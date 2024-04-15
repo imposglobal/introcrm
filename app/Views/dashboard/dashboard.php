@@ -1,3 +1,4 @@
+<!-- Included header sidebar & footer in layout -->
 <?= $this->extend('layout/layout') ?>
 
 <!-- Define the content section -->
@@ -650,5 +651,4 @@
         </div>
         <!-- content-wrapper ends -->
       
-<!-- Your dashboard content here -->
 <?= $this->endSection() ?>
