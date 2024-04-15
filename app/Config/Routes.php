@@ -18,3 +18,4 @@ $routes->get('logout', 'Home::logout');
 
 //Register
 $routes->get('/onboard', 'Home::register');
+$routes->get('/onboarding', 'Home::store');
