@@ -149,6 +149,7 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2024-04-15 06:49:37 --> ErrorException: Undefined variable $baseURL
 [Method: GET, Route: /]
 in APPPATH\Views\login.php on line 10.
@@ -206,6 +207,35 @@ in APPPATH\Views\login.php on line 10.
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 CRITICAL - 2024-04-15 06:52:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+=======
+CRITICAL - 2024-04-15 08:24:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(21): view('dashboard/dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-15 08:24:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(21): view('dashboard/dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-15 08:34:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+>>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
 [Method: GET, Route: /]
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
@@ -217,72 +247,125 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2024-04-15 06:52:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+=======
+CRITICAL - 2024-04-15 08:34:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+>>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
 [Method: GET, Route: /]
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
  2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login', [], true)
+<<<<<<< HEAD
  3 APPPATH\Controllers\Home.php(10): view('login')
+=======
+ 3 APPPATH\Controllers\Home.php(17): view('login')
+>>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
  4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
  5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2024-04-15 06:52:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+=======
+CRITICAL - 2024-04-15 08:34:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+>>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
 [Method: GET, Route: /]
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
  2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login', [], true)
+<<<<<<< HEAD
  3 APPPATH\Controllers\Home.php(10): view('login')
+=======
+ 3 APPPATH\Controllers\Home.php(17): view('login')
+>>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
  4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
  5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2024-04-15 06:52:44 --> ErrorException: Undefined variable $baseURL
+=======
+CRITICAL - 2024-04-15 08:34:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Home.php(17): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-15 08:34:55 --> ErrorException: Undefined variable $baseURL
+>>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
 [Method: GET, Route: /]
 in APPPATH\Views\signup_signin\login.php on line 10.
  1 APPPATH\Views\signup_signin\login.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baseURL', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php', 10)
  2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php')
  3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('signup_signin/login', [], true)
+<<<<<<< HEAD
  5 APPPATH\Controllers\Home.php(10): view('signup_signin/login')
+=======
+ 5 APPPATH\Controllers\Home.php(17): view('signup_signin/login')
+>>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
  6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
  7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2024-04-15 06:52:45 --> ErrorException: Undefined variable $baseURL
+=======
+CRITICAL - 2024-04-15 08:35:20 --> ErrorException: Undefined variable $baseURL
+>>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
 [Method: GET, Route: /]
 in APPPATH\Views\signup_signin\login.php on line 10.
  1 APPPATH\Views\signup_signin\login.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baseURL', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php', 10)
  2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php')
  3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('signup_signin/login', [], true)
+<<<<<<< HEAD
  5 APPPATH\Controllers\Home.php(10): view('signup_signin/login')
+=======
+ 5 APPPATH\Controllers\Home.php(17): view('signup_signin/login')
+>>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
  6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
  7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2024-04-15 06:52:46 --> ErrorException: Undefined variable $baseURL
+=======
+CRITICAL - 2024-04-15 08:35:20 --> ErrorException: Undefined variable $baseURL
+>>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
 [Method: GET, Route: /]
 in APPPATH\Views\signup_signin\login.php on line 10.
  1 APPPATH\Views\signup_signin\login.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baseURL', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php', 10)
  2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php')
  3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('signup_signin/login', [], true)
+<<<<<<< HEAD
  5 APPPATH\Controllers\Home.php(10): view('signup_signin/login')
+=======
+ 5 APPPATH\Controllers\Home.php(17): view('signup_signin/login')
+>>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
  6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
  7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2024-04-15 06:53:40 --> ErrorException: Undefined variable $baseURL
 [Method: GET, Route: /]
 in APPPATH\Views\signup_signin\login.php on line 10.
@@ -367,3 +450,29 @@ in APPPATH\Views\signup_signin\login.php on line 10.
  9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+=======
+CRITICAL - 2024-04-15 08:38:10 --> ParseError: syntax error, unexpected token "<", expecting "function" or "const"
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 20.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-15 08:39:02 --> ParseError: Unmatched '}'
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 57.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+>>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6

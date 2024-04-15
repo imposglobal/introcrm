@@ -1,3 +1,8 @@
+<!-- Included header sidebar & footer in layout -->
+<?= $this->extend('layout/layout') ?>
+
+<!-- Define the content section -->
+<?= $this->section('content') ?>
 <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
@@ -646,3 +651,4 @@
         </div>
         <!-- content-wrapper ends -->
       
+<?= $this->endSection() ?>
