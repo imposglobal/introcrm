@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use CodeIgniter\Controller;
 use App\Models\UserModel;
 
 class Home extends BaseController
@@ -10,6 +11,7 @@ class Home extends BaseController
         $currentURL = current_url();
         // Get the base URL
         $baseURL = base_url();
+        helper(['form']);
          // Pass the data to the view
          $data = [
             'currentURL' => $currentURL,
@@ -27,10 +29,13 @@ class Home extends BaseController
         $session = session();
         $userModel = new UserModel();
         $email = $this->request->getVar('email');
+        // echo $email;
+        
         $password = $this->request->getVar('password');
-        
+        // echo $password;
         $data = $userModel->where('email', $email)->first();
-        
+        print_r($data);
+
         if($data){
             $pass = $data['password'];
             $authenticatePassword = password_verify($password, $pass);
@@ -43,14 +48,15 @@ class Home extends BaseController
                 ];
                 $session->set($ses_data);
 
-                return redirect()->to('/layout/layout');
+                return redirect()->to('/dashboard/dashboard');
 
             
             }else{
                 $session->setFlashdata('msg', 'Email or Password is incorrect.');
                 return redirect()->to('/login');
             }
-        }else{
+        }
+        else{
             $session->setFlashdata('msg', 'Email or password incorrect.');
             return redirect()->to('/login');
         }
