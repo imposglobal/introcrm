@@ -1,3 +1,6 @@
+
+<?php $session = session();?>
+
 <!-- Included header sidebar & footer in layout -->
 <?= $this->extend('layout/layout') ?>
 
@@ -9,9 +12,9 @@
             <div class="col-md-12 grid-margin">
               <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">Welcome : <?php $session = session();
-                         echo $session->get('fname');?></h3>
-                         
+                  <h3 class="font-weight-bold">Welcome : <?php 
+                         echo $session->get('name');?></h3>
+
                   <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6>
                 </div>
                 <div class="col-12 col-xl-4">
