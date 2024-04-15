@@ -1,3 +1,7 @@
+<?= $this->extend('layout/layout') ?>
+
+<!-- Define the content section -->
+<?= $this->section('content') ?>
 <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
@@ -646,3 +650,5 @@
         </div>
         <!-- content-wrapper ends -->
       
+<!-- Your dashboard content here -->
+<?= $this->endSection() ?>
