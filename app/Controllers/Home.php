@@ -53,12 +53,12 @@ class Home extends BaseController
             
             }else{
                 $session->setFlashdata('msg', 'Email or Password is incorrect.');
-                return redirect()->to('/login');
+                return redirect()->to('/');
             }
         }
         else{
             $session->setFlashdata('msg', 'Email or password incorrect.');
-            return redirect()->to('/login');
+            return redirect()->to('/');
         }
     }
 
