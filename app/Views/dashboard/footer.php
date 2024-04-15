@@ -33,6 +33,7 @@
   <!-- Custom js for this page-->
   <script src="<?php echo $baseURL; ?>/assets/js/dashboard.js"></script>
   <script src="<?php echo $baseURL; ?>/assets/js/Chart.roundedBarCharts.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <!-- End custom js for this page-->
 </body>
 

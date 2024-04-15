@@ -1,9 +1,32 @@
 <!-- Included header sidebar & footer in layout -->
+<title>Add Customer</title>
 <?= $this->extend('layout/layout') ?>
-
 <!-- Define the content section -->
 <?= $this->section('content') ?>
+<style>
+    .drop-area {
+    border: 2px dashed #ccc;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.drop-text {
+    margin-top: 0;
+}
+
+.file-list {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.file-item {
+    margin-bottom: 5px;
+}
+
+</style>
 <div class="main-panel">          
         <div class="content-wrapper">
           <div class="row">
@@ -11,7 +34,7 @@
               <div class="card">
                 <div class="row">
                   <div class="col-md-12">
-                    <div class="card-body">
+                    <div class="card-body mt-2">
                       <h4 class="card-title"><i class="mdi mdi-account-multiple-plus bg-primary h4 pt-1 px-2 text-white rounded"></i> Add Customer</h4>
                       <hr>
                       
@@ -52,6 +75,9 @@
                                 <input type="text" name="telephone" class="form-control form-control-lg" placeholder="Customer Telephone No" id="telephone">
                             </div>
                         </div>
+                        <div class="col-lg-12">
+                            <hr>
+                        </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Address 1</label>
@@ -70,6 +96,9 @@
                                 <input type="text" name="postcode" class="form-control form-control-lg" placeholder="Post Code" id="postcode">
                             </div>
                         </div>
+                        <div class="col-lg-12">
+                            <hr>
+                        </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Tenure</label>
@@ -83,6 +112,9 @@
                             </div>
                         </div>
                         <div class="col-lg-4"></div>
+                        <div class="col-lg-12">
+                            <hr>
+                        </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Boiler Age</label>
@@ -101,14 +133,17 @@
                                 <input type="text" name="boiler_model" class="form-control form-control-lg" placeholder="Boiler Model" id="boiler_model">
                             </div>
                         </div>
+                        <div class="col-lg-12">
+                            <hr>
+                        </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Benefit / Flex</label>
-                                <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <select name="benefit" id="benefit" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option value="Universal credit">Universal credit</option>
                                 <option value="Income Support">Income Support </option>
                                 <option value="Pension Credit">Pension Credit </option>
-                                <option value="Child Tax Credit">Child Tax Credit</option>
+                                <option value="D">Child Tax Credit</option>
                                 <option value="Housing Benefit">Housing Benefit</option>
                                 <option value="Universal Credit">Universal Credit</option>
                                 <option value="Employment and support allowance">Employment and support allowance</option>
@@ -122,6 +157,36 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">EPC Rating</label>
+                                <select name="epc" id="epc" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option value="A">A</option>
+                                <option value="B">B </option>
+                                <option value="C">C </option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <hr>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="notes">Additional Notes</label>
+                                <textarea class="form-control" id="add_notes" name="add_notes" rows="8"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="notes">Drag & Drop Files Here</label>
+                                <div id="drop-area" class="drop-area">
+                                    <!-- <h3 class="drop-text">Drag & Drop Files Here</h3> -->
+                                    <input type="file" id="fileInput" multiple>
+                                </div>
+                            </div>
                       </div>
                     </div>
                   </div>
@@ -134,7 +199,5 @@
           </div>
         </div>
         <!-- content-wrapper ends -->
-
-
 
 <?= $this->endSection() ?>
