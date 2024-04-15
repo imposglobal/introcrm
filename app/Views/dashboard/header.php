@@ -17,6 +17,8 @@
   <link rel="stylesheet" type="text/css" href="<?php echo $baseURL; ?>/assets/js/select.dataTables.min.css">
   <!-- End plugin css for this page -->
   <!-- inject:css -->
+   <!-- Plugin css for this page -->
+   <link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="<?php echo $baseURL; ?>/assets/images/favicon.png" />
