@@ -7,3 +7,11 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'Dashboard::index');
+
+// Login routes defined here
+
+$routes->POST('/login/check', 'Home::loginAuth');
+
+
+
+
