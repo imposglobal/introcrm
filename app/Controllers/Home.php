@@ -38,27 +38,27 @@ class Home extends BaseController
 
         if($data){
             $pass = $data['password'];
-            $authenticatePassword = password_verify($password, $pass);
-            if($authenticatePassword){
+            
+            if($password == $pass){
                 $ses_data = [
                     'id' => $data['id'],
-                    'name' => $data['name'],
+                    'name' => $data['fname'],
                     'email' => $data['email'],
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);
 
-                return redirect()->to('/dashboard/dashboard');
+                return redirect()->to('/dashboard');
 
             
             }else{
                 $session->setFlashdata('msg', 'Email or Password is incorrect.');
-                return redirect()->to('/login');
+                return redirect()->to('/');
             }
         }
         else{
             $session->setFlashdata('msg', 'Email or password incorrect.');
-            return redirect()->to('/login');
+            return redirect()->to('/');
         }
     }
 
