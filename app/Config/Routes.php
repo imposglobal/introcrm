@@ -15,3 +15,6 @@ $routes->POST('/login/check', 'Home::loginAuth');
 
 // logout 
 $routes->get('logout', 'Home::logout');
+
+//Register
+$routes->get('/onboard', 'Home::register');
