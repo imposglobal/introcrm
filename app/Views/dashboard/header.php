@@ -1,4 +1,5 @@
 <?php $session = session();?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -106,7 +107,7 @@
                 <i class="ti-settings text-primary"></i>
                 Settings
               </a>
-              <a class="dropdown-item">
+              <a class="dropdown-item"  href="<?php echo base_url('logout'); ?>">
                 <i class="ti-power-off text-primary"></i>
                 Logout
               </a>
