@@ -14,17 +14,12 @@ class Home extends BaseController
             'currentURL' => $currentURL,
             'baseURL' => $baseURL
         ];
-<<<<<<< HEAD
+
        
          return view('signup_signin/login', $data);
     }
 
-=======
-         return view('signup_signin/login',$data);
-    }
 
-   
->>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
     // login function
     public function loginAuth()
     {
@@ -46,11 +41,9 @@ class Home extends BaseController
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);
-<<<<<<< HEAD
-                return redirect()->to('/dashboard');
-=======
+
                 return redirect()->to('/layout/layout');
->>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
+
             
             }else{
                 $session->setFlashdata('msg', 'Email or Password is incorrect.');

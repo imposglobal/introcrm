@@ -32,11 +32,7 @@
               <h4>Hello! let's get started</h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
 
-<<<<<<< HEAD
-              <form class="pt-3" action="<?php echo base_url(); ?>/Home/loginAuth" method="post">
-=======
               <form class="pt-3" action="<?php $baseURL; ?>/Home/loginAuth" method="post">
->>>>>>> bdf39e9921e2239659a6e9e74e7d7f5d4303aef6
                 <div class="form-group">
                   <input type="email" class="form-control form-control-lg" id="email" placeholder="Email">
                 </div>
