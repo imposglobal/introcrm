@@ -30,7 +30,7 @@
                 <img src="<?php echo $baseURL; ?>/assets/images/logo.svg" alt="logo">
               </div>
              
-              <form class="pt-3" action="<?php echo base_url('/signup_signin/login'); ?>" method="post">
+              <form class="pt-3" action="<?php echo base_url('/onboard/check'); ?>" method="post">
                 <div class="form-group">
                   <input type="text"  required name="fname" class="form-control form-control-lg" id="fname" placeholder="First Name" value="<?= set_value('fname') ?>">
                 </div>
