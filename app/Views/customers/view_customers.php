@@ -49,18 +49,22 @@
                                             <th scope="col">Last Name</th>
                                             <th scope="col">Mobile</th>
                                             <th scope="col">Email</th>
+                                            <th scope="col">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php if($customers): ?>
+                                    <?php 
+                                    $i = 1;
+                                    if($customers): ?>
                                     <?php foreach($customers as $customer): ?>
                                         <tr>
                                             
-                                            <td><?php echo $customer['lead_id']; ?></td>
+                                            <td><?php echo $i++; ?></td>
                                             <td><?php echo $customer['fname']; ?></td>
                                             <td><?php echo $customer['lname']; ?></td>
                                             <td><?php echo $customer['mobile']; ?></td>
                                             <td><?php echo $customer['email']; ?></td>
+                                            <td><?php echo $customer['lead_id']; ?></td>
                                         </tr>
                                         <?php endforeach; ?>
                                         <?php endif; ?>
