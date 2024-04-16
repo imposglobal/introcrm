@@ -112,6 +112,7 @@ class Home extends BaseController
     return view('signup_signin/login', ['alrt' => 'Onboarding successfully,<br> Please login to access your portal'] + $this->data);
 
   }
+  
 
 
 
