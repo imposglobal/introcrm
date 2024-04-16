@@ -36,11 +36,14 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card-body mt-2">
-                            <h4 class="card-title"><i class="mdi mdi-account-multiple-plus bg-primary h4 pt-1 px-2 text-white rounded"></i> View Customer</h4>
-                            <hr>
+                                <h4 class="card-title"><i
+                                        class="mdi mdi-account-multiple-plus bg-primary h4 pt-1 px-2 text-white rounded"></i>
+                                    View Customer</h4>
+                                <hr>
 
                                 <!-- table code -->
 
+                                <!-- Display customers data -->
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -53,23 +56,41 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php 
-                                    $i = 1;
-                                    if($customers): ?>
-                                    <?php foreach($customers as $customer): ?>
+                                        <?php $i = 1; ?>
+                                        <?php if ($customers): ?>
+                                        <?php foreach ($customers as $customer): ?>
                                         <tr>
-                                            
-                                            <td><?php echo $i++; ?></td>
-                                            <td><?php echo $customer['fname']; ?></td>
-                                            <td><?php echo $customer['lname']; ?></td>
-                                            <td><?php echo $customer['mobile']; ?></td>
-                                            <td><?php echo $customer['email']; ?></td>
-                                            <td><?php echo $customer['lead_id']; ?></td>
+                                            <td>
+                                                <?= $i++ ?>
+                                            </td>
+                                            <td>
+                                                <?= $customer['fname'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $customer['lname'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $customer['mobile'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $customer['email'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $customer['lead_id'] ?>
+                                            </td>
                                         </tr>
                                         <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <tr>
+                                            <td colspan="6">No customers found.</td>
+                                        </tr>
                                         <?php endif; ?>
                                     </tbody>
                                 </table>
+
+                                <!-- Display pagination links -->
+                                <?= $paginationLinks ?>
+
 
                                 <!-- table code end -->
 

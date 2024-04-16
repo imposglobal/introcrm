@@ -29,15 +29,36 @@ class CustomerView extends BaseController
         ];
     }
 
-    public function index(){
+    // public function index(){
        
-        $customerModel = new CustomerModel();
-        $result['customers'] = $customerModel->orderBy('lead_id ', 'DESC')->findAll();
+    //     $customerModel = new CustomerModel();
+    //     $result['customers'] = $customerModel->orderBy('lead_id ', 'DESC')->findAll();
         
-        // return view('customers/view_customer', $result);
-        return view('customers/view_customers', $result + $this->data);
+    //     // return view('customers/view_customer', $result);
+    //     return view('customers/view_customers', $result + $this->data);
 
-    }
+    // }
+
+
+    public function index()
+{
+    $customerModel = new CustomerModel();
+    
+    $currentPage = $this->request->getVar('page') ?? 1;
+    $perPage = 10; 
+    $customers = $customerModel->orderBy('lead_id', 'DESC')->paginate($perPage, 'page', $currentPage);
+    $pager = $customerModel->pager;
+    $paginationLinks = $pager->links('default_full', 'default_full');
+
+    // Pass customers data, pagination links, and base URL to the view
+    $data = [
+        'customers' => $customers,
+        'paginationLinks' => $paginationLinks,
+        'baseURL' => $this->baseURL,
+    ];
+
+    return view('customers/view_customers', $data + $this->data);
+}
 
    
 
