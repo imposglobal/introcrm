@@ -33,17 +33,6 @@ class Home extends BaseController
 
     public function index()
     {
-        // instead of public function initController we can use this for base url
-        // $currentURL = current_url();
-        // // Get the base URL
-        // $baseURL = base_url();
-        // helper(['form']);
-        //  // Pass the data to the view
-        //  $data = [
-        //     'currentURL' => $currentURL,
-        //     'baseURL' => $baseURL
-        // ];
-
        
          return view('signup_signin/login', $this->data);
     }
