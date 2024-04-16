@@ -46,25 +46,33 @@
 
 
               <!-- Login form  -->
-              <form class="pt-3" action="<?php echo base_url('/login/check'); ?>" method="POST">
-                <div class="form-group">
-                  <input type="email" name="email" required class="form-control form-control-lg" id="email"
-                    placeholder="Email" value="<?= set_value('email') ?>">
-                </div>
-                <div class="form-group">
-                  <input type="password" name="password" required class="form-control form-control-lg" id="password"
-                    placeholder="Password">
-                </div>
-                <div class="mt-3">
-                  <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN
-                    IN</button>
-                </div>
-                <div class="my-4 d-flex justify-content-between align-items-center">
-
-                  <a href="#" class="auth-link text-black">Forgot password?</a>
-                </div>
-                
-              </form>
+              <!-- flash message code -->
+              <?php if (session()->has('msg')): ?>
+                      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                          <?= session()->get('msg') ?>
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                  <?php endif; ?>
+              <!-- flash message code end-->
+                <form class="pt-3" action="<?php echo base_url('/login/check'); ?>" method="POST">
+                  <div class="form-group">
+                    <input type="email" name="email" required class="form-control form-control-lg" id="email" placeholder="Email" value="<?= set_value('email') ?>">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password" required class="form-control form-control-lg" id="password" placeholder="Password">
+                  </div>
+                  <div class="mt-3">
+                    <button type="submit"
+                      class="btn btn-block btn-priloginmary btn-lg font-weight-medium auth-form-btn">SIGN IN
+                    </button>
+                  </div>
+                  <div class="my-4 d-flex justify-content-between align-items-center">
+                    <a href="#" class="auth-link text-black">Forgot password?</a>
+                  </div>
+                </form>   
+<!-- Login form end -->
             </div>
           </div>
         </div>
