@@ -22,3 +22,6 @@ $routes->post('/login', 'Home::store');
 
 //customer Related
 $routes->POST('/customer/add', 'Customers::store');
+
+//view customer
+$routes->get('/customer/view', 'CustomerView::index');

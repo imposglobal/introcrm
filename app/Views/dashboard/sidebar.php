@@ -16,7 +16,7 @@
             <div class="collapse " id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link active" href="<?php echo base_url('customer'); ?>">Add Customer</a></li>
-                <li class="nav-item"> <a class="nav-link active" href="<?php echo base_url('customer'); ?>">View Customer</a></li>
+                <li class="nav-item"> <a class="nav-link active" href="<?php echo base_url('customer/view'); ?>">View Customer</a></li>
               </ul>
             </div>
           </li>
