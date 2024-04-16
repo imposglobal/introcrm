@@ -96,16 +96,17 @@ class Home extends BaseController
 
     $userModel = new UserModel();
     $data = [
-        'fname'=> $this->request->getVar('fname'),
-        'lname'=> $this->request->getVar('lname'),
-        'email'=> $this->request->getVar('email'),
-        'phone'=> $this->request->getVar('phone'),
-        'center_name'=> $this->request->getVar('center_name'),
-        'location'=> $this->request->getVar('location'),
-        'password'=> $this->request->getVar('password')
+        'fname'=> $this->request->getPost('fname'),
+        'lname'=> $this->request->getPost('lname'),
+        'email'=> $this->request->getPost('email'),
+        'phone'=> $this->request->getPost('phone'),
+        'center_name'=> $this->request->getPost('center_name'),
+        'location'=> $this->request->getPost('location'),
+        'password'=> $this->request->getPost('password')
     ];
+    print_r($data);
     $userModel->save($data);
-    return redirect()->to('/');
+    // return view('signup_signin/login', $this->data);
   }
 
 

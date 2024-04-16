@@ -30,12 +30,12 @@
                 <img src="<?php echo $baseURL; ?>/assets/images/logo.svg" alt="logo">
               </div>
              
-              <form class="pt-3" action="<?php echo base_url('/onboarding'); ?>" method="POST">
+              <form class="pt-3" action="<?php echo base_url('/signup_signin/login'); ?>" method="post">
                 <div class="form-group">
                   <input type="text"  required name="fname" class="form-control form-control-lg" id="fname" placeholder="First Name" value="<?= set_value('fname') ?>">
                 </div>
                 <div class="form-group">
-                  <input type="text" required name="fname" class="form-control form-control-lg" id="lname" placeholder="Last Name" value="<?= set_value('lname') ?>">
+                  <input type="text" required name="lname" class="form-control form-control-lg" id="lname" placeholder="Last Name" value="<?= set_value('lname') ?>">
                 </div>
                 <div class="form-group">
                   <input type="email" required name="email" class="form-control form-control-lg" id="email" placeholder="Email" value="<?= set_value('email') ?>">
