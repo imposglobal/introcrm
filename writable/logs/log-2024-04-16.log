@@ -1,0 +1,103 @@
+CRITICAL - 2024-04-16 05:40:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/login.php"
+[Method: POST, Route: onboard/check]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/login.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/login', [], true)
+ 3 APPPATH\Controllers\Home.php(109): view('/login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-16 05:41:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/login.php"
+[Method: POST, Route: onboard/check]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/login.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/login', [], true)
+ 3 APPPATH\Controllers\Home.php(109): view('/login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-16 05:46:58 --> ErrorException: Undefined variable $baseURL
+[Method: POST, Route: login]
+in APPPATH\Views\signup_signin\login.php on line 10.
+ 1 APPPATH\Views\signup_signin\login.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baseURL', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('signup_signin/login', [], true)
+ 5 APPPATH\Controllers\Home.php(109): view('signup_signin/login')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-16 05:57:46 --> Error: Call to a member function with() on string
+[Method: POST, Route: login]
+in APPPATH\Controllers\Home.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->store()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-16 06:03:41 --> ErrorException: Undefined variable $baseURL
+[Method: POST, Route: login]
+in APPPATH\Views\signup_signin\login.php on line 10.
+ 1 APPPATH\Views\signup_signin\login.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baseURL', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('signup_signin/login', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('signup_signin/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-16 06:05:20 --> ErrorException: Undefined variable $baseURL
+[Method: POST, Route: login]
+in APPPATH\Views\signup_signin\login.php on line 10.
+ 1 APPPATH\Views\signup_signin\login.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baseURL', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('signup_signin/login', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('signup_signin/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-16 06:06:13 --> ErrorException: Undefined variable $baseURL
+[Method: POST, Route: login]
+in APPPATH\Views\signup_signin\login.php on line 10.
+ 1 APPPATH\Views\signup_signin\login.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baseURL', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('signup_signin/login', [...], true)
+ 5 APPPATH\Controllers\Home.php(111): view('signup_signin/login', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-16 06:06:54 --> ErrorException: Undefined variable $baseURL
+[Method: POST, Route: login]
+in APPPATH\Views\signup_signin\login.php on line 10.
+ 1 APPPATH\Views\signup_signin\login.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baseURL', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\login.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('signup_signin/login', [...], true)
+ 5 APPPATH\Controllers\Home.php(111): view('signup_signin/login', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
