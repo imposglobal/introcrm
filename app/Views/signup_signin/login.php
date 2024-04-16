@@ -26,31 +26,44 @@
         <div class="row w-100 mx-0">
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+              
+            <!-- code to display flash message -->
+            <?php if (isset($alrt)): ?>
+                  <div class="alert alert-success alert-dismissible fade show" role="alert">
+                      <?= $alrt ?>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                <?php endif; ?>
+              <!-- code to display flash message  end-->
+
               <div class="brand-logo">
                 <img src="<?php echo $baseURL; ?>/assets/images/logo.svg" alt="logo">
               </div>
               <h4>Hello! let's get started</h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
 
-                  
+
               <!-- Login form  -->
               <form class="pt-3" action="<?php echo base_url('/login/check'); ?>" method="POST">
                 <div class="form-group">
-                  <input type="email" name="email" required class="form-control form-control-lg" id="email" placeholder="Email" value="<?= set_value('email') ?>">
+                  <input type="email" name="email" required class="form-control form-control-lg" id="email"
+                    placeholder="Email" value="<?= set_value('email') ?>">
                 </div>
                 <div class="form-group">
-                  <input type="password" name="password" required class="form-control form-control-lg" id="password" placeholder="Password">
+                  <input type="password" name="password" required class="form-control form-control-lg" id="password"
+                    placeholder="Password">
                 </div>
                 <div class="mt-3">
-                  <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN IN</button>
+                  <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN
+                    IN</button>
                 </div>
                 <div class="my-4 d-flex justify-content-between align-items-center">
-                 
+
                   <a href="#" class="auth-link text-black">Forgot password?</a>
                 </div>
-                <!-- <div class="text-center mt-4 font-weight-light">
-                  Don't have an account? <a href="<?php echo base_url('register'); ?>" class="text-primary">Create</a>
-                </div> -->
+                
               </form>
             </div>
           </div>

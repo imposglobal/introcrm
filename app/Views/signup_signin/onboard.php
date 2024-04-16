@@ -30,7 +30,7 @@
                 <img src="<?php echo $baseURL; ?>/assets/images/logo.svg" alt="logo">
               </div>
              
-              <form class="pt-3" action="<?php echo base_url('/onboard/check'); ?>" method="post">
+              <form class="pt-3" action="<?php echo base_url('/login'); ?>" method="post">
                 <div class="form-group">
                   <input type="text"  required name="fname" class="form-control form-control-lg" id="fname" placeholder="First Name" value="<?= set_value('fname') ?>">
                 </div>
@@ -44,7 +44,7 @@
                   <input type="text" required name="phone" class="form-control form-control-lg" id="phone" placeholder="Phone Number" value="<?= set_value('phone') ?>">
                 </div>                
                 <div class="form-group">
-                  <input type="text" required name="center_name" class="form-control form-control-lg" id="center_name" placeholder="Location" value="<?= set_value('center_name') ?>">
+                  <input type="text" required name="center_name" class="form-control form-control-lg" id="center_name" placeholder="Center Name" value="<?= set_value('center_name') ?>">
                 </div>
                 <div class="form-group">
                   <input type="text" required name="location" class="form-control form-control-lg" id="location" placeholder="Location" value="<?= set_value('location') ?>">
