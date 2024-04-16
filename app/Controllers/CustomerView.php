@@ -32,10 +32,10 @@ class CustomerView extends BaseController
     public function index(){
        
         $customerModel = new CustomerModel();
-        $result['customers'] = $customerModel->orderBy('lead_id ', 'ASC')->findAll();
+        $result['customers'] = $customerModel->orderBy('lead_id ', 'DESC')->findAll();
         
         // return view('customers/view_customer', $result);
-        return view('customers/view_customer', $result + $this->data);
+        return view('customers/view_customers', $result + $this->data);
 
     }
 
