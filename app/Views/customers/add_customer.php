@@ -1,8 +1,8 @@
 <!-- Included header sidebar & footer in layout -->
-<title>Add Customer</title>
 <?= $this->extend('layout/layout') ?>
 <!-- Define the content section -->
 <?= $this->section('content') ?>
+<title>Add Customer</title>
 <style>
     .drop-area {
     border: 2px dashed #ccc;
@@ -186,7 +186,12 @@
                                     <!-- <h3 class="drop-text">Drag & Drop Files Here</h3> -->
                                     <input type="file" id="fileInput" multiple>
                                 </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <button class="btn btn-primary py-3 px-5">Add Customer</button>
                             </div>
+                        </div>
                       </div>
                     </div>
                   </div>
