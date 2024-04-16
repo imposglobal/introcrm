@@ -27,7 +27,7 @@ class Customers extends BaseController
             'baseURL' => $this->baseURL
         ];
     }
-
+    //view add customer page 
     public function customer()
     {
         $currentURL = current_url();
@@ -43,7 +43,8 @@ class Customers extends BaseController
             return view('customers/add_customer', $data);
     }
 
-   // Add Customer
+/****************************************************************************************************/
+/* Add Customer to database with duplicate check */
 public function store()
 {
     $session = session();
@@ -101,4 +102,7 @@ public function store()
 
     return view('customers/add_customer', ['status' => $status] + $this->data);
 }
+
+/****************************************************************************************************/
+
 }

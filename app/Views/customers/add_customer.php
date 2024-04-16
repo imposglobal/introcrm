@@ -206,7 +206,7 @@
                             <label for="notes">Drag & Drop Files Here</label>
                                 <div id="drop-area" class="drop-area">
                                     <!-- <h3 class="drop-text">Drag & Drop Files Here</h3> -->
-                                    <input required  type="file" name="images[]" id="images" multiple>
+                                    <input  accept="image/*,.pdf" required  type="file" name="images[]" id="images" multiple>
                                 </div>
                         </div>
                         <div class="col-lg-12">
