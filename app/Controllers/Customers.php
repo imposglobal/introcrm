@@ -47,20 +47,38 @@ class Customers extends BaseController
     public function store(){
         $session = session();
         $center = $session->get('center');
+        $name = $session->get('name');
         $email = $this->request->getPost('email');
         $customerModel = new CustomerModel();
         $result = $customerModel->where('email', $email)->first();
+        $date = date('Y-m-d H:i:s');
         if($result['email'] === $email){
             $status = "duplicate";
         }else{
             $data = [
+                'lead_date' => $date,
+                'center_name' => $center,
+                'email' => $email,
                 'fname' => $this->request->getPost('fname'),
                 'lname' => $this->request->getPost('lname'),
-                'email' => $email,
-                'phone' => $this->request->getPost('phone'),
-                'center_name' => $this->request->getPost('center_name'),
-                'location' => $this->request->getPost('location'),
-                'password' => $this->request->getPost('password')
+                'dob' => $this->request->getPost('dob'),
+                'mobile' => $this->request->getPost('mobile'),
+                'telephone' => $this->request->getPost('telephone'),
+                'address_1' => $this->request->getPost('address_1'),
+                'address_2' => $this->request->getPost('address_2'),
+                'post_code' => $this->request->getPost('post_code'),
+                'tenure' => $this->request->getPost('tenure'),
+                'council' => $this->request->getPost('council'),
+                'boiler_age' => $this->request->getPost('boiler_age'),
+                'boiler_make' => $this->request->getPost('boiler_make'),
+                'boiler_model' => $this->request->getPost('boiler_model'),
+                'benefit_flex' => $this->request->getPost('benefit_flex'),
+                'epc_rating' => $this->request->getPost('epc_rating'),
+                'additional_notes' => $this->request->getPost('additional_notes'),
+                'upload_image' => $this->request->getPost('upload_image'),
+                'created_agent_date' => $this->request->getPost('created_agent_date'),
+                'agent_name' => $name,
+
             ];
             $customerModel->save($data);
             $status = "added";

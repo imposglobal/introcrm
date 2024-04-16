@@ -58,8 +58,10 @@ class Home extends BaseController
                 $ses_data = [
                     'id' => $data['id'],
                     'fname' => $data['fname'],
+                    'lname' => $data['lname'],
                     'email' => $data['email'],
                     'center' => $data['center_name'],
+                    'role' => $data['role'],
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);

@@ -90,12 +90,7 @@
                                 <input type="text" name="telephone" class="form-control form-control-lg" placeholder="Customer Telephone No" id="telephone">
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label>Telephone</label>
-                                <input type="text" name="telephone" class="form-control form-control-lg" placeholder="Customer Telephone No" id="telephone">
-                            </div>
-                        </div>
+                        
                         <div class="col-lg-12">
                             <hr>
                         </div>
@@ -114,7 +109,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Post Code</label>
-                                <input type="text" name="postcode" class="form-control form-control-lg" placeholder="Post Code" id="postcode">
+                                <input type="text" name="post_code" class="form-control form-control-lg" placeholder="Post Code" id="postcode">
                             </div>
                         </div>
                         <div class="col-lg-12">
