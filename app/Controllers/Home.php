@@ -59,6 +59,7 @@ class Home extends BaseController
                     'id' => $data['id'],
                     'fname' => $data['fname'],
                     'email' => $data['email'],
+                    'center' => $data['center_name'],
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);

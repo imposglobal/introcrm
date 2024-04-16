@@ -7,7 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'Dashboard::index');
-$routes->get('/customer/add', 'Customers::customer');
+$routes->get('/customer', 'Customers::customer');
 
 // Login routes defined here
 
@@ -19,3 +19,6 @@ $routes->get('logout', 'Home::logout');
 //Register
 $routes->get('/onboard', 'Home::register');
 $routes->post('/login', 'Home::store');
+
+//customer Related
+$routes->POST('/customer/add', 'Customers::store');

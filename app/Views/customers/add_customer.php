@@ -30,6 +30,27 @@
 <div class="main-panel">          
         <div class="content-wrapper">
           <div class="row">
+            <div class="col-lg-12">
+            <?php if (isset($status)){ 
+                if($status === "duplicate"){
+                ?>
+                  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      Duplicate Record Found
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                <?php }elseif($status == "added"){ ?>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                      Record Added Successfully
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+
+                <?php } } ?>
+                
+            </div>
             <div class="col-12 grid-margin stretch-card">
               <div class="card">
                 <div class="row">
@@ -37,7 +58,7 @@
                     <div class="card-body mt-2">
                       <h4 class="card-title"><i class="mdi mdi-account-multiple-plus bg-primary h4 pt-1 px-2 text-white rounded"></i> Add Customer</h4>
                       <hr>
-                      
+                      <form action="<?php echo base_url('/customer/add')?>" method="POST">
                       <div class="row">
                         <div class="col-lg-4">
                             <div class="form-group">
@@ -189,10 +210,11 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <button class="btn btn-primary py-3 px-5">Add Customer</button>
+                                <button type="submit" class="btn btn-primary py-3 px-5">Add Customer</button>
                             </div>
                         </div>
                       </div>
+                        </form>     
                     </div>
                   </div>
                   
