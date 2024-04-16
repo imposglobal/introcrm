@@ -13,6 +13,7 @@ class UserModel extends Model{
         'center_name',
         'location',
         'password',
+        'role',
         'created_at'
     ];
     

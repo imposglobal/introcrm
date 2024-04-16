@@ -58,63 +58,64 @@
                     <div class="card-body mt-2">
                       <h4 class="card-title"><i class="mdi mdi-account-multiple-plus bg-primary h4 pt-1 px-2 text-white rounded"></i> Add Customer</h4>
                       <hr>
-                      <form action="<?php echo base_url('/customer/add')?>" method="POST">
+                      <form action="<?php echo base_url('/customer/add')?>" method="POST" enctype="multipart/form-data">
                       <div class="row">
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>First Name</label>
-                                <input type="text" name="fname" class="form-control form-control-lg" placeholder="Customer First Name" id="fname">
+                                <input required  type="text" name="fname" class="form-control form-control-lg" placeholder="Customer First Name" id="fname">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Last Name</label>
-                                <input type="text" name="lname" class="form-control form-control-lg" placeholder="Customer Last Name" id="lname">
+                                <input required  type="text" name="lname" class="form-control form-control-lg" placeholder="Customer Last Name" id="lname">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Email</label>
-                                <input type="email" name="email" class="form-control form-control-lg" placeholder="Customer Email" id="email">
+                                <input required  type="email" name="email" class="form-control form-control-lg" placeholder="Customer Email" id="email">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Mobile</label>
-                                <input type="text" name="mobile" class="form-control form-control-lg" placeholder="Customer Mobile No" id="mobile">
+                                <input required  type="text" name="mobile" class="form-control form-control-lg" placeholder="Customer Mobile No" id="mobile">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Telephone</label>
-                                <input type="text" name="telephone" class="form-control form-control-lg" placeholder="Customer Telephone No" id="telephone">
+                                <input required  type="text" name="telephone" class="form-control form-control-lg" placeholder="Customer Telephone No" id="telephone">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Telephone</label>
-                                <input type="text" name="telephone" class="form-control form-control-lg" placeholder="Customer Telephone No" id="telephone">
+                                <label>DOB</label>
+                                <input required  type="date" name="dob" class="form-control form-control-lg" placeholder="Customer Telephone No" id="dob">
                             </div>
                         </div>
+                        
                         <div class="col-lg-12">
                             <hr>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Address 1</label>
-                                <input type="text" name="address_1" class="form-control form-control-lg" placeholder="Customer Address 1" id="address_1">
+                                <input required  type="text" name="address_1" class="form-control form-control-lg" placeholder="Customer Address 1" id="address_1">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Address 2</label>
-                                <input type="text" name="address_2" class="form-control form-control-lg" placeholder="Customer Address " id="address_2">
+                                <input required  type="text" name="address_2" class="form-control form-control-lg" placeholder="Customer Address " id="address_2">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Post Code</label>
-                                <input type="text" name="postcode" class="form-control form-control-lg" placeholder="Post Code" id="postcode">
+                                <input required  type="text" name="post_code" class="form-control form-control-lg" placeholder="Post Code" id="postcode">
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -123,13 +124,13 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Tenure</label>
-                                <input type="text" name="tenure" class="form-control form-control-lg" placeholder="Tenure" id="tenure">
+                                <input required  type="text" name="tenure" class="form-control form-control-lg" placeholder="Tenure" id="tenure">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Council</label>
-                                <input type="text" name="council" class="form-control form-control-lg" placeholder="Council" id="council">
+                                <input required  type="text" name="council" class="form-control form-control-lg" placeholder="Council" id="council">
                             </div>
                         </div>
                         <div class="col-lg-4"></div>
@@ -139,19 +140,19 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Boiler Age</label>
-                                <input type="text" name="boiler_age" class="form-control form-control-lg" placeholder="Boiler Age" id="boiler_age">
+                                <input required  type="text" name="boiler_age" class="form-control form-control-lg" placeholder="Boiler Age" id="boiler_age">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Boiler Make</label>
-                                <input type="text" name="boiler_make" class="form-control form-control-lg" placeholder="Boiler Make" id="boiler_make">
+                                <input required  type="text" name="boiler_make" class="form-control form-control-lg" placeholder="Boiler Make" id="boiler_make">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Boiler Model</label>
-                                <input type="text" name="boiler_model" class="form-control form-control-lg" placeholder="Boiler Model" id="boiler_model">
+                                <input required  type="text" name="boiler_model" class="form-control form-control-lg" placeholder="Boiler Model" id="boiler_model">
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -205,7 +206,7 @@
                             <label for="notes">Drag & Drop Files Here</label>
                                 <div id="drop-area" class="drop-area">
                                     <!-- <h3 class="drop-text">Drag & Drop Files Here</h3> -->
-                                    <input type="file" id="fileInput" multiple>
+                                    <input required  type="file" name="images[]" id="images" multiple>
                                 </div>
                         </div>
                         <div class="col-lg-12">
@@ -228,3 +229,4 @@
         <!-- content-wrapper ends -->
 
 <?= $this->endSection() ?>
+
