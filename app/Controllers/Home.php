@@ -57,7 +57,7 @@ class Home extends BaseController
             if($password == $pass){
                 $ses_data = [
                     'id' => $data['id'],
-                    'name' => $data['fname'],
+                    'fname' => $data['fname'],
                     'email' => $data['email'],
                     'isLoggedIn' => TRUE
                 ];
@@ -91,6 +91,23 @@ class Home extends BaseController
 
 
     }
+
+    public function store(){
+
+    $userModel = new UserModel();
+    $data = [
+        'fname'=> $this->request->getVar('fname'),
+        'lname'=> $this->request->getVar('lname'),
+        'email'=> $this->request->getVar('email'),
+        'phone'=> $this->request->getVar('phone'),
+        'center_name'=> $this->request->getVar('center_name'),
+        'location'=> $this->request->getVar('location'),
+        'password'=> $this->request->getVar('password')
+    ];
+    $userModel->save($data);
+    return redirect()->to('/');
+  }
+
 
 
 }
