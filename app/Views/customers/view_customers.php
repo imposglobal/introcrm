@@ -78,7 +78,7 @@
                                                 <?= $customer['lead_id'] ?>
                                             </td>
                                             <td>
-                                            <a href="<?php echo base_url('edit-view/'.$customer['lead_id']);?>" class="btn btn-primary btn-sm">Edit</a>
+                                            <a href="<?php echo base_url('customer/update/'.$customer['lead_id']);?>" class="btn btn-primary btn-sm">Edit</a>
                                             <a href="<?php echo base_url('delete/'.$customer['lead_id']);?>" class="btn btn-danger btn-sm">Delete</a>
                                             </td>
                                         </tr>
