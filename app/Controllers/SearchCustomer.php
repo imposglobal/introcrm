@@ -5,7 +5,7 @@ use CodeIgniter\Controller;
 use App\Models\CustomerModel;
 use CodeIgniter\API\ResponseTrait;
 
-class CustomerView extends BaseController
+class searchCustomer extends BaseController
 {
     use ResponseTrait;
     protected $currentURL;
@@ -29,34 +29,26 @@ class CustomerView extends BaseController
             'baseURL' => $this->baseURL
         ];
     }
-/***********************************************************************************************/
-//view all Customer in Tables
-    public function index(){
-       
-        $customerModel = new CustomerModel();
-        $result['customers'] = $customerModel->orderBy('lead_id ', 'DESC')->findAll();
-        
-        // return view('customers/view_customer', $result);
-        return view('customers/view_customers', $result + $this->data);
 
-    }
-/***********************************************************************************************/
-//search funtionality
-    public function searchCustomer(){
+/**************************************search funtionality*********************************************************/
+
+    public function search(){
         // Get the search query from the request
-        $searchQuery = $this->request->getPost('searchQuery');
-
+        $searchQuery = $this->request->getGet('searchQuery');
+        echo $searchQuery;
         // Search for customers in the database based on email or mobile number
         $customerModel = new CustomerModel();
         $customers = $customerModel
                         ->like('email', $searchQuery)
                         ->orLike('mobile', $searchQuery)
                         ->findAll();
-
+        print_r($customers);
         // Return the search results as JSON
-        return $this->respond($customers);
+        //return $this->respond($customers);
     }
 
 
 /***********************************************************************************************/
+
+
 }
