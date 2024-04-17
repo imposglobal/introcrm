@@ -1,0 +1,13 @@
+CRITICAL - 2024-04-17 08:10:49 --> Error: Undefined constant "default_simple"
+[Method: GET, Route: customer/view]
+in APPPATH\Views\customers\view_customers.php on line 89.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customers/view_customers', [], true)
+ 4 APPPATH\Controllers\CustomerView.php(41): view('customers/view_customers', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CustomerView->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerView))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

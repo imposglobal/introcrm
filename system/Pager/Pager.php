@@ -80,7 +80,7 @@ class Pager implements PagerInterface
      *
      * @param string $template The output template alias to render.
      */
-    public function links(string $group = 'default', string $template = 'default_full'): string
+    public function links(string $group = 'default', string $template = 'full_pagination'): string
     {
         $this->ensureGroup($group);
 
