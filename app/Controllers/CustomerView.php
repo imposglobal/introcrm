@@ -29,19 +29,47 @@ class CustomerView extends BaseController
             'baseURL' => $this->baseURL
         ];
     }
-/***********************************************************************************************/
-//view all Customer in Tables
-    public function index(){
-       
-        $customerModel = new CustomerModel();
-        $result['customers'] = $customerModel->orderBy('lead_id ', 'DESC')->findAll();
-        
-        // return view('customers/view_customer', $result);
-        return view('customers/view_customers', $result + $this->data);
+/*****************************************view all Customer in Tables with pagination******************************************************/
+public function index()
+{
+    $customerModel = new CustomerModel();
 
-    }
-/***********************************************************************************************/
-//search funtionality
+    // Get the current page from the URL segment (default to 1 if not set)
+    $currentPage = $this->request->getVar('page') ?? 1;
+
+    // Define the number of items per page
+    $perPage = 10; // Adjust this value as needed
+
+    // Get customers data with pagination
+    $customers = $customerModel->orderBy('lead_id', 'DESC')
+                               ->paginate($perPage, 'page', $currentPage);
+
+    // Get pagination links
+    $pager = $customerModel->pager;
+
+    // Get the base URL
+    $base = base_url('CustomerView/index'); // Adjust your_controller/index as needed
+
+    // Determine if there are previous and next pages
+    $hasPreviousPage = $currentPage > 1;
+    $hasNextPage = $currentPage < $pager->getLastPage();
+
+    // Pass customers data, pager object, base URL, hasPreviousPage, and hasNextPage to the view
+    $data = [
+        'customers' => $customers,
+        'pager' => $pager,
+        'base' => $base,
+        'hasPreviousPage' => $hasPreviousPage,
+        'hasNextPage' => $hasNextPage,
+    ];
+
+    return view('customers/view_customers', $data + $this->data );
+}
+
+
+
+/**************************************search funtionality*********************************************************/
+
     public function searchCustomer(){
         // Get the search query from the request
         $searchQuery = $this->request->getPost('searchQuery');
@@ -59,4 +87,6 @@ class CustomerView extends BaseController
 
 
 /***********************************************************************************************/
+
+
 }
