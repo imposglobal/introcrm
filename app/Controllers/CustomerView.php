@@ -60,4 +60,26 @@ class CustomerView extends BaseController
 
 
 /***********************************************************************************************/
+
+
+
+
+public function delete($lead_id = null) {
+    $customerModel = new CustomerModel();
+    $result['customers'] = $customerModel->where('lead_id', $lead_id)->delete();
+
+    // Check if the delete operation was successful
+    if ($result['customers']) {
+        // Get the referral URL from the HTTP_REFERER header
+        $referrer = $this->request->getServer('HTTP_REFERER');
+        
+        // Redirect to the referral URL after successful deletion
+        return redirect()->to($referrer);
+    } else {
+        // Handle the case where the delete operation failed
+        return "Error deleting customer with lead_id: $lead_id";
+    }
+}
+
+
 }
