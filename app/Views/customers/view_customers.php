@@ -51,11 +51,12 @@
                                             <th scope="col">Mobile</th>
                                             <th scope="col">Email</th>
                                             <th scope="col">Lead ID</th>
+                                            <th scope="col">Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php $i = 1; ?>
-                                        <?php if ($customers && count($customers) > 0): ?>
+                                        <?php if ($customers && count($customers) > 1): ?>
                                         <?php foreach ($customers as $customer): ?>
                                         <tr>
                                             <td>
@@ -75,6 +76,10 @@
                                             </td>
                                             <td>
                                                 <?= $customer['lead_id'] ?>
+                                            </td>
+                                            <td>
+                                            <a href="<?php echo base_url('edit-view/'.$customer['lead_id']);?>" class="btn btn-primary btn-sm">Edit</a>
+                                            <a href="<?php echo base_url('delete/'.$customer['lead_id']);?>" class="btn btn-danger btn-sm">Delete</a>
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>

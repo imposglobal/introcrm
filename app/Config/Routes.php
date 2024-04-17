@@ -28,3 +28,7 @@ $routes->get('/customer/view', 'CustomerView::index');
 
 //search customer
 $routes->post('/customer/search', 'SearchCustomer::search');
+
+//delete customer
+$routes->get('delete/(:num)', 'CustomerView::delete/$1');
+
