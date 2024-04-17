@@ -36,8 +36,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card-body mt-2">
-                                <h4 class="card-title"><i
-                                        class="mdi mdi-account-multiple-plus bg-primary h4 pt-1 px-2 text-white rounded"></i>
+                                <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
                                     View Customer</h4>
                                 <hr>
 
@@ -46,11 +45,9 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">First Name</th>
-                                            <th scope="col">Last Name</th>
+                                            <th scope="col">Customer Name</th>
                                             <th scope="col">Mobile</th>
                                             <th scope="col">Email</th>
-                                            <th scope="col">Lead ID</th>
                                             <th scope="col">Actions</th>
                                         </tr>
                                     </thead>
@@ -63,10 +60,7 @@
                                                 <?= $i++ ?>
                                             </td>
                                             <td>
-                                                <?= $customer['fname'] ?>
-                                            </td>
-                                            <td>
-                                                <?= $customer['lname'] ?>
+                                                <?= $customer['fname']." ". $customer['lname'] ?>
                                             </td>
                                             <td>
                                                 <?= $customer['mobile'] ?>
@@ -75,11 +69,11 @@
                                                 <?= $customer['email'] ?>
                                             </td>
                                             <td>
-                                                <?= $customer['lead_id'] ?>
-                                            </td>
-                                            <td>
-                                            <a href="<?php echo base_url('customer/update/'.$customer['lead_id']);?>" class="btn btn-primary btn-sm">Edit</a>
-                                            <a href="<?php echo base_url('delete/'.$customer['lead_id']);?>" class="btn btn-danger btn-sm">Delete</a>
+                                            <a href="<?php echo base_url('customer/update/'.$customer['lead_id']);?>" data-toggle="tooltip" data-placement="top" title="view customer"><i class="mdi mdi-account-search bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
+
+                                            <a href="<?php echo base_url('customer/update/'.$customer['lead_id']);?>" data-toggle="tooltip" data-placement="top" title="edit customer"><i class="mdi mdi-account-edit bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
+
+                                            <a href="<?php echo base_url('delete/'.$customer['lead_id']);?>" data-toggle="tooltip" data-placement="top" title="delete customer"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
