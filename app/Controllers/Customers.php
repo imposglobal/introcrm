@@ -58,6 +58,7 @@ public function store()
     if ($result !== null && $result['email'] === $email) {
         $status = "duplicate";
     } else {
+        //for image uploading
         $imageNames = []; // Initialize an array to hold image names
         if ($this->request->getFileMultiple('images')) {
             foreach ($this->request->getFileMultiple('images') as $file) {
@@ -106,5 +107,22 @@ public function store()
 }
 
 /****************************************************************************************************/
+public function update($lead_id){
+    $session = session();
+    $center = $session->get('center');
+    $name = $session->get('fname') . " " . $session->get('lname');
+    $aid = $session->get('id');
 
+    $customerModel = new CustomerModel();
+    $result = $customerModel->where('lead_id', $lead_id)->first();
+
+    $viewData = [
+        'result' => $result,
+        'center' => $center,
+        'name' => $name,
+        'aid' => $aid,
+    ];
+
+    return view('customers/edit_customer', $viewData + $this->data);
+}
 }
