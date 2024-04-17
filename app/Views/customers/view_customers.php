@@ -64,19 +64,19 @@
                                                 <?= $i++ ?>
                                             </td>
                                             <td>
-                                                <?= $customer['fname'] ?>
+                                                <?php echo $customer['fname'] ?>
                                             </td>
                                             <td>
-                                                <?= $customer['lname'] ?>
+                                                <?php echo $customer['lname'] ?>
                                             </td>
                                             <td>
-                                                <?= $customer['mobile'] ?>
+                                                <?php echo $customer['mobile'] ?>
                                             </td>
                                             <td>
-                                                <?= $customer['email'] ?>
+                                                <?php echo $customer['email'] ?>
                                             </td>
                                             <td>
-                                                <?= $customer['lead_id'] ?>
+                                                <?php echo $customer['lead_id'] ?>
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
