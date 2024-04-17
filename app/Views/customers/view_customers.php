@@ -85,42 +85,10 @@
                                         <?php endif; ?>
                                     </tbody>
                                 </table>
+                                
 
-                                <nav aria-label="...">
-                                    <ul class="pagination">
-                                        <!-- Previous Page Link -->
-                                        <?php if ($hasPreviousPage) : ?>
-                                        <li class="page-item">
-                                            <a class="page-link" href="<?= $base ?>?page=<?= $currentPage - 1 ?>"
-                                                aria-label="Previous">
-                                                <span aria-hidden="true">&laquo;</span>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                        </li>
-                                        <?php else : ?>
-                                        <li class="page-item disabled">
-                                            <span class="page-link" aria-hidden="true">&laquo;</span>
-                                        </li>
-                                        <?php endif; ?>
-
-                                        <!-- Next Page Link -->
-                                        <?php if ($hasNextPage) : ?>
-                                        <li class="page-item">
-                                            <a class="page-link" href="<?= $base ?>?page=<?= $currentPage + 1 ?>"
-                                                aria-label="Next">
-                                                <span aria-hidden="true">&raquo;</span>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </li>
-                                        <?php else : ?>
-                                        <li class="page-item disabled">
-                                            <span class="page-link" aria-hidden="true">&raquo;</span>
-                                        </li>
-                                        <?php endif; ?>
-                                    </ul>
-                                </nav>
-
-                                <!-- table code end -->
+                                
+                         <!-- table code end -->
                             </div>
                         </div>
 
@@ -128,7 +96,9 @@
                 </div>
             </div>
 
-
+            <div>
+                <?php echo $pager->links('default','full_pagination');?>
+            </div>
         </div>
     </div>
     <!-- content-wrapper ends -->
