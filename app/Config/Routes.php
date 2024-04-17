@@ -25,3 +25,6 @@ $routes->POST('/customer/add', 'Customers::store');
 
 //view customer
 $routes->get('/customer/view', 'CustomerView::index');
+
+//search customer
+$routes->post('/customer/search', 'SearchCustomer::search');
