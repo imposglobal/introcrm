@@ -443,3 +443,148 @@ in APPPATH\Views\customers\view_customers.php on line 92.
  9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-17 05:49:41 --> ErrorException: Undefined variable $paginationLinks
+[Method: POST, Route: customer/search]
+in APPPATH\Views\customers\view_customers.php on line 92.
+ 1 APPPATH\Views\customers\view_customers.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paginationLinks', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php', 92)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customers/view_customers', [], true)
+ 5 APPPATH\Controllers\CustomerView.php(40): view('customers/view_customers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CustomerView->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerView))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-17 05:50:41 --> ErrorException: Undefined variable $paginationLinks
+[Method: POST, Route: customer/search]
+in APPPATH\Views\customers\view_customers.php on line 92.
+ 1 APPPATH\Views\customers\view_customers.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paginationLinks', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php', 92)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customers/view_customers', [], true)
+ 5 APPPATH\Controllers\CustomerView.php(40): view('customers/view_customers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CustomerView->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerView))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-17 05:50:46 --> ErrorException: Undefined variable $paginationLinks
+[Method: POST, Route: customer/search]
+in APPPATH\Views\customers\view_customers.php on line 92.
+ 1 APPPATH\Views\customers\view_customers.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paginationLinks', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php', 92)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customers/view_customers', [], true)
+ 5 APPPATH\Controllers\CustomerView.php(40): view('customers/view_customers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CustomerView->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerView))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-17 05:52:59 --> ErrorException: Undefined variable $paginationLinks
+[Method: POST, Route: customer/search]
+in APPPATH\Views\customers\view_customers.php on line 92.
+ 1 APPPATH\Views\customers\view_customers.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paginationLinks', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php', 92)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customers/view_customers', [], true)
+ 5 APPPATH\Controllers\CustomerView.php(40): view('customers/view_customers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CustomerView->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerView))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-17 05:53:00 --> ErrorException: Undefined variable $paginationLinks
+[Method: POST, Route: customer/search]
+in APPPATH\Views\customers\view_customers.php on line 92.
+ 1 APPPATH\Views\customers\view_customers.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paginationLinks', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php', 92)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customers/view_customers', [], true)
+ 5 APPPATH\Controllers\CustomerView.php(40): view('customers/view_customers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CustomerView->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerView))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-17 05:53:35 --> ErrorException: Undefined variable $paginationLinks
+[Method: POST, Route: customer/search]
+in APPPATH\Views\customers\view_customers.php on line 92.
+ 1 APPPATH\Views\customers\view_customers.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paginationLinks', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php', 92)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customers/view_customers', [], true)
+ 5 APPPATH\Controllers\CustomerView.php(40): view('customers/view_customers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CustomerView->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerView))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-17 05:53:37 --> ErrorException: Undefined variable $paginationLinks
+[Method: POST, Route: customer/search]
+in APPPATH\Views\customers\view_customers.php on line 92.
+ 1 APPPATH\Views\customers\view_customers.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paginationLinks', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php', 92)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customers/view_customers', [], true)
+ 5 APPPATH\Controllers\CustomerView.php(40): view('customers/view_customers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CustomerView->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerView))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-17 05:53:38 --> ErrorException: Undefined variable $paginationLinks
+[Method: POST, Route: customer/search]
+in APPPATH\Views\customers\view_customers.php on line 92.
+ 1 APPPATH\Views\customers\view_customers.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paginationLinks', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php', 92)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customers/view_customers', [], true)
+ 5 APPPATH\Controllers\CustomerView.php(40): view('customers/view_customers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CustomerView->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerView))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-17 05:54:06 --> TypeError: CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in C:\xampp\htdocs\introcrm\system\Model.php on line 918
+[Method: POST, Route: customer/search]
+in SYSTEMPATH\Database\BaseBuilder.php on line 987.
+ 1 SYSTEMPATH\Model.php(918): CodeIgniter\Database\BaseBuilder->like('email', null)
+ 2 APPPATH\Controllers\CustomerView.php(52): CodeIgniter\Model->__call('like', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CustomerView->searchCustomer()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerView))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-17 05:54:08 --> TypeError: CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in C:\xampp\htdocs\introcrm\system\Model.php on line 918
+[Method: POST, Route: customer/search]
+in SYSTEMPATH\Database\BaseBuilder.php on line 987.
+ 1 SYSTEMPATH\Model.php(918): CodeIgniter\Database\BaseBuilder->like('email', null)
+ 2 APPPATH\Controllers\CustomerView.php(52): CodeIgniter\Model->__call('like', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CustomerView->searchCustomer()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerView))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-17 05:54:22 --> TypeError: CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in C:\xampp\htdocs\introcrm\system\Model.php on line 918
+[Method: POST, Route: customer/search]
+in SYSTEMPATH\Database\BaseBuilder.php on line 987.
+ 1 SYSTEMPATH\Model.php(918): CodeIgniter\Database\BaseBuilder->like('email', null)
+ 2 APPPATH\Controllers\CustomerView.php(52): CodeIgniter\Model->__call('like', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CustomerView->searchCustomer()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerView))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
