@@ -100,7 +100,9 @@ public function store()
         $status = "added";
     }
 
-    return view('customers/add_customer', ['status' => $status] + $this->data);
+    return redirect()->to('customer?status=' . urlencode($status));
+
+
 }
 
 /****************************************************************************************************/

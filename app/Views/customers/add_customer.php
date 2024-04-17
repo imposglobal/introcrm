@@ -31,7 +31,11 @@
         <div class="content-wrapper">
           <div class="row">
             <div class="col-lg-12">
-            <?php if (isset($status)){ 
+            <?php 
+            if(isset($_GET['status'])){
+                $status = $_GET['status'];
+            }
+            if (isset($status)){ 
                 if($status === "duplicate"){
                 ?>
                   <div class="alert alert-warning alert-dismissible fade show" role="alert">
