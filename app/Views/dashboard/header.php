@@ -39,12 +39,12 @@
         <ul class="navbar-nav mr-lg-2">
           <li class="nav-item nav-search d-none d-lg-block">
             <div class="input-group">
-              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+              <input type="text" class="bg-primary text-white form-control border px-4 border-rounded" id="navbar-search-input" placeholder="Check Duplicate Email or Mobile No" aria-label="search" aria-describedby="search">
+              <div class="input-group-prepend hover-cursor ml-2" id="duplicatechk">
                 <span class="input-group-text" id="search">
                   <i class="icon-search"></i>
                 </span>
               </div>
-              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
             </div>
           </li>
         </ul>
