@@ -29,34 +29,25 @@ class CustomerView extends BaseController
             'baseURL' => $this->baseURL
         ];
     }
-/***********************************************************************************************/
-//view all Customer in Tables
+
     public function index(){
        
-        $customerModel = new CustomerModel();
-        $result['customers'] = $customerModel->orderBy('lead_id ', 'DESC')->findAll();
+    //     $customerModel = new CustomerModel();
+    //     $result['customers'] = $customerModel->orderBy('lead_id ', 'DESC')->findAll();
         
-        // return view('customers/view_customer', $result);
-        return view('customers/view_customers', $result + $this->data);
+    //     // return view('customers/view_customer', $result);
+    //     return view('customers/view_customers', $result + $this->data);
 
     }
-/***********************************************************************************************/
-//search funtionality
-    public function searchCustomer(){
-        // Get the search query from the request
-        $searchQuery = $this->request->getPost('searchQuery');
 
-        // Search for customers in the database based on email or mobile number
-        $customerModel = new CustomerModel();
-        $customers = $customerModel
-                        ->like('email', $searchQuery)
-                        ->orLike('mobile', $searchQuery)
-                        ->findAll();
+   
 
-        // Return the search results as JSON
-        return $this->respond($customers);
-    }
+    
+
+   
+  
 
 
-/***********************************************************************************************/
+
 }
+
