@@ -23,6 +23,11 @@
   <link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="<?php echo $baseURL; ?>/assets/images/favicon.png" />
+  <style>
+    #searchQuery::placeholder{
+      color: #ffffff61;
+    }
+  </style>
 </head>
 <body>
   <div class="container-scroller">
@@ -39,9 +44,9 @@
         <ul class="navbar-nav mr-lg-2">
           <li class="nav-item nav-search d-none d-lg-block">
             <div class="input-group">
-              <input type="text" class="bg-primary text-white form-control border px-4 border-rounded" id="navbar-search-input" placeholder="Check Duplicate Email or Mobile No" aria-label="search" aria-describedby="search">
+              <input style="border-radius: 10px;" type="text" class="bg-primary text-white form-control border px-4 border-rounded" id="searchQuery" placeholder="Check Duplicate Email or Mobile No" aria-label="search" aria-describedby="search">
               <div class="input-group-prepend hover-cursor ml-2" id="duplicatechk">
-                <span class="input-group-text" id="search">
+                <span class="input-group-text" id="searchCustomer">
                   <i class="icon-search"></i>
                 </span>
               </div>

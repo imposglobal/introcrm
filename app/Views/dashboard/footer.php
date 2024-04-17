@@ -33,9 +33,65 @@
   <!-- Custom js for this page-->
   <script src="<?php echo $baseURL; ?>/assets/js/dashboard.js"></script>
   <script src="<?php echo $baseURL; ?>/assets/js/Chart.roundedBarCharts.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <!-- End custom js for this page-->
-</body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
+    <script>
+        $(document).ready(function(){
+            // Event handler for the search button click
+            $("#searchCustomer").click(function(){
+                // Get the search query from the input field
+                var searchQuery = $("#searchQuery").val();
+                if (searchQuery.trim() === "") {
+                    // If the search query is empty, show an error message
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error!',
+                        text: 'Please enter an email address to search for the customer.',
+                    });
+                    return; // Exit the function
+                }
+
+                // Construct the URL with the search query
+                var url = "http://localhost/introcrm/customer/search?searchQuery=" + searchQuery;
+
+                // Make the AJAX request
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    dataType: "json", // Assuming the response is in JSON format
+                    success: function(response) {
+                        if(response.message == "No Duplicate Customer Found"){
+                          Swal.fire({
+                            icon: 'success',
+                            title: response.message,
+                            text: searchQuery + ' Not Found in database.',
+                        });
+                        }else{
+                          Swal.fire({
+                            icon: 'warning',
+                            title: response.message,
+                            text: searchQuery + ' Found in database.',
+                        });
+                        }
+                        
+                        // For example, you can update the DOM with the response data
+                        $("#result").html(JSON.stringify(response));
+                    },
+                    error: function(xhr, status, error) {
+                        // Handle errors here
+                        // Display an error message using SweetAlert2
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error!',
+                            text: 'There was an error with your AJAX request.',
+                        });
+                        console.error("Error:", error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
 </html>
 

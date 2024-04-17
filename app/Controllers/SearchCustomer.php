@@ -35,16 +35,29 @@ class searchCustomer extends BaseController
     public function search(){
         // Get the search query from the request
         $searchQuery = $this->request->getGet('searchQuery');
-        echo $searchQuery;
+
         // Search for customers in the database based on email or mobile number
         $customerModel = new CustomerModel();
         $customers = $customerModel
                         ->like('email', $searchQuery)
                         ->orLike('mobile', $searchQuery)
                         ->findAll();
-        print_r($customers);
-        // Return the search results as JSON
-        //return $this->respond($customers);
+        
+
+        // Check if any customers were found
+        if (!empty($customers)) {
+            // Customers found, return "Duplicate"
+            $response = ['message' => 'Duplicate Customer Found'];
+        } else {
+            // No customers found, return "No Duplicate"
+            $response = ['message' => 'No Duplicate Customer Found'];
+        }
+
+        // Convert the response array to JSON
+        $jsonResponse = json_encode($response);
+
+        // Output the JSON response
+        echo $jsonResponse;
     }
 
 
