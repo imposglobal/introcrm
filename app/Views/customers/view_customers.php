@@ -41,9 +41,7 @@
                                     View Customer</h4>
                                 <hr>
 
-                                <!-- table code -->
-
-                                <!-- Display customers data -->
+                                <!-- table code start -->
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -52,31 +50,31 @@
                                             <th scope="col">Last Name</th>
                                             <th scope="col">Mobile</th>
                                             <th scope="col">Email</th>
-                                            <th scope="col">Action</th>
+                                            <th scope="col">Lead ID</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php $i = 1; ?>
-                                        <?php if ($customers): ?>
+                                        <?php if ($customers && count($customers) > 0): ?>
                                         <?php foreach ($customers as $customer): ?>
                                         <tr>
                                             <td>
                                                 <?= $i++ ?>
                                             </td>
                                             <td>
-                                                <?php echo $customer['fname'] ?>
+                                                <?= $customer['fname'] ?>
                                             </td>
                                             <td>
-                                                <?php echo $customer['lname'] ?>
+                                                <?= $customer['lname'] ?>
                                             </td>
                                             <td>
-                                                <?php echo $customer['mobile'] ?>
+                                                <?= $customer['mobile'] ?>
                                             </td>
                                             <td>
-                                                <?php echo $customer['email'] ?>
+                                                <?= $customer['email'] ?>
                                             </td>
                                             <td>
-                                                <?php echo $customer['lead_id'] ?>
+                                                <?= $customer['lead_id'] ?>
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
@@ -88,13 +86,41 @@
                                     </tbody>
                                 </table>
 
-                                <!-- Display pagination links -->
-                                <?= $paginationLinks ?>
+                                <nav aria-label="...">
+                                    <ul class="pagination">
+                                        <!-- Previous Page Link -->
+                                        <?php if ($hasPreviousPage) : ?>
+                                        <li class="page-item">
+                                            <a class="page-link" href="<?= $base ?>?page=<?= $currentPage - 1 ?>"
+                                                aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                        </li>
+                                        <?php else : ?>
+                                        <li class="page-item disabled">
+                                            <span class="page-link" aria-hidden="true">&laquo;</span>
+                                        </li>
+                                        <?php endif; ?>
 
+                                        <!-- Next Page Link -->
+                                        <?php if ($hasNextPage) : ?>
+                                        <li class="page-item">
+                                            <a class="page-link" href="<?= $base ?>?page=<?= $currentPage + 1 ?>"
+                                                aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </li>
+                                        <?php else : ?>
+                                        <li class="page-item disabled">
+                                            <span class="page-link" aria-hidden="true">&raquo;</span>
+                                        </li>
+                                        <?php endif; ?>
+                                    </ul>
+                                </nav>
 
                                 <!-- table code end -->
-
-
                             </div>
                         </div>
 
