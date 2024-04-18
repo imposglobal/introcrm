@@ -73,8 +73,8 @@
 
                                             <a href="<?php echo base_url('customer/update/'.$customer['lead_id']);?>" data-toggle="tooltip" data-placement="top" title="edit customer"><i class="mdi mdi-account-edit bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
 
-                                            <a href="<?php echo base_url('delete/'.$customer['lead_id']);?>" data-toggle="tooltip" data-placement="top" title="delete customer"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
-                                            </td>
+                                            <a href="<?php echo base_url('delete/'.$customer['lead_id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delete customer"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
+
                                         </tr>
                                         <?php endforeach; ?>
                                         <?php else: ?>
@@ -95,11 +95,36 @@
                 </div>
             </div>
 
-            <div>
+            <div class="col-lg-12">
                 <?php echo $pager->links('default','full_pagination');?>
             </div>
         </div>
     </div>
     <!-- content-wrapper ends -->
+    <script>
+    function confirmDelete(link) {
+        event.preventDefault(); // Prevent the default behavior of the link
 
+        const deleteUrl = link.getAttribute('href'); // Get the URL to delete
+
+        // Show Sweet Alert confirmation
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this customer!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // If user confirms deletion, redirect to the delete URL
+                window.location.href = deleteUrl;
+            } else {
+                // If user cancels deletion, do nothing
+                Swal.fire("Cancelled", "Your customer is safe!", "info");
+            }
+        });
+    }
+</script>
     <?= $this->endSection() ?>
