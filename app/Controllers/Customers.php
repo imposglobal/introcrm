@@ -107,22 +107,26 @@ public function store()
 }
 
 /****************************************************************************************************/
-public function update($lead_id){
+public function showCustomer($lead_id){
     $session = session();
     $center = $session->get('center');
     $name = $session->get('fname') . " " . $session->get('lname');
     $aid = $session->get('id');
+    $email = $this->request->getPost('email');
 
     $customerModel = new CustomerModel();
     $result = $customerModel->where('lead_id', $lead_id)->first();
-
     $viewData = [
         'result' => $result,
         'center' => $center,
         'name' => $name,
         'aid' => $aid,
+        // 'status'=>$status,
     ];
 
     return view('customers/edit_customer', $viewData + $this->data);
 }
+
+
+
 }

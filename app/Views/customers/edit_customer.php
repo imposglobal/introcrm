@@ -31,24 +31,7 @@
         <div class="content-wrapper">
           <div class="row">
             <div class="col-lg-12">
-            <?php if (isset($status)){ 
-                if($status === "duplicate"){
-                ?>
-                  <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                      Duplicate Record Found
-                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                <?php }elseif($status == "added"){ ?>
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                      Record Added Successfully
-                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-
-                <?php } } ?>
+            
                 
             </div>
             <div class="col-12 grid-margin stretch-card">
@@ -58,8 +41,25 @@
                     <div class="card-body mt-2">
                       <h4 class="card-title"><i class="mdi mdi-account-multiple-plus bg-primary h4 pt-1 px-2 text-white rounded"></i> Update Customer</h4>
                       <hr>
-                      <form action="<?php echo base_url('/customer/add')?>" method="POST" enctype="multipart/form-data">
+                      <form action="<?php echo base_url('/customer/update')?>" method="POST" enctype="multipart/form-data">
                       <div class="row">
+                      <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Lead ID</label>
+                                <input required  type="text" value="<?= $result['lead_id'] ?>" name="lead_id" class="form-control form-control-lg" placeholder="Lead ID" id="lead_id" readonly>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Lead Date</label>
+                                <input required  type="text" value="<?= $result['lead_date'] ?>" name="lead_date" class="form-control form-control-lg" placeholder="Lead Date" id="lead_date">
+                            </div>
+                        </div>
+                      <!-- hr line tag -->
+                        <div class="col-lg-12">
+                            <hr>
+                        </div>
+                      <!-- hr line tag -->
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>First Name</label>
@@ -96,7 +96,7 @@
                                 <input required  type="date" name="dob" value="<?= $result['dob'] ?>" class="form-control form-control-lg" placeholder="Customer Telephone No" id="dob">
                             </div>
                         </div>
-                        
+            
                         <div class="col-lg-12">
                             <hr>
                         </div>
@@ -198,6 +198,85 @@
                         <div class="col-lg-12">
                             <hr>
                         </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Survey Status</label>
+                                <input required  type="text" name="survey_status" value="<?= $result['survey_status'] ?>" class="form-control form-control-lg" placeholder="Survey Status" id="survey_status">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Job Status</label>
+                                <input required  type="text" name="job_status" value="<?= $result['job_status'] ?>" class="form-control form-control-lg" placeholder="Job Status" id="job_status">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Payment Status</label>
+                                <input required  type="text" name="payment_status" value="<?= $result['payment_status'] ?>" class="form-control form-control-lg" placeholder="Payment Status" id="payment_status">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <hr>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Measures</label>
+                                <input required  type="text" name="measures" value="<?= $result['measures'] ?>" class="form-control form-control-lg" placeholder="Measures" id="measures">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <hr>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>EPC Link</label>
+                                <input required  type="text" name="epc_link" value="<?= $result['epc_link'] ?>" class="form-control form-control-lg" placeholder="EPC Link" id="epc_link">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Gas Safe Link</label>
+                                <input required  type="text" name="gas_safe_link" value="<?= $result['gas_safe_link'] ?>" class="form-control form-control-lg" placeholder="Gas Safe Link" id="gas_safe_link">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Boiler Efficiency Link</label>
+                                <input required  type="text" name="boiler_efficiency_link" value="<?= $result['boiler_efficiency_link'] ?>" class="form-control form-control-lg" placeholder="Boiler Efficiency Link" id="boiler_efficiency_link">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <hr>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="notes">Processing Notes</label>
+                                <textarea class="form-control" id="processing_notes" name="processing_notes" rows="8"><?= $result['processing_notes'] ?></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <hr>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="notes">Previous Grant/Work</label>
+                                <textarea class="form-control" id="previous_grant_work" name="previous_grant_work" rows="8"><?= $result['previous_grant_work'] ?></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <hr>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="notes">Call Center Notes</label>
+                                <textarea class="form-control" id="contact_center_notes" name="contact_center_notes" rows="8"><?= $result['contact_center_notes'] ?></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <hr>
+                        </div>
+
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="notes">Additional Notes</label>
@@ -207,7 +286,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <label for="notes">Drag & Drop Files Here</label>
+                            <label for="notes">View or upload Documents</label>
                                 <div id="drop-area" class="drop-area">
                                     <!-- <h3 class="drop-text">Drag & Drop Files Here</h3> -->
                                     <input  accept="image/*,.pdf" required  type="file" name="images[]"  id="images" multiple>
@@ -215,7 +294,7 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary py-3 px-5">Update Customer</button>
+                                <button type="submit" class="btn btn-primary py-3 px-5">Save And Update </button>
                             </div>
                         </div>
                       </div>
