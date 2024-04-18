@@ -60,7 +60,7 @@
                 <div class="col-md-6 mb-4 stretch-card transparent">
                   <div class="card card-dark-blue">
                     <div class="card-body">
-                      <p class="mb-4">Total Bookings</p>
+                      <p class="mb-4">Total Customers</p>
                       <p class="fs-30 mb-2"><?= $totalCustomer; ?></p>
                       <p>22.00% (30 days)</p>
                     </div>
@@ -71,8 +71,8 @@
                 <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                   <div class="card card-light-blue">
                     <div class="card-body">
-                      <p class="mb-4">Number of Meetings</p>
-                      <p class="fs-30 mb-2">34040</p>
+                      <p class="mb-4">Accepted</p>
+                      <p class="fs-30 mb-2">1</p>
                       <p>2.00% (30 days)</p>
                     </div>
                   </div>
@@ -80,8 +80,8 @@
                 <div class="col-md-6 stretch-card transparent">
                   <div class="card card-light-danger">
                     <div class="card-body">
-                      <p class="mb-4">Number of Clients</p>
-                      <p class="fs-30 mb-2">47033</p>
+                      <p class="mb-4">Rejected</p>
+                      <p class="fs-30 mb-2">5</p>
                       <p>0.22% (30 days)</p>
                     </div>
                   </div>
@@ -89,6 +89,64 @@
               </div>
             </div>
           </div>
+          
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="card card-light-blue">
+                <div class="card-body">
+                  <p class="mb-4">DWP Submitted</p>
+                  <p class="fs-30 mb-2">5</p>
+                  <p>0.22% (30 days)</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card card-light-danger">
+                <div class="card-body">
+                  <p class="mb-4">DWP Passed</p>
+                  <p class="fs-30 mb-2">6</p>
+                  <p>0.22% (30 days)</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card card-dark-blue">
+                <div class="card-body">
+                  <p class="mb-4">Completed</p>
+                  <p class="fs-30 mb-2">4</p>
+                  <p>0.22% (30 days)</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card card-tale">
+                <div class="card-body">
+                  <p class="mb-4">Paid</p>
+                  <p class="fs-30 mb-2">50</p>
+                  <p>0.22% (30 days)</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 my-3">
+              <div class="card card-tale">
+                <div class="card-body">
+                  <p class="mb-4">Callback</p>
+                  <p class="fs-30 mb-2">8</p>
+                  <p>0.22% (30 days)</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 my-3">
+              <div class="card card-dark-blue">
+                <div class="card-body">
+                  <p class="mb-4">Retransfer</p>
+                  <p class="fs-30 mb-2">12</p>
+                  <p>0.22% (30 days)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <div class="row">
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
