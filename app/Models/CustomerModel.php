@@ -7,6 +7,7 @@ class CustomerModel extends Model{
     protected $primarykey = 'lead_id';
     
     protected $allowedFields = [
+        'lead_id',
         'lead_date',
         'center_name',
         'fname',
