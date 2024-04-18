@@ -190,6 +190,7 @@ public function update()
             'survey_status' => $this->request->getPost('survey_status'),
             'job_status' => $this->request->getPost('job_status'),
             'payment_status' => $this->request->getPost('payment_status'),
+            'status' => $this->request->getPost('status'),
             'measures' => $this->request->getPost('measures'),
             'epc_link' => $this->request->getPost('epc_link'),
             'gas_safe_link' => $this->request->getPost('gas_safe_link'),
