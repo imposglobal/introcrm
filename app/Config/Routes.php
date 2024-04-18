@@ -32,8 +32,8 @@ $routes->post('/customer/search', 'SearchCustomer::search');
 //delete customer
 $routes->get('delete/(:num)', 'CustomerView::delete/$1');
 
-//update  customer
+//show  customer
 $routes->get('/customer/(:num)', 'Customers::showCustomer/$1');
-//view updated  customer
+// updated  customer
 $routes->post('/customer/update', 'Customers::update');
 
