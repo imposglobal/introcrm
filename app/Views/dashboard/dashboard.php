@@ -61,7 +61,7 @@
                   <div class="card card-dark-blue">
                     <div class="card-body">
                       <p class="mb-4">Total Bookings</p>
-                      <p class="fs-30 mb-2">61344</p>
+                      <p class="fs-30 mb-2"><?= $totalCustomer; ?></p>
                       <p>22.00% (30 days)</p>
                     </div>
                   </div>
