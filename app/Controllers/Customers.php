@@ -90,7 +90,7 @@ public function store()
             'boiler_model' => $this->request->getPost('boiler_model'),
             'benefit_flex' => $this->request->getPost('benefit'),
             'epc_rating' => $this->request->getPost('epc'),
-            'additional_notes' => $this->request->getPost('additional_notes'),
+            'additional_notes' => $this->request->getPost('add_notes'),
             'created_agent_date' => $this->request->getPost('created_agent_date'),
             'agent_name' => $name,
             'userid' => $id

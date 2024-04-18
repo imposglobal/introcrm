@@ -2,7 +2,7 @@
 <?= $this->extend('layout/layout') ?>
 <!-- Define the content section -->
 <?= $this->section('content') ?>
-<title>Add Customer</title>
+<title>Edit Customer</title>
 <style>
     .drop-area {
     border: 2px dashed #ccc;
@@ -56,7 +56,7 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="card-body mt-2">
-                      <h4 class="card-title"><i class="mdi mdi-account-multiple-plus bg-primary h4 pt-1 px-2 text-white rounded"></i> Add Customer</h4>
+                      <h4 class="card-title"><i class="mdi mdi-account-multiple-plus bg-primary h4 pt-1 px-2 text-white rounded"></i> Update Customer</h4>
                       <hr>
                       <form action="<?php echo base_url('/customer/add')?>" method="POST" enctype="multipart/form-data">
                       <div class="row">
@@ -81,19 +81,19 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Mobile</label>
-                                <input required  type="text" name="mobile" class="form-control form-control-lg" placeholder="Customer Mobile No" id="mobile">
+                                <input required  type="text" name="mobile" value="<?= $result['mobile'] ?>" class="form-control form-control-lg" placeholder="Customer Mobile No" id="mobile">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Telephone</label>
-                                <input required  type="text" name="telephone" class="form-control form-control-lg" placeholder="Customer Telephone No" id="telephone">
+                                <input required  type="text" name="telephone" value="<?= $result['telephone'] ?>" class="form-control form-control-lg" placeholder="Customer Telephone No" id="telephone">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>DOB</label>
-                                <input required  type="date" name="dob" class="form-control form-control-lg" placeholder="Customer Telephone No" id="dob">
+                                <input required  type="date" name="dob" value="<?= $result['dob'] ?>" class="form-control form-control-lg" placeholder="Customer Telephone No" id="dob">
                             </div>
                         </div>
                         
@@ -103,19 +103,19 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Address 1</label>
-                                <input required  type="text" name="address_1" class="form-control form-control-lg" placeholder="Customer Address 1" id="address_1">
+                                <input required  type="text" name="address_1" value="<?= $result['address_1'] ?>" class="form-control form-control-lg" placeholder="Customer Address 1" id="address_1">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Address 2</label>
-                                <input required  type="text" name="address_2" class="form-control form-control-lg" placeholder="Customer Address " id="address_2">
+                                <input required  type="text" name="address_2" value="<?= $result['address_2'] ?>" class="form-control form-control-lg" placeholder="Customer Address " id="address_2">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Post Code</label>
-                                <input required  type="text" name="post_code" class="form-control form-control-lg" placeholder="Post Code" id="postcode">
+                                <input required  type="text" name="post_code" value="<?= $result['post_code'] ?>" class="form-control form-control-lg" placeholder="Post Code" id="postcode">
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -124,13 +124,13 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Tenure</label>
-                                <input required  type="text" name="tenure" class="form-control form-control-lg" placeholder="Tenure" id="tenure">
+                                <input required  type="text" name="tenure" value="<?= $result['tenure'] ?>" class="form-control form-control-lg" placeholder="Tenure" id="tenure">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Council</label>
-                                <input required  type="text" name="council" class="form-control form-control-lg" placeholder="Council" id="council">
+                                <input required  type="text" name="council" value="<?= $result['council'] ?>" class="form-control form-control-lg" placeholder="Council" id="council">
                             </div>
                         </div>
                         <div class="col-lg-4"></div>
@@ -140,19 +140,19 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Boiler Age</label>
-                                <input required  type="text" name="boiler_age" class="form-control form-control-lg" placeholder="Boiler Age" id="boiler_age">
+                                <input required  type="text" name="boiler_age" value="<?= $result['boiler_age'] ?>" class="form-control form-control-lg" placeholder="Boiler Age" id="boiler_age">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Boiler Make</label>
-                                <input required  type="text" name="boiler_make" class="form-control form-control-lg" placeholder="Boiler Make" id="boiler_make">
+                                <input required  type="text" name="boiler_make" value="<?= $result['boiler_make'] ?>" class="form-control form-control-lg" placeholder="Boiler Make" id="boiler_make">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Boiler Model</label>
-                                <input required  type="text" name="boiler_model" class="form-control form-control-lg" placeholder="Boiler Model" id="boiler_model">
+                                <input required  type="text" name="boiler_model" value="<?= $result['boiler_model'] ?>" class="form-control form-control-lg" placeholder="Boiler Model" id="boiler_model">
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -161,7 +161,8 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Benefit / Flex</label>
-                                <select name="benefit" id="benefit" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <select name="benefit" id="benefit"  class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option selected value="<?= $result['benefit_flex'] ?>"><?= $result['benefit_flex'] ?></option>
                                 <option value="Universal credit">Universal credit</option>
                                 <option value="Income Support">Income Support </option>
                                 <option value="Pension Credit">Pension Credit </option>
@@ -183,6 +184,7 @@
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">EPC Rating</label>
                                 <select name="epc" id="epc" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option selected value="<?= $result['epc_rating'] ?>"><?= $result['epc_rating'] ?></option>
                                 <option value="A">A</option>
                                 <option value="B">B </option>
                                 <option value="C">C </option>
@@ -199,19 +201,21 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="notes">Additional Notes</label>
-                                <textarea class="form-control" id="add_notes" name="add_notes" rows="8"></textarea>
+                                <!-- <textarea class="form-control" id="add_notes" name="add_notes" value="<?= $result['additional_notes'] ?>" rows="8"></textarea> -->
+                                <textarea class="form-control" id="add_notes" name="add_notes" rows="8"><?= $result['additional_notes'] ?></textarea>
+
                             </div>
                         </div>
                         <div class="col-md-12">
                             <label for="notes">Drag & Drop Files Here</label>
                                 <div id="drop-area" class="drop-area">
                                     <!-- <h3 class="drop-text">Drag & Drop Files Here</h3> -->
-                                    <input  accept="image/*,.pdf" required  type="file" name="images[]" id="images" multiple>
+                                    <input  accept="image/*,.pdf" required  type="file" name="images[]"  id="images" multiple>
                                 </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary py-3 px-5">Add Customer</button>
+                                <button type="submit" class="btn btn-primary py-3 px-5">Update Customer</button>
                             </div>
                         </div>
                       </div>
