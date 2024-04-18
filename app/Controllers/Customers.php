@@ -92,6 +92,7 @@ public function store()
             'epc_rating' => $this->request->getPost('epc'),
             'additional_notes' => $this->request->getPost('add_notes'),
             'created_agent_date' => $this->request->getPost('created_agent_date'),
+            'status' => 'New Customer',
             'agent_name' => $name,
             'userid' => $id
         ];
@@ -127,6 +128,8 @@ public function showCustomer($lead_id){
     return view('customers/edit_customer', $viewData + $this->data);
 }
 
+/****************************************************************************************************/
+
 public function update()
 {
 
@@ -137,11 +140,29 @@ public function update()
     $id = $session->get('id');
     // $customerModel=find($lead_id);
      $lead_id=$this->request->getPost('lead_id');
+     //for image uploading
+     $prevImageData=$this->request->getPost('prevImg');
+     $imageNames = []; // Initialize an array to hold image names
+     if ($this->request->getFileMultiple('images')) {
+        $imageNames = []; // Initialize an empty array to store image names
+        foreach ($this->request->getFileMultiple('images') as $file) {
+            if ($file->isValid() && !$file->hasMoved()) {
+                // Move the uploaded file to the destination directory
+                $file->move(WRITEPATH . '../assets/images/uploads');
+                $imageNames[] = $file->getClientName(); // Add image name to the array
+            }
+        }
+        // Convert array of image names to a comma-separated string
+        $imageNamesString = implode(',', $imageNames);
+        $newImageData = $prevImageData . ',' . $imageNamesString;
+    } else {
+        $newImageData = $prevImageData;
+    }
 
-    echo $lead_id;
-    
+
+         
         $data = [
-            //'upload_image' => $imageNamesString, 
+            'upload_image' => $newImageData, 
             //'type'  => $file->getClientMimeType(),
             
             'center_name' => $center,
@@ -179,27 +200,24 @@ public function update()
             'contact_center_notes' => $this->request->getPost('contact_center_notes'),
             
         ];
-         print_r($data);
-    //    $customerModel->update($data);
-       $customerModel->where('lead_id', $lead_id)->update($data);
-    // Print the generated SQL query
-// $query = $customerModel->where('lead_id', $lead_id)->update($data);
-// echo $query->getLastQuery();
-
-
     
-    //return redirect()->to('customers/view_customers')->with('success', 'Customer updated successfully');
+            // Perform the update
+            $result = $customerModel->update($lead_id, $data);
 
-    }
+            // Define the base URL for redirection
+            $baseUrl = base_url('customer/');
 
-
-
-
-
-
-
-
-    
+            // Check if the update was successful
+            if ($result) {
+                // Append status parameter for success
+                $redirectURL = $baseUrl .$lead_id. '?status=success';
+            } else {
+                // Append status parameter for error
+                $redirectURL = $baseUrl .$lead_id. '?status=error';
+            }
+            // Redirect to the updated URL
+            return redirect()->to($redirectURL);
+}
 }
 
 

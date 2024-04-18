@@ -4,10 +4,9 @@ use CodeIgniter\Model;
   
 class CustomerModel extends Model{
     protected $table = 'customers';
-    protected $primarykey = 'lead_id';
+    protected $primaryKey = 'lead_id';
     
     protected $allowedFields = [
-        'lead_id',
         'lead_date',
         'center_name',
         'fname',

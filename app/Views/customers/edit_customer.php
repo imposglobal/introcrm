@@ -30,8 +30,29 @@
 <div class="main-panel">          
         <div class="content-wrapper">
           <div class="row">
-            <div class="col-lg-12">
-            
+          <div class="col-lg-12">
+            <?php 
+            if(isset($_GET['status'])){
+                $status = $_GET['status'];
+            }
+            if (isset($status)){ 
+                if($status === "error"){
+                ?>
+                  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      Something went wrong...
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                <?php }elseif($status == "success"){ ?>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                      Record Updated Successfully.
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+
+                <?php } } ?>
                 
             </div>
             <div class="col-12 grid-margin stretch-card">
@@ -289,6 +310,7 @@
                             <label for="notes">View or upload Documents</label>
                                 <div id="drop-area" class="drop-area">
                                     <!-- <h3 class="drop-text">Drag & Drop Files Here</h3> -->
+                                    <input type="hidden" name="prevImg" value="<?= $result['upload_image']; ?>">
                                     <input  accept="image/*,.pdf"   type="file" name="images[]"  id="images" multiple>
                                 </div>
                         </div>
