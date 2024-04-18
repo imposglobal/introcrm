@@ -33,9 +33,7 @@
   <!-- Custom js for this page-->
   <script src="<?php echo $baseURL; ?>/assets/js/dashboard.js"></script>
   <script src="<?php echo $baseURL; ?>/assets/js/Chart.roundedBarCharts.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
+  
     <script>
         $(document).ready(function(){
             // Event handler for the search button click
