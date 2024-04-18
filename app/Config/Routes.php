@@ -35,5 +35,5 @@ $routes->get('delete/(:num)', 'CustomerView::delete/$1');
 //update  customer
 $routes->get('/customer/(:num)', 'Customers::showCustomer/$1');
 //view updated  customer
-$routes->POST('/customer/updat', 'Customers::update/$1');
+$routes->post('/customer/update', 'Customers::update');
 

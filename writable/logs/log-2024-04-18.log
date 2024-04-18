@@ -1,0 +1,485 @@
+CRITICAL - 2024-04-18 07:22:48 --> ErrorException: Undefined variable $result
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 132.
+ 1 APPPATH\Controllers\Customers.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 132)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 07:23:07 --> ErrorException: Undefined variable $customers
+[Method: POST, Route: customer/update]
+in APPPATH\Views\customers\view_customers.php on line 56.
+ 1 APPPATH\Views\customers\view_customers.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customers', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php', 56)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\view_customers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customers/view_customers', [], true)
+ 5 APPPATH\Controllers\Customers.php(132): view('customers/view_customers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 08:41:44 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: customer/24]
+in APPPATH\Controllers\Customers.php on line 175.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 08:41:58 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: customer/24]
+in APPPATH\Controllers\Customers.php on line 175.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 08:49:41 --> ArgumentCountError: Too few arguments to function App\Controllers\Customers::update(), 0 passed in C:\xampp\htdocs\introcrm\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 130.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 08:50:17 --> ErrorException: Undefined variable $lead_id
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 137.
+ 1 APPPATH\Controllers\Customers.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lead_id', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 08:51:12 --> ErrorException: Undefined variable $lead_id
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 137.
+ 1 APPPATH\Controllers\Customers.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lead_id', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 08:51:17 --> ErrorException: Undefined variable $lead_id
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 137.
+ 1 APPPATH\Controllers\Customers.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lead_id', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 08:51:30 --> ArgumentCountError: Too few arguments to function App\Controllers\Customers::update(), 0 passed in C:\xampp\htdocs\introcrm\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 130.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 08:53:01 --> ErrorException: Undefined variable $imageNamesString
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 140.
+ 1 APPPATH\Controllers\Customers.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $imageNamesString', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 140)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 08:53:16 --> ErrorException: Undefined variable $file
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 141.
+ 1 APPPATH\Controllers\Customers.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $file', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 141)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 08:59:35 --> ErrorException: Undefined variable $lead_id
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 139.
+ 1 APPPATH\Controllers\Customers.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lead_id', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 08:59:53 --> ArgumentCountError: Too few arguments to function App\Controllers\Customers::update(), 0 passed in C:\xampp\htdocs\introcrm\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 130.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:04:45 --> ArgumentCountError: Too few arguments to function App\Controllers\Customers::update(), 0 passed in C:\xampp\htdocs\introcrm\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 130.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:07:57 --> ErrorException: Undefined variable $imageNamesString
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 141.
+ 1 APPPATH\Controllers\Customers.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $imageNamesString', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 141)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:08:55 --> ErrorException: Undefined variable $file
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 142.
+ 1 APPPATH\Controllers\Customers.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $file', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 142)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:09:09 --> ErrorException: Undefined variable $date
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 143.
+ 1 APPPATH\Controllers\Customers.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $date', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:09:38 --> ErrorException: Undefined variable $date
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 143.
+ 1 APPPATH\Controllers\Customers.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $date', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:19:47 --> ErrorException: Undefined variable $date
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 143.
+ 1 APPPATH\Controllers\Customers.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $date', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:20:24 --> ErrorException: Undefined variable $email
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 145.
+ 1 APPPATH\Controllers\Customers.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:27:25 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(180): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:32:09 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(180): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:32:52 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(180): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-04-18 09:39:06 --> mysqli_sql_exception: Unknown column 'customers.id' in 'where clause' in C:\xampp\htdocs\introcrm\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\introcrm\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `custome...', 0)
+#1 C:\xampp\htdocs\introcrm\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `custome...')
+#2 C:\xampp\htdocs\introcrm\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `custome...')
+#3 C:\xampp\htdocs\introcrm\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `custome...', Array, false)
+#4 C:\xampp\htdocs\introcrm\system\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\introcrm\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\introcrm\system\Model.php(853): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\introcrm\app\Controllers\Customers.php(179): CodeIgniter\Model->update('17', Array)
+#8 C:\xampp\htdocs\introcrm\system\CodeIgniter.php(933): App\Controllers\Customers->update()
+#9 C:\xampp\htdocs\introcrm\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#10 C:\xampp\htdocs\introcrm\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\introcrm\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\introcrm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\introcrm\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-04-18 09:39:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'customers.id' in 'where clause'
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `center_name` = :center_name:, `fname` = :fname:, `lname` = :lname:, `email` = :email:, `dob` = :dob:, `mobile` = :mobile:, `telephone` = :telephone:, `address_1` = :address_1:, `address_2` = :address_2:, `post_code` = :post_code:, `tenure` = :tenure:, `council` = :council:, `boiler_age` = :boiler_age:, `boiler_make` = :boiler_make:, `boiler_model` = :boiler_model:, `benefit_flex` = :benefit_flex:, `epc_rating` = :epc_rating:, `additional_notes` = :additional_notes:, `created_agent_date` = :created_agent_date:, `lead_date` = :lead_date:, `survey_status` = :survey_status:, `job_status` = :job_status:, `payment_status` = :payment_status:, `measures` = :measures:, `epc_link` = :epc_link:, `gas_safe_link` = :gas_safe_link:, `boiler_efficiency_link` = :boiler_efficiency_link:, `processing_notes` = :processing_notes:, `previous_grant_work` = :previous_grant_work:, `contact_center_notes` = :contact_center_notes:
+WHERE `customers`.`id` IN :customers.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Customers.php(179): CodeIgniter\Model->update('17', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:39:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'customers.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `customers` SET `center_name` = \'Kondhwa\', `fname` = \'ha\', `lname` = \'takampalle\', `email` = \'hanuman@gmail.com\', `dob` = \'1998-04-12\', `mobile` = \'6567567557\', `telephone` = \'5765675\', `address_1` = \'fgfgfg\', `address_2` = \'fcgxx\', `post_code` = \'xfgxg\', `tenure` = \'gxfg\', `council` = \'gxgfx\', `boiler_age` = \'xxfgxgfx\', `boiler_make` = \'xgxg\', `boiler_model` = \'gxgx\', `benefit_flex` = \'Universal credit\', `epc_rating` = \'A\', `additional_notes` = \'gxsajkajksf\', `created_agent_date` = NULL, `lead_date` = \'2024-04-18 05:51:26\', `survey_status` = \'\', `job_status` = \'\', `payment_status` = \'\', `measures` = \'\', `epc_link` = \'\', `gas_safe_link` = \'\', `boiler_efficiency_link` = \'\', `processing_notes` = \'\', `previous_grant_work` = \'\', `contact_center_notes` = \'\'
+WHERE `customers`.`id` IN (\'17\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `customers` SET `center_name` = \'Kondhwa\', `fname` = \'ha\', `lname` = \'takampalle\', `email` = \'hanuman@gmail.com\', `dob` = \'1998-04-12\', `mobile` = \'6567567557\', `telephone` = \'5765675\', `address_1` = \'fgfgfg\', `address_2` = \'fcgxx\', `post_code` = \'xfgxg\', `tenure` = \'gxfg\', `council` = \'gxgfx\', `boiler_age` = \'xxfgxgfx\', `boiler_make` = \'xgxg\', `boiler_model` = \'gxgx\', `benefit_flex` = \'Universal credit\', `epc_rating` = \'A\', `additional_notes` = \'gxsajkajksf\', `created_agent_date` = NULL, `lead_date` = \'2024-04-18 05:51:26\', `survey_status` = \'\', `job_status` = \'\', `payment_status` = \'\', `measures` = \'\', `epc_link` = \'\', `gas_safe_link` = \'\', `boiler_efficiency_link` = \'\', `processing_notes` = \'\', `previous_grant_work` = \'\', `contact_center_notes` = \'\'
+WHERE `customers`.`id` IN (\'17\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `center_name` = :center_name:, `fname` = :fname:, `lname` = :lname:, `email` = :email:, `dob` = :dob:, `mobile` = :mobile:, `telephone` = :telephone:, `address_1` = :address_1:, `address_2` = :address_2:, `post_code` = :post_code:, `tenure` = :tenure:, `council` = :council:, `boiler_age` = :boiler_age:, `boiler_make` = :boiler_make:, `boiler_model` = :boiler_model:, `benefit_flex` = :benefit_flex:, `epc_rating` = :epc_rating:, `additional_notes` = :additional_notes:, `created_agent_date` = :created_agent_date:, `lead_date` = :lead_date:, `survey_status` = :survey_status:, `job_status` = :job_status:, `payment_status` = :payment_status:, `measures` = :measures:, `epc_link` = :epc_link:, `gas_safe_link` = :gas_safe_link:, `boiler_efficiency_link` = :boiler_efficiency_link:, `processing_notes` = :processing_notes:, `previous_grant_work` = :previous_grant_work:, `contact_center_notes` = :contact_center_notes:
+WHERE `customers`.`id` IN :customers.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Customers.php(179): CodeIgniter\Model->update('17', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:39:06 --> [Caused by] mysqli_sql_exception: Unknown column 'customers.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `customers` SET `center_name` = \'Kondhwa\', `fname` = \'ha\', `lname` = \'takampalle\', `email` = \'hanuman@gmail.com\', `dob` = \'1998-04-12\', `mobile` = \'6567567557\', `telephone` = \'5765675\', `address_1` = \'fgfgfg\', `address_2` = \'fcgxx\', `post_code` = \'xfgxg\', `tenure` = \'gxfg\', `council` = \'gxgfx\', `boiler_age` = \'xxfgxgfx\', `boiler_make` = \'xgxg\', `boiler_model` = \'gxgx\', `benefit_flex` = \'Universal credit\', `epc_rating` = \'A\', `additional_notes` = \'gxsajkajksf\', `created_agent_date` = NULL, `lead_date` = \'2024-04-18 05:51:26\', `survey_status` = \'\', `job_status` = \'\', `payment_status` = \'\', `measures` = \'\', `epc_link` = \'\', `gas_safe_link` = \'\', `boiler_efficiency_link` = \'\', `processing_notes` = \'\', `previous_grant_work` = \'\', `contact_center_notes` = \'\'
+WHERE `customers`.`id` IN (\'17\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `customers` SET `center_name` = \'Kondhwa\', `fname` = \'ha\', `lname` = \'takampalle\', `email` = \'hanuman@gmail.com\', `dob` = \'1998-04-12\', `mobile` = \'6567567557\', `telephone` = \'5765675\', `address_1` = \'fgfgfg\', `address_2` = \'fcgxx\', `post_code` = \'xfgxg\', `tenure` = \'gxfg\', `council` = \'gxgfx\', `boiler_age` = \'xxfgxgfx\', `boiler_make` = \'xgxg\', `boiler_model` = \'gxgx\', `benefit_flex` = \'Universal credit\', `epc_rating` = \'A\', `additional_notes` = \'gxsajkajksf\', `created_agent_date` = NULL, `lead_date` = \'2024-04-18 05:51:26\', `survey_status` = \'\', `job_status` = \'\', `payment_status` = \'\', `measures` = \'\', `epc_link` = \'\', `gas_safe_link` = \'\', `boiler_efficiency_link` = \'\', `processing_notes` = \'\', `previous_grant_work` = \'\', `contact_center_notes` = \'\'
+WHERE `customers`.`id` IN (\'17\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `customers` SET `center_name` = \'Kondhwa\', `fname` = \'ha\', `lname` = \'takampalle\', `email` = \'hanuman@gmail.com\', `dob` = \'1998-04-12\', `mobile` = \'6567567557\', `telephone` = \'5765675\', `address_1` = \'fgfgfg\', `address_2` = \'fcgxx\', `post_code` = \'xfgxg\', `tenure` = \'gxfg\', `council` = \'gxgfx\', `boiler_age` = \'xxfgxgfx\', `boiler_make` = \'xgxg\', `boiler_model` = \'gxgx\', `benefit_flex` = \'Universal credit\', `epc_rating` = \'A\', `additional_notes` = \'gxsajkajksf\', `created_agent_date` = NULL, `lead_date` = \'2024-04-18 05:51:26\', `survey_status` = \'\', `job_status` = \'\', `payment_status` = \'\', `measures` = \'\', `epc_link` = \'\', `gas_safe_link` = \'\', `boiler_efficiency_link` = \'\', `processing_notes` = \'\', `previous_grant_work` = \'\', `contact_center_notes` = \'\'
+WHERE `customers`.`id` IN (\'17\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `center_name` = :center_name:, `fname` = :fname:, `lname` = :lname:, `email` = :email:, `dob` = :dob:, `mobile` = :mobile:, `telephone` = :telephone:, `address_1` = :address_1:, `address_2` = :address_2:, `post_code` = :post_code:, `tenure` = :tenure:, `council` = :council:, `boiler_age` = :boiler_age:, `boiler_make` = :boiler_make:, `boiler_model` = :boiler_model:, `benefit_flex` = :benefit_flex:, `epc_rating` = :epc_rating:, `additional_notes` = :additional_notes:, `created_agent_date` = :created_agent_date:, `lead_date` = :lead_date:, `survey_status` = :survey_status:, `job_status` = :job_status:, `payment_status` = :payment_status:, `measures` = :measures:, `epc_link` = :epc_link:, `gas_safe_link` = :gas_safe_link:, `boiler_efficiency_link` = :boiler_efficiency_link:, `processing_notes` = :processing_notes:, `previous_grant_work` = :previous_grant_work:, `contact_center_notes` = :contact_center_notes:
+WHERE `customers`.`id` IN :customers.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Customers.php(179): CodeIgniter\Model->update('17', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:40:46 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(179): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:42:25 --> ArgumentCountError: Too few arguments to function App\Controllers\Customers::update(), 0 passed in C:\xampp\htdocs\introcrm\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 130.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:43:38 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(179): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:46:10 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(179): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:48:08 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(179): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:48:54 --> ErrorException: Undefined variable $CustomerModel
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 179.
+ 1 APPPATH\Controllers\Customers.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $CustomerModel', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 179)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:49:31 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(179): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:55:43 --> ErrorException: Undefined variable $lead_id
+[Method: POST, Route: customer/update]
+in APPPATH\Controllers\Customers.php on line 180.
+ 1 APPPATH\Controllers\Customers.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lead_id', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Customers.php', 180)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 09:58:00 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(181): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 10:02:37 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(183): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 10:02:45 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(183): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 10:03:04 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(183): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 10:05:39 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(184): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-18 10:08:42 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: customer/update]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(994): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Customers.php(182): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

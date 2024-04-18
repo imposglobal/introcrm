@@ -201,19 +201,19 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Survey Status</label>
-                                <input required  type="text" name="survey_status" value="<?= $result['survey_status'] ?>" class="form-control form-control-lg" placeholder="Survey Status" id="survey_status">
+                                <input   type="text" name="survey_status" value="<?= $result['survey_status'] ?>" class="form-control form-control-lg" placeholder="Survey Status" id="survey_status">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Job Status</label>
-                                <input required  type="text" name="job_status" value="<?= $result['job_status'] ?>" class="form-control form-control-lg" placeholder="Job Status" id="job_status">
+                                <input   type="text" name="job_status" value="<?= $result['job_status'] ?>" class="form-control form-control-lg" placeholder="Job Status" id="job_status">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Payment Status</label>
-                                <input required  type="text" name="payment_status" value="<?= $result['payment_status'] ?>" class="form-control form-control-lg" placeholder="Payment Status" id="payment_status">
+                                <input   type="text" name="payment_status" value="<?= $result['payment_status'] ?>" class="form-control form-control-lg" placeholder="Payment Status" id="payment_status">
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -222,7 +222,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Measures</label>
-                                <input required  type="text" name="measures" value="<?= $result['measures'] ?>" class="form-control form-control-lg" placeholder="Measures" id="measures">
+                                <input   type="text" name="measures" value="<?= $result['measures'] ?>" class="form-control form-control-lg" placeholder="Measures" id="measures">
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -231,19 +231,19 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>EPC Link</label>
-                                <input required  type="text" name="epc_link" value="<?= $result['epc_link'] ?>" class="form-control form-control-lg" placeholder="EPC Link" id="epc_link">
+                                <input   type="text" name="epc_link" value="<?= $result['epc_link'] ?>" class="form-control form-control-lg" placeholder="EPC Link" id="epc_link">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Gas Safe Link</label>
-                                <input required  type="text" name="gas_safe_link" value="<?= $result['gas_safe_link'] ?>" class="form-control form-control-lg" placeholder="Gas Safe Link" id="gas_safe_link">
+                                <input   type="text" name="gas_safe_link" value="<?= $result['gas_safe_link'] ?>" class="form-control form-control-lg" placeholder="Gas Safe Link" id="gas_safe_link">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Boiler Efficiency Link</label>
-                                <input required  type="text" name="boiler_efficiency_link" value="<?= $result['boiler_efficiency_link'] ?>" class="form-control form-control-lg" placeholder="Boiler Efficiency Link" id="boiler_efficiency_link">
+                                <input   type="text" name="boiler_efficiency_link" value="<?= $result['boiler_efficiency_link'] ?>" class="form-control form-control-lg" placeholder="Boiler Efficiency Link" id="boiler_efficiency_link">
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -289,12 +289,12 @@
                             <label for="notes">View or upload Documents</label>
                                 <div id="drop-area" class="drop-area">
                                     <!-- <h3 class="drop-text">Drag & Drop Files Here</h3> -->
-                                    <input  accept="image/*,.pdf" required  type="file" name="images[]"  id="images" multiple>
+                                    <input  accept="image/*,.pdf"   type="file" name="images[]"  id="images" multiple>
                                 </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary py-3 px-5">Save And Update </button>
+                                <button type="submit" class="btn btn-primary py-3 px-5">Update </button>
                             </div>
                         </div>
                       </div>
