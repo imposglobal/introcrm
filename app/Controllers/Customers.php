@@ -135,7 +135,9 @@ public function update()
     $center = $session->get('center');
     $name = $session->get('fname') . " " . $session->get('lname');
     $id = $session->get('id');
-    $lead_id=$this->request->getPost('lead_id');
+    // $customerModel=find($lead_id);
+     $lead_id=$this->request->getPost('lead_id');
+
     echo $lead_id;
     
         $data = [
