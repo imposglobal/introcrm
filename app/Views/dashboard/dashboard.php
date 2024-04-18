@@ -38,8 +38,8 @@
                       <!-- <div>
                         <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>33<sup>C</sup></h2>
                       </div> -->
-                      <div class="ml-2 pb-4" style="margin-top: -28px;">
-                        <p id="quoteContainer" class="font-weight-normal"></p>
+                      <div class="ml-2 pb-4" style="margin-top: -15px;">
+                        <p id="quoteContainer" class="font-weight-bold"></p>
                       </div>
                     </div>
                   </div>
@@ -51,9 +51,9 @@
                 <div class="col-md-6 mb-4 stretch-card transparent">
                   <div class="card card-tale">
                     <div class="card-body">
-                      <p class="mb-4">Today’s Bookings</p>
-                      <p class="fs-30 mb-2">4006</p>
-                      <p>10.00% (30 days)</p>
+                      <p class="mb-4">Working Days</p>
+                      <p class="fs-30 mb-2"><?= $curworking_days; ?></p>
+                      <p>Total working Days (<?= $total_working_days; ?>)</p>
                     </div>
                   </div>
                 </div>
