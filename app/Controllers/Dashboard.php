@@ -61,7 +61,7 @@ class Dashboard extends BaseController
         }elseif($role == 0 || $role == 3){
             $totalCustomers = $customerModel->countAllResults();
         }
-        
+        return $totalCustomers;
     }
 
     /****************************************************************************************************/
