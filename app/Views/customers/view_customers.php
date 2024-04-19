@@ -45,19 +45,33 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
+                                            <th scope="col">Lead ID</th>
+                                            <th scope="col">Lead Date</th>
                                             <th scope="col">Customer Name</th>
                                             <th scope="col">Mobile</th>
-                                            <th scope="col">Email</th>
+                                            <th scope="col">Status</th>
                                             <th scope="col">Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php $i = 1; ?>
                                         <?php if ($customers && count($customers) > 1): ?>
-                                        <?php foreach ($customers as $customer): ?>
+                                        <?php foreach ($customers as $customer): 
+                                            if($customer['status'] === "New Customer"){
+                                                $lstatus = '<span class="bg-primary text-white p-2 rounded">New Customer</span>';
+                                            }else{
+                                                $lstatus = $customer['status'];
+                                            }
+                                        ?>
                                         <tr>
                                             <td>
                                                 <?= $i++ ?>
+                                            </td>
+                                            <td>
+                                                <?= $customer['lead_id'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $customer['lead_date'] ?>
                                             </td>
                                             <td>
                                                 <?= $customer['fname']." ". $customer['lname'] ?>
@@ -66,7 +80,7 @@
                                                 <?= $customer['mobile'] ?>
                                             </td>
                                             <td>
-                                                <?= $customer['email'] ?>
+                                                <?= $lstatus ?>
                                             </td>
                                             <td>
                                             <a href="<?php echo base_url('customer/'.$customer['lead_id']);?>" data-toggle="tooltip" data-placement="top" title="view customer"><i class="mdi mdi-account-search bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>

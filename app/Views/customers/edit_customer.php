@@ -337,12 +337,37 @@
 
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <label for="notes">View or upload Documents</label>
                                 <div id="drop-area" class="drop-area">
                                     <!-- <h3 class="drop-text">Drag & Drop Files Here</h3> -->
                                     <input type="hidden" name="prevImg" value="<?= $result['upload_image']; ?>">
                                     <input  accept="image/*,.pdf"   type="file" name="images[]"  id="images" multiple>
+                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="notes">Uploaded Document</label>
+                                <div id="drop-area" class="drop-area">
+                                    <!-- <h3 class="drop-text">Drag & Drop Files Here</h3> -->
+                                    <?php
+                                        // Assuming $result['upload_image'] contains image names separated by commas
+                                        $image_names = explode(',', $result['upload_image']);
+                                        if($result['upload_image'] == null){
+                                            echo"Document Not Found";
+                                        }
+
+                                        foreach ($image_names as $image_name) {
+                                            // Assuming the images are in the same directory as this script
+                                            $image_path = 'assets/images/uploads/' . trim($image_name);
+
+                                            // Checking if the file exists before creating the <img> tag
+                                            if (file_exists($image_path)) {
+                                                echo '<a href="' .$baseURL. $image_path . '" target="_blank">
+                                                <img class="mx-2 border" src="' .$baseURL. $image_path . '" alt="' . $image_name . '" style="width:100px">
+                                                </a>';
+                                            } 
+                                        }
+                                        ?>
                                 </div>
                         </div>
                         <div class="col-lg-12">
