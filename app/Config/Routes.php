@@ -37,3 +37,6 @@ $routes->get('/customer/(:num)', 'Customers::showCustomer/$1');
 // updated  customer
 $routes->post('/customer/update', 'Customers::update');
 
+//send Email
+$routes->get('/email_view', 'SendMail::index'); 
+
