@@ -37,10 +37,10 @@ $routes->get('/customer/(:num)', 'Customers::showCustomer/$1');
 // updated  customer
 $routes->post('/customer/update', 'Customers::update');
 
-//send Email
+// Email
 $routes->get('/email_view', 'SendMail::index'); 
-$routes->get('/email/invite', 'SendMail::invite'); 
-
+$routes->get('/email/invite', 'SendMail::EmailInvite'); 
+$routes->post('/save/invite', 'SendMail::SaveInvite');
  
 
 //view customer api json
