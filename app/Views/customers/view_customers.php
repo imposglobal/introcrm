@@ -2,7 +2,7 @@
 <?= $this->extend('layout/layout') ?>
 <!-- Define the content section -->
 <?= $this->section('content') ?>
-<title>Add Customer</title>
+<title>View Customer</title>
 <style>
     .drop-area {
         border: 2px dashed #ccc;
@@ -25,7 +25,46 @@
     .file-item {
         margin-bottom: 5px;
     }
+    .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 99999 ;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #111;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #11111150;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 </style>
+<?php $session = session(); ?>
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
@@ -83,12 +122,19 @@
                                                 <?= $lstatus ?>
                                             </td>
                                             <td>
-                                            <a href="<?php echo base_url('customer/'.$customer['lead_id']);?>" data-toggle="tooltip" data-placement="top" title="view customer"><i class="mdi mdi-account-search bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <?php $role = $session->get('role'); 
+                                            if($role == 0 || $role == 1 || $role == 2 || $role == 3){
+                                            ?>
+                                            <a onclick="openNav()" href="#" data-toggle="tooltip" data-placement="top" title="view customer"><i class="mdi mdi-account-search bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <?php } ?>
 
+                                            <?php if($role == 0 || $role == 1 || $role == 3){ ?>
                                             <a href="<?php echo base_url('customer/'.$customer['lead_id']);?>" data-toggle="tooltip" data-placement="top" title="edit customer"><i class="mdi mdi-account-edit bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <?php } ?>
 
+                                            <?php if($role == 0 || $role == 3){ ?>
                                             <a href="<?php echo base_url('delete/'.$customer['lead_id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delete customer"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
-
+                                            <?php } ?>
                                         </tr>
                                         <?php endforeach; ?>
                                         <?php else: ?>
@@ -108,7 +154,153 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Drawer  -->
+            <div id="mySidenav" class="sidenav shadow-lg">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="row px-5 pt-4">
+                <div class="col-lg-4"> 
+                    <h5>Lead ID</h5> 
+                    <p id="leadid"></p>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>Lead Date</h5> 
+                    <p id="ldate"></p>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>Center Name</h5> 
+                    <p id="cname">dsdsd</p>
+                </div>
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>First Name</h5> 
+                    <p id="fname">dsdsd</p>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>Last Name</h5> 
+                    <p id="lname">dsdsd</p>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>Date Of Birth</h5> 
+                    <p id="dob">dsdsd</p>
+                </div>
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>Email</h5> 
+                    <p id="email">dsdsd</p>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>Mobile</h5> 
+                    <p id="phone">dsdsd</p>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>Telephone</h5> 
+                </div>
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>Address 1</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>Address 2</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>Post Code</h5> 
+                </div>
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>tenure</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>council</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>boiler_age</h5> 
+                </div>
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>boiler_make</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>boiler_model</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>benefit_flex</h5> 
+                </div>
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>epc_rating</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>additional_notes</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>upload_image</h5> 
+                </div>
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>survey_status</h5> 
+                </div>
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>job_status</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>status</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>payment_status</h5> 
+                </div>
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>measures</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>epc_link</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>gas_safe_link</h5> 
+                </div>
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>boiler_efficiency_link</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>processing_notes</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>previous_grant_work</h5> 
+                </div>
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>contact_center_notes</h5> 
+                </div>
+                <div class="col-lg-4"> 
+                    <h5>previous_grant_work</h5> 
+                </div>
+                
+            </div>
+            </div>
             <div class="col-lg-12">
                 <?php echo $pager->links('default','full_pagination');?>
             </div>
@@ -140,5 +332,14 @@
             }
         });
     }
+</script>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "600px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 </script>
     <?= $this->endSection() ?>
