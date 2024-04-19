@@ -39,4 +39,7 @@ $routes->post('/customer/update', 'Customers::update');
 
 //send Email
 $routes->get('/email_view', 'SendMail::index'); 
+$routes->get('/email/invite', 'SendMail::invite'); 
+
+ 
 
