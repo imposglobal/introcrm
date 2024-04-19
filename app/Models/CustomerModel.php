@@ -31,6 +31,7 @@ class CustomerModel extends Model{
         'survey_status',
         'job_status',
         'payment_status',
+        'status',
         'measures',
         'epc_link',
         'gas_safe_link',

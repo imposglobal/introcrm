@@ -221,24 +221,55 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Survey Status</label>
-                                <input   type="text" name="survey_status" value="<?= $result['survey_status'] ?>" class="form-control form-control-lg" placeholder="Survey Status" id="survey_status">
+                                <label for="exampleFormControlSelect1">Survey status</label>
+                                <select name="survey_status" id="survey_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option selected value="<?= $result['survey_status'] ?>"><?= $result['survey_status'] ?></option>
+                                <option value="Done">Done</option>
+                                <option value="Not Done">Not Done </option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Job Status</label>
-                                <input   type="text" name="job_status" value="<?= $result['job_status'] ?>" class="form-control form-control-lg" placeholder="Job Status" id="job_status">
+                                <label for="exampleFormControlSelect1">Job status</label>
+                                <select name="job_status" id="job_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option selected value="<?= $result['job_status'] ?>"><?= $result['job_status'] ?></option>
+                                <option value="Booked">Booked</option>
+                                <option value="Not Booked">Not Booked </option>
+                                
+                                </select>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Payment Status</label>
-                                <input   type="text" name="payment_status" value="<?= $result['payment_status'] ?>" class="form-control form-control-lg" placeholder="Payment Status" id="payment_status">
+                                <label for="exampleFormControlSelect1">Payment status</label>
+                                <select name="payment_status" id="payment_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option selected value="<?= $result['payment_status'] ?>"><?= $result['payment_status'] ?></option>
+                                <option value="Paid">Paid</option>
+                                <option value="Not Paid">Not Paid </option>
+
+                                </select>
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <hr>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Status</label>
+                                <select name="status" id="status" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option selected value="<?= $result['status'] ?>"><?= $result['status'] ?></option>
+                                <option value="Accepted">Accepted</option>
+                                <option value="Rejected">Rejected</option>
+                                <option value="DWP Submitted">DWP Submitted</option>
+                                <option value="DWP Passed">DWP Passed</option>
+                                <option value="Completed">Completed</option>
+                                <option value="Paid">Paid</option>
+                                <option value="Callback">Callback</option>
+                                <option value="Retransfer">Retransfer</option>
+
+                            </select>
+                            </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
