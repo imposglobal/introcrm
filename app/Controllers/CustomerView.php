@@ -83,17 +83,27 @@ public function delete($lead_id = null) {
     }
 }
 
-public function viewCustomerAPI($id){
-    
-
-    // Search for customers in the database based on email or mobile number
+public function viewCustomerAPI($id) {
+    // Search for a customer in the database based on lead_id
     $customerModel = new CustomerModel();
-    $customers = $customerModel
-                ->where('id', $id);
-    
+    $customer = $customerModel
+                    ->where('lead_id', $id)
+                    ->first(); // Fetch only one record
+
+    // Initialize the response array
+    $response = [];
+
+    // Check if the customer exists
+    if ($customer) {
+        // If the customer exists, add the customer data to the response
+        $response['customer'] = $customer;
+    } else {
+        // If no customer found, return an error message
+        $response['error'] = 'Customer not found';
+    }
 
     // Convert the response array to JSON
-    $jsonResponse = json_encode($customers);
+    $jsonResponse = json_encode($response);
 
     // Output the JSON response
     echo $jsonResponse;

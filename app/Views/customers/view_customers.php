@@ -107,7 +107,7 @@
                                                 <?= $i++ ?>
                                             </td>
                                             <td>
-                                                <?= $customer['lead_id'] ?>
+                                                <a href="#" onclick="openNav(<?= $customer['lead_id'] ?>)"><?= $customer['lead_id'] ?></a>
                                             </td>
                                             <td>
                                                 <?= $customer['lead_date'] ?>
@@ -219,45 +219,49 @@
                     <hr>
                 </div>
                 <div class="col-lg-4"> 
-                    <h5>tenure</h5> 
+                    <h5>Tenure</h5> 
                     <p id="tenure">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
-                    <h5>council</h5> 
+                    <h5>Council</h5> 
                     <p id="council">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
-                    <h5>boiler_age</h5> 
+                    <h5>Boiler Age</h5> 
                     <p id="boilerage">dsdsd</p>
                 </div>
                 <div class="col-lg-12">
                     <hr>
                 </div>
                 <div class="col-lg-4"> 
-                    <h5>boiler_make</h5> 
+                    <h5>Boiler Make</h5> 
                     <p id="boilermake">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
-                    <h5>boiler_model</h5> 
+                    <h5>Moiler Model</h5> 
                     <p id="boilermodel">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
-                    <h5>benefit_flex</h5> 
+                    <h5>Benefit Flex</h5> 
                     <p id="benefitflex">dsdsd</p>
                 </div>
                 <div class="col-lg-12">
                     <hr>
                 </div>
                 <div class="col-lg-4"> 
-                    <h5>epc_rating</h5> 
+                    <h5>EPC Rating</h5> 
                     <p id="epcrating">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
-                    <h5>additional_notes</h5> 
+                    <h5>Additional_notes</h5> 
                     <p id="addnotes">dsdsd</p>
                 </div>
-                <div class="col-lg-4"> 
-                    <h5>upload_image</h5> 
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+                <div class="col-lg-12"> 
+                    <h5>Uploaded Files</h5> 
+                    <div id="imageContainer"></div>
                 </div>
                 <div class="col-lg-12">
                     <hr>
@@ -358,12 +362,77 @@
     }
 </script>
 <script>
-function openNav(id) {
-  document.getElementById("mySidenav").style.width = "1000px";
+    function openNav(id) {
+        $.ajax({
+            url: 'http://localhost/introcrm/getcustomer/' + id,
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                // Update HTML elements with received data
+                $('#leadid').text(data.customer.lead_id);
+                $('#ldate').text(data.customer.lead_date);
+                $('#cname').text(data.customer.center_name);
+                $('#fname').text(data.customer.fname);
+                $('#lname').text(data.customer.lname);
+                $('#dob').text(data.customer.dob);
+                $('#email').text(data.customer.email);
+                $('#phone').text(data.customer.mobile);
+                $('#telephone').text(data.customer.telephone);
+                $('#address1').text(data.customer.address_1);
+                $('#address2').text(data.customer.address_2);
+                $('#postcode').text(data.customer.post_code);
+                $('#tenure').text(data.customer.tenure);
+                $('#council').text(data.customer.council);
+                $('#boilerage').text(data.customer.boiler_age);
+                $('#boilermake').text(data.customer.boiler_make);
+                $('#boilermodel').text(data.customer.boiler_model);
+                $('#benefitflex').text(data.customer.benefit_flex);
+                $('#epcrating').text(data.customer.epc_rating);
+                $('#addnotes').text(data.customer.additional_notes);
+                $('#survyastatus').text(data.customer.survey_status);
+                $('#jobstatus').text(data.customer.job_status);
+                $('#lstatus').text(data.customer.status);
+                $('#paystatus').text(data.customer.payment_status);
+                $('#measures').text(data.customer.measures);
+                $('#epclink').text(data.customer.epc_link);
+                $('#gas').text(data.customer.gas_safe_link);
+                $('#boiler').text(data.customer.boiler_efficiency_link);
+                $('#pronotes').text(data.customer.processing_notes);
+                $('#pgrant').text(data.customer.previous_grant_work);
+                $('#ccenternotes').text(data.customer.contact_center_notes);
+                $('#gwork').text(data.customer.previous_grant_work);
+
+                            // Split the image URLs into an array
+                            var imageUrls = data.customer.upload_image.split(',');
+
+                // Iterate through each image URL and create img tags
+                var imageContainer = $('#imageContainer');
+                imageContainer.empty(); // Clear previous images
+                imageUrls.forEach(function(imageUrl) {
+                    // Prepend the base URL and directory to the image URL
+                    var fullImageUrl = '<?= $baseURL ?>assets/images/uploads/' + imageUrl.trim();
+                    
+                    // Create an <a> tag with the image path as href and an <img> tag inside it
+                    var aTag = $('<a>').attr('href', fullImageUrl).attr('target', '_blank').css('display', 'inline-block').css('margin-right', '10px');
+                    var img = $('<img>').attr('src', fullImageUrl).attr('style', 'width: 150px;');
+                    aTag.append(img);
+                    
+                    // Append the <a> tag to the imageContainer
+                    imageContainer.append(aTag);
+                });
+
+                // Open the side navigation
+                $('#mySidenav').css('width', '1000px');
+                },
+                error: function(xhr, status, error) {
+                console.error('Error:', error);
+    }
+});
 }
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
+    function closeNav() {
+        // Close the side navigation
+        $('#mySidenav').css('width', '0');
+    }
 </script>
     <?= $this->endSection() ?>
