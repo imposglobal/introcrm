@@ -64,3 +64,235 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 09:50:33 --> ErrorException: Undefined variable $customerModel
+[Method: POST, Route: save/invite]
+in APPPATH\Controllers\SendMail.php on line 73.
+ 1 APPPATH\Controllers\SendMail.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customerModel', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\SendMail.php', 73)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->SaveInvite()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 09:56:08 --> ParseError: syntax error, unexpected token "}"
+[Method: POST, Route: save/invite]
+in APPPATH\Controllers\SendMail.php on line 77.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\SendMail.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\SendMail')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\SendMail')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\SendMail', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:28:48 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(31): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:28:52 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(31): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:30:16 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(31): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:30:30 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(31): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:34:02 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(31): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:35:50 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(31): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:35:51 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(31): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:35:51 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(31): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:35:51 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(31): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:35:51 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(31): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:35:51 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(31): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:35:52 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(31): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:44:00 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(36): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:44:00 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(36): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-19 10:44:02 --> ErrorException: Undefined variable $invite
+[Method: GET, Route: email_view]
+in APPPATH\Views\email\email_view.php on line 116.
+ 1 APPPATH\Views\email\email_view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invite', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php', 116)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\email\\email_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('email/email_view', [], true)
+ 5 APPPATH\Controllers\SendMail.php(36): view('email/email_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

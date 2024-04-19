@@ -27,12 +27,15 @@ class SendMail extends Controller
     }
     public function index() 
 	{
+        $inviteModel = new InviteModel();
 
-        return view('email/email_view',$this->data);
+        $result['invite'] = $inviteModel->orderBy('invite_id ', 'desc')->paginate();
+        
+         $result['pager'] = $inviteModel->pager;
+        return view('email/email_view',$result + $this->data);
 
-        //return view('form_view');
     }
-    public function invite(){
+    public function EmailInvite(){
         
         echo "testing email";
        
@@ -51,12 +54,25 @@ class SendMail extends Controller
             $data = $email->printDebugger(['headers']);
             print_r($data);
         }
- //return view('form_view');
+         //return view('form_view');
         
     }
 
     public function SaveInvite(){
-        echo "test";
+
+        $inviteModel = new InviteModel();
+
+        $data = [
+                'fname' => $this->request->getPost('fname'),
+                'lname' => $this->request->getPost('lname'),
+                'center_name' => $this->request->getPost('center_name'),
+                'email' => $this->request->getPost('email'),
+               
+            ];
+        
+             $inviteModel->save($data);
+             return redirect()->back();
+
     }
-    
+  
 }
