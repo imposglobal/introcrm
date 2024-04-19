@@ -125,7 +125,7 @@
                                             <?php $role = $session->get('role'); 
                                             if($role == 0 || $role == 1 || $role == 2 || $role == 3){
                                             ?>
-                                            <a onclick="openNav()" href="#" data-toggle="tooltip" data-placement="top" title="view customer"><i class="mdi mdi-account-search bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <a onclick="openNav(<?= $customer['lead_id'] ?>)" href="#" data-toggle="tooltip" data-placement="top" title="view customer"><i class="mdi mdi-account-search bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
                                             <?php } ?>
 
                                             <?php if($role == 0 || $role == 1 || $role == 3){ ?>
@@ -198,51 +198,63 @@
                 </div>
                 <div class="col-lg-4"> 
                     <h5>Telephone</h5> 
+                    <p id="telephone">dsdsd</p>
                 </div>
                 <div class="col-lg-12">
                     <hr>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>Address 1</h5> 
+                    <p id="address1">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
-                    <h5>Address 2</h5> 
+                    <h5>Address 2</h5>
+                    <p id="address2">dsdsd</p> 
                 </div>
                 <div class="col-lg-4"> 
                     <h5>Post Code</h5> 
+                    <p id="postcode">dsdsd</p>
                 </div>
                 <div class="col-lg-12">
                     <hr>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>tenure</h5> 
+                    <p id="tenure">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>council</h5> 
+                    <p id="council">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>boiler_age</h5> 
+                    <p id="boilerage">dsdsd</p>
                 </div>
                 <div class="col-lg-12">
                     <hr>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>boiler_make</h5> 
+                    <p id="boilermake">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>boiler_model</h5> 
+                    <p id="boilermodel">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>benefit_flex</h5> 
+                    <p id="benefitflex">dsdsd</p>
                 </div>
                 <div class="col-lg-12">
                     <hr>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>epc_rating</h5> 
+                    <p id="epcrating">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>additional_notes</h5> 
+                    <p id="addnotes">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>upload_image</h5> 
@@ -252,51 +264,63 @@
                 </div>
                 <div class="col-lg-4"> 
                     <h5>survey_status</h5> 
-                </div>
-                <div class="col-lg-12">
-                    <hr>
+                    <p id="survyastatus">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>job_status</h5> 
+                    <p id="jobstatus">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>status</h5> 
+                    <p id="lstatus">dsdsd</p>
+                </div>
+                <div class="col-lg-12">
+                    <hr>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>payment_status</h5> 
-                </div>
-                <div class="col-lg-12">
-                    <hr>
+                    <p id="paystatus">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>measures</h5> 
+                    <p id="measures">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>epc_link</h5> 
+                    <p id="epclink">dsdsd</p>
+                </div>
+                <div class="col-lg-12">
+                    <hr>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>gas_safe_link</h5> 
-                </div>
-                <div class="col-lg-12">
-                    <hr>
+                    <p id="gas">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>boiler_efficiency_link</h5> 
+                    <p id="boiler">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>processing_notes</h5> 
-                </div>
-                <div class="col-lg-4"> 
-                    <h5>previous_grant_work</h5> 
+                    <p id="pronotes">dsdsd</p>
                 </div>
                 <div class="col-lg-12">
                     <hr>
                 </div>
                 <div class="col-lg-4"> 
+                    <h5>previous_grant_work</h5> 
+                    <p id="pgrant">dsdsd</p>
+                </div>
+                <div class="col-lg-4"> 
                     <h5>contact_center_notes</h5> 
+                    <p id="ccenternotes">dsdsd</p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>previous_grant_work</h5> 
+                    <p id="gwork">dsdsd</p>
+                </div>
+                <div class="col-lg-12">
+                    <hr>
                 </div>
                 
             </div>
@@ -334,8 +358,8 @@
     }
 </script>
 <script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "600px";
+function openNav(id) {
+  document.getElementById("mySidenav").style.width = "1000px";
 }
 
 function closeNav() {

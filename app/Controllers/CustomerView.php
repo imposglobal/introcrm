@@ -83,5 +83,21 @@ public function delete($lead_id = null) {
     }
 }
 
+public function viewCustomerAPI($id){
+    
+
+    // Search for customers in the database based on email or mobile number
+    $customerModel = new CustomerModel();
+    $customers = $customerModel
+                ->where('id', $id);
+    
+
+    // Convert the response array to JSON
+    $jsonResponse = json_encode($customers);
+
+    // Output the JSON response
+    echo $jsonResponse;
+}
+
 
 }

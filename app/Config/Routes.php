@@ -40,3 +40,5 @@ $routes->post('/customer/update', 'Customers::update');
 //send Email
 $routes->get('/email_view', 'SendMail::index'); 
 
+//view customer api json
+$routes->get('getcustomer/(:num)', 'CustomerView::viewCustomerAPI/$1');
