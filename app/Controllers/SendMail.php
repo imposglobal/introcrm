@@ -54,5 +54,9 @@ class SendMail extends Controller
  //return view('form_view');
         
     }
+
+    public function SaveInvite(){
+        echo "test";
+    }
     
 }
