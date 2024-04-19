@@ -62,7 +62,7 @@
                     <div class="card-body">
                       <p class="mb-4">Total Customers</p>
                       <p class="fs-30 mb-2"><?= $totalCustomer; ?></p>
-                      <p>22.00% (30 days)</p>
+                      <p>Total Customer Till Now</p>
                     </div>
                   </div>
                 </div>
@@ -71,9 +71,9 @@
                 <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                   <div class="card card-light-blue">
                     <div class="card-body">
-                      <p class="mb-4">Accepted</p>
+                      <p class="mb-4">Total Customers</p>
                       <p class="fs-30 mb-2">1</p>
-                      <p>2.00% (30 days)</p>
+                      <p>In This Month</p>
                     </div>
                   </div>
                 </div>
