@@ -94,7 +94,7 @@
                                     </thead>
                                     <tbody>
                                         <?php $i = 1; ?>
-                                        <?php if ($customers && count($customers) > 1): ?>
+                                        <?php if ($customers && count($customers) >= 1): ?>
                                         <?php foreach ($customers as $customer): 
                                             if($customer['status'] === "New Customer"){
                                                 $lstatus = '<span class="bg-primary text-white p-2 rounded">New Customer</span>';
@@ -139,7 +139,7 @@
                                         <?php endforeach; ?>
                                         <?php else: ?>
                                         <tr>
-                                            <td colspan="6">No customers found.</td>
+                                            <td colspan="7">No customers found.</td>
                                         </tr>
                                         <?php endif; ?>
                                     </tbody>

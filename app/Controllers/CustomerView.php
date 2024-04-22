@@ -33,13 +33,15 @@ class CustomerView extends BaseController
 //view all Customer in Tables
 public function index() {
     $customerModel = new CustomerModel();
-    
-    // Query customers and order them by a specific column in descending order
+
+    // Query customers and order them by the 'lead_id' column in descending order
     $result['customers'] = $customerModel->orderBy('lead_id', 'desc')->paginate();
     
+    // Retrieve the pager for pagination
     $result['pager'] = $customerModel->pager;
     
-    // return view('customers/view_customer', $result);
+    // Pass additional data to the view, if needed ($this->data seems to be additional data)
+    // You can merge it with the $result array using the '+' operator
     return view('customers/view_customers', $result + $this->data);
 }
 
