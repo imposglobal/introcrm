@@ -1,0 +1,42 @@
+CRITICAL - 2024-04-22 06:08:03 --> ErrorException: Undefined variable $customers
+[Method: GET, Route: agent]
+in APPPATH\Views\agent\add_agent.php on line 97.
+ 1 APPPATH\Views\agent\add_agent.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customers', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\add_agent.php', 97)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\add_agent.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('agent/add_agent', [], true)
+ 5 APPPATH\Controllers\AddAgent.php(35): view('agent/add_agent', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AddAgent->Add_agent()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AddAgent))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 06:11:48 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: agent]
+in APPPATH\Views\agent\add_agent.php on line 168.
+ 1 APPPATH\Views\agent\add_agent.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\add_agent.php', 168)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\add_agent.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('agent/add_agent', [], true)
+ 5 APPPATH\Controllers\AddAgent.php(35): view('agent/add_agent', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AddAgent->Add_agent()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AddAgent))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 06:12:32 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: agent]
+in APPPATH\Views\agent\add_agent.php on line 168.
+ 1 APPPATH\Views\agent\add_agent.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\add_agent.php', 168)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\add_agent.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('agent/add_agent', [], true)
+ 5 APPPATH\Controllers\AddAgent.php(35): view('agent/add_agent', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AddAgent->Add_agent()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AddAgent))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
