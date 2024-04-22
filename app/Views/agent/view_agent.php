@@ -130,11 +130,11 @@
                                            
                                             <?php $role = $session->get('role');
                                              if($role == 0 || $role == 1 || $role == 3){ ?>
-                                            <a href="<?php echo base_url('agent/update/');?>" data-toggle="tooltip" data-placement="top" title="edit agent"><i class="mdi mdi-account-edit bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <a href="<?php echo base_url('agent/edit/'.$user['id']);?>" data-toggle="tooltip" data-placement="top" title="edit agent"><i class="mdi mdi-account-edit bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
                                             <?php } ?>
 
                                             <?php if($role == 0 || $role == 3){ ?>
-                                            <a href="<?php echo base_url('delete_agent/'.$user['id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delete customer"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <a href="<?php echo base_url('agent/delete/'.$user['id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delete customer"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
                                             <?php } ?>
                                             </td>
                                         </tr>

@@ -51,11 +51,12 @@ $routes->get('/agent', 'Agent::index');
 $routes->POST('/agent/add', 'Agent::store');
 $routes->get('/agent/view', 'Agent::View');
 // delete agent
-$routes->get('delete_agent/(:num)', 'Agent::delete/$1');
+$routes->get('agent/delete/(:num)', 'Agent::delete/$1');
 //agent edit
-$routes->get('/agent/update', 'Agent::update');
+$routes->get('agent/edit/(:num)', 'Agent::edit/$1');
 
-
+// update agent
+$routes->post('/agent/update', 'Agent::update');
 
 
 
