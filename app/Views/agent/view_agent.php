@@ -76,18 +76,76 @@
                         <div class="col-md-12">
                             <div class="card-body mt-2">
                                 <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
-                                    Add Agent</h4>
+                                    View Agent</h4>
                                 <hr>
-
-                                <!-- table code start -->
-                                <?php if (isset($alrt)): ?>
+                                <!-- alert message code using flash data -->
+                                <?php if (session()->has('alrt')): ?>
                                     <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                        <?= $alrt ?>
+                                        <?= session('alrt') ?>
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                 <?php endif; ?>
+                                <!-- alert message code end -->
+
+                                <!-- table code start -->
+                                
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First Name</th>
+                                            <th scope="col">Last Name</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Center Name</th>
+                                            <th scope="col">Actions</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php $i = 1; ?>
+                                        <?php if ($users && count($users) >= 1): ?>
+                                        <?php foreach ($users as $user):    
+                                        ?>
+                                        <tr>
+                                            <td>
+                                                <?= $i++ ?>
+                                            </td>                                       
+                                            <td>
+                                                <?= $user['fname'] ?>
+                                            </td>
+                                            
+                                            <td>
+                                                <?=  $user['lname'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $user['email'] ?>
+                                            </td>                                           
+                                            <td>
+                                                <?= $user['center_name'] ?>
+                                            </td>
+                                           
+                                            <td>
+                                           
+                                            <?php $role = $session->get('role');
+                                             if($role == 0 || $role == 1 || $role == 3){ ?>
+                                            <a href="<?php echo base_url('edit_agent/'.$user['id']);?>" data-toggle="tooltip" data-placement="top" title="edit agent"><i class="mdi mdi-account-edit bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <?php } ?>
+
+                                            <?php if($role == 0 || $role == 3){ ?>
+                                            <a href="<?php echo base_url('delete_agent/'.$user['id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delete customer"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <?php } ?>
+                                            </td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <tr>
+                                            <td colspan="7">No agents found.</td>
+                                        </tr>
+                                        <?php endif; ?>
+                                    </tbody>
+                                </table>
                                 
                          <!-- table code end -->
                             </div>
@@ -103,6 +161,33 @@
            
         </div>
     </div>
+
+    <script>
+    function confirmDelete(link) {
+        event.preventDefault(); // Prevent the default behavior of the link
+
+        const deleteUrl = link.getAttribute('href'); // Get the URL to delete
+
+        // Show Sweet Alert confirmation
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this customer!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // If user confirms deletion, redirect to the delete URL
+                window.location.href = deleteUrl;
+            } else {
+                // If user cancels deletion, do nothing
+                Swal.fire("Cancelled", "Your customer is safe!", "info");
+            }
+        });
+    }
+</script>
     <!-- content-wrapper ends -->
 
 

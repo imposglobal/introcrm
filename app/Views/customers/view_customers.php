@@ -435,4 +435,6 @@
         $('#mySidenav').css('width', '0');
     }
 </script>
+
+
     <?= $this->endSection() ?>
