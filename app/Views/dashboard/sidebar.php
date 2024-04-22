@@ -1,7 +1,5 @@
 <style>
-  .nav-link{
-    background: #f5f5f5;
-  }
+  
   .false{
     background: #f5f5f5 !important;
   }
