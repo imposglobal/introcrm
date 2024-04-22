@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Skydash Admin</title>
+  <title>Welcome On Boarding</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/vendors/feather/feather.css">
   <link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/vendors/ti-icons/css/themify-icons.css">
@@ -29,7 +29,13 @@
               <div class="brand-logo">
                 <img src="<?php echo $baseURL; ?>/assets/images/logo.svg" alt="logo">
               </div>
-             
+             <?php $center = "";
+                   $role = "";
+                   if(isset($_GET['center'])!== null || isset($GET['role'])== "introducer"){
+                    $center = $_GET['center'];
+                    $role = '1';
+                   }
+             ?>
               <form class="pt-3" action="<?php echo base_url('/login'); ?>" method="post">
               <div class="row">
                 <div class="col-lg-6">
@@ -59,7 +65,8 @@
                 <div class="col-lg-6">
                   <div class="form-group">
                   <label>Center Name</label>
-                    <input type="text" required name="center_name" class="form-control form-control-lg" id="center_name" placeholder="Center Name" value="<?= set_value('center_name') ?>">
+                    <input type="text" required name="center_name" class="form-control form-control-lg" id="center_name" placeholder="Center Name" value="<?= set_value('center_name') ?><?= $center ?>" readonly>
+                    <input type="hidden" name="role" value="<?=$role ?>">
                   </div>
                 </div>
                 <div class="col-lg-6">

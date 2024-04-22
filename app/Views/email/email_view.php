@@ -39,9 +39,8 @@
                                 <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
                                  Invite</h4>
                                 <hr>
-                                <hr>
 
-                                <form action="<?php echo base_url('/save/invite')?>" method="POST" enctype="multipart/form-data">
+                                <form  class="mt-4" action="<?php echo base_url('/email/invite')?>" method="POST" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="form-group">
@@ -97,7 +96,6 @@
                             <div class="card-body mt-2">
                                 <!-- <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
                                  </h4> -->
-                                <hr>
                                 
                                  <!-- table code start -->
                                  <table class="table table-striped">
