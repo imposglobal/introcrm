@@ -50,7 +50,8 @@ class AddAgent extends BaseController
     ];
     // print_r($data);
     $userModel->save($data);
-    return view('agent/view_agent', ['alrt' => 'Agent added successfully'] + $this->data);
+    // return redirect()->back();
+     return view('agent/view_agent', ['alrt' => 'Agent added successfully'] + $this->data);
 
   }
   
