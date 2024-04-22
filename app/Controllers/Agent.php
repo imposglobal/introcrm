@@ -35,7 +35,7 @@ class Agent extends BaseController
          return view('agent/add_agent', $this->data);
     }
   
-
+/**************************************************************************** */
     public function store(){
             $userModel = new UserModel();
             // get data from agent form in db fields using getpost
@@ -54,7 +54,8 @@ class Agent extends BaseController
             // return redirect()->back();
             return redirect()->to('agent/view')->with('alrt', 'Agent added successfully');
   }
-  
+
+  /******************************************************************************/
 //view all Customer in Tables
 public function View() {
     $userModel = new UserModel();
@@ -69,7 +70,7 @@ public function View() {
     // You can merge it with the $result array using the '+' operator
     return view('agent/view_agent', $result + $this->data);
 }
-
+/********************************************************************************/
 public function delete($id = null) {
     $userModel = new UserModel();
     $result['users'] = $userModel->where('id', $id)->delete();
@@ -87,43 +88,50 @@ public function delete($id = null) {
     }
 }
 
-
- public function update()
+/************************************************************************************/
+ public function edit($id)
 {
-    echo "testttt";
-    
-//  $userModel = new UserModel();
-//      $id=$this->request->getPost('id');
-    
- 
-//      $data = [
-//         'fname' => $this->request->getPost('fname'),
-//         'role' => $this->request->getPost('role'),
-//         'lname' => $this->request->getPost('lname'),
-//         'email' => $this->request->getPost('email'),
-//         'phone' => $this->request->getPost('phone'),
-//         'center_name' => $this->request->getPost('center_name'),
-//         'location' => $this->request->getPost('location'),
-//         'password' => $this->request->getPost('password')
-//     ];
-//     print_r($data);
-//             // Perform the update
-//             $result = $userModel->update(id, $data);
+    $userModel = new UserModel();
+    $result = $userModel->where('id', $id)->first();
+    // print_r($result);
+    $viewData = [
+        'result' => $result,
+    ];
+    return view('agent/agent_update', $viewData + $this->data);
 
-//             // Define the base URL for redirection
-//             $baseUrl = base_url('customer/');
-
-//             // Check if the update was successful
-//             if ($result) {
-//                 // Append status parameter for success
-//                 $redirectURL = $baseUrl .$lead_id. '?status=success';
-//             } else {
-//                 // Append status parameter for error
-//                 $redirectURL = $baseUrl .$lead_id. '?status=error';
-//             }
-//             // Redirect to the updated URL
-//             return redirect()->to($redirectURL);
 }
+/*************************************************************************************/
+
+
+public function update()
+{
+
+            $userModel = new UserModel();
+            $id=$this->request->getPost('id');
+            $data = [
+                'fname' => $this->request->getPost('fname'),
+                'role' => $this->request->getPost('role'),
+                'lname' => $this->request->getPost('lname'),
+                'email' => $this->request->getPost('email'),
+                'phone' => $this->request->getPost('phone'),
+                'center_name' => $this->request->getPost('center_name'),
+                'location' => $this->request->getPost('location'),
+        
+            ];
+           // print_r($data);
+                    // Perform the update
+                    $result = $userModel->update($id, $data);
+                    if ($result) {
+                        // Set success flash message
+                        session()->setFlashdata('alrt', 'Record updated successfully.');
+                        return redirect()->back();
+                    } else {
+                        // Handle update failure if needed
+                        return redirect()->back()->with('error', 'Failed to update user data.');
+                    } 
+   }
+
+
 
 
 }
