@@ -31,7 +31,7 @@ class AddAgent extends BaseController
 
     public function index()
     {
-   
+        
          return view('agent/add_agent', $this->data);
     }
   
