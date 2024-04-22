@@ -54,7 +54,7 @@ class SendMail extends Controller
         $message .= '<h2 style="color: #333; text-align: center;">Welcome to Our Service!</h2>';
         $message .= '<p style="color: #333;">Dear ' . $fname . ' ' . $lname . ',</p>';
         $message .= '<p style="color: #333;">We are thrilled to welcome you to our service and excited to have you onboard!</p>';
-        $message .= '<p style="color: #333;">At [Your Company Name], we strive to provide exceptional service and support to all our clients.</p>';
+        $message .= '<p style="color: #333;">At Impos Global ltd, we strive to provide exceptional service and support to all our clients.</p>';
         $message .= '<p style="color: #333;">To get started with your onboarding process, please click the link below:</p>';
         $message .= '<div style="text-align: center; margin-top: 20px;">';
         $message .= '<a href="http://localhost/introcrm/onboard?center=' . $center . '&role=introducer" style="background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px; display: inline-block;">Complete Onboarding</a>';
