@@ -38,7 +38,7 @@ $routes->get('/customer/(:num)', 'Customers::showCustomer/$1');
 $routes->post('/customer/update', 'Customers::update');
 
 // Email
-$routes->get('/email_view', 'SendMail::index'); 
+$routes->get('/invite', 'SendMail::index'); 
 $routes->get('/email/invite', 'SendMail::EmailInvite'); 
 $routes->post('/save/invite', 'SendMail::SaveInvite');
  

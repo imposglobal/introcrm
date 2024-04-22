@@ -20,6 +20,13 @@
               </ul>
             </div>
           </li>
+
+          <li class="nav-item <?php echo ($currentURL == base_url('invite')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url('dashboard'); ?>">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+            </a>
+        </li>
         <!-- Add more sidebar items with similar logic -->
     </ul>
 </nav>
