@@ -17,3 +17,169 @@ in SYSTEMPATH\Database\Query.php on line 337.
 14 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
 15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 08:36:48 --> ErrorException: Undefined variable $customers
+[Method: GET, Route: agent/view]
+in APPPATH\Views\agent\view_agent.php on line 105.
+ 1 APPPATH\Views\agent\view_agent.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customers', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\view_agent.php', 105)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\view_agent.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('agent/view_agent', [], true)
+ 5 APPPATH\Controllers\Agent.php(70): view('agent/view_agent', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agent->View()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agent))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 08:42:53 --> ErrorException: Undefined variable $customer
+[Method: GET, Route: agent/view]
+in APPPATH\Views\agent\view_agent.php on line 118.
+ 1 APPPATH\Views\agent\view_agent.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customer', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\view_agent.php', 118)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\view_agent.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('agent/view_agent', [], true)
+ 5 APPPATH\Controllers\Agent.php(70): view('agent/view_agent', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agent->View()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agent))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 08:43:11 --> ErrorException: Undefined variable $customer
+[Method: GET, Route: agent/view]
+in APPPATH\Views\agent\view_agent.php on line 121.
+ 1 APPPATH\Views\agent\view_agent.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customer', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\view_agent.php', 121)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\view_agent.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('agent/view_agent', [], true)
+ 5 APPPATH\Controllers\Agent.php(70): view('agent/view_agent', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agent->View()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agent))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 08:43:19 --> ErrorException: Undefined array key "mobile"
+[Method: GET, Route: agent/view]
+in APPPATH\Views\agent\view_agent.php on line 121.
+ 1 APPPATH\Views\agent\view_agent.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "mobile"', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\view_agent.php', 121)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\view_agent.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('agent/view_agent', [], true)
+ 5 APPPATH\Controllers\Agent.php(70): view('agent/view_agent', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agent->View()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agent))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 09:02:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "agent/view.php"
+[Method: POST, Route: agent/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('agent/view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('agent/view', [], true)
+ 3 APPPATH\Controllers\Agent.php(56): view('agent/view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agent->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agent))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 09:11:28 --> ErrorException: Undefined array key "center"
+[Method: GET, Route: onboard]
+in APPPATH\Views\signup_signin\onboard.php on line 35.
+ 1 APPPATH\Views\signup_signin\onboard.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "center"', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\onboard.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\onboard.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('signup_signin/onboard', [], true)
+ 5 APPPATH\Controllers\Home.php(93): view('signup_signin/onboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 09:11:30 --> ErrorException: Undefined array key "center"
+[Method: GET, Route: onboard]
+in APPPATH\Views\signup_signin\onboard.php on line 35.
+ 1 APPPATH\Views\signup_signin\onboard.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "center"', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\onboard.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\onboard.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('signup_signin/onboard', [], true)
+ 5 APPPATH\Controllers\Home.php(93): view('signup_signin/onboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 09:11:53 --> ErrorException: Undefined array key "center"
+[Method: GET, Route: onboard]
+in APPPATH\Views\signup_signin\onboard.php on line 35.
+ 1 APPPATH\Views\signup_signin\onboard.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "center"', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\onboard.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\onboard.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('signup_signin/onboard', [], true)
+ 5 APPPATH\Controllers\Home.php(93): view('signup_signin/onboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 09:11:54 --> ErrorException: Undefined array key "center"
+[Method: GET, Route: onboard]
+in APPPATH\Views\signup_signin\onboard.php on line 35.
+ 1 APPPATH\Views\signup_signin\onboard.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "center"', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\onboard.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\signup_signin\\onboard.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('signup_signin/onboard', [], true)
+ 5 APPPATH\Controllers\Home.php(93): view('signup_signin/onboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 09:24:05 --> ErrorException: Undefined variable $customer
+[Method: GET, Route: agent/view]
+in APPPATH\Views\agent\view_agent.php on line 131.
+ 1 APPPATH\Views\agent\view_agent.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customer', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\view_agent.php', 131)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\view_agent.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('agent/view_agent', [], true)
+ 5 APPPATH\Controllers\Agent.php(70): view('agent/view_agent', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agent->View()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agent))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 09:27:55 --> ErrorException: Undefined variable $customer
+[Method: GET, Route: agent/view]
+in APPPATH\Views\agent\view_agent.php on line 131.
+ 1 APPPATH\Views\agent\view_agent.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customer', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\view_agent.php', 131)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\agent\\view_agent.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('agent/view_agent', [], true)
+ 5 APPPATH\Controllers\Agent.php(70): view('agent/view_agent', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agent->View()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agent))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-22 09:41:29 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: customer/38]
+in APPPATH\Views\customers\edit_customer.php on line 70.
+ 1 APPPATH\Views\customers\edit_customer.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\edit_customer.php', 70)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\customers\\edit_customer.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customers/edit_customer', [], true)
+ 5 APPPATH\Controllers\Customers.php(128): view('customers/edit_customer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->showCustomer('38')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

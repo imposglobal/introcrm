@@ -50,6 +50,12 @@ $routes->get('getcustomer/(:num)', 'CustomerView::viewCustomerAPI/$1');
 $routes->get('/agent', 'Agent::index');
 $routes->POST('/agent/add', 'Agent::store');
 $routes->get('/agent/view', 'Agent::View');
+// delete agent
+$routes->get('delete_agent/(:num)', 'Agent::delete/$1');
+//agent edit
+$routes->get('update_agent/(:num)', 'Agent::update/$1');
+
+
 
 
 
