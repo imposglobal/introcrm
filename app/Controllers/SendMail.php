@@ -48,7 +48,7 @@ class SendMail extends Controller
         $email->setSubject($subject);
         $email->setMessage($message);
 
-        if($email->send()){
+        if($email->send()=== true){
             echo "Mail sent successfully";
         }else{
             $data = $email->printDebugger(['headers']);
