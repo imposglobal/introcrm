@@ -88,9 +88,11 @@ public function delete($id = null) {
 }
 
 
-// public function update()
-// {
-//     $userModel = new UserModel();
+ public function update()
+{
+    echo "testttt";
+    
+//  $userModel = new UserModel();
 //      $id=$this->request->getPost('id');
     
  
@@ -104,7 +106,7 @@ public function delete($id = null) {
 //         'location' => $this->request->getPost('location'),
 //         'password' => $this->request->getPost('password')
 //     ];
-    
+//     print_r($data);
 //             // Perform the update
 //             $result = $userModel->update(id, $data);
 
@@ -121,7 +123,7 @@ public function delete($id = null) {
 //             }
 //             // Redirect to the updated URL
 //             return redirect()->to($redirectURL);
-// }
+}
 
 
 }
