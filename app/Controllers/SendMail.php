@@ -79,12 +79,13 @@ class SendMail extends Controller
                 'fname' => $fname,
                 'lname' => $lname,
                 'center_name' => $center,
-                'email' => $email,
+                'email' => $to,
                
             ];
         
              $inviteModel->save($data);
             echo "Mail sent successfully";
+            return redirect()->back();
         } else {
             // Display error if email sending fails
             $data = $email->printDebugger(['headers']);

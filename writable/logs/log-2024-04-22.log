@@ -1,0 +1,19 @@
+CRITICAL - 2024-04-22 07:06:44 --> Error: Object of class CodeIgniter\Email\Email could not be converted to string
+[Method: POST, Route: email/invite]
+in SYSTEMPATH\Database\Query.php on line 337.
+ 1 SYSTEMPATH\Database\Query.php(337): strtr('INSERT INTO `invite` (`fname`, `lname`, `center_name`, `email`) VALUES (:fname:, :lname:, :center_name:, :email:)', [...])
+ 2 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `invite` (`fname`, `lname`, `center_name`, `email`) VALUES (:fname:, :lname:, :center_name:, :email:)', [...])
+ 3 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `invite` (`fname`, `lname`, `center_name`, `email`) VALUES (:fname:, :lname:, :center_name:, :email:)', [...], false)
+ 6 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\SendMail.php(86): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SendMail->EmailInvite()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SendMail))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
