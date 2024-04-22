@@ -49,6 +49,8 @@ $routes->get('getcustomer/(:num)', 'CustomerView::viewCustomerAPI/$1');
 // Add agent
 $routes->get('/agent', 'AddAgent::index');
 $routes->POST('/agent/add', 'AddAgent::store');
+$routes->get('/agent/view', 'AddAgent::index');
+
 
 
 
