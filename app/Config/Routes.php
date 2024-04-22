@@ -39,9 +39,17 @@ $routes->post('/customer/update', 'Customers::update');
 
 // Email
 $routes->get('/invite', 'SendMail::index'); 
-$routes->get('/email/invite', 'SendMail::EmailInvite'); 
+$routes->post('/email/invite', 'SendMail::EmailInvite'); 
 $routes->post('/save/invite', 'SendMail::SaveInvite');
  
 
 //view customer api json
 $routes->get('getcustomer/(:num)', 'CustomerView::viewCustomerAPI/$1');
+
+// Add agent
+$routes->get('/agent', 'AddAgent::index');
+$routes->POST('/agent/add', 'AddAgent::store');
+
+
+
+
