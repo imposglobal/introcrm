@@ -4,7 +4,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
 
-class AddAgent extends BaseController
+class Agent extends BaseController
 {
 
     protected $currentURL;
@@ -51,10 +51,24 @@ class AddAgent extends BaseController
     // print_r($data);
     $userModel->save($data);
     // return redirect()->back();
-     return view('agent/view_agent', ['alrt' => 'Agent added successfully'] + $this->data);
+    return redirect()->to('agent/view')->with('alrt', 'Agent added successfully');
 
   }
   
+//view all Customer in Tables
+public function View() {
+    $userModel = new UserModel();
+
+    // Query customers and order them by the 'lead_id' column in descending order
+    $result['users'] = $userModel->orderBy('id', 'desc')->paginate();
+    
+    // Retrieve the pager for pagination
+    $result['pager'] = $userModel->pager;
+    
+    // Pass additional data to the view, if needed ($this->data seems to be additional data)
+    // You can merge it with the $result array using the '+' operator
+    return view('agent/view_agent', $result + $this->data);
+}
 
 
 

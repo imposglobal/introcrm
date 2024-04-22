@@ -47,9 +47,9 @@ $routes->post('/save/invite', 'SendMail::SaveInvite');
 $routes->get('getcustomer/(:num)', 'CustomerView::viewCustomerAPI/$1');
 
 // Add agent
-$routes->get('/agent', 'AddAgent::index');
-$routes->POST('/agent/add', 'AddAgent::store');
-$routes->get('/agent/view', 'AddAgent::index');
+$routes->get('/agent', 'Agent::index');
+$routes->POST('/agent/add', 'Agent::store');
+$routes->get('/agent/view', 'Agent::View');
 
 
 
