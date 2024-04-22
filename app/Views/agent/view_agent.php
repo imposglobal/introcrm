@@ -130,7 +130,7 @@
                                            
                                             <?php $role = $session->get('role');
                                              if($role == 0 || $role == 1 || $role == 3){ ?>
-                                            <a href="<?php echo base_url('edit_agent/'.$user['id']);?>" data-toggle="tooltip" data-placement="top" title="edit agent"><i class="mdi mdi-account-edit bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <a href="<?php echo base_url('agent/update/');?>" data-toggle="tooltip" data-placement="top" title="edit agent"><i class="mdi mdi-account-edit bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
                                             <?php } ?>
 
                                             <?php if($role == 0 || $role == 3){ ?>
