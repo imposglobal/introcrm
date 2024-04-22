@@ -33,9 +33,28 @@ class CustomerView extends BaseController
 //view all Customer in Tables
 public function index() {
     $customerModel = new CustomerModel();
+    
+    $session = session();
+    $center = $session->get('center');
+    $role = $session->get('role');
+    $userid = $session->get('id');
+
+    if($role == 2){
+        $result['customers'] = $customerModel
+        ->where('userid', $userid) // Replace $leadId with the value you want to use for the where condition
+        ->orderBy('lead_id', 'desc')
+        ->paginate();
+    }elseif($role == 1){
+        $result['customers'] = $customerModel
+        ->where('center_name', $center) // Replace $leadId with the value you want to use for the where condition
+        ->orderBy('lead_id', 'desc')
+        ->paginate();
+    }else{
+        $result['customers'] = $customerModel->orderBy('lead_id', 'desc')->paginate();
+    }
 
     // Query customers and order them by the 'lead_id' column in descending order
-    $result['customers'] = $customerModel->orderBy('lead_id', 'desc')->paginate();
+    
     
     // Retrieve the pager for pagination
     $result['pager'] = $customerModel->pager;

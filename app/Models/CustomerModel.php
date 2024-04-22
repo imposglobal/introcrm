@@ -40,7 +40,9 @@ class CustomerModel extends Model{
         'previous_grant_work',
         'contact_center_notes',
         'update_date_introducer',
-        'update_date_admin'
+        'update_date_admin',
+        'userid',
+        'agent_name'
     ];
     
 }
