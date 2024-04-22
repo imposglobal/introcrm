@@ -23,7 +23,7 @@
             </a>
         </li>
         <li class="nav-item mb-3 <?php echo ($currentURL === base_url('index.php/customer/view')) ? 'active' : ''; ?>">
-            <a class="nav-link" href="<?php echo base_url('customer'); ?>">
+            <a class="nav-link" href="<?php echo base_url('customer/view'); ?>">
                 <i class="icon-grid menu-icon"></i>
                 <span class="menu-title">View Customers</span>
             </a>
