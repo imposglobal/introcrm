@@ -75,9 +75,38 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card-body mt-2">
-                                <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
+                            <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
                                     View Customer</h4>
                                 <hr>
+                                    <div class="row">
+                                        <div class="col-lg-6 my-3">
+                                            <span class="bg-primary text-white px-4 py-2 rounded">Yesterday</span>
+                                            <span class="bg-primary text-white px-4 py-2 rounded">Today</span>
+                                            <span class="bg-primary text-white px-4 py-2 rounded">Week</span>
+                                            <span class="bg-primary text-white px-4 py-2 rounded">Month</span>
+                                        </div>
+                                       
+                                    
+                                
+                                    <div class="col-lg-6">
+                                    <div class="row align-items-center">
+                                         <div class="col-md-4 ">
+                                           
+                                            <input type="date" id="birthday" name="birthday" class="form-control" placeholder="From date">
+                                        </div>
+                                        <div class="col-md-4 ">
+                                            <input type="date" id="birthday" name="birthday" class="form-control" placeholder="From date">
+                                        </div>
+                                        <div class="col-md-4 ">
+                                            <span class="bg-primary text-white px-4 py-2 rounded">Filter</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                               <hr>
+
+
+                               
 
                                 <!-- table code start -->
                                 <table class="table table-striped">
