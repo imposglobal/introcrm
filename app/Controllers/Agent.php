@@ -59,9 +59,20 @@ class Agent extends BaseController
 //view all Customer in Tables
 public function View() {
     $userModel = new UserModel();
-
-    // Query customers and order them by the 'lead_id' column in descending order
-    $result['users'] = $userModel->orderBy('id', 'desc')->paginate();
+    $session = session();
+    $center = $session->get('center');
+    $role = $session->get('role');
+    $userid = $session->get('id');
+    if($role == 1){
+        $result['users'] = $userModel
+        ->where('center_name', $center) 
+        ->orderBy('id', 'desc')
+        ->paginate();
+    }else{
+        // Query customers and order them by the 'lead_id' column in descending order
+        $result['users'] = $userModel->orderBy('id', 'desc')->paginate();
+    }
+    
     
     // Retrieve the pager for pagination
     $result['pager'] = $userModel->pager;
