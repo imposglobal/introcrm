@@ -41,13 +41,13 @@ public function index() {
 
     if($role == 2){
         $result['customers'] = $customerModel
-        ->where('userid', $userid) // Replace $leadId with the value you want to use for the where condition
+        ->where('userid', $userid) // Replace $userid with the value you want to use for the where condition
         ->orderBy('lead_id', 'desc')
         ->paginate();
 
     }elseif($role == 1){
         $result['customers'] = $customerModel
-        ->where('center_name', $center) // Replace $leadId with the value you want to use for the where condition
+        ->where('center_name', $center) // Replace $userid with the value you want to use for the where condition
         ->orderBy('lead_id', 'desc')
         ->paginate();
         
