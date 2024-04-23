@@ -2,7 +2,7 @@
 <?= $this->extend('layout/layout') ?>
 <!-- Define the content section -->
 <?= $this->section('content') ?>
-<title>Add Customer</title>
+<title>Add Customers</title>
 <style>
     .drop-area {
     border: 2px dashed #ccc;

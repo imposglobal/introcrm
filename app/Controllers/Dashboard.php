@@ -65,6 +65,19 @@ class Dashboard extends BaseController
     }
 
     /****************************************************************************************************/
+    function getStatusCount($status) {
+        $customerModel = new CustomerModel();
+        
+        // Query to count total status count based status
+        $totalAccepted = $customerModel
+            ->where('status', $status)
+            ->countAllResults();
+    
+        return $totalAccepted;
+    }
+    
+
+    /****************************************************************************************************/
     //show dashboard page 
     public function index()
     {
@@ -73,10 +86,10 @@ class Dashboard extends BaseController
         $role = $session->get('role');
         $id = $session->get('id');
         $center = $session->get('center');
-
         $currentURL = current_url();
         $startDate = date('Y-m-01'); // Start date of the current month
         $endDate = date('Y-m-t'); // End date of the current month
+
 
         // Get the base URL
         $baseURL = base_url();
@@ -85,14 +98,30 @@ class Dashboard extends BaseController
          $totalWorkingDays = $this->countWorkingDays($startDate, $endDate);
          $totaCurlWorkingDays = $this->countWorkingDaysUntilToday($startDate);
          $totalCustomer = $this->getTotalCustomers($role,$id,$center);
+         $countAccept = $this->getStatusCount('Accepted');
+         $countRejected = $this->getStatusCount('Rejected');
+         $countDWPSubmitted = $this->getStatusCount('DWP Submitted');
+         $countDWPPassed = $this->getStatusCount('DWP Passed');
+         $countCompleted = $this->getStatusCount('Completed');
+         $countPaid = $this->getStatusCount('Paid');
+         $countCallback = $this->getStatusCount('Callback');
+         $countRetransfer = $this->getStatusCount('Retransfer');
+
          $data = [
             'currentURL' => $currentURL,
             'baseURL' => $baseURL,
             'total_working_days' => $totalWorkingDays,
             'curworking_days'=> $totaCurlWorkingDays,
-            'totalCustomer' => $totalCustomer
+            'totalCustomer' => $totalCustomer,
+            'countAccept' => $countAccept,
+            'countRejected' => $countRejected,
+            'countDWPSubmitted' => $countDWPSubmitted,
+            'countDWPPassed' => $countDWPPassed,
+            'countCompleted' => $countCompleted,
+            'countCallback' => $countCallback,
+            'countPaid' => $countPaid,
+            'countRetransfer' => $countRetransfer
         ];
-
 
             return view('dashboard/dashboard', $data);
     }

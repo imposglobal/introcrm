@@ -71,9 +71,9 @@
                 <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                   <div class="card card-light-blue">
                     <div class="card-body">
-                      <p class="mb-4">Total Customers</p>
-                      <p class="fs-30 mb-2">1</p>
-                      <p>In This Month</p>
+                      <p class="mb-4">Accepted</p>
+                      <p class="fs-30 mb-2"><?= $countAccept; ?></p>
+                      <p>From total <?= $totalCustomer; ?> customers</p>
                     </div>
                   </div>
                 </div>
@@ -81,8 +81,8 @@
                   <div class="card card-light-danger">
                     <div class="card-body">
                       <p class="mb-4">Rejected</p>
-                      <p class="fs-30 mb-2">5</p>
-                      <p>0.22% (30 days)</p>
+                      <p class="fs-30 mb-2"><?=  $countRejected ;?></p>
+                      <p>From total <?= $totalCustomer; ?> customers</p>
                     </div>
                   </div>
                 </div>
@@ -95,8 +95,8 @@
               <div class="card card-light-blue">
                 <div class="card-body">
                   <p class="mb-4">DWP Submitted</p>
-                  <p class="fs-30 mb-2">5</p>
-                  <p>0.22% (30 days)</p>
+                  <p class="fs-30 mb-2"><?= $countDWPSubmitted  ;?></p>
+                  <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
             </div>
@@ -104,8 +104,8 @@
               <div class="card card-light-danger">
                 <div class="card-body">
                   <p class="mb-4">DWP Passed</p>
-                  <p class="fs-30 mb-2">6</p>
-                  <p>0.22% (30 days)</p>
+                  <p class="fs-30 mb-2"><?= $countDWPPassed ;?></p>
+                  <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
             </div>
@@ -113,8 +113,8 @@
               <div class="card card-dark-blue">
                 <div class="card-body">
                   <p class="mb-4">Completed</p>
-                  <p class="fs-30 mb-2">4</p>
-                  <p>0.22% (30 days)</p>
+                  <p class="fs-30 mb-2"><?= $countCompleted ;?></p>
+                  <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
             </div>
@@ -122,8 +122,8 @@
               <div class="card card-tale">
                 <div class="card-body">
                   <p class="mb-4">Paid</p>
-                  <p class="fs-30 mb-2">50</p>
-                  <p>0.22% (30 days)</p>
+                  <p class="fs-30 mb-2"><?= $countPaid ;?></p>
+                  <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
             </div>
@@ -131,8 +131,8 @@
               <div class="card card-tale">
                 <div class="card-body">
                   <p class="mb-4">Callback</p>
-                  <p class="fs-30 mb-2">8</p>
-                  <p>0.22% (30 days)</p>
+                  <p class="fs-30 mb-2"><?= $countCallback ;?></p>
+                  <p>From total <?= $totalCustomer; ?> customers </p>
                 </div>
               </div>
             </div>
@@ -140,8 +140,8 @@
               <div class="card card-dark-blue">
                 <div class="card-body">
                   <p class="mb-4">Retransfer</p>
-                  <p class="fs-30 mb-2">12</p>
-                  <p>0.22% (30 days)</p>
+                  <p class="fs-30 mb-2"><?= $countRetransfer ;?></p>
+                  <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
             </div>
