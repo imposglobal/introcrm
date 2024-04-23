@@ -80,10 +80,10 @@
                                 <hr>
                                     <div class="row">
                                         <div class="col-lg-6 my-3">
-                                            <span class="bg-primary  px-4 py-2 rounded"><a class="text-white" href="<?= $baseURL."filter/yesterday"?>">Yesterday</span></a>
-                                            <span class="bg-primary text-white px-4 py-2 rounded"><a class="text-white" href="<?= $baseURL."filter/today"?>">Today</span></a>
-                                            <span class="bg-primary text-white px-4 py-2 rounded"><a class="text-white" href="<?= $baseURL."filter/week"?>">Weekly</span></a>
-                                            <span class="bg-primary text-white px-4 py-2 rounded"><a class="text-white" href="<?= $baseURL."filter/month"?>">Monthly</span></a>
+                                            <span class="bg-light border mx-2 px-4 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/yesterday"?>">Yesterday</span></a>
+                                            <span class="bg-light border mx-2 text-dark px-4 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/today"?>">Today</span></a>
+                                            <span class="bg-light border mx-2 text-dark px-4 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/week"?>">Weekly</span></a>
+                                            <span class="bg-light border mx-2 text-dark px-4 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/month"?>">Monthly</span></a>
                                         </div>
                                        
                                     
@@ -126,11 +126,48 @@
                                         <?php $i = 1; ?>
                                         <?php if ($customers && count($customers) >= 1): ?>
                                         <?php foreach ($customers as $customer): 
-                                            if($customer['status'] === "New Customer"){
-                                                $lstatus = '<span class="bg-primary text-white p-2 rounded">New Customer</span>';
-                                            }else{
-                                                $lstatus = $customer['status'];
+                                            switch ($customer['status']) {
+                                                case "New Lead":
+                                                    $lstatus = '<span class="bg-secondary text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    break;
+                                                    
+                                                case "Accepted":
+                                                    $lstatus = '<span class="bg-success text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    break;
+
+                                                case "Rejected":
+                                                    $lstatus = '<span class="bg-danger text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    break;
+
+                                                case "DWP Submitted":
+                                                    $lstatus = '<span class="bg-warning text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    break;
+
+                                                case "DWP Passed":
+                                                    $lstatus = '<span class="bg-success text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    break;
+
+                                                 case "Completed":
+                                                    $lstatus = '<span class="bg-success text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    break;
+
+                                                 case "Paid":
+                                                    $lstatus = '<span class="bg-success text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    break;
+
+                                                case "Callback":
+                                                    $lstatus = '<span class="bg-warning text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    break;
+
+                                                case "Retransfer":
+                                                    $lstatus = '<span class="bg-warning text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    break;
+
+                                                default:
+                                                    $lstatus = $customer['status'];
+                                                    break;
                                             }
+                                            
                                         ?>
                                         <tr>
                                             <td>

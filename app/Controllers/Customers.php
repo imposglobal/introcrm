@@ -92,7 +92,7 @@ public function store()
             'epc_rating' => $this->request->getPost('epc'),
             'additional_notes' => $this->request->getPost('add_notes'),
             'created_agent_date' => $this->request->getPost('created_agent_date'),
-            'status' => 'New Customer',
+            'status' => 'New Lead',
             'agent_name' => $name,
             'userid' => $id
         ];
