@@ -128,39 +128,39 @@
                                         <?php foreach ($customers as $customer): 
                                             switch ($customer['status']) {
                                                 case "New Lead":
-                                                    $lstatus = '<span class="bg-secondary text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    $lstatus = '<span class="bg-secondary text-white p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
                                                     break;
                                                     
                                                 case "Accepted":
-                                                    $lstatus = '<span class="bg-success text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    $lstatus = '<span class="bg-success text-white p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
                                                     break;
 
                                                 case "Rejected":
-                                                    $lstatus = '<span class="bg-danger text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    $lstatus = '<span class="bg-danger text-white p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
                                                     break;
 
                                                 case "DWP Submitted":
-                                                    $lstatus = '<span class="bg-warning text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    $lstatus = '<span class="bg-warning text-dark p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
                                                     break;
 
                                                 case "DWP Passed":
-                                                    $lstatus = '<span class="bg-success text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    $lstatus = '<span class="bg-success text-white p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
                                                     break;
 
                                                  case "Completed":
-                                                    $lstatus = '<span class="bg-success text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    $lstatus = '<span class="bg-success text-white p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
                                                     break;
 
                                                  case "Paid":
-                                                    $lstatus = '<span class="bg-success text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    $lstatus = '<span class="bg-success text-white p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
                                                     break;
 
                                                 case "Callback":
-                                                    $lstatus = '<span class="bg-warning text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    $lstatus = '<span class="bg-warning text-dark p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
                                                     break;
 
                                                 case "Retransfer":
-                                                    $lstatus = '<span class="bg-warning text-white h6 p-1 px-3 rounded">'.$customer['status'].'</span>';
+                                                    $lstatus = '<span class="bg-warning text-dark p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
                                                     break;
 
                                                 default:
