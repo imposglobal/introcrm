@@ -139,14 +139,11 @@
                                         <?php endforeach; ?>
                                         <?php else: ?>
                                         <tr>
-                                            <td colspan="7">No customers found.</td>
+                                            <td colspan="7" class="text-center">No customers found.</td>
                                         </tr>
                                         <?php endif; ?>
                                     </tbody>
-                                </table>
-                                
-
-                                
+                                </table>       
                          <!-- table code end -->
                             </div>
                         </div>
