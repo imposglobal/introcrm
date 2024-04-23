@@ -80,10 +80,10 @@
                                 <hr>
                                     <div class="row">
                                         <div class="col-lg-6 my-3">
-                                            <span class="bg-primary text-white px-4 py-2 rounded">Yesterday</span>
-                                            <span class="bg-primary text-white px-4 py-2 rounded">Today</span>
-                                            <span class="bg-primary text-white px-4 py-2 rounded">Week</span>
-                                            <span class="bg-primary text-white px-4 py-2 rounded">Month</span>
+                                            <span class="bg-primary  px-4 py-2 rounded"><a class="text-white" href="<?= $baseURL."filter/yesterday"?>">Yesterday</span></a>
+                                            <span class="bg-primary text-white px-4 py-2 rounded"><a class="text-white" href="<?= $baseURL."filter/today"?>">Today</span></a>
+                                            <span class="bg-primary text-white px-4 py-2 rounded"><a class="text-white" href="<?= $baseURL."filter/week"?>">Weekly</span></a>
+                                            <span class="bg-primary text-white px-4 py-2 rounded"><a class="text-white" href="<?= $baseURL."filter/month"?>">Monthly</span></a>
                                         </div>
                                        
                                     
@@ -91,15 +91,16 @@
                                     <div class="col-lg-6">
                                     <div class="row align-items-center">
                                          <div class="col-md-4 ">
-                                           
-                                            <input type="date" id="birthday" name="birthday" class="form-control" placeholder="From date">
+                                           <form action="<?= $baseURL."filter/date" ?>" method="post">
+                                            <input type="date" id="from" name="from" class="form-control" placeholder="From date">
                                         </div>
                                         <div class="col-md-4 ">
-                                            <input type="date" id="birthday" name="birthday" class="form-control" placeholder="From date">
+                                            <input type="date" id="to" name="to" class="form-control" placeholder="From date">
                                         </div>
                                         <div class="col-md-4 ">
-                                            <span class="bg-primary text-white px-4 py-2 rounded">Filter</span>
+                                            <button type="submit" class="bg-primary text-white px-4 py-2 rounded">Filter</button>
                                         </div>
+                                        </form>
                                     </div>
                                     </div>
                                     </div>

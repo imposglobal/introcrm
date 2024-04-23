@@ -58,6 +58,10 @@ $routes->get('agent/edit/(:num)', 'Agent::edit/$1');
 // update agent
 $routes->post('/agent/update', 'Agent::update');
 
+//filter by days
+$routes->get('filter/(:any)', 'FilterCustomer::filterByDays/$1');
+$routes->post('filter/date', 'FilterCustomer::filterByDate');
+
 
 
 
