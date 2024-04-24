@@ -62,6 +62,12 @@ $routes->post('/agent/update', 'Agent::update');
 $routes->get('filter/(:any)', 'FilterCustomer::filterByDays/$1');
 $routes->post('filter/date', 'FilterCustomer::filterByDate');
 
+//Agent login
+$routes->get('/agent/login', 'AgentLogin::index');
+$routes->POST('/agentlogin/check', 'AgentLogin::Agentlogin');
+
+
+
 
 
 

@@ -114,6 +114,7 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
+                                            <th scope="col">Center Name</th>
                                             <th scope="col">Lead ID</th>
                                             <th scope="col">Lead Date</th>
                                             <th scope="col">Customer Name</th>
@@ -172,6 +173,9 @@
                                         <tr>
                                             <td>
                                                 <?= $i++ ?>
+                                            </td>
+                                            <td>
+                                                <?= $customer['center_name'] ?>
                                             </td>
                                             <td>
                                                 <a href="#" onclick="openNav(<?= $customer['lead_id'] ?>)"><?= $customer['lead_id'] ?></a>

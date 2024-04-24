@@ -97,8 +97,9 @@
                                             <th scope="col">#</th>
                                             <th scope="col">First Name</th>
                                             <th scope="col">Last Name</th>
-                                            <th scope="col">Email</th>
                                             <th scope="col">Center Name</th>
+                                            <th scope="col">User Name</th>
+                                            <th scope="col">Password</th>
                                             <th scope="col">Actions</th>
                                             
                                         </tr>
@@ -118,13 +119,16 @@
                                             
                                             <td>
                                                 <?=  $user['lname'] ?>
-                                            </td>
-                                            <td>
-                                                <?= $user['email'] ?>
-                                            </td>                                           
+                                            </td>                                          
                                             <td>
                                                 <?= $user['center_name'] ?>
                                             </td>
+                                            <td>
+                                                <?= $user['username'] ?>
+                                            </td> 
+                                            <td>
+                                                <?= $user['password'] ?>
+                                            </td> 
                                            
                                             <td>
                                            

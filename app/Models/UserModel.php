@@ -12,6 +12,7 @@ class UserModel extends Model{
         'phone',
         'center_name',
         'location',
+        'username',
         'password',
         'role',
         'created_at'

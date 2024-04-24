@@ -43,10 +43,9 @@ class Agent extends BaseController
                 'fname' => $this->request->getPost('fname'),
                 'role' => $this->request->getPost('role'),
                 'lname' => $this->request->getPost('lname'),
-                'email' => $this->request->getPost('email'),
-                'phone' => $this->request->getPost('phone'),
                 'center_name' => $this->request->getPost('center_name'),
                 'location' => $this->request->getPost('location'),
+                'username' => $this->request->getPost('username'),
                 'password' => $this->request->getPost('password')
             ];
             // print_r($data);
