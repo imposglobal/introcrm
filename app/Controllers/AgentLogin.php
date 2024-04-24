@@ -3,6 +3,8 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
+use App\Models\IpModel;
+
 
 class AgentLogin extends BaseController
 {
@@ -33,9 +35,41 @@ class AgentLogin extends BaseController
 
     public function index()
     {
+        $session = session();
+        $ipModel = new IpModel();
+        $request = service('request');
+        $userIP = $request->getIPAddress();
        
-       return view('agent/agent_login', $this->data);
+        $userIP ="192.168.1.";
+        $ids = $ipModel->select('ip_id')->findAll();
+        $ipIds = array_column($ids, 'ip_id'); 
+        
+        $ipdata = $ipModel->select('ip_address')->whereIn('ip_id', $ipIds)->findAll(); 
+    
+        $isUserIPAuthorized = false; // Initialize a variable to track if user IP is authorized
+    
+        foreach ($ipdata as $row) {
+            if ($row['ip_address'] === $userIP) { // Access 'ip_address' as an array key
+                $isUserIPAuthorized = true;
+                break; // Exit the loop if a match is found
+            }
+        }
+    
+        if ($isUserIPAuthorized) {
+            // User's IP is authorized, proceed with your logic
+            // echo "User IP is authorized.";
+            return view('agent/agent_login', $this->data);
+        } else {
+            // User's IP is not authorized
+            //echo "you are not authorized user to access this portal. ";
+            return view('agent/view_ip_errorr', $this->data);
+
+        }
+    
+       
     }
+    
+    
 
 
     // login function
