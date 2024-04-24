@@ -66,6 +66,9 @@ $routes->post('filter/date', 'FilterCustomer::filterByDate');
 $routes->get('/agent/login', 'AgentLogin::index');
 $routes->POST('/agentlogin/check', 'AgentLogin::Agentlogin');
 
+// searching customer from table only
+$routes->POST('/search/customer', 'FilterCustomer::searchingCustomer');
+
 
 
 

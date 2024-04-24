@@ -75,8 +75,21 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card-body mt-2">
-                            <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
-                                    View Customer</h4>
+
+                            <h4 class="card-title mb-3"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>View Customer</h4>
+                              
+                            <!-- search customer from table code     -->
+                                    <form action="<?php echo base_url('/search/customer'); ?>" method="post">
+                                        <div class="input-group col-md-4 justify-content-start">
+                                            <input type="text" id="searching" required name="searching" class="form-control" placeholder="Search....">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-dark " type="submit">Search</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                               <!-- search customer from table code     -->
+                                    
+
                                 <hr>
                                     <div class="row">
                                         <div class="col-lg-6 my-3">

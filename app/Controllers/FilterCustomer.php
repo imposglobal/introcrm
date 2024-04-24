@@ -64,12 +64,9 @@ class FilterCustomer extends BaseController
                             ->orderBy('lead_id', 'desc')
                             ->paginate();
         }
-        
-        
+
         // Search for customers in the database based on email or mobile number
         
-        
-
                         $result['pager'] = $customerModel->pager;
     
                         // Pass additional data to the view, if needed ($this->data seems to be additional data)
@@ -78,7 +75,7 @@ class FilterCustomer extends BaseController
     }
 
 
-/***********************************************************************************************/
+/**************************************************filter by date functionality*************************************************************/
 
 public function filterByDate(){
     $customerModel = new CustomerModel();
@@ -94,6 +91,24 @@ public function filterByDate(){
     
     // Pass additional data to the view, if needed ($this->data seems to be additional data)
     // You can merge it with the $result array using the '+' operator
+    return view('customers/view_customers', $result + $this->data);
+
+}
+/**************************************searching customers from tables only *********************************************************/
+
+public function searchingCustomer(){
+
+    $customerModel = new CustomerModel();
+   
+    $search = $this->request->getPost('searching'); //Accept input from from field using name"searching" in view_customer.php
+      
+               $result['customers'] = $customerModel
+                               ->like('center_name', $search) // Use like() for partial matches
+                               ->orWhere('fname', $search)
+                               ->orWhere('lname', $search)
+                               ->orWhere('lead_id', $search)
+                               ->paginate();
+                               $result['pager'] = $customerModel->pager;
     return view('customers/view_customers', $result + $this->data);
 
 }

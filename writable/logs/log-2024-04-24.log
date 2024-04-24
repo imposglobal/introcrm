@@ -150,3 +150,43 @@ in APPPATH\Controllers\AgentLogin.php on line 53.
  5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-24 08:51:19 --> BadMethodCallException: Call to undefined method App\Models\CustomerModel::getAll
+[Method: POST, Route: search/customer]
+in SYSTEMPATH\Model.php on line 920.
+ 1 APPPATH\Controllers\Customers.php(227): CodeIgniter\Model->__call('getAll', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->searchCustomer()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-24 08:53:04 --> BadMethodCallException: Call to undefined method App\Models\CustomerModel::getAll
+[Method: POST, Route: search/customer]
+in SYSTEMPATH\Model.php on line 920.
+ 1 APPPATH\Controllers\Customers.php(227): CodeIgniter\Model->__call('getAll', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->searchCustomer()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-24 09:04:33 --> BadMethodCallException: Call to undefined method App\Models\CustomerModel::getAll
+[Method: POST, Route: search/customer]
+in SYSTEMPATH\Model.php on line 920.
+ 1 APPPATH\Controllers\Customers.php(229): CodeIgniter\Model->__call('getAll', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->searchCustomer()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-24 09:06:08 --> BadMethodCallException: Call to undefined method App\Models\CustomerModel::getAll
+[Method: POST, Route: search/customer]
+in SYSTEMPATH\Model.php on line 920.
+ 1 APPPATH\Controllers\Customers.php(229): CodeIgniter\Model->__call('getAll', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customers->searchingCustomer()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
