@@ -82,8 +82,17 @@ class Home extends BaseController
 
     public function logout(){
         $session=session();
-        $session->destroy();
-        return redirect()->to('/');
+        $userModel = new UserModel();
+        $role = $session->get('role');
+
+        if ($role == 2) {
+            $session->destroy(); 
+            return redirect()->to('/agent/login'); 
+        } else{
+            $session->destroy(); 
+            return redirect()->to('/'); 
+        }
+        
     }
 
 
