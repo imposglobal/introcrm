@@ -82,7 +82,8 @@ public function store()
             'mobile' => $this->request->getPost('mobile'),
             'telephone' => $this->request->getPost('telephone'),
             'address_1' => $this->request->getPost('address_1'),
-            'address_2' => $this->request->getPost('address_2'),
+            // 'address_2' => $this->request->getPost('address_2'),
+            
             'post_code' => $this->request->getPost('post_code'),
             'tenure' => $this->request->getPost('tenure'),
             'council' => $this->request->getPost('council'),

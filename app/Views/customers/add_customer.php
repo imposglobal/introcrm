@@ -104,18 +104,19 @@
                         <div class="col-lg-12">
                             <hr>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-8">
                             <div class="form-group">
-                                <label>Address 1</label>
-                                <input required  type="text" name="address_1" class="form-control form-control-lg" placeholder="Customer Address 1" id="address_1">
+                                <label>Address</label>
+                                <input required  type="text" name="address_1" class="form-control form-control-lg" placeholder="Customer Address " id="address_1">
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <!-- <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Address 2</label>
                                 <input required  type="text" name="address_2" class="form-control form-control-lg" placeholder="Customer Address " id="address_2">
                             </div>
-                        </div>
+                        </div> -->
+
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Post Code</label>
