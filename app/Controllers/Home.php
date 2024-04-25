@@ -49,7 +49,7 @@ class Home extends BaseController
         $password = $this->request->getVar('password');
         // echo $password;
         $data = $userModel->where('email', $email)->first();
-        print_r($data);
+        // print_r($data);
 
         if($data){
             $pass = $data['password'];
