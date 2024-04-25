@@ -321,8 +321,8 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="notes">Comments</label>
-                                <textarea class="form-control" id="comments" name="comments" rows="19"><?= $result['additional_notes'] ?></textarea></br>
-                                <span class="bg-primary text-white px-3 py-2"> Add Comment </span>
+                                <textarea class="form-control" id="comments" name="comments" rows="19"><?= $result['additional_notes'] ?></textarea>
+                                <button type="button" id="addcomment" class="bg-primary text-white px-3 py-2"> Add Comment </button>
 
                             </div>
                         </div>
@@ -402,6 +402,33 @@
                 $('.callback').hide();
             }
         });
+    });
+
+
+    $("#addcomment").click(function(){
+        
+                // Construct the URL with the search query
+                var url = "http://localhost/introcrm/comment/add";
+
+                // Make the AJAX request
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    dataType: "json", // Assuming the response is in JSON format
+                    success: function(response) {
+                        
+                    },
+                    error: function(xhr, status, error) {
+                        // Handle errors here
+                        // Display an error message using SweetAlert2
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error!',
+                            text: 'There was an error with your AJAX request.',
+                        });
+                        console.error("Error:", error);
+                    }
+                });
     });
 </script>
 

@@ -148,9 +148,8 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Center Name</th>
                                             <th scope="col">Lead ID</th>
+                                            <th scope="col">Source</th>
                                             <th scope="col">Lead Date</th>
                                             <th scope="col">Customer Name</th>
                                             <th scope="col">Mobile</th>
@@ -162,6 +161,7 @@
                                         <?php $i = 1; ?>
                                         <?php if ($customers && count($customers) >= 1): ?>
                                         <?php foreach ($customers as $customer): 
+                                        $ldate = strtotime($customer['lead_date']);
                                             switch ($customer['status']) {
                                                 case "New Lead":
                                                     $lstatus = '<span class="bg-secondary text-white p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
@@ -206,17 +206,17 @@
                                             
                                         ?>
                                         <tr>
-                                            <td>
-                                                <?= $i++ ?>
+                                        <td>
+                                                <a href="#" onclick="openNav(<?= $customer['lead_id'] ?>)"><?= $customer['lead_id'] ?></a>
                                             </td>
+                                           
                                             <td>
                                                 <?= $customer['center_name'] ?>
                                             </td>
+                                           
                                             <td>
-                                                <a href="#" onclick="openNav(<?= $customer['lead_id'] ?>)"><?= $customer['lead_id'] ?></a>
-                                            </td>
-                                            <td>
-                                                <?= $customer['lead_date'] ?>
+                                                <?= date('d-m-Y',$ldate) ?>
+                                                <p class="mt-1"><small><?= date('H:i:s',$ldate) ?></small></p>
                                             </td>
                                             <td>
                                                 <?= $customer['fname']." ". $customer['lname'] ?>

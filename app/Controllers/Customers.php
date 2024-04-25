@@ -235,7 +235,7 @@ public function update()
         $comment = $this->request->getPost('status');
         $cid = $this->request->getPost('lead_id');
         
-        echo $comment." ".$cid;
+        echo $name." ".$cid;
 
     }
 }
