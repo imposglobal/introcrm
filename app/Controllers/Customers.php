@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\CustomerModel;
+use App\Models\CommentModel;
 
 class Customers extends BaseController
 {
@@ -221,8 +222,23 @@ public function update()
             // Redirect to the updated URL
             return redirect()->to($redirectURL);
 }
-}
 
+
+    /* Add comments function */
+    public function addComment()
+    {
+        $session = session();
+        $center = $session->get('center');
+        $name = $session->get('fname') . " " . $session->get('lname');
+        $id = $session->get('id');
+
+        $comment = $this->request->getPost('status');
+        $cid = $this->request->getPost('lead_id');
+        
+        echo $comment." ".$cid;
+
+    }
+}
 
 
 
