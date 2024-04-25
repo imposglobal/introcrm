@@ -73,7 +73,7 @@ $routes->POST('/search/customer', 'FilterCustomer::searchingCustomer');
 $routes->get('status/(:any)', 'FilterCustomer::getStatusbyCustomer/$1');
 
 //test
-$routes->get('/test/customer', 'Dashboard::getCusomersByMonth');
+// $routes->get('/test/customer', 'Dashboard::getCusomersByMonth');
 
 //test
 $routes->get('/comment/add', 'Customers::addComment');
