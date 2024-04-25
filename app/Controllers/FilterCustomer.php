@@ -150,18 +150,26 @@ class FilterCustomer extends BaseController
 //get customer by status
 public function getStatusbyCustomer(string $status) {
     $customerModel = new CustomerModel();
-    
+    if($status == "All"){
+        // Query to count total status count based status
+        $result['customers'] = $customerModel
+        ->orderBy('lead_id', 'desc')
+        ->paginate();
+        // Get total count of customers
+        $totalCustomers = $customerModel
+        ->countAllResults();
+    }else{
     // Query to count total status count based status
     $result['customers'] = $customerModel
         ->where('status', $status)
         ->orderBy('lead_id', 'desc')
         ->paginate();
 
-    // Get total count of customers
-    $totalCustomers = $customerModel
-    ->where('status', $status)
-    ->countAllResults();
-
+        // Get total count of customers
+        $totalCustomers = $customerModel
+        ->where('status', $status)
+        ->countAllResults();
+    }
     // Merge total count with results
     $result['totalCustomers'] = $totalCustomers;
     $result['pager'] = $customerModel->pager;

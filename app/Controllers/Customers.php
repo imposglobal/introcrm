@@ -183,7 +183,7 @@ public function update()
             'boiler_model' => $this->request->getPost('boiler_model'),
             'benefit_flex' => $this->request->getPost('benefit'),
             'epc_rating' => $this->request->getPost('epc'),
-            'additional_notes' => $this->request->getPost('add_notes'),
+            // 'additional_notes' => $this->request->getPost('add_notes'),
             'created_agent_date' => $this->request->getPost('created_agent_date'),
             'lead_id' => $this->request->getPost('lead_id'),
             'lead_date' => $this->request->getPost('lead_date'),
@@ -191,14 +191,16 @@ public function update()
             'job_status' => $this->request->getPost('job_status'),
             'payment_status' => $this->request->getPost('payment_status'),
             'status' => $this->request->getPost('status'),
+            'calldate' => $this->request->getPost('calldate'),
+            'calltime' => $this->request->getPost('calltime'),
             'measures' => $this->request->getPost('measures'),
             'epc_link' => $this->request->getPost('epc_link'),
             'gas_safe_link' => $this->request->getPost('gas_safe_link'),
             'gas_safe_link' => $this->request->getPost('gas_safe_link'),
             'boiler_efficiency_link' => $this->request->getPost('boiler_efficiency_link'),
-            'processing_notes' => $this->request->getPost('processing_notes'),
-            'previous_grant_work' => $this->request->getPost('previous_grant_work'),
-            'contact_center_notes' => $this->request->getPost('contact_center_notes'),
+            // 'processing_notes' => $this->request->getPost('processing_notes'),
+            // 'previous_grant_work' => $this->request->getPost('previous_grant_work'),
+            // 'contact_center_notes' => $this->request->getPost('contact_center_notes'),
             
         ];
     

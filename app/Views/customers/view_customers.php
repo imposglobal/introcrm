@@ -103,6 +103,12 @@
                                             <span style="font-size: 14px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/week"?>">Weekly</span></a>
                                             <span style="font-size: 14px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/month"?>">Monthly</span></a>
                                             <select style="font-size: 14px;" class="bg-light border mx-2 px-3 py-2 rounded" name="" id="statusSelect" onchange="redirect()">
+                                            <?php
+                                                if(isset($_GET['status']) != null){
+                                                    echo '<option selected>'.$_GET['status'].'</option>';
+                                                }
+                                            ?>
+                                            <option value="All">All</option>
                                             <option value="New Lead">New Lead</option>
                                             <option value="Accepted">Accepted</option>
                                             <option value="Rejected">Rejected</option>
@@ -536,8 +542,8 @@
 function redirect() {
     var select = document.getElementById("statusSelect");
     var selectedValue = select.options[select.selectedIndex].value;
-    var baseUrl = "<?= $baseURL ?>";
-    var redirectUrl = baseUrl + encodeURIComponent(selectedValue);
+    var baseUrl = "<?= $baseURL.'/status/' ?>";
+    var redirectUrl = baseUrl + encodeURIComponent(selectedValue) + '?status='+ encodeURIComponent(selectedValue);
     window.location.href = redirectUrl;
 }
 </script>

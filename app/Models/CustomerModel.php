@@ -42,7 +42,9 @@ class CustomerModel extends Model{
         'update_date_introducer',
         'update_date_admin',
         'userid',
-        'agent_name'
+        'agent_name',
+        'calltime',
+        'calldate'
     ];
     
 }

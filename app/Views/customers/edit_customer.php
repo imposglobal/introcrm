@@ -277,6 +277,21 @@
                                 <input   type="text" name="measures" value="<?= $result['measures'] ?>" class="form-control form-control-lg" placeholder="Measures" id="measures">
                             </div>
                         </div>
+                        <div class="col-lg-12 callback">
+                            <hr>
+                        </div>
+                        <div class="col-lg-4 callback">
+                            <div class="form-group">
+                                <label>Callback Date</label>
+                                <input type="date" name="calldate" value="<?= $result['calldate'] ?>" class="form-control form-control-lg" placeholder="calldate" id="calldate">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 callback">
+                            <div class="form-group">
+                                <label>Callback Time</label>
+                                <input type="time" name="calltime" value="<?= $result['calltime'] ?>" class="form-control form-control-lg" placeholder="calltime" id="calltime">
+                            </div>
+                        </div>
                         <div class="col-lg-12">
                             <hr>
                         </div>
@@ -298,45 +313,29 @@
                                 <input   type="text" name="boiler_efficiency_link" value="<?= $result['boiler_efficiency_link'] ?>" class="form-control form-control-lg" placeholder="Boiler Efficiency Link" id="boiler_efficiency_link">
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <hr>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label for="notes">Processing Notes</label>
-                                <textarea class="form-control" id="processing_notes" name="processing_notes" rows="8"><?= $result['processing_notes'] ?></textarea>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <hr>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label for="notes">Previous Grant/Work</label>
-                                <textarea class="form-control" id="previous_grant_work" name="previous_grant_work" rows="8"><?= $result['previous_grant_work'] ?></textarea>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <hr>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label for="notes">Call Center Notes</label>
-                                <textarea class="form-control" id="contact_center_notes" name="contact_center_notes" rows="8"><?= $result['contact_center_notes'] ?></textarea>
-                            </div>
-                        </div>
+                        
                         <div class="col-lg-12">
                             <hr>
                         </div>
 
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="notes">Additional Notes</label>
-                                <!-- <textarea class="form-control" id="add_notes" name="add_notes" value="<?= $result['additional_notes'] ?>" rows="8"></textarea> -->
-                                <textarea class="form-control" id="add_notes" name="add_notes" rows="8"><?= $result['additional_notes'] ?></textarea>
+                                <label for="notes">Comments</label>
+                                <textarea class="form-control" id="comments" name="comments" rows="19"><?= $result['additional_notes'] ?></textarea></br>
+                                <span class="bg-primary text-white px-3 py-2"> Add Comment </span>
 
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <label for="notes">All Comments</label>
+                                <div id="drop-area" class="drop-area" style="height: 295px;">
+                                </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <hr>
+                        </div>
+
                         <div class="col-md-6">
                             <label for="notes">View or upload Documents</label>
                                 <div id="drop-area" class="drop-area">
@@ -379,13 +378,33 @@
                         </form>     
                     </div>
                   </div>
-                  
                 </div>
               </div>
             </div>   
           </div>
         </div>
         <!-- content-wrapper ends -->
+        <script>
+    $(document).ready(function(){
+        <?php if($result['status']=='Callback'){
+            echo "$('.callback').show();";
+        }else{
+            echo "$('.callback').hide();";
+        }
+        ?>
+
+        // Bind change event directly with anonymous function
+        $("#status").change(function(){
+            var status = $("#status").val();
+            if(status === "Callback"){
+                $('.callback').show();
+            } else {
+                $('.callback').hide();
+            }
+        });
+    });
+</script>
+
 
 <?= $this->endSection() ?>
 
