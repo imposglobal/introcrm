@@ -121,18 +121,13 @@
                         <div class="col-lg-12">
                             <hr>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-8">
                             <div class="form-group">
-                                <label>Address 1</label>
+                                <label>Address </label>
                                 <input required  type="text" name="address_1" value="<?= $result['address_1'] ?>" class="form-control form-control-lg" placeholder="Customer Address 1" id="address_1">
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label>Address 2</label>
-                                <input required  type="text" name="address_2" value="<?= $result['address_2'] ?>" class="form-control form-control-lg" placeholder="Customer Address " id="address_2">
-                            </div>
-                        </div>
+                    
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Post Code</label>
@@ -184,19 +179,15 @@
                                 <label for="exampleFormControlSelect1">Benefit / Flex</label>
                                 <select name="benefit" id="benefit"  class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['benefit_flex'] ?>"><?= $result['benefit_flex'] ?></option>
-                                <option value="Universal credit">Universal credit</option>
-                                <option value="Income Support">Income Support </option>
-                                <option value="Pension Credit">Pension Credit </option>
-                                <option value="D">Child Tax Credit</option>
-                                <option value="Housing Benefit">Housing Benefit</option>
-                                <option value="Universal Credit">Universal Credit</option>
-                                <option value="Employment and support allowance">Employment and support allowance</option>
-                                <option value="Universal Credit">Universal Credit</option>
-                                <option value="Child Tax support">Child Tax support </option>
-                                <option value="Working Tax Credit">Working Tax Credit</option>
-                                <option value="Pension credit and income Support credit">Pension credit and income Support credit</option>
-                                <option value="working tax credit">working tax credit </option>
-                                <option value="No Benefits">No Benefits</option>
+                                <option value="Income Support">Income Support (IS)</option>
+                                <option value="Housing Benefit">Housing Benefit (HB) </option>
+                                <option value="Universal Credit">Universal Credit (UC) </option>
+                                <option value="Working Tax Credit">Working Tax Credit (WTC)</option>
+                                <option value="Jobseeker’s Allowance">Jobseeker’s Allowance (JSA)</option>
+                                <option value="Child Benefit (subject to income)">Child Benefit (subject to income)</option>
+                                <option value="Pension Credit Savings Credit">Pension Credit Savings Credit (PCSC)</option>
+                                <option value="Pension Credit Guarantee Credit">Pension Credit Guarantee Credit (PCGC)</option>
+                                <option value="Employment and Support Allowance">Employment and Support Allowance (ESA) </option>
                                 
                                 </select>
                             </div>
@@ -413,10 +404,10 @@
                 // Make the AJAX request
                 $.ajax({
                     url: url,
-                    type: "POST",
-                    dataType: "json", // Assuming the response is in JSON format
+                    type: "GET",
+                    dataType: "html", // Assuming the response is in JSON format
                     success: function(response) {
-                        
+                        alert(response)
                     },
                     error: function(xhr, status, error) {
                         // Handle errors here
