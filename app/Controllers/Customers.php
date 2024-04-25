@@ -77,7 +77,7 @@ public function store()
             'center_name' => $center,
             'email' => $email,
             'fname' => $this->request->getPost('fname'),
-            'lname' => $this->request->getPost('lname'),
+            // 'lname' => $this->request->getPost('lname'),
             'dob' => $this->request->getPost('dob'),
             'mobile' => $this->request->getPost('mobile'),
             'telephone' => $this->request->getPost('telephone'),

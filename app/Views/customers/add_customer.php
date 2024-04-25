@@ -64,18 +64,18 @@
                       <hr>
                       <form action="<?php echo base_url('/customer/add')?>" method="POST" enctype="multipart/form-data">
                       <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-8">
                             <div class="form-group">
-                                <label>First Name</label>
-                                <input required  type="text" name="fname" class="form-control form-control-lg" placeholder="Customer First Name" id="fname">
+                                <label>Name</label>
+                                <input required  type="text" name="fname" class="form-control form-control-lg" placeholder="Customer Full Name" id="fname">
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <!-- <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Last Name</label>
                                 <input required  type="text" name="lname" class="form-control form-control-lg" placeholder="Customer Last Name" id="lname">
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Email</label>
