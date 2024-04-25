@@ -75,8 +75,31 @@ class Dashboard extends BaseController
     
         return $totalAccepted;
     }
-    
+       
+/****************************************************************************************************/
 
+    // get total customers of every month
+    function getCusomersByMonth()
+    {
+        echo "test";
+        // $customerModel = new CustomerModel();
+    
+        // // Initialize an array to store the total customers for each month
+        // $totalCustomersByMonth = [];
+    
+        // // Query to count total customers month wise
+        // $totalCustomers = $customerModel->select('MONTH(lead_date) as month, COUNT(*) as total')
+        //     ->where('lead_id', $lead_id)
+        //     ->groupBy('MONTH(lead_date)')
+        //     ->findAll();
+    
+        // foreach ($totalCustomers as $customer) {
+        //     $totalCustomersByMonth[$customer['month']] = $customer['total'];
+        // }
+    
+        // return $totalCustomersByMonth;
+    }
+    
     /****************************************************************************************************/
     //show dashboard page 
     public function index()
@@ -86,6 +109,7 @@ class Dashboard extends BaseController
         $role = $session->get('role');
         $id = $session->get('id');
         $center = $session->get('center');
+        $lead_id = $session->get('lead_id');
         $currentURL = current_url();
         $startDate = date('Y-m-01'); // Start date of the current month
         $endDate = date('Y-m-t'); // End date of the current month
@@ -106,6 +130,8 @@ class Dashboard extends BaseController
          $countPaid = $this->getStatusCount('Paid');
          $countCallback = $this->getStatusCount('Callback');
          $countRetransfer = $this->getStatusCount('Retransfer');
+        //  $totalCustomersByMonth = $this->getCusomersByMonth($lead_id);
+
 
          $data = [
             'currentURL' => $currentURL,
@@ -120,7 +146,8 @@ class Dashboard extends BaseController
             'countCompleted' => $countCompleted,
             'countCallback' => $countCallback,
             'countPaid' => $countPaid,
-            'countRetransfer' => $countRetransfer
+            'countRetransfer' => $countRetransfer,
+            // 'totalCustomersByMonth' => $totalCustomersByMonth
         ];
 
             return view('dashboard/dashboard', $data);
