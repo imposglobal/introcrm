@@ -64,18 +64,18 @@
                       <hr>
                       <form action="<?php echo base_url('/customer/add')?>" method="POST" enctype="multipart/form-data">
                       <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-8">
                             <div class="form-group">
-                                <label>First Name</label>
-                                <input required  type="text" name="fname" class="form-control form-control-lg" placeholder="Customer First Name" id="fname">
+                                <label>Name</label>
+                                <input required  type="text" name="fname" class="form-control form-control-lg" placeholder="Customer Full Name" id="fname">
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <!-- <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Last Name</label>
                                 <input required  type="text" name="lname" class="form-control form-control-lg" placeholder="Customer Last Name" id="lname">
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Email</label>
@@ -104,18 +104,19 @@
                         <div class="col-lg-12">
                             <hr>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-8">
                             <div class="form-group">
-                                <label>Address 1</label>
-                                <input required  type="text" name="address_1" class="form-control form-control-lg" placeholder="Customer Address 1" id="address_1">
+                                <label>Address</label>
+                                <input required  type="text" name="address_1" class="form-control form-control-lg" placeholder="Customer Address " id="address_1">
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <!-- <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Address 2</label>
                                 <input required  type="text" name="address_2" class="form-control form-control-lg" placeholder="Customer Address " id="address_2">
                             </div>
-                        </div>
+                        </div> -->
+
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Post Code</label>
