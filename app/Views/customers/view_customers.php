@@ -76,42 +76,58 @@
                         <div class="col-md-12">
                             <div class="card-body mt-2">
 
-                            <h4 class="card-title mb-3"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>View Customer</h4>
-                              
-                            <!-- search customer from table code     -->
+                            <div class="row">
+                                <div class="col-lg-8">
+                                <h4 class="card-title mb-3"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 mr-2 text-white rounded"></i>View Customer</h4>
+                                </div>
+                                <div class="col-lg-4">
+                                    <!-- search customer from table code     -->
                                     <form action="<?php echo base_url('/search/customer'); ?>" method="post">
-                                        <div class="input-group col-md-4 justify-content-start">
-                                            <input type="text" id="searching" required name="searching" class="form-control" placeholder="Search....">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-dark " type="submit">Search</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                               <!-- search customer from table code     -->
+                                          <div class="input-group col-md-12 justify-content-start">
+                                              <input style="height: 35px;" type="text" id="searching" required name="searching" class="form-control" placeholder="Search Customer....">
+                                              <div class="input-group-append">
+                                                  <button style="height: 35px;" class="px-3 btn-primary rounded-right" type="submit">Search</button>
+                                              </div>
+                                          </div>
+                                      </form>
+                                 <!-- search customer from table code     -->
+                                </div>
+                            </div>
                                     
 
                                 <hr>
                                     <div class="row">
-                                        <div class="col-lg-6 my-3">
-                                            <span class="bg-light border mx-2 px-4 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/yesterday"?>">Yesterday</span></a>
-                                            <span class="bg-light border mx-2 text-dark px-4 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/today"?>">Today</span></a>
-                                            <span class="bg-light border mx-2 text-dark px-4 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/week"?>">Weekly</span></a>
-                                            <span class="bg-light border mx-2 text-dark px-4 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/month"?>">Monthly</span></a>
+                                        <div class="col-lg-7 my-2">
+                                            <span style="font-size: 14px;" class="bg-light border mx-2 px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/yesterday"?>">Yesterday</span></a>
+                                            <span style="font-size: 14px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/today"?>">Today</span></a>
+                                            <span style="font-size: 14px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/week"?>">Weekly</span></a>
+                                            <span style="font-size: 14px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/month"?>">Monthly</span></a>
+                                            <select style="font-size: 14px;" class="bg-light border mx-2 px-3 py-2 rounded" name="" id="statusSelect" onchange="redirect()">
+                                            <option value="New Lead">New Lead</option>
+                                            <option value="Accepted">Accepted</option>
+                                            <option value="Rejected">Rejected</option>
+                                            <option value="DWP Submitted">DWP Submitted</option>
+                                            <option value="DWP Passed">DWP Passed</option>
+                                            <option value="Completed">Completed</option>
+                                            <option value="Paid">Paid</option>
+                                            <option value="Callback">Callback</option>
+                                            <option value="Retransfer">Retransfer</option>
+                                            </select>
                                         </div>
                                        
                                     
                                 
-                                    <div class="col-lg-6">
-                                    <div class="row align-items-center">
-                                         <div class="col-md-4 ">
+                                    <div class="col-lg-5 my-2">
+                                    <div class="row align-items-center pr-5">
+                                         <div class="col-md-5 ">
                                            <form action="<?= $baseURL."filter/date" ?>" method="post">
-                                            <input type="date" id="from" name="from" class="form-control" placeholder="From date">
+                                            <input style="height: 35px;" type="date" id="from" name="from" class="form-control" placeholder="From date">
                                         </div>
-                                        <div class="col-md-4 ">
-                                            <input type="date" id="to" name="to" class="form-control" placeholder="From date">
+                                        <div class="col-md-5 ">
+                                            <input style="height: 35px;" type="date" id="to" name="to" class="form-control" placeholder="From date">
                                         </div>
-                                        <div class="col-md-4 ">
-                                            <button type="submit" class="bg-primary text-white px-4 py-2 rounded">Filter</button>
+                                        <div class="col-md-2">
+                                            <button style="height: 35px;" type="submit" class="bg-primary pt-0 text-white px-4 py-2 rounded">Filter</button>
                                         </div>
                                         </form>
                                     </div>
@@ -132,7 +148,7 @@
                                             <th scope="col">Lead Date</th>
                                             <th scope="col">Customer Name</th>
                                             <th scope="col">Mobile</th>
-                                            <th scope="col">Status</th>
+                                            <th scope="col">Status (<?=$totalCustomers ?>)</th>
                                             <th scope="col">Actions</th>
                                         </tr>
                                     </thead>
@@ -223,7 +239,7 @@
                                         <?php endforeach; ?>
                                         <?php else: ?>
                                         <tr>
-                                            <td colspan="7" class="text-center">No customers found.</td>
+                                            <td colspan="8" class="text-center">No customers found.</td>
                                         </tr>
                                         <?php endif; ?>
                                     </tbody>
@@ -516,6 +532,14 @@
         $('#mySidenav').css('width', '0');
     }
 </script>
-
+<script>
+function redirect() {
+    var select = document.getElementById("statusSelect");
+    var selectedValue = select.options[select.selectedIndex].value;
+    var baseUrl = "<?= $baseURL ?>";
+    var redirectUrl = baseUrl + encodeURIComponent(selectedValue);
+    window.location.href = redirectUrl;
+}
+</script>
 
     <?= $this->endSection() ?>

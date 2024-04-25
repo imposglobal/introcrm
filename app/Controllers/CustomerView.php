@@ -38,33 +38,42 @@ public function index() {
     $center = $session->get('center');
     $role = $session->get('role');
     $userid = $session->get('id');
+    $totalCustomers = "";
 
     if($role == 2){
         $result['customers'] = $customerModel
-        ->where('userid', $userid) // Replace $userid with the value you want to use for the where condition
-        ->orderBy('lead_id', 'desc')
-        ->paginate();
-
-    }elseif($role == 1){
+            ->where('userid', $userid)
+            ->orderBy('lead_id', 'desc')
+            ->paginate();
+        $totalCustomers = $customerModel
+            ->where('userid', $userid)
+            ->countAllResults();
+    } elseif($role == 1){
         $result['customers'] = $customerModel
-        ->where('center_name', $center) // Replace $userid with the value you want to use for the where condition
-        ->orderBy('lead_id', 'desc')
-        ->paginate();
-        
-    }else{
-        $result['customers'] = $customerModel->orderBy('lead_id', 'desc')->paginate();
+            ->where('center_name', $center)
+            ->orderBy('lead_id', 'desc')
+            ->paginate();
+        $totalCustomers = $customerModel
+            ->where('center_name', $center)
+            ->countAllResults();
+    } else {
+        $result['customers'] = $customerModel
+            ->orderBy('lead_id', 'desc')
+            ->paginate();
+        $totalCustomers = $customerModel
+            ->countAllResults();
     }
 
-    // Query customers and order them by the 'lead_id' column in descending order
-    
-    
     // Retrieve the pager for pagination
     $result['pager'] = $customerModel->pager;
     
-    // Pass additional data to the view, if needed ($this->data seems to be additional data)
-    // You can merge it with the $result array using the '+' operator
+    // Pass additional data to the view
+    $result['totalCustomers'] = $totalCustomers;
+    
+    // Merge additional data with the $result array using the '+' operator
     return view('customers/view_customers', $result + $this->data);
 }
+
 
 /***********************************************************************************************/
 //search funtionality
