@@ -85,12 +85,26 @@ class Dashboard extends BaseController
         $role = $session->get('role');
         $id = $session->get('id');
         $center = $session->get('center');
-        $lead_id = $session->get('lead_id');
-        $lead_date = $session->get('lead_date');
+        // $status = $session->get('status');
+          $status='callback';
+         $today = date('Y-m-d');
         $currentURL = current_url();
         $startDate = date('Y-m-01'); // Start date of the current month
         $endDate = date('Y-m-t'); // End date of the current month
 
+        // show call back status table on dashboard
+        $customerModel = new CustomerModel();
+
+
+        
+            // Query customers and order them by the 'lead_id' column in descending order
+            $result['customers'] = $customerModel
+                                ->where('status', $status) 
+                                ->where('calldate',$today)
+                                ->orderBy('lead_id', 'desc')
+                                ->paginate();
+        // Retrieve the pager for pagination
+        $result['pager'] = $customerModel->pager;
 
         // Get the base URL
         $baseURL = base_url();
@@ -122,9 +136,37 @@ class Dashboard extends BaseController
             'countCompleted' => $countCompleted,
             'countCallback' => $countCallback,
             'countPaid' => $countPaid,
-            'countRetransfer' => $countRetransfer
+            'countRetransfer' => $countRetransfer,
+            'result' => $result,
         ];
 
             return view('dashboard/dashboard', $data);
     }
+
+/**********************************************************************************************************/
+
+public function View() {
+    $userModel = new UserModel();
+    $session = session();
+    $center = $session->get('center');
+    $role = $session->get('role');
+    $userid = $session->get('id');
+    if($role == 1){
+        $result['users'] = $userModel
+        ->where('center_name', $center) 
+        ->orderBy('id', 'desc')
+        ->paginate();
+    }else{
+        // Query customers and order them by the 'lead_id' column in descending order
+        $result['users'] = $userModel->orderBy('id', 'desc')->paginate();
+    }
+    
+    
+    // Retrieve the pager for pagination
+    $result['pager'] = $userModel->pager;
+    
+    // Pass additional data to the view, if needed ($this->data seems to be additional data)
+    // You can merge it with the $result array using the '+' operator
+    return view('agent/view_agent', $result + $this->data);
+}
 }
