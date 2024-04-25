@@ -76,7 +76,8 @@ $routes->get('status/(:any)', 'FilterCustomer::getStatusbyCustomer/$1');
 // $routes->get('/test/customer', 'Dashboard::getCusomersByMonth');
 
 //test
-$routes->get('/comment/add', 'Customers::addComment');
+$routes->post('/comment/add', 'Customers::addComment');
+$routes->get('/comment/view/(:num)', 'Customers::getComments/$1');
 
 
 

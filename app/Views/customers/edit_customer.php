@@ -27,6 +27,8 @@
 }
 
 </style>
+<script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+
 <div class="main-panel">          
         <div class="content-wrapper">
           <div class="row">
@@ -72,8 +74,14 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
+                                <label>Source</label>
+                                <input required  type="text" value="<?= $result['center_name'] ?>" name="center" class="form-control form-control-lg" placeholder="Source" id="lead_id" readonly>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
                                 <label>Lead Date</label>
-                                <input required  type="text" value="<?= $result['lead_date'] ?>" name="lead_date" class="form-control form-control-lg" placeholder="Lead Date" id="lead_date">
+                                <input required  type="text" value="<?= $result['lead_date'] ?>" name="lead_date" class="form-control form-control-lg" placeholder="Lead Date" id="lead_date" readonly>
                             </div>
                         </div>
                       <!-- hr line tag -->
@@ -312,14 +320,16 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="notes">Comments</label>
-                                <textarea class="form-control" id="comments" name="comments" rows="19"><?= $result['additional_notes'] ?></textarea>
+                                <textarea class="form-control" id="comments" name="comments" rows="19"></textarea>
                                 <button type="button" id="addcomment" class="bg-primary text-white px-3 py-2"> Add Comment </button>
-
                             </div>
                         </div>
                         <div class="col-md-6">
                             <label for="notes">All Comments</label>
-                                <div id="drop-area" class="drop-area" style="height: 295px;">
+                                <div id="drop-area" class="drop-area" style="height: 335px; overflow-x:auto">
+                                <div id="commentResponse" class="text-left">
+                                    
+                                </div>
                                 </div>
                         </div>
 
@@ -376,7 +386,10 @@
         </div>
         <!-- content-wrapper ends -->
         <script>
+            
     $(document).ready(function(){
+        CKEDITOR.replace('comments');
+        getComments()
         <?php if($result['status']=='Callback'){
             echo "$('.callback').show();";
         }else{
@@ -395,32 +408,81 @@
         });
     });
 
-
-    $("#addcomment").click(function(){
-        
-                // Construct the URL with the search query
-                var url = "http://localhost/introcrm/comment/add";
-
-                // Make the AJAX request
-                $.ajax({
-                    url: url,
-                    type: "GET",
-                    dataType: "html", // Assuming the response is in JSON format
-                    success: function(response) {
-                        alert(response)
-                    },
-                    error: function(xhr, status, error) {
-                        // Handle errors here
-                        // Display an error message using SweetAlert2
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Error!',
-                            text: 'There was an error with your AJAX request.',
-                        });
-                        console.error("Error:", error);
-                    }
-                });
+    function getComments() {
+    var id = $('#lead_id').val();
+    $.ajax({
+        url: "http://localhost/introcrm/comment/view/" + id, // Correct URL concatenation
+        type: "get", // Use POST method
+        dataType: "html", // Assuming the response is in HTML format
+        success: function(response) {
+            // Handle success response
+            $('#commentResponse').html(response);
+        },
+        error: function(xhr, status, error) {
+            // Handle errors here
+            // Display an error message using SweetAlert2
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: 'There was an error with your AJAX request.',
+            });
+            console.error("Error:", error);
+        }
     });
+}
+
+
+
+$("#addcomment").click(function(){
+    // Get lead_id and comments data from your form or other source
+    var lead_id = $('#lead_id').val();
+    
+    // Get the content from CKEditor
+    var comments = CKEDITOR.instances.comments.getData();
+
+    // Check if the comments field is not empty
+    if (comments.trim() === '') {
+        // If comments field is empty, show an error message
+        Swal.fire({
+            icon: 'warning',
+            title: 'Empty Comment!',
+            text: 'Please enter a comment.',
+        });
+        return; // Stop execution
+    }
+
+    // Construct the data object
+    var data = {
+        lead_id: lead_id,
+        comments: comments
+    };
+
+    // Make the AJAX request
+    $.ajax({
+        url: "http://localhost/introcrm/comment/add",
+        type: "POST", // Use POST method
+        data: data, // Pass the data object
+        dataType: "html", // Assuming the response is in HTML format
+        success: function(response) {
+            // Handle success response
+            // Refresh comments
+            getComments();
+            // Reset the content of CKEditor
+            CKEDITOR.instances.comments.setData('');
+        },
+        error: function(xhr, status, error) {
+            // Handle errors here
+            // Display an error message using SweetAlert2
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: 'There was an error with your AJAX request.',
+            });
+            console.error("Error:", error);
+        }
+    });
+});
+
 </script>
 
 

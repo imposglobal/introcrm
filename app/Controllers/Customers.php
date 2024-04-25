@@ -227,18 +227,63 @@ public function update()
 
     /* Add comments function */
     public function addComment()
-    {
-        $session = session();
-        $center = $session->get('center');
-        $name = $session->get('fname') . " " . $session->get('lname');
-        $id = $session->get('id');
+{
+    $commentModel = new CommentModel();
+    $session = session();
+    $center = $session->get('center');
+    $name = $session->get('fname') . " " . $session->get('lname');
+    $id = $session->get('id');
 
-        $comment = $this->request->getPost('status');
-        $cid = $this->request->getPost('lead_id');
-        
-        echo $name." ".$cid;
+    $comment = $this->request->getPost('comments');
+    $cid = $this->request->getPost('lead_id');
 
+    $data = [
+        'cid' => $cid,
+        'comments' => $comment,
+        'byname' => $name,
+        'time_stamp' => date('Y-m-d H:i:s')
+    ];
+
+    // Save comment and check the result
+    $result = $commentModel->save($data);
+    if ($result) {
+        $message = "Comment added successfully.";
+        // You can also redirect or do other actions here if needed.
+    } else {
+        // Log the error for debugging purposes
+        log_message('error', 'Error occurred while saving comment: ' . $commentModel->errors());
+        $message = "An error occurred while adding the comment. Please try again later.";
+        // You might want to redirect back to the form or show an error message to the user.
     }
+
+    // Return message
+    return $message;
+}
+
+
+
+public function getComments($lead_id = null) {
+    $commentModel = new CommentModel();
+    $comments = $commentModel->where('cid', $lead_id)
+                ->orderBy('com_id', 'desc')
+                ->findAll();
+
+    // Check if comments exist
+    if (!empty($comments)) {
+        // Iterate over comments and print each one
+        foreach ($comments as $comment) {
+            echo "" . $comment['comments'] . "<br>";
+            echo "<small>By: " . $comment['byname']." (";
+            echo  $comment['time_stamp'] . ")</small><br>";
+            echo "<hr>"; // Separator between comments
+        }
+    } else {
+        echo "No comments found.";
+    }
+}
+
+
+
 }
 
 

@@ -58,6 +58,21 @@
   font-size: 36px;
   margin-left: 50px;
 }
+.tb-responsive {
+    overflow-x: auto;
+    width: 100%;
+}
+.tb-responsive td{
+    font-size: 14px;
+}
+.tb-responsive td:nth-child(5) {
+    width: 230px;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    line-height: 20px;
+}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -145,13 +160,14 @@
                                
 
                                 <!-- table code start -->
-                                <table class="table table-striped">
+                                <table class="table table-striped tb-responsive">
                                     <thead>
                                         <tr>
                                             <th scope="col">Lead ID</th>
                                             <th scope="col">Source</th>
                                             <th scope="col">Lead Date</th>
                                             <th scope="col">Customer Name</th>
+                                            <th scope="col">Address</th>
                                             <th scope="col">Mobile</th>
                                             <th scope="col">Status (<?=$totalCustomers ?>)</th>
                                             <th scope="col">Actions</th>
@@ -164,7 +180,7 @@
                                         $ldate = strtotime($customer['lead_date']);
                                             switch ($customer['status']) {
                                                 case "New Lead":
-                                                    $lstatus = '<span class="bg-secondary text-white p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
+                                                    $lstatus = '<span style="background:skyblue" class=" text-white p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
                                                     break;
                                                     
                                                 case "Accepted":
@@ -214,12 +230,15 @@
                                                 <?= $customer['center_name'] ?>
                                             </td>
                                            
-                                            <td>
+                                            <td style="font-size: 12px;">
                                                 <?= date('d-m-Y',$ldate) ?>
-                                                <p class="mt-1"><small><?= date('H:i:s',$ldate) ?></small></p>
+                                                <p class="mt-1"><small><?= date('H:i',$ldate) ?></small></p>
                                             </td>
                                             <td>
                                                 <?= $customer['fname']." ". $customer['lname'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $customer['address_1']." ".$customer['post_code'] ?>
                                             </td>
                                             <td>
                                                 <?= $customer['mobile'] ?>

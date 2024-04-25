@@ -7,7 +7,7 @@ class CommentModel extends Model{
     protected $primaryKey = 'com_id';
     
     protected $allowedFields = [
-        
+        'cid',
         'comments',
         'byname',
         'time_stamp'
