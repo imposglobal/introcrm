@@ -196,7 +196,8 @@
                                             <th scope="col">Customer Name</th>
                                             <th scope="col">Mobile </th>
                                             <th scope="col">Status </th>
-                                            <th scope="col">Call back date</th>
+                                            <th scope="col">Callback Date</th>
+                                            <th scope="col">Callback Time</th>
                                                  
                                         </tr>
                                     </thead>
@@ -205,37 +206,38 @@
                                     <?php if ($result && count($result['customers']) >= 1): ?>
                                         <?php foreach ($result['customers'] as $results):    
                                         ?>
-                                        <tr>
+                                          <tr>
                                             <td>
-                                            <?= $results['lead_id'] ?>
+                                              <?= $results['lead_id'] ?>
                                             </td>                                       
                                             <td>
-                                                <?= $results['center_name'] ?>
-                                            </td>
-                                            
+                                              <?= $results['center_name'] ?>
+                                            </td>                                           
                                             <td>
-                                                <?=  $results['lead_date'] ?>
+                                              <?=  $results['lead_date'] ?>
                                             </td>                                          
                                             <td>
-                                                <?= $results['fname'] ?>
+                                              <?= $results['fname'] ?>
                                             </td>
                                             <td>
-                                                <?= $results['mobile'] ?>
+                                              <?= $results['mobile'] ?>
                                             </td> 
                                             <td>
-                                                <?= $results['status'] ?>
-                                            </td> 
-                                           
+                                              <?= $results['status'] ?>
+                                            </td>                                           
                                             <td>
                                             <?= $results['calldate'] ?>
                                             
                                             </td>
-                                        </tr>
+                                            <td>
+                                              <?= $results['calltime'] ?>
+                                            </td>
+                                          </tr>
                                         <?php endforeach; ?>
                                         <?php else: ?>
-                                        <tr>
-                                            <td colspan="7">No agents found.</td>
-                                        </tr>
+                                            <tr>
+                                              <td colspan="7">No agents found.</td>
+                                            </tr>
                                         <?php endif; ?>
                                     </tbody>
                                 </table>

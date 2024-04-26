@@ -146,8 +146,8 @@ class FilterCustomer extends BaseController
         return view('customers/view_customers', $result + $this->data);
     }
 
+/************************************************get customer by status*******************************************************************/
 
-//get customer by status
 public function getStatusbyCustomer(string $status) {
     $customerModel = new CustomerModel();
     if($status == "All"){
@@ -178,7 +178,7 @@ public function getStatusbyCustomer(string $status) {
 return view('customers/view_customers', $result + $this->data);
 }
 
-/************************************************************************************************************/
+/*****************************************callback search filetr by date*******************************************************************/
 
 public function CallbackFilter(){
     $customerModel = new CustomerModel();
