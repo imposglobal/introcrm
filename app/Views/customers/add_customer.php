@@ -201,7 +201,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="notes">Additional Notes</label>
-                                <textarea class="form-control" id="add_notes" name="add_notes" rows="8"></textarea>
+                                <textarea class="form-control" id="comments" name="add_notes" rows="8"></textarea>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -229,6 +229,11 @@
           </div>
         </div>
         <!-- content-wrapper ends -->
+<script>
+    $(document).ready(function(){
+        CKEDITOR.replace('comments');
+    });
 
+</script>
 <?= $this->endSection() ?>
 

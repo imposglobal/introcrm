@@ -10,6 +10,7 @@
   <!-- plugins:css -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
 
   <link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/vendors/feather/feather.css">
   <link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/vendors/ti-icons/css/themify-icons.css">
@@ -129,6 +130,24 @@
     </nav>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
+       <!-- Modal -->
+  <div class="modal show" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
       <!-- partial:partials/_settings-panel.html -->
       <!-- <div class="theme-setting-wrapper">
         <div id="settings-trigger"><i class="ti-settings"></i></div>

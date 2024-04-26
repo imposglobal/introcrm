@@ -263,23 +263,38 @@ public function update()
 
 
 public function getComments($lead_id = null) {
-    $commentModel = new CommentModel();
-    $comments = $commentModel->where('cid', $lead_id)
-                ->orderBy('com_id', 'desc')
+    $customerModel = new CustomerModel();
+    $custcomments = $customerModel->where('lead_id', $lead_id)
+                ->orderBy('lead_id', 'desc')
                 ->findAll();
 
-    // Check if comments exist
-    if (!empty($comments)) {
+    // *******************************************************
+     $commentModel = new CommentModel();
+     $comments = $commentModel->where('cid', $lead_id)
+                 ->orderBy('com_id', 'desc')
+                 ->findAll();
+
+    if (!empty($custcomments) || !empty($comments)) {
         // Iterate over comments and print each one
+        foreach ($custcomments as $comment) {
+            echo "" . $comment['additional_notes'] . "<br>";
+            echo "<small>By: " . $comment['agent_name']." (";
+            echo  $comment['lead_date'] . ")</small><br>";
+            echo "<hr>"; // Separator between comments
+
+             // Iterate over comments and print each one
         foreach ($comments as $comment) {
             echo "" . $comment['comments'] . "<br>";
             echo "<small>By: " . $comment['byname']." (";
             echo  $comment['time_stamp'] . ")</small><br>";
             echo "<hr>"; // Separator between comments
         }
-    } else {
-        echo "No comments found.";
+        }
+    }else{
+        echo"No Comments Found";
     }
+
+
 }
 
 

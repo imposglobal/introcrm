@@ -27,7 +27,13 @@
 }
 
 </style>
-<script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+
+<!-- session start -->
+<?php  
+    $session = session();
+    $role = $session->get('role');
+?>
+
 
 <div class="main-panel">          
         <div class="content-wrapper">
@@ -256,7 +262,8 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Status</label>
-                                <select name="status" id="status" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <select name="status" id="status" class="form-control form-control-lg" id="exampleFormControlSelect1"
+                                <?php echo ($role == 1) ? 'disabled="true"' : ''; ?>>
                                 <option selected value="<?= $result['status'] ?>"><?= $result['status'] ?></option>
                                 <option value="Accepted">Accepted</option>
                                 <option value="Rejected">Rejected</option>

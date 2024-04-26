@@ -89,7 +89,9 @@
                 });
             });
         });
+        $('#myModal').modal('show');
     </script>
+    
 </body>
 </html>
 
