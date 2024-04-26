@@ -27,9 +27,9 @@ class Database extends Config
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => 'root',
-        'password'     => '',
-        'database'     => 'introcrm',
+        'username'     => 'ballapo7_echo4',
+        'password'     => 'echo4@2024',
+        'database'     => 'ballapo7_echo4',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,

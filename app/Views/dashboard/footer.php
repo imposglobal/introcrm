@@ -51,7 +51,7 @@
                 }
 
                 // Construct the URL with the search query
-                var url = "http://localhost/introcrm/customer/search?searchQuery=" + searchQuery;
+                var url = "<?$baseURL?>/customer/search?searchQuery=" + searchQuery;
 
                 // Make the AJAX request
                 $.ajax({

@@ -61,6 +61,10 @@
 .mrgn{
     margin-left: 19rem;
 }
+#showcomment a{
+    font-size: 16px !important;
+    color: lightskyblue;
+}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}

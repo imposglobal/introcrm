@@ -418,7 +418,7 @@
     function getComments() {
     var id = $('#lead_id').val();
     $.ajax({
-        url: "http://localhost/introcrm/comment/view/" + id, // Correct URL concatenation
+        url: "<?= $baseURL?>comment/view/" + id, // Correct URL concatenation
         type: "get", // Use POST method
         dataType: "html", // Assuming the response is in HTML format
         success: function(response) {
@@ -466,7 +466,7 @@ $("#addcomment").click(function(){
 
     // Make the AJAX request
     $.ajax({
-        url: "http://localhost/introcrm/comment/add",
+        url: "<?= $baseURL?>comment/add",
         type: "POST", // Use POST method
         data: data, // Pass the data object
         dataType: "html", // Assuming the response is in HTML format

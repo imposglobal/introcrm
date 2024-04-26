@@ -275,21 +275,27 @@ public function getComments($lead_id = null) {
                  ->findAll();
 
     if (!empty($custcomments) || !empty($comments)) {
-        // Iterate over comments and print each one
-        foreach ($custcomments as $comment) {
-            echo "" . $comment['additional_notes'] . "<br>";
-            echo "<small>By: " . $comment['agent_name']." (";
-            echo  $comment['lead_date'] . ")</small><br>";
-            echo "<hr>"; // Separator between comments
-
+       
              // Iterate over comments and print each one
         foreach ($comments as $comment) {
-            echo "" . $comment['comments'] . "<br>";
-            echo "<small>By: " . $comment['byname']." (";
+            echo "<div class='pb-3 time'>";
+            echo "" . $comment['comments'];
+            echo "<small><b>By: " . $comment['byname']." </b>(";
             echo  $comment['time_stamp'] . ")</small><br>";
             echo "<hr>"; // Separator between comments
+            echo "</div>";
         }
+             // Iterate over comments and print each one
+        foreach ($custcomments as $comment) {
+            echo "<div class='pb-3 time'>";
+            echo "" . $comment['additional_notes'];
+            echo "<small><b>By : " . $comment['agent_name']."</b>  (";
+            echo  $comment['lead_date'] . ")</small><br>";
+            echo "<hr>"; // Separator between comments
+            echo "</div>";
+
         }
+        
     }else{
         echo"No Comments Found";
     }

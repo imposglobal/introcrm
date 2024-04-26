@@ -36,7 +36,7 @@
     width: 100%;
 }
 td{
-  width: 10%;
+  width: 3%;
 }
 .tableb-responsive td{
     font-size: 14px;

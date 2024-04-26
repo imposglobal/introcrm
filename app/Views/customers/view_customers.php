@@ -67,7 +67,7 @@
 }
 .tb-responsive td:nth-child(5) {
     width: 230px;
-    max-width: 300px;
+    max-width: 300px !important;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: wrap;
@@ -250,15 +250,19 @@
                                             <?php $role = $session->get('role'); 
                                             if($role == 0 || $role == 1 || $role == 2 || $role == 3){
                                             ?>
-                                            <a onclick="openNav(<?= $customer['lead_id'] ?>)" href="#" data-toggle="tooltip" data-placement="top" title="view customer"><i class="mdi mdi-account-search bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <a onclick="openNav(<?= $customer['lead_id'] ?>)" href="#" data-toggle="tooltip" data-placement="top" title="view customer"><i style="font-size: 24px;" class="mdi mdi-account-search text-primary h4 pt-2 px-1 text-white rounded-circle"></i></a>
                                             <?php } ?>
 
                                             <?php if($role == 0 || $role == 1 || $role == 3){ ?>
-                                            <a href="<?php echo base_url('customer/'.$customer['lead_id']);?>" data-toggle="tooltip" data-placement="top" title="edit customer"><i class="mdi mdi-account-edit bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <a href="<?php echo base_url('customer/'.$customer['lead_id']);?>" data-toggle="tooltip" data-placement="top" title="edit customer"><i style="font-size: 24px;" class="mdi mdi-account-edit text-primary h4 pt-2 px-1 text-white rounded-circle"></i></a>
                                             <?php } ?>
 
                                             <?php if($role == 0 || $role == 3){ ?>
-                                            <a href="<?php echo base_url('delete/'.$customer['lead_id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delete customer"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <a href="<?php echo base_url('delete/'.$customer['lead_id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delete customer"><i style="font-size: 24px;" class="mdi mdi-account-remove text-danger h4 pt-2 px-1 text-white rounded-circle"></i></a>
+                                            <?php } ?>
+
+                                            <?php if($role == 0 || $role == 3 || $role == 1){ ?>
+                                            <a href="#" onclick="opentimeline(<?= $customer['lead_id'] ?>)" data-toggle="tooltip" data-placement="top" title="View Comments"><i style="font-size: 24px;" class="mdi mdi-comment-account text-dark h4 pt-2 px-1 text-white rounded-circle"></i></a>
                                             <?php } ?>
                                         </tr>
                                         <?php endforeach; ?>
@@ -450,7 +454,20 @@
                 </div>
                 
             </div>
+            </div>  
+
+            <!-- Time Line -->
+              <!-- Drawer  -->
+              <div id="timelineslide" class="sidenav shadow-lg">
+            <a href="javascript:void(0)" class="closebtn" onclick="closetmeline()">&times;</a>
+            <div class="row px-5 pt-4">
+                <div class="col-lg-12">
+                    <div id="showcomment"></div>
+                </div>
+                
             </div>
+            </div>
+            
             <div class="col-lg-12">
                 <?php echo $pager->links('default','full_pagination');?>
             </div>
@@ -486,7 +503,7 @@
 <script>
     function openNav(id) {
         $.ajax({
-            url: 'http://localhost/introcrm/getcustomer/' + id,
+            url: '<?= $baseURL?>/getcustomer/' + id,
             type: 'GET',
             dataType: 'json',
             success: function(data) {
@@ -510,7 +527,7 @@
                 $('#boilermodel').text(data.customer.boiler_model);
                 $('#benefitflex').text(data.customer.benefit_flex);
                 $('#epcrating').text(data.customer.epc_rating);
-                $('#addnotes').text(data.customer.additional_notes);
+                $('#addnotes').html(data.customer.additional_notes);
                 $('#survyastatus').text(data.customer.survey_status);
                 $('#jobstatus').text(data.customer.job_status);
                 $('#lstatus').text(data.customer.status);
@@ -544,7 +561,7 @@
                 });
 
                 // Open the side navigation
-                $('#mySidenav').css('width', '1000px');
+                $('#mySidenav').css('width', '60%');
                 },
                 error: function(xhr, status, error) {
                 console.error('Error:', error);
@@ -555,6 +572,39 @@
     function closeNav() {
         // Close the side navigation
         $('#mySidenav').css('width', '0');
+    }
+
+
+    //timeline slider
+    function getComments(id) {
+    $.ajax({
+        url: "<?= $baseURL?>comment/view/" + id, // Correct URL concatenation
+        type: "get", // Use POST method
+        dataType: "html", // Assuming the response is in HTML format
+        success: function(response) {
+            // Handle success response
+            $('#showcomment').html(response);
+        },
+        error: function(xhr, status, error) {
+            // Handle errors here
+            // Display an error message using SweetAlert2
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: 'There was an error with your AJAX request.',
+            });
+            console.error("Error:", error);
+        }
+    });
+}
+    function opentimeline(leadid){
+         // Open the side navigation
+         getComments(leadid);
+         $('#timelineslide').css('width', '30%');
+    }
+    function closetmeline() {
+        // Close the side navigation
+        $('#timelineslide').css('width', '0');
     }
 </script>
 <script>
