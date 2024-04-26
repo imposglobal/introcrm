@@ -81,7 +81,6 @@
                                 <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
                                     View Callback</h4>
                                 
-
                                     <div class="col-lg-5 my-2">
                                         <div class="row align-items-center pr-5">
                                          <div class="col-md-5 ">
@@ -112,6 +111,7 @@
                                             <th scope="col">Mobile </th>
                                             <th scope="col">Status </th>
                                             <th scope="col">Callback date</th>
+                                            <th scope="col">Callback Time</th>
                                                  
                                         </tr>
                                     </thead>
@@ -126,7 +126,6 @@
                                             <td>
                                                 <?= $customer['center_name'] ?>
                                             </td>
-                                            
                                             <td>
                                                 <?=  $customer['lead_date'] ?>
                                             </td>                                          
@@ -138,11 +137,12 @@
                                             </td> 
                                             <td>
                                                 <?= $customer['status'] ?>
-                                            </td> 
-                                           
+                                            </td>                                           
                                             <td>
-                                            <?= $customer['calldate'] ?>
-                                            
+                                                <?= $customer['calldate'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $customer['calltime'] ?>    
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
