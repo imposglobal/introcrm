@@ -72,8 +72,8 @@ $routes->POST('/search/customer', 'FilterCustomer::searchingCustomer');
 //filter by status
 $routes->get('status/(:any)', 'FilterCustomer::getStatusbyCustomer/$1');
 
-//test
-// $routes->get('/test/customer', 'Dashboard::getCusomersByMonth');
+//view call back
+$routes->get('/view/callback', 'Dashboard::ViewCallback');
 
 //test
 $routes->post('/comment/add', 'Customers::addComment');

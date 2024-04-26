@@ -6,6 +6,30 @@ use App\Models\CustomerModel;
 class Dashboard extends BaseController
 {
 
+    protected $currentURL;
+    protected $baseURL;
+    protected $data;
+
+    // Initialize controller properties
+    public function initController(\CodeIgniter\HTTP\RequestInterface $request, \CodeIgniter\HTTP\ResponseInterface $response, \Psr\Log\LoggerInterface $logger)
+    {
+        // Call parent initController method
+        parent::initController($request, $response, $logger);
+
+        // Initialize variables
+        $this->currentURL = current_url();
+        $this->baseURL = base_url();
+        helper(['form']);
+
+        // Set data array
+        $this->data = [
+            'currentURL' => $this->currentURL,
+            'baseURL' => $this->baseURL
+        ];
+    }
+
+
+
     //total working days
     public function countWorkingDays($startDate, $endDate) {
         $startDate = strtotime($startDate);
@@ -103,6 +127,7 @@ class Dashboard extends BaseController
                                 ->where('calldate',$today)
                                 ->orderBy('lead_id', 'desc')
                                 ->paginate();
+                                
         // Retrieve the pager for pagination
         $result['pager'] = $customerModel->pager;
 
@@ -145,28 +170,26 @@ class Dashboard extends BaseController
 
 /**********************************************************************************************************/
 
-public function View() {
-    $userModel = new UserModel();
-    $session = session();
-    $center = $session->get('center');
-    $role = $session->get('role');
-    $userid = $session->get('id');
-    if($role == 1){
-        $result['users'] = $userModel
-        ->where('center_name', $center) 
-        ->orderBy('id', 'desc')
-        ->paginate();
-    }else{
-        // Query customers and order them by the 'lead_id' column in descending order
-        $result['users'] = $userModel->orderBy('id', 'desc')->paginate();
-    }
-    
-    
-    // Retrieve the pager for pagination
-    $result['pager'] = $userModel->pager;
-    
-    // Pass additional data to the view, if needed ($this->data seems to be additional data)
-    // You can merge it with the $result array using the '+' operator
-    return view('agent/view_agent', $result + $this->data);
+
+
+public function ViewCallback(){
+
+    $customerModel = new CustomerModel();
+    $status='callback';
+    $today = date('Y-m-d');
+ 
+    // Query customers and order them by the 'lead_id' column in descending order
+    $result['customers'] = $customerModel
+                        ->where('status', $status) 
+                        ->orderBy('lead_id', 'desc')
+                        ->paginate();
+                       
+// Retrieve the pager for pagination
+$result['pager'] = $customerModel->pager;
+// print_r($result); 
+    // echo "test";
+     return view('callback/view_callback', $result + $this->data);
 }
+
+
 }
