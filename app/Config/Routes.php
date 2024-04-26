@@ -74,10 +74,15 @@ $routes->get('status/(:any)', 'FilterCustomer::getStatusbyCustomer/$1');
 
 //view call back
 $routes->get('/view/callback', 'Dashboard::ViewCallback');
+// callback date filter
+$routes->post('callback/filter', 'FilterCustomer::CallbackFilter');
 
 //test
 $routes->post('/comment/add', 'Customers::addComment');
 $routes->get('/comment/view/(:num)', 'Customers::getComments/$1');
+
+
+
 
 
 

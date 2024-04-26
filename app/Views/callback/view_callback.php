@@ -58,6 +58,9 @@
   font-size: 36px;
   margin-left: 50px;
 }
+.mrgn{
+    margin-left: 19rem;
+}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -77,19 +80,27 @@
                             <div class="card-body mt-2">
                                 <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
                                     View Callback</h4>
-                                <hr>
-                                <!-- alert message code using flash data -->
-                                <?php if (session()->has('alrt')): ?>
-                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                        <?= session('alrt') ?>
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                <?php endif; ?>
-                                <!-- alert message code end -->
+                                
 
-                                <!-- table code start -->
+                                    <div class="col-lg-5 my-2">
+                                        <div class="row align-items-center pr-5">
+                                         <div class="col-md-5 ">
+                                           <form action="<?= $baseURL."filter/date" ?>" method="post">
+                                            <input style="height: 35px;" type="date" id="from" name="from" class="form-control" placeholder="From date">
+                                        </div>
+                                        <div class="col-md-5 ">
+                                            <input style="height: 35px;" type="date" id="to" name="to" class="form-control" placeholder="From date">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button style="height: 35px;" type="submit" class="bg-primary pt-0 text-white px-4 py-2 rounded">Filter</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                    </div>
+                                  
+                               <hr>
+
+                             <!-- table code start -->
                                 
                                 <table class="table table-striped">
                                     <thead>
@@ -100,7 +111,7 @@
                                             <th scope="col">Customer Name</th>
                                             <th scope="col">Mobile </th>
                                             <th scope="col">Status </th>
-                                            <th scope="col">Call back date</th>
+                                            <th scope="col">Callback date</th>
                                                  
                                         </tr>
                                     </thead>

@@ -177,4 +177,25 @@ public function getStatusbyCustomer(string $status) {
 // Pass data to the view
 return view('customers/view_customers', $result + $this->data);
 }
+
+/************************************************************************************************************/
+
+public function CallbackFilter(){
+    $customerModel = new CustomerModel();
+    $start = $this->request->getPost('from');
+    $end = $this->request->getPost('to');
+    $result['customers'] = $customerModel
+                    ->where('DATE(calldate) >=', $start)
+                    ->where('DATE(calldate) <=', $end)
+                    ->orderBy('lead_id', 'desc')
+                    ->paginate();
+
+    $result['pager'] = $customerModel->pager;
+
+    // Pass data to the view
+    return view('callback/view_callback', $result + $this->data);
+
+}
+
+
 }
