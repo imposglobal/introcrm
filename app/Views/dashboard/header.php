@@ -58,7 +58,7 @@ td{
         <ul class="navbar-nav mr-lg-2">
           <li class="nav-item nav-search d-none d-lg-block">
             <div class="input-group">
-              <input style="border-radius: 10px;" type="text" class="bg-light text-dark form-control border px-4 border-rounded" id="searchQuery" placeholder="Check Duplicate Email or Mobile No" aria-label="search" aria-describedby="search">
+              <input style="border-radius: 10px; width:500px" type="text" class="bg-light text-dark form-control border px-4 border-rounded" id="searchQuery" placeholder="Check Duplicate Email or Mobile No" aria-label="search" aria-describedby="search">
               <div class="input-group-prepend hover-cursor ml-2" id="duplicatechk">
                 <span class="input-group-text" id="searchCustomer">
                   <i class="icon-search"></i>
@@ -68,57 +68,12 @@ td{
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-              <i class="icon-bell mx-0"></i>
-              <span class="count"></span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-success">
-                    <i class="ti-info-alt mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
-                  <p class="font-weight-light small-text mb-0 text-muted">
-                    Just now<?php echo $baseURL; ?>
-                  </p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-warning">
-                    <i class="ti-settings mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">Settings</h6>
-                  <p class="font-weight-light small-text mb-0 text-muted">
-                    Private message
-                  </p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-info">
-                    <i class="ti-user mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
-                  <p class="font-weight-light small-text mb-0 text-muted">
-                    2 days ago
-                  </p>
-                </div>
-              </a>
-            </div>
-          </li>
+          
           <li class="nav-item nav-profile dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="<?php echo $baseURL; ?>/assets/images/faces/face28.jpg" alt="profile"/>
+            <a class="nav-link dropdown-toggle text-primary mt-3 pt-2" href="#" data-toggle="dropdown" id="profileDropdown">
+            <i class=" menu-icon mdi mdi-account-circle" style="font-size:38px"></i>
+            <span class="font-weight-bold pb-3"><?php 
+                         echo $session->get('fname');?></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item">

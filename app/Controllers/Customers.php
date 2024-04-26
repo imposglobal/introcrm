@@ -170,7 +170,7 @@ public function update()
             'center_name' => $center,
             
             'fname' => $this->request->getPost('fname'),
-            'lname' => $this->request->getPost('lname'),
+            // 'lname' => $this->request->getPost('lname'),
             'email' => $this->request->getPost('email'),
             'dob' => $this->request->getPost('dob'),
             'mobile' => $this->request->getPost('mobile'),
