@@ -7,6 +7,9 @@
 <!-- Define the content section -->
 <?= $this->section('content') ?>
 <title>Dashboard</title>
+<?php $session = session();
+      $role = $session->get('role');
+?>
 <?php
      if ($callback && count($callback['customers']) >= 1){ ?>
      
@@ -182,31 +185,32 @@
               </div>
             </div>
           </div>
+          
+          <?php  if( $role != "2" ){ ?>
           <div class="my-5">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card-body mt-2">
-                            <table class="table table-striped table-responsive">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Lead ID</th>
-                                            <th scope="col">Source</th>
-                                            <th scope="col">Lead Date</th>
-                                            <th scope="col">Customer Name</th>
-                                            <th scope="col">Mobile </th>
-                                            <th scope="col">Status </th>
-                                            <th scope="col">Callback Date</th>
-                                            <th scope="col">Callback Time</th>
-                                                 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    
-                                    <?php if ($result && count($result['customers']) >= 1): ?>
-                                        <?php foreach ($result['customers'] as $results):    
-                                        ?>
-                                          <tr>
+            <div class="card">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card-body mt-2">
+                  <h4 class="card-title pb-3"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
+                                    Todays Callback</h4>
+                    <table class="table table-striped table-responsive">
+                      <thead>
+                        <tr>
+                          <th scope="col">Lead ID</th>
+                          <th scope="col">Source</th>
+                          <th scope="col">Lead Date</th>
+                          <th scope="col">Customer Name</th>
+                          <th scope="col">Mobile </th>
+                          <th scope="col">Status </th>
+                          <th scope="col">Callback Date</th>
+                          <th scope="col">Callback Time</th>                         
+                        </tr>
+                      </thead>
+                        <tbody>           
+                          <?php if ($result && count($result['customers']) >= 1): ?>
+                          <?php foreach ($result['customers'] as $results):?>                                         
+                          <tr>
                                             <td>
                                               <?= $results['lead_id'] ?>
                                             </td>                                       
@@ -241,11 +245,12 @@
                                         <?php endif; ?>
                                     </tbody>
                                 </table>
-                                        </div>
-                                        </div>
-                                        </div>
-                                        </div>
-                                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+           </div>
+        <?php }?>
       
   <script>
       // Function to fetch a random quote
