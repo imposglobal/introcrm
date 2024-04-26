@@ -81,10 +81,10 @@
                                 <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
                                     View Callback</h4>
                                 
-                                    <div class="col-lg-5 my-2">
+                                    <div class="col-lg-5 my-2 mt-5">
                                         <div class="row align-items-center pr-5">
                                          <div class="col-md-5 ">
-                                           <form action="<?= $baseURL."filter/date" ?>" method="post">
+                                           <form action="<?= $baseURL."callback/filter" ?>" method="post">
                                             <input style="height: 35px;" type="date" id="from" name="from" class="form-control" placeholder="From date">
                                         </div>
                                         <div class="col-md-5 ">
@@ -136,7 +136,7 @@
                                                 <?= $customer['mobile'] ?>
                                             </td> 
                                             <td>
-                                                <?= $customer['status'] ?>
+                                            <span class="bg-warning text-dark p-1 px-3 rounded font-weight-bold" style="font-size:13px"><?= $customer['status'] ?></span>
                                             </td>                                           
                                             <td>
                                                 <?= $customer['calldate'] ?>
@@ -148,7 +148,7 @@
                                         <?php endforeach; ?>
                                         <?php else: ?>
                                         <tr>
-                                            <td colspan="7">No agents found.</td>
+                                            <td colspan="8" class="text-center">No Cutomer found.</td>
                                         </tr>
                                         <?php endif; ?>
                                     </tbody>
