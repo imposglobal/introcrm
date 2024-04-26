@@ -104,6 +104,7 @@ class Dashboard extends BaseController
     //show dashboard page 
     public function index()
     {
+        date_default_timezone_set('Europe/London');
         //session start
         $session = session();
         $role = $session->get('role');
@@ -112,6 +113,7 @@ class Dashboard extends BaseController
         // $status = $session->get('status');
           $status='callback';
          $today = date('Y-m-d');
+         $time = date('H:i');
         $currentURL = current_url();
         $startDate = date('Y-m-01'); // Start date of the current month
         $endDate = date('Y-m-t'); // End date of the current month
@@ -122,11 +124,20 @@ class Dashboard extends BaseController
 
         
             // Query customers and order them by the 'lead_id' column in descending order
-            $result['customers'] = $customerModel
+            $callback['customers'] = $customerModel
                                 ->where('status', $status) 
                                 ->where('calldate',$today)
+                                ->where('calltime',$time)
                                 ->orderBy('lead_id', 'desc')
                                 ->paginate();
+
+        //get call back customer by exact time 
+         // Query customers and order them by the 'lead_id' column in descending order
+         $result['customers'] = $customerModel
+         ->where('status', $status) 
+         ->where('calldate',$today)
+         ->orderBy('lead_id', 'desc')
+         ->paginate();
                                 
         // Retrieve the pager for pagination
         $result['pager'] = $customerModel->pager;
@@ -163,6 +174,7 @@ class Dashboard extends BaseController
             'countPaid' => $countPaid,
             'countRetransfer' => $countRetransfer,
             'result' => $result,
+            'callback'=>$callback
         ];
 
             return view('dashboard/dashboard', $data);

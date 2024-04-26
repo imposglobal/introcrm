@@ -6,6 +6,40 @@
 
 <!-- Define the content section -->
 <?= $this->section('content') ?>
+<title>Dashboard</title>
+<?php
+     if ($callback && count($callback['customers']) >= 1){ ?>
+     
+       <!-- Modal -->
+  <div class="modal show" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+        <h4 style="float: inline-start;">Callback Today</h4>
+        <button type="button" style="float: inline-end;" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+        
+        <?php foreach ($callback['customers'] as $callbacks): ?>
+         <p> <span class="h5 font-weight-bold">Customer: </span><span><?=$callbacks['fname']?></span></p>
+         <p> <span class="h5 font-weight-bold">Email: </span><span><?=$callbacks['email']?></span></p>
+         <p> <span class="h5 font-weight-bold">Phone: </span><span><?=$callbacks['mobile']." / ".$callbacks['telephone']?></span></p>
+         <p> <span class="h5 font-weight-bold">Address: </span><span><?=$callbacks['address_1']."-".$callbacks['post_code']?></span></p>
+        <?php endforeach; ?>
+         
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+      <?php }else{
+        $callback = null;
+      } ?>
 <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
@@ -91,7 +125,7 @@
           </div>
           
           <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 my-3">
               <div class="card card-light-blue">
                 <div class="card-body">
                   <p class="mb-4">DWP Submitted</p>
@@ -100,7 +134,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 my-3">
               <div class="card card-light-danger">
                 <div class="card-body">
                   <p class="mb-4">DWP Passed</p>
@@ -109,7 +143,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 my-3">
               <div class="card card-dark-blue">
                 <div class="card-body">
                   <p class="mb-4">Completed</p>
@@ -118,7 +152,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 my-3">
               <div class="card card-tale">
                 <div class="card-body">
                   <p class="mb-4">Paid</p>
@@ -127,7 +161,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 my-3">
+          </div>
+          <div class="row">
+            <div class="col-lg-3 my-3 my-3">
               <div class="card card-tale">
                 <div class="card-body">
                   <p class="mb-4">Callback</p>
@@ -136,7 +172,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 my-3">
+            <div class="col-lg-3 my-3 my-3">
               <div class="card card-dark-blue">
                 <div class="card-body">
                   <p class="mb-4">Retransfer</p>
@@ -146,12 +182,12 @@
               </div>
             </div>
           </div>
-          <div class="col-12 grid-margin stretch-card">
+          <div class="my-5">
                 <div class="card">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card-body mt-2">
-                            <table class="table table-striped">
+                            <table class="table table-striped table-responsive">
                                     <thead>
                                         <tr>
                                             <th scope="col">Lead ID</th>

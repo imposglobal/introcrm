@@ -95,18 +95,18 @@
                             <hr>
                         </div>
                       <!-- hr line tag -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-8">
                             <div class="form-group">
-                                <label>First Name</label>
-                                <input required  type="text" value="<?= $result['fname'] ?>" name="fname" class="form-control form-control-lg" placeholder="Customer First Name" id="fname">
+                                <label>Customer Name</label>
+                                <input required  type="text" value="<?= $result['fname'] ?>" name="fname" class="form-control form-control-lg" placeholder="Customer Full Name" id="fname">
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <!-- <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Last Name</label>
                                 <input required  type="text" value="<?= $result['lname'] ?>" name="lname" class="form-control form-control-lg" placeholder="Customer Last Name" id="lname">
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Email</label>

@@ -31,6 +31,16 @@
     #searchQuery::placeholder{
       color: #00000061;
     }
+    .tb-responsive {
+    overflow-x: auto !important;
+    width: 100%;
+}
+td{
+  width: 10%;
+}
+.tableb-responsive td{
+    font-size: 14px;
+}
   </style>
 </head>
 <body>
@@ -117,7 +127,7 @@
               </a>
               <a class="dropdown-item"  href="<?php echo base_url('logout'); ?>">
                 <i class="ti-power-off text-primary"></i>
-                Logout
+                Logout 
               </a>
             </div>
           </li>
@@ -130,24 +140,7 @@
     </nav>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
-       <!-- Modal -->
-  <div class="modal show" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        
-      </div>
-      
-    </div>
-  </div>
+  
       <!-- partial:partials/_settings-panel.html -->
       <!-- <div class="theme-setting-wrapper">
         <div id="settings-trigger"><i class="ti-settings"></i></div>

@@ -160,7 +160,7 @@
                                
 
                                 <!-- table code start -->
-                                <table class="table table-striped tb-responsive">
+                                <table class="table table-striped table-responsive tb-responsive">
                                     <thead>
                                         <tr>
                                             <th scope="col">Lead ID</th>
