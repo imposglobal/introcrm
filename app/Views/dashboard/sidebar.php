@@ -54,6 +54,14 @@
                 <span class="menu-title">View Agent</span>
             </a>
         </li>
+
+        <li class="nav-item  <?php echo ($currentURL == base_url('index.php/view/callback')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url('view/callback'); ?>">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">View Callback</span>
+            </a>
+        </li>
+        
         <?php }?>
 
         <!-- Add more sidebar items with similar logic -->

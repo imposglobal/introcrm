@@ -76,7 +76,7 @@
                         <div class="col-md-12">
                             <div class="card-body mt-2">
                                 <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
-                                    View Agent</h4>
+                                    View Callback</h4>
                                 <hr>
                                 <!-- alert message code using flash data -->
                                 <?php if (session()->has('alrt')): ?>
@@ -94,52 +94,44 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">First Name</th>
-                                            <th scope="col">Last Name</th>
-                                            <th scope="col">Center Name</th>
-                                            <th scope="col">User Name</th>
-                                            <th scope="col">Password</th>
-                                            <th scope="col">Actions</th>
-                                            
+                                            <th scope="col">Lead ID</th>
+                                            <th scope="col">Source</th>
+                                            <th scope="col">Lead Date</th>
+                                            <th scope="col">Customer Name</th>
+                                            <th scope="col">Mobile </th>
+                                            <th scope="col">Status </th>
+                                            <th scope="col">Call back date</th>
+                                                 
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php $i = 1; ?>
-                                        <?php if ($users && count($users) >= 1): ?>
-                                        <?php foreach ($users as $user):    
+                                    <?php if ($customers && count($customers) >= 1): ?>
+                                        <?php foreach ($customers as $customer):    
                                         ?>
                                         <tr>
                                             <td>
-                                                <?= $i++ ?>
+                                            <?= $customer['lead_id'] ?>
                                             </td>                                       
                                             <td>
-                                                <?= $user['fname'] ?>
+                                                <?= $customer['center_name'] ?>
                                             </td>
                                             
                                             <td>
-                                                <?=  $user['lname'] ?>
+                                                <?=  $customer['lead_date'] ?>
                                             </td>                                          
                                             <td>
-                                                <?= $user['center_name'] ?>
+                                                <?= $customer['fname'] ?>
                                             </td>
                                             <td>
-                                                <?= $user['username'] ?>
+                                                <?= $customer['mobile'] ?>
                                             </td> 
                                             <td>
-                                                <?= $user['password'] ?>
+                                                <?= $customer['status'] ?>
                                             </td> 
                                            
                                             <td>
-                                           
-                                            <?php $role = $session->get('role');
-                                             if($role == 0 || $role == 1 || $role == 3){ ?>
-                                            <a href="<?php echo base_url('agent/edit/'.$user['id']);?>" data-toggle="tooltip" data-placement="top" title="edit agent"><i class="mdi mdi-account-edit bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
-                                            <?php } ?>
-
-                                            <?php if($role == 0 || $role == 3){ ?>
-                                            <a href="<?php echo base_url('agent/delete/'.$user['id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delete customer"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
-                                            <?php } ?>
+                                            <?= $customer['calldate'] ?>
+                                            
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
@@ -154,8 +146,9 @@
                          <!-- table code end -->
                             </div>
                         </div>
-
+                       
                     </div>
+                    
                 </div>
             </div>
             <div class="col-lg-12">
