@@ -167,19 +167,15 @@
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Benefit / Flex</label>
                                 <select name="benefit" id="benefit" class="form-control form-control-lg" id="exampleFormControlSelect1">
-                                <option value="Universal credit">Universal credit</option>
-                                <option value="Income Support">Income Support </option>
-                                <option value="Pension Credit">Pension Credit </option>
-                                <option value="D">Child Tax Credit</option>
-                                <option value="Housing Benefit">Housing Benefit</option>
-                                <option value="Universal Credit">Universal Credit</option>
-                                <option value="Employment and support allowance">Employment and support allowance</option>
-                                <option value="Universal Credit">Universal Credit</option>
-                                <option value="Child Tax support">Child Tax support </option>
-                                <option value="Working Tax Credit">Working Tax Credit</option>
-                                <option value="Pension credit and income Support credit">Pension credit and income Support credit</option>
-                                <option value="working tax credit">working tax credit </option>
-                                <option value="No Benefits">No Benefits</option>
+                                <option value="Income Support">Income Support (IS)</option>
+                                <option value="Housing Benefit">Housing Benefit (HB) </option>
+                                <option value="Universal Credit">Universal Credit (UC) </option>
+                                <option value="Working Tax Credit">Working Tax Credit (WTC)</option>
+                                <option value="Jobseeker’s Allowance">Jobseeker’s Allowance (JSA)</option>
+                                <option value="Child Benefit (subject to income)">Child Benefit (subject to income)</option>
+                                <option value="Pension Credit Savings Credit">Pension Credit Savings Credit (PCSC)</option>
+                                <option value="Pension Credit Guarantee Credit">Pension Credit Guarantee Credit (PCGC)</option>
+                                <option value="Employment and Support Allowance">Employment and Support Allowance (ESA) </option>
                                 
                                 </select>
                             </div>
@@ -188,6 +184,7 @@
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">EPC Rating</label>
                                 <select name="epc" id="epc" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option value="A">Not Available</option>
                                 <option value="A">A</option>
                                 <option value="B">B </option>
                                 <option value="C">C </option>

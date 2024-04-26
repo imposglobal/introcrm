@@ -145,7 +145,69 @@
                 </div>
               </div>
             </div>
-          </div>      
+          </div>
+          <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card-body mt-2">
+                            <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Lead ID</th>
+                                            <th scope="col">Source</th>
+                                            <th scope="col">Lead Date</th>
+                                            <th scope="col">Customer Name</th>
+                                            <th scope="col">Mobile </th>
+                                            <th scope="col">Status </th>
+                                            <th scope="col">Call back date</th>
+                                                 
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    
+                                    <?php if ($result && count($result['customers']) >= 1): ?>
+                                        <?php foreach ($result['customers'] as $results):    
+                                        ?>
+                                        <tr>
+                                            <td>
+                                            <?= $results['lead_id'] ?>
+                                            </td>                                       
+                                            <td>
+                                                <?= $results['center_name'] ?>
+                                            </td>
+                                            
+                                            <td>
+                                                <?=  $results['lead_date'] ?>
+                                            </td>                                          
+                                            <td>
+                                                <?= $results['fname'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $results['mobile'] ?>
+                                            </td> 
+                                            <td>
+                                                <?= $results['status'] ?>
+                                            </td> 
+                                           
+                                            <td>
+                                            <?= $results['calldate'] ?>
+                                            
+                                            </td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <tr>
+                                            <td colspan="7">No agents found.</td>
+                                        </tr>
+                                        <?php endif; ?>
+                                    </tbody>
+                                </table>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
       
   <script>
       // Function to fetch a random quote
