@@ -113,7 +113,7 @@
 
                                 <hr>
                                     <div class="row">
-                                        <div class="col-lg-7 my-2">
+                                        <div class="col-lg-8 my-2">
                                             <span style="font-size: 14px;" class="bg-light border mx-2 px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/yesterday"?>">Yesterday</span></a>
                                             <span style="font-size: 14px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/today"?>">Today</span></a>
                                             <span style="font-size: 14px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/week"?>">Weekly</span></a>
@@ -139,7 +139,7 @@
                                        
                                     
                                 
-                                    <div class="col-lg-5 my-2">
+                                    <div class="col-lg-4 my-2">
                                     <div class="row align-items-center pr-5">
                                          <div class="col-md-5 ">
                                            <form action="<?= $baseURL."filter/date" ?>" method="post">
