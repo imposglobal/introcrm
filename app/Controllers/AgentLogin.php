@@ -39,14 +39,12 @@ class AgentLogin extends BaseController
         $ipModel = new IpModel();
         $request = service('request');
         $userIP = $request->getIPAddress();
-       echo $userIP;
         
         $ipdata = $ipModel->select('ip_address')->findAll(); 
     
         $isUserIPAuthorized = false; // Initialize a variable to track if user IP is authorized
     
         foreach ($ipdata as $row) {
-            echo $row['ip_address'];
             if ($row['ip_address'] === $userIP) { // Access 'ip_address' as an array key
                 $isUserIPAuthorized = true;
                 echo $isUserIPAuthorized;
