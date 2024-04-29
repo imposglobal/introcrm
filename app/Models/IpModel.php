@@ -4,7 +4,7 @@ use CodeIgniter\Model;
   
 class IpModel extends Model{
     protected $table = 'ipadress';
-    protected $primaryKey = 'ip_idid ';
+    protected $primaryKey = 'ip_id ';
     
     protected $allowedFields = [
         
