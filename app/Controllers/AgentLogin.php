@@ -39,7 +39,7 @@ class AgentLogin extends BaseController
         $ipModel = new IpModel();
         $request = service('request');
         $userIP = $request->getIPAddress();
-       
+       echo $userIP;
         $userIP ="192.168.1.1";
         $ids = $ipModel->select('ip_id')->findAll();
         $ipIds = array_column($ids, 'ip_id'); 

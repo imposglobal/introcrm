@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Login</title>
+  <title>Agent Login</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/vendors/feather/feather.css">
   <link rel="stylesheet" href="<?php echo $baseURL; ?>/assets/vendors/ti-icons/css/themify-icons.css">
@@ -39,11 +39,10 @@
               <!-- code to display flash message  end-->
 
               <div class="brand-logo">
-                <img src="<?php echo $baseURL; ?>/assets/images/logo.svg" alt="logo">
+                <!-- <img src="<?php echo $baseURL; ?>/assets/images/logo.svg" alt="logo"> -->
               </div>
-              <div class="text-center">
-                 <h4 style="font-weight: bold;">Agent Login</h4>
-              </div>
+              <h4>Hello <span class="text-primary">Agent!</span> let's get started</h4>
+              <h6 class="font-weight-light">Sign in to continue.</h6>
 
               
               <!-- Login form  -->
@@ -70,7 +69,7 @@
                     </button>
                   </div>
                   <div class="my-4 d-flex justify-content-between align-items-center">
-                    <a href="#" class="auth-link text-black">Forgot password?</a>
+                    <a href="<?= base_url()."admin/login"?>" class=" border-bottom text-primary font-weight-bold">Login to Admin</a>
                   </div>
                 </form>   
 <!-- Login form end -->

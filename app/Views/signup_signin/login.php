@@ -38,10 +38,10 @@
                 <?php endif; ?>
               <!-- code to display flash message  end-->
 
-              <div class="brand-logo">
+              <!-- <div class="brand-logo">
                 <img src="<?php echo $baseURL; ?>/assets/images/logo.svg" alt="logo">
-              </div>
-              <h4>Hello! let's get started</h4>
+              </div> -->
+              <h4>Hello Admin! let's get started</h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
 
 
@@ -69,7 +69,7 @@
                     </button>
                   </div>
                   <div class="my-4 d-flex justify-content-between align-items-center">
-                    <a href="#" class="auth-link text-black">Forgot password?</a>
+                    <a href="<?= base_url()?>" class=" border-bottom text-primary font-weight-bold">Login to Agent</a>
                   </div>
                 </form>   
 <!-- Login form end -->
