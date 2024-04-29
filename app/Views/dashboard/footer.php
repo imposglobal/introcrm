@@ -36,6 +36,7 @@
   
     <script>
         $(document).ready(function(){
+          $('#loader').hide();
             // Event handler for the search button click
             $("#searchCustomer").click(function(){
                 // Get the search query from the input field
