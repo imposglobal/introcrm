@@ -32,13 +32,10 @@ class IpControle extends BaseController
     public function index()
     {
         $ipModel = new IpModel();
-
-        
+      
         $result['ipadress'] = $ipModel->orderBy('ip_id  ', 'desc')->paginate(); // fetch data from database
         
          $result['pager'] = $ipModel->pager;
-
-        // print_r($result);
         
       return view('ipcontrole/add_ipcontrole', $result + $this->data);
     }
@@ -51,7 +48,7 @@ class IpControle extends BaseController
        $data=[
         'ip_address' => $this->request->getPost('ip_address'),
        ];
-        print_r($data);
+        
        $ipModel->save($data);
       return redirect()->to('ip/Management')->with('alrt', 'Ip  added successfully');
 
