@@ -169,7 +169,7 @@
                                             </td>
 
                                             <td>
-                                                <a href="<?php echo base_url('ip/delete/'.$ipadd['ip_id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delist IP adress"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                                <a href="<?php echo base_url('ip/delete/'.$ipadd['ip_id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delist IP Address"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
                                             </td>
                                             
                                         
@@ -216,7 +216,7 @@
         // Show Sweet Alert confirmation
         Swal.fire({
             title: "Are you sure?",
-            text: "Once deleted, you will not be able to recover this IP Adress!",
+            text: "Once deleted, you will not be able to recover this IP Address!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: '#d33',
@@ -228,7 +228,7 @@
                 window.location.href = deleteUrl;
             } else {
                 // If user cancels deletion, do nothing
-                Swal.fire("Cancelled", "Your IP Adress is safe!", "info");
+                Swal.fire("Cancelled", "Your IP Address is safe!", "info");
             }
         });
     }
