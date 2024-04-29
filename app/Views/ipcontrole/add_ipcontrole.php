@@ -2,7 +2,7 @@
 <?= $this->extend('layout/layout') ?>
 <!-- Define the content section -->
 <?= $this->section('content') ?>
-<title>Add Agent</title>
+<title>Manage IP</title>
 <style>
     .drop-area {
         border: 2px dashed #ccc;
@@ -169,7 +169,7 @@
                                             </td>
 
                                             <td>
-                                                <a href="<?php echo base_url('ip/delete/'.$ipadd['ip_id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delist IP Address"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                                <a href="<?php echo base_url('ip/delete/'.$ipadd['ip_id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delist IP Address"><i class="mdi mdi-server-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
                                             </td>
                                             
                                         
