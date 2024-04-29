@@ -67,7 +67,7 @@ td{
                   <i class="icon-search"></i>
                 </span>
               </div>
-              <div id="loader" class="spinner-border p-3" role="status">
+              <div id="loader" class="spinner-grow text-primary p-3" role="status">
                 <span class="sr-only">Loading...</span>
               </div>
             </div>
