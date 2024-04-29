@@ -103,7 +103,6 @@ public function delete($id = null) {
 {
     $userModel = new UserModel();
     $result = $userModel->where('id', $id)->first();
-    // print_r($result);
     $viewData = [
         'result' => $result,
     ];
@@ -128,7 +127,7 @@ public function update()
                 'location' => $this->request->getPost('location'),
         
             ];
-           // print_r($data);
+           
                     // Perform the update
                     $result = $userModel->update($id, $data);
                     if ($result) {
@@ -140,9 +139,6 @@ public function update()
                         return redirect()->back()->with('error', 'Failed to update user data.');
                     } 
    }
-
-
-
 
 }
 
