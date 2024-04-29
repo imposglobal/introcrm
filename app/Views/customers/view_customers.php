@@ -140,7 +140,7 @@
                                     
                                 
                                     <div class="col-lg-5 my-2">
-                                    <div class="row">
+                                    <div class="row pr-5">
                                          <div class="col-md-5 ">
                                            <form action="<?= $baseURL."filter/date" ?>" method="post">
                                             <input style="height: 35px;" type="date" id="from" name="from" class="form-control" placeholder="From date">
