@@ -39,7 +39,7 @@ class AgentLogin extends BaseController
         $ipModel = new IpModel();
         $request = service('request');
         $userIP = $request->getIPAddress();
-        
+        /// $userIP= '192.168.1.1';
         $ipdata = $ipModel->select('ip_address')->findAll(); 
     
         $isUserIPAuthorized = false; // Initialize a variable to track if user IP is authorized
@@ -111,11 +111,7 @@ class AgentLogin extends BaseController
         }
     }
 
-    // public function Agentlogout(){
-    //     $session=session();
-    //     $session->destroy();
-    //     return redirect()->to('/');
-    // }
+
 
 
     

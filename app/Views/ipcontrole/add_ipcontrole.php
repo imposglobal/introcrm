@@ -149,21 +149,27 @@
                                  <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col">IP Id</th>
+                                            <th scope="col">#</th>
                                             <th scope="col">IP Address</th>
+                                            <th scope="col">Delist IP</th>
                                            
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php $i=1;?>
                                     <?php if ($ipadress && count($ipadress) >= 1): ?>
                                         <?php foreach ($ipadress as $ipadd):    
                                         ?>
                                         <tr>
                                             <td>
-                                            <?= $ipadd['ip_id'] ?>
+                                            <?= $i++ ?>
                                             </td>
                                             <td>
                                             <?= $ipadd['ip_address'] ?>
+                                            </td>
+
+                                            <td>
+                                                <a href="<?php echo base_url('ip/delete/'.$ipadd['ip_id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delete customer"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
                                             </td>
                                             
                                         
@@ -201,7 +207,32 @@
     <!-- content-wrapper ends -->
 
    
+    <script>
+    function confirmDelete(link) {
+        event.preventDefault(); // Prevent the default behavior of the link
 
+        const deleteUrl = link.getAttribute('href'); // Get the URL to delete
+
+        // Show Sweet Alert confirmation
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this customer!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // If user confirms deletion, redirect to the delete URL
+                window.location.href = deleteUrl;
+            } else {
+                // If user cancels deletion, do nothing
+                Swal.fire("Cancelled", "Your customer is safe!", "info");
+            }
+        });
+    }
+</script>
 
 
 
