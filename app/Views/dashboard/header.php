@@ -1,10 +1,22 @@
-<?php $session = session();
+<?php
+
+// Ensure that sessions are initialized
+$session = session();
+
+// Retrieve session data
 $login = $session->get('email');
-echo $login;
-if($login == ' '){
-  echo'<script>window.location.href = "http://www.w3schools.com";</script>';
+
+// Check if the session data is empty
+if(empty($login)) {
+    // Redirect to a specific URL using CodeIgniter's redirect function
+    return redirect()->to('http://www.w3schools.com');
 }
+
+// Output the session data
+echo $login;
+
 ?>
+
 
 
 <!DOCTYPE html>
