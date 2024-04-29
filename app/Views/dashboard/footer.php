@@ -97,7 +97,24 @@
         });
         $('#myModal').modal('show');
     </script>
-    
+    <!-- Add this script in your HTML file -->
+<script>
+    // Disable the back button
+    window.history.forward();
+
+    // Redirect to a specific page if the user tries to navigate back
+    window.onload = function () {
+        if (typeof history.pushState === "function") {
+            history.pushState("jibberish", null, null);
+            window.onpopstate = function () {
+                history.pushState("newjibberish", null, null);
+                // Redirect to a specific page (like login) if needed
+                window.location.href = "login";
+            };
+        }
+    };
+</script>
+
 </body>
 </html>
 
