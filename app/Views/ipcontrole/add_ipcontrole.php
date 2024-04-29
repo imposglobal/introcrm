@@ -73,7 +73,7 @@
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="card-body mt-2">
                                 <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
                                     IP Management</h4>
@@ -140,7 +140,7 @@
 
             <div class="card">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="card-body mt-2">
                                 <!-- <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
                                  </h4> -->
