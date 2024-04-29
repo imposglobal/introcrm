@@ -1,4 +1,10 @@
-<?php $session = session();?>
+<?php $session = session();
+$login = $session->get('isLoggedIn');
+if($login == false){
+  return redirect()->to('/');
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
