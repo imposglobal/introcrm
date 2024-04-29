@@ -288,7 +288,7 @@ public function getComments($lead_id = null) {
              // Iterate over comments and print each one
         foreach ($custcomments as $comment) {
             echo "<div class='pb-3 time'>";
-            echo "" . $comment['additional_notes'];
+            echo "" . $comment['additional_notes']."<br>";
             echo "<small><b>By : " . $comment['agent_name']."</b>  (";
             echo  $comment['lead_date'] . ")</small><br>";
             echo "<hr>"; // Separator between comments
