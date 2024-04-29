@@ -13,8 +13,6 @@ if(empty($login)) {
     echo'<script>window.location.href = "/";</script>';
 }
 
-// Output the session data
-echo $login;
 
 ?>
 
