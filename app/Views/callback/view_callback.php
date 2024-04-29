@@ -85,7 +85,7 @@
                                 <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
                                     View Callback</h4>
                                 
-                                    <div class="col-lg-5 my-2 mt-5">
+                                    <div class="col-lg-8 my-2 mt-5">
                                         <div class="row align-items-center pr-5">
                                          <div class="col-md-5 ">
                                            <form action="<?= $baseURL."callback/filter" ?>" method="post">
