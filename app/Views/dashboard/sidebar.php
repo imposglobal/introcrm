@@ -38,7 +38,7 @@
         </li>
         <?php }?>
 
-        <?php  if( $role != "2" ){ ?>
+        <?php  if( $role != "2" ){   ?>
         <li class="nav-item  <?php echo ($currentURL == base_url('index.php/agent')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('agent'); ?>">
             <i class=" menu-icon mdi mdi-account-plus" style="font-size:18px"></i>
