@@ -10,7 +10,7 @@ $login = $session->get('email');
 if(empty($login)) {
     // Redirect to a specific URL using CodeIgniter's redirect function
     // return redirect()->to('http://www.w3schools.com');
-    echo "dsalkdjaldsjlskjdsalkjdsakjdaksjd";
+    echo'<script>window.location.href = "http://www.w3schools.com";</script>';
 }
 
 // Output the session data
