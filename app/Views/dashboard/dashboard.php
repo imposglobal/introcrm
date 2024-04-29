@@ -240,7 +240,7 @@
                                         <?php endforeach; ?>
                                         <?php else: ?>
                                             <tr>
-                                              <td colspan="7">No agents found.</td>
+                                              <td colspan="8">No Callback found.</td>
                                             </tr>
                                         <?php endif; ?>
                                     </tbody>
