@@ -9,7 +9,6 @@ $login = $session->get('email');
 // Check if the session data is empty
 if(empty($login)) {
     // Redirect to a specific URL using CodeIgniter's redirect function
-    // return redirect()->to('http://www.w3schools.com');
     echo'<script>window.location.href = "/";</script>';
 }
 
