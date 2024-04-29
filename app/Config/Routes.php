@@ -81,6 +81,11 @@ $routes->post('callback/filter', 'FilterCustomer::CallbackFilter');
 $routes->post('/comment/add', 'Customers::addComment');
 $routes->get('/comment/view/(:num)', 'Customers::getComments/$1');
 
+// Ip controle 
+$routes->get('/ip/Management', 'IpControle::index');
+$routes->post('/ip/add', 'IpControle::store');
+
+
 
 
 
