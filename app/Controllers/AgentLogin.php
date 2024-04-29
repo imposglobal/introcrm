@@ -47,7 +47,6 @@ class AgentLogin extends BaseController
         foreach ($ipdata as $row) {
             if ($row['ip_address'] === $userIP) { // Access 'ip_address' as an array key
                 $isUserIPAuthorized = true;
-                echo $isUserIPAuthorized;
                 break; // Exit the loop if a match is found
             }
         }
