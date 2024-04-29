@@ -39,9 +39,13 @@
           $('#loader').hide();
             // Event handler for the search button click
             $("#searchCustomer").click(function(){
+              $('#loader').show();
+              $('#searchCustomer').hide();
                 // Get the search query from the input field
                 var searchQuery = $("#searchQuery").val();
                 if (searchQuery.trim() === "") {
+                  $('#searchCustomer').show();
+                  $('#loader').hide();
                     // If the search query is empty, show an error message
                     Swal.fire({
                         icon: 'error',
@@ -73,7 +77,8 @@
                             text: searchQuery + ' Found in database.',
                         });
                         }
-                        
+                        $('#searchCustomer').show();
+                        $('#loader').hide();
                         // For example, you can update the DOM with the response data
                         $("#result").html(JSON.stringify(response));
                     },
