@@ -64,7 +64,7 @@
 
         <li class="nav-item  <?php echo ($currentURL == base_url('index.php/ip/Management')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('ip/Management'); ?>">
-            <i class=" menu-icon mdi mdi-headphones-box" style="font-size:18px"></i>
+            <i class=" menu-icon mdi mdi-remote" style="font-size:18px"></i>
                 <span class="menu-title">IP Management</span>
             </a>
         </li>
