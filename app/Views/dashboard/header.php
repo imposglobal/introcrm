@@ -35,6 +35,9 @@
     overflow-x: auto !important;
     width: 100%;
 }
+#loader{
+  display: none;
+}
 td{
   width: 3%;
 }
