@@ -1,7 +1,8 @@
 <?php $session = session();
-$login = $session->get('isLoggedIn');
-if($login == false){
-  return redirect()->to('/');
+$login = $session->get('email');
+echo $login;
+if($login == ' '){
+  echo'<script>window.location.href = "http://www.w3schools.com";</script>';
 }
 ?>
 
