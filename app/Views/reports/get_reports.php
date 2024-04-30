@@ -83,10 +83,10 @@
                                     <div class="row pr-5">
                                         <div class="col-md-5">
                                             <form action="<?= $baseURL."excell_report" ?>" method="post">
-                                                <input  type="date" id="start" name="start" class="form-control" placeholder="From date">
+                                                <input  type="date" required id="start" name="start" class="form-control" placeholder="From date">
                                         </div>
                                         <div class="col-md-5">
-                                            <input  type="date" id="end" name="end" class="form-control" placeholder="To date">
+                                            <input  type="date" required id="end" name="end" class="form-control" placeholder="To date">
                                         </div>
 
                                         <div class="col-md-2">
@@ -104,7 +104,7 @@
             
                                             <div class="col-lg-6">
                                                 <label for="exampleFormControlSelect1">Please Select Status to Export Data</label>
-                                                <select class="form-control" name="status" id="status">
+                                                <select class="form-control" name="status" required id="status">
                                                 <option value="All">All</option>
                                                 <option value="New Lead">New Lead</option>
                                                 <option value="Accepted">Accepted</option>
