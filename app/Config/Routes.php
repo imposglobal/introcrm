@@ -87,6 +87,15 @@ $routes->get('/ip/Management', 'IpControle::index');
 $routes->post('/ip/add', 'IpControle::store');
 $routes->get('ip/delete/(:num)', 'IpControle::delete/$1');
 
+//Excell Report
+$routes->get('/view/reports', 'ExcellExport::index');
+
+// $routes->match(['get','post'], 'excell_report','CustomerView::ExportExcellReport', ['filter' => 'authGuard'] );
+$routes->match(['get','post'], 'excell_report','ExcellExport::ExportFullExcellReport' );
+$routes->match(['get','post'], 'accepted','ExcellExport::ExportAcceptReport' );
+
+
+
 
 
 

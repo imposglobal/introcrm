@@ -1,0 +1,159 @@
+CRITICAL - 2024-04-30 06:48:52 --> CodeIgniter\Filters\Exceptions\FilterException: "authGuard" filter must have a matching alias defined.
+[Method: GET, Route: excell_report]
+in SYSTEMPATH\Filters\Filters.php on line 495.
+ 1 SYSTEMPATH\Filters\Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('authGuard')
+ 2 SYSTEMPATH\Filters\Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('authGuard', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 07:22:25 --> ErrorException: Array to string conversion
+[Method: GET, Route: excell_report]
+in APPPATH\Controllers\ExcellExport.php on line 38.
+ 1 APPPATH\Controllers\ExcellExport.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\ExcellExport.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ExcellExport->ExportExcellReport()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcellExport))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 07:26:06 --> Error: Class "App\Controllers\Spreadsheet" not found
+[Method: GET, Route: excell_report]
+in APPPATH\Controllers\ExcellExport.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ExcellExport->ExportExcellReport()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcellExport))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 07:27:11 --> Error: Class "App\Controllers\Spreadsheet" not found
+[Method: GET, Route: excell_report]
+in APPPATH\Controllers\ExcellExport.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ExcellExport->ExportExcellReport()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcellExport))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 08:12:23 --> ErrorException: Undefined variable $sheet
+[Method: GET, Route: excell_report]
+in APPPATH\Controllers\ExcellExport.php on line 42.
+ 1 APPPATH\Controllers\ExcellExport.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sheet', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\ExcellExport.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ExcellExport->ExportExcellReport()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcellExport))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 08:21:24 --> Error: Class "App\Controllers\Spreadsheet" not found
+[Method: GET, Route: excell_report]
+in APPPATH\Controllers\ExcellExport.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ExcellExport->ExportExcellReport()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcellExport))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 08:55:25 --> ErrorException: Undefined variable $startDate
+[Method: GET, Route: excell_report]
+in APPPATH\Controllers\ExcellExport.php on line 42.
+ 1 APPPATH\Controllers\ExcellExport.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $startDate', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\ExcellExport.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ExcellExport->ExportExcellReport()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcellExport))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 09:08:16 --> ErrorException: Undefined array key "lead_id"
+[Method: GET, Route: excell_report]
+in APPPATH\Controllers\ExcellExport.php on line 69.
+ 1 APPPATH\Controllers\ExcellExport.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "lead_id"', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\ExcellExport.php', 69)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ExcellExport->ExportExcellReport()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcellExport))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 09:32:29 --> ErrorException: Undefined variable $users
+[Method: GET, Route: view/reports]
+in APPPATH\Views\reports\get_reports.php on line 109.
+ 1 APPPATH\Views\reports\get_reports.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'C:\\xampp\\htdocs\\introcrm\\app\\Views\\reports\\get_reports.php', 109)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\introcrm\\app\\Views\\reports\\get_reports.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('reports/get_reports', [], true)
+ 5 APPPATH\Controllers\ExcellExport.php(40): view('reports/get_reports', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ExcellExport->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcellExport))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 10:42:09 --> ErrorException: Undefined variable $statuswise
+[Method: POST, Route: excell_report]
+in APPPATH\Controllers\ExcellExport.php on line 62.
+ 1 APPPATH\Controllers\ExcellExport.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $statuswise', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\ExcellExport.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ExcellExport->ExportExcellReport()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcellExport))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 11:26:52 --> ErrorException: Undefined variable $records
+[Method: POST, Route: excell_report]
+in APPPATH\Controllers\ExcellExport.php on line 93.
+ 1 APPPATH\Controllers\ExcellExport.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $records', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\ExcellExport.php', 93)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ExcellExport->ExportExcellReport()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcellExport))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 12:13:10 --> ParseError: syntax error, unexpected token "public"
+[Method: GET, Route: view/reports]
+in APPPATH\Controllers\ExcellExport.php on line 151.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\ExcellExport.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ExcellExport')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ExcellExport')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\ExcellExport', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 12:14:00 --> ParseError: syntax error, unexpected token "public"
+[Method: GET, Route: view/reports]
+in APPPATH\Controllers\ExcellExport.php on line 151.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\ExcellExport.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ExcellExport')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ExcellExport')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\ExcellExport', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 12:14:06 --> ParseError: syntax error, unexpected token "public"
+[Method: GET, Route: view/reports]
+in APPPATH\Controllers\ExcellExport.php on line 151.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\ExcellExport.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ExcellExport')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ExcellExport')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\ExcellExport', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-30 12:15:15 --> ParseError: Unclosed '{' on line 44
+[Method: GET, Route: view/reports]
+in APPPATH\Controllers\ExcellExport.php on line 152.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\ExcellExport.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ExcellExport')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ExcellExport')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\ExcellExport', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -95,6 +95,7 @@ class FilterCustomer extends BaseController
     public function filterByDate(){
         $customerModel = new CustomerModel();
         $start = $this->request->getPost('from');
+
         $end = $this->request->getPost('to');
         $result['customers'] = $customerModel
                         ->where('DATE(lead_date) >=', $start)
@@ -183,6 +184,7 @@ return view('customers/view_customers', $result + $this->data);
 public function CallbackFilter(){
     $customerModel = new CustomerModel();
     $start = $this->request->getPost('from');
+    
     $end = $this->request->getPost('to');
     $result['customers'] = $customerModel
                     ->where('DATE(calldate) >=', $start)

@@ -97,11 +97,18 @@
                                 <h4 class="card-title mb-3"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 mr-2 text-white rounded"></i>View Customer</h4>
                                 </div>
                                 <div class="col-lg-4">
+                                
+
                                     <!-- search customer from table code     -->
                                     <form action="<?php echo base_url('/search/customer'); ?>" method="post">
-                                          <div class="input-group col-md-12 justify-content-start">
+                                  
+                                    
+                                          <div class="input-group col-md-12 row justify-content-start">
+                                            <div class="px-4" >
+                                                <a href="<?php echo site_url('/excell_report') ?>" style="height: 35px; margin-left: -62px;" class="btn btn-primary px-3 py-2 btn-space">Export</a>
+                                            </div>
                                               <input style="height: 35px;" type="text" id="searching" required name="searching" class="form-control" placeholder="Search Customer....">
-                                              <div class="input-group-append">
+                                              <div class="input-group-append">  
                                                   <button style="height: 35px;" class="px-3 btn-primary rounded-right" type="submit">Search</button>
                                               </div>
                                           </div>
