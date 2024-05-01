@@ -47,23 +47,23 @@ class SendMail extends Controller
 
         
         // Set email subject
-        $subject = 'Welcome to Our Service!';
+        $subject = 'Welcome to Eco4 Portal!';
     
        // Email message with HTML content
         $message = '<div style="width: 600px; margin: 0 auto; background: #f5f5f5; padding: 20px; font-family: Arial, sans-serif;">';
-        $message .= '<h2 style="color: #333; text-align: center;">Welcome to Our Service!</h2>';
+        $message .= '<h2 style="color: #333; text-align: center;">Welcome to Eco4 Portal!</h2>';
         $message .= '<p style="color: #333;">Dear ' . $fname . ' ' . $lname . ',</p>';
-        $message .= '<p style="color: #333;">We are thrilled to welcome you to our service and excited to have you onboard!</p>';
-        $message .= '<p style="color: #333;">At Impos Global ltd, we strive to provide exceptional service and support to all our clients.</p>';
+        $message .= '<p style="color: #333;">We are thrilled to welcome you and excited to have you onboard!</p>';
         $message .= '<p style="color: #333;">To get started with your onboarding process, please click the link below:</p>';
-        $message .= '<div style="text-align: center; margin-top: 20px;">';
+        $message .= '<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">';
         $message .= '<a href="'.base_url().'/onboard?center=' . $center . '&role=introducer" style="background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px; display: inline-block;">Complete Onboarding</a>';
         $message .= '</div>';
         $message .= '<p style="color: #333;">By completing the onboarding process, you will gain access to all the features and benefits of our service.</p>';
-        $message .= '<p style="color: #333;">If you have any questions or need assistance at any point during the onboarding process, our dedicated support team is here to help you.</p>';
-        $message .= '<p style="color: #333;">Feel free to reach out to us at [Your Contact Email] or call us at [Your Contact Phone Number].</p>';
+        $message .= '<p style="color: #333;">If you have any questions or need assistance at any point during the Onboarding process, our dedicated support team is here to help you.
+        </p>';
+        $message .= '<p style="color: #333;">Feel free to reach out to us at support@eco4.doodlo.in</p>';
         $message .= '<p style="color: #333;">We look forward to working with you and helping you achieve your goals!</p>';
-        $message .= '<p style="color: #333;">Best regards,<br> [Your Company Name] Team</p>';
+        $message .= '<p style="color: #333;">Eco4 Team</p>';
         $message .= '</div>';
 
 
