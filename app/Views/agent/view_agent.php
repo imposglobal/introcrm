@@ -78,11 +78,11 @@
                                 <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
                                     View Agent</h4>
 
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModaldd">
   Open modal
 </button>
  <!-- The Modal -->
- <div class="modal" id="myModal">
+ <div class="modal" id="myModaldd">
     <div class="modal-dialog">
       <div class="modal-content">
       
