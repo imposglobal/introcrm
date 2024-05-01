@@ -75,12 +75,12 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card-body mt-2">
-                                <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
+                                <h4 style="display: inline-block;" class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
                                     View Agent</h4>
 
                                     <button style="float: right;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModaldd">
-  Open modal
-</button>
+                                    Open modal
+                                    </button>
  <!-- The Modal -->
  <div class="modal" id="myModaldd">
     <div class="modal-dialog">
