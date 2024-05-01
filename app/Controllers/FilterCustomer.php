@@ -121,7 +121,6 @@ class FilterCustomer extends BaseController
 
     public function searchingCustomer(){
         $customerModel = new CustomerModel();
-
         $search = $this->request->getPost('searching'); // Accept input from form field using name "searching" in view_customer.php
         if (strpos($search, "EC-") === 0) { // Check if $res starts with "EC-"
             $search = str_replace("EC-", "", $search);
