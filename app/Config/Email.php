@@ -28,17 +28,17 @@ class Email extends BaseConfig
     /**
      * SMTP Server Hostname
      */
-    public string $SMTPHost = 'mail.doodlodesigns.com';
+    public string $SMTPHost = 'mail.eco4.doodlo.in';
 
     /**
      * SMTP Username
      */
-    public string $SMTPUser = 'krushna.phad@doodlodesigns.com';
+    public string $SMTPUser = 'support@eco4.doodlo.in';
 
     /**
      * SMTP Password
      */
-    public string $SMTPPass = 'krushna@123';
+    public string $SMTPPass = 'support@2024';
 
     /**
      * SMTP Port
