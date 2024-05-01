@@ -35,6 +35,7 @@ $routes->get('delete/(:num)', 'CustomerView::delete/$1');
 
 //show  customer
 $routes->get('/customer/(:num)', 'Customers::showCustomer/$1');
+
 // updated  customer
 $routes->post('/customer/update', 'Customers::update');
 
@@ -43,7 +44,6 @@ $routes->get('/invite', 'SendMail::index');
 $routes->post('/email/invite', 'SendMail::EmailInvite'); 
 $routes->post('/save/invite', 'SendMail::SaveInvite');
  
-
 //view customer api json
 $routes->get('getcustomer/(:num)', 'CustomerView::viewCustomerAPI/$1');
 
@@ -51,8 +51,10 @@ $routes->get('getcustomer/(:num)', 'CustomerView::viewCustomerAPI/$1');
 $routes->get('/agent', 'Agent::index');
 $routes->POST('/agent/add', 'Agent::store');
 $routes->get('/agent/view', 'Agent::View');
+
 // delete agent
 $routes->get('agent/delete/(:num)', 'Agent::delete/$1');
+
 //agent edit
 $routes->get('agent/edit/(:num)', 'Agent::edit/$1');
 

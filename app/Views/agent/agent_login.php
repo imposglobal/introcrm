@@ -69,7 +69,7 @@
                     </button>
                   </div>
                   <div class="my-4 d-flex justify-content-between align-items-center">
-                    <a href="<?= base_url()."admin"?>" class=" border-bottom text-primary font-weight-bold">Login to Admin</a>
+                    <a href="<?= base_url()."admin"?>" class=" border-bottom text-primary font-weight-bold">Login as a Admin</a>
                   </div>
                 </form>   
 <!-- Login form end -->

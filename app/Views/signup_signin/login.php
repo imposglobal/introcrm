@@ -69,7 +69,7 @@
                     </button>
                   </div>
                   <div class="my-4 d-flex justify-content-between align-items-center">
-                    <a href="<?= base_url()?>" class=" border-bottom text-primary font-weight-bold">Login to Agent</a>
+                    <a href="<?= base_url()?>" class=" border-bottom text-primary font-weight-bold">Login as a Agent</a>
                   </div>
                 </form>   
 <!-- Login form end -->

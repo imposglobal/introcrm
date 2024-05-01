@@ -2,7 +2,7 @@
 <?= $this->extend('layout/layout') ?>
 <!-- Define the content section -->
 <?= $this->section('content') ?>
-<title>Manage IP</title>
+<title>IP Management</title>
 <style>
     .drop-area {
         border: 2px dashed #ccc;
