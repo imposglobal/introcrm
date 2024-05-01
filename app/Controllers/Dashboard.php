@@ -122,22 +122,46 @@ class Dashboard extends BaseController
         $customerModel = new CustomerModel();
 
 
-        
+        if($role == 1){
+
+             // Query customers and order them by the 'lead_id' column in descending order
+             $callback['customers'] = $customerModel
+             ->where('status', $status) 
+             ->where('calldate',$today)
+             ->where('calltime',$time)
+             ->where('center_name',$center)
+             ->orderBy('lead_id', 'desc')
+             ->paginate();
+
+            //get call back customer by exact time 
+            // Query customers and order them by the 'lead_id' column in descending order
+            $result['customers'] = $customerModel
+            ->where('status', $status) 
+            ->where('calldate',$today)
+            ->where('center_name',$center)
+            ->orderBy('lead_id', 'desc')
+            ->paginate();
+
+        }else{
+
             // Query customers and order them by the 'lead_id' column in descending order
             $callback['customers'] = $customerModel
-                                ->where('status', $status) 
-                                ->where('calldate',$today)
-                                ->where('calltime',$time)
-                                ->orderBy('lead_id', 'desc')
-                                ->paginate();
+            ->where('status', $status) 
+            ->where('calldate',$today)
+            ->where('calltime',$time)
+            ->orderBy('lead_id', 'desc')
+            ->paginate();
 
-        //get call back customer by exact time 
-         // Query customers and order them by the 'lead_id' column in descending order
-         $result['customers'] = $customerModel
-         ->where('status', $status) 
-         ->where('calldate',$today)
-         ->orderBy('lead_id', 'desc')
-         ->paginate();
+           //get call back customer by exact time 
+           // Query customers and order them by the 'lead_id' column in descending order
+           $result['customers'] = $customerModel
+           ->where('status', $status) 
+           ->where('calldate',$today)
+           ->orderBy('lead_id', 'desc')
+           ->paginate();
+
+        }
+           
                                 
         // Retrieve the pager for pagination
         $result['pager'] = $customerModel->pager;
