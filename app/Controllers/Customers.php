@@ -64,16 +64,15 @@ public function store()
     if ($result !== null && $result['email'] === $email) {
         $status = "duplicate";
     } else {
-        // Check if any images are uploaded
-        if ($this->request->hasFile('images')) {
-            $imageNames = [];
-            $images = $this->request->getFileMultiple('images');
-            
+        $imageNames = [];
+
+        $images = $this->request->getFileMultiple('images');
+        
+        if (!empty($images)) {
             foreach ($images as $file) {
                 $file->move(WRITEPATH . '../assets/images/uploads');
                 $imageNames[] = $file->getClientName(); // Add image name to the array
             }
-            
             // Convert array of image names to a comma-separated string
             $imageNamesString = implode(',', $imageNames);
         } else {
