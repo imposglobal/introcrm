@@ -124,6 +124,7 @@ class Home extends BaseController
         'lname' => $this->request->getPost('lname'),
         'email' => $this->request->getPost('email'),
         'phone' => $this->request->getPost('phone'),
+        'role' => '1',
         'center_name' => $this->request->getPost('center_name'),
         'location' => $this->request->getPost('location'),
         'password' => $this->request->getPost('password')
