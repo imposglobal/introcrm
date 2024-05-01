@@ -1,7 +1,7 @@
 <!-- Included header sidebar & footer in layout -->
-<?= $this->extend('layout/layout') ?>
+<?= $this->extend("layout/layout") ?>
 <!-- Define the content section -->
-<?= $this->section('content') ?>
+<?= $this->section("content") ?>
 <title>View Agent</title>
 <style>
     .drop-area {
@@ -88,13 +88,91 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title">Add Customer</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
         <!-- Modal body -->
         <div class="modal-body">
-          Modal body..
+          
+                                <!-- table code start -->
+                                <div class="container-scroller">
+                                    <div class="py-4">
+                                    <div class=" d-flex align-items-center auth px-0">
+                                        <div class="row w-100 mx-0">
+                                        <div class="col-lg-12">
+                                            <div class="auth-form-light text-left py-1 px-4 px-sm-5">
+                                            
+                                            <form class="" action="<?php echo base_url(
+                                                "/agent/add"
+                                            ); ?>" method="post">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>First Name</label>
+                                                        <input type="text"   name="fname" class="form-control form-control-lg" id="fname" placeholder="First Name" value="<?= set_value(
+                                                            "fname"
+                                                        ) ?>">
+                                                        <input type="hidden" id="role" name="role" value="2">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>Last Name</label>
+                                                        <input type="text"  name="lname" class="form-control form-control-lg" id="lname" placeholder="Last Name" value="<?= set_value(
+                                                            "lname"
+                                                        ) ?>">
+                                                     </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>Center Name</label>
+                                                        <input type="text"  name="center_name" class="form-control form-control-lg" id="center_name" placeholder="Center Name" value="<?= set_value(
+                                                            "center_name"
+                                                        ) ?>">
+                                                     </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>Location</label>
+                                                        <input type="text"  name="location" class="form-control form-control-lg" id="location" placeholder="Location" value="<?= set_value(
+                                                            "location"
+                                                        ) ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>User Name</label>
+                                                        <input type="text"  name="username" class="form-control form-control-lg" id="username" placeholder="User Name" value="<?= set_value(
+                                                            "username"
+                                                        ) ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>Password</label>
+                                                        <input type="password"  name="password" class="form-control form-control-lg" id="password" placeholder="Password">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="mt-3">
+                                                        <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"  >Add Agent</button>
+                                                    </div>
+                                                </div>
+                                                
+                                                </div>
+                                            </form>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <!-- content-wrapper ends -->
+                                    </div>
+                                    <!-- page-body-wrapper ends -->
+                                </div>
+
+                                
+                         <!-- table code end -->
         </div>
         
         <!-- Modal footer -->
@@ -108,9 +186,9 @@
   
                                 <hr>
                                 <!-- alert message code using flash data -->
-                                <?php if (session()->has('alrt')): ?>
+                                <?php if (session()->has("alrt")): ?>
                                     <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                        <?= session('alrt') ?>
+                                        <?= session("alrt") ?>
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -135,39 +213,54 @@
                                     </thead>
                                     <tbody>
                                         <?php $i = 1; ?>
-                                        <?php if ($users && count($users) >= 1): ?>
-                                        <?php foreach ($users as $user):    
-                                        ?>
+                                        <?php if (
+                                            $users &&
+                                            count($users) >= 1
+                                        ): ?>
+                                        <?php foreach ($users as $user): ?>
                                         <tr>
                                             <td>
                                                 <?= $i++ ?>
                                             </td>                                       
                                             <td>
-                                                <?= $user['fname'] ?>
+                                                <?= $user["fname"] ?>
                                             </td>
                                             
                                             <td>
-                                                <?=  $user['lname'] ?>
+                                                <?= $user["lname"] ?>
                                             </td>                                          
                                             <td>
-                                                <?= $user['center_name'] ?>
+                                                <?= $user["center_name"] ?>
                                             </td>
                                             <td>
-                                                <?= $user['username'] ?>
+                                                <?= $user["username"] ?>
                                             </td> 
                                             <td>
-                                                <?= $user['password'] ?>
+                                                <?= $user["password"] ?>
                                             </td> 
                                            
                                             <td>
                                            
-                                            <?php $role = $session->get('role');
-                                             if($role == 0 || $role == 1 || $role == 3){ ?>
-                                            <a href="<?php echo base_url('agent/edit/'.$user['id']);?>" data-toggle="tooltip" data-placement="top" title="edit agent"><i class="mdi mdi-account-edit bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
-                                            <?php } ?>
+                                            <?php
+                                            $role = $session->get("role");
+                                            if (
+                                                $role == 0 ||
+                                                $role == 1 ||
+                                                $role == 3
+                                            ) { ?>
+                                            <a href="<?php echo base_url(
+                                                "agent/edit/" . $user["id"]
+                                            ); ?>" data-toggle="tooltip" data-placement="top" title="edit agent"><i class="mdi mdi-account-edit bg-primary h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <?php }
+                                            ?>
 
-                                            <?php if($role == 0 || $role == 3){ ?>
-                                            <a href="<?php echo base_url('agent/delete/'.$user['id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delete customer"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
+                                            <?php if (
+                                                $role == 0 ||
+                                                $role == 3
+                                            ) { ?>
+                                            <a href="<?php echo base_url(
+                                                "agent/delete/" . $user["id"]
+                                            ); ?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delete customer"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
                                             <?php } ?>
                                             </td>
                                         </tr>
@@ -188,7 +281,7 @@
                 </div>
             </div>
             <div class="col-lg-12">
-                <?php echo $pager->links('default','full_pagination');?>
+                <?php echo $pager->links("default", "full_pagination"); ?>
             </div>
                 
             </div>
