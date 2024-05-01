@@ -38,7 +38,9 @@ class ExcellExport extends BaseController
 public function index()
 {
     $userModel = new UserModel();
-    $result['users']=$userModel->findAll();
+    $result['users']=$userModel
+    ->where('role', '1')
+    ->findAll();
     //print_r($result);
     return view('reports/get_reports', $result + $this->data);
 }
