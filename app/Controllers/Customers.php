@@ -65,57 +65,52 @@ public function store()
         $status = "duplicate";
     } else {
         $imageNames = [];
-
         $images = $this->request->getFileMultiple('images');
-       echo $images;
         
-        // if (!empty($images)) {
-        //     foreach ($images as $file) {
-        //         $file->move(WRITEPATH . '../assets/images/uploads');
-        //         $imageNames[] = $file->getClientName(); // Add image name to the array
-        //     }
-        //     // Convert array of image names to a comma-separated string
-        //     $imageNamesString = implode(',', $imageNames);
-        // } else {
-        //     $imageNamesString = null; // No images uploaded, set to null
-        // }
+        foreach ($images as $file) {
+            $file->move(WRITEPATH . '../assets/images/uploads');
+            $imageNames[] = $file->getClientName(); // Add image name to the array
+        }
+        
+        // Convert array of image names to a comma-separated string
+        $imageNamesString = implode(',', $imageNames);
 
-        // $data = [
-        //     'upload_image' => $imageNamesString, // Save comma-separated string of image names
-        //     'type'  => $file->getClientMimeType(),
-        //     'lead_date' => $date,
-        //     'center_name' => $center,
-        //     'email' => $email,
-        //     'fname' => $this->request->getPost('fname'),
-        //     // 'lname' => $this->request->getPost('lname'),
-        //     'dob' => $this->request->getPost('dob'),
-        //     'mobile' => $this->request->getPost('mobile'),
-        //     'telephone' => $this->request->getPost('telephone'),
-        //     'address_1' => $this->request->getPost('address_1'),
-        //     // 'address_2' => $this->request->getPost('address_2'),
+        $data = [
+            'upload_image' => $imageNamesString, // Save comma-separated string of image names
+            'type'  => $file->getClientMimeType(),
+            'lead_date' => $date,
+            'center_name' => $center,
+            'email' => $email,
+            'fname' => $this->request->getPost('fname'),
+            // 'lname' => $this->request->getPost('lname'),
+            'dob' => $this->request->getPost('dob'),
+            'mobile' => $this->request->getPost('mobile'),
+            'telephone' => $this->request->getPost('telephone'),
+            'address_1' => $this->request->getPost('address_1'),
+            // 'address_2' => $this->request->getPost('address_2'),
             
-        //     'post_code' => $this->request->getPost('post_code'),
-        //     'tenure' => $this->request->getPost('tenure'),
-        //     'council' => $this->request->getPost('council'),
-        //     'boiler_age' => $this->request->getPost('boiler_age'),
-        //     'boiler_make' => $this->request->getPost('boiler_make'),
-        //     'boiler_model' => $this->request->getPost('boiler_model'),
-        //     'benefit_flex' => $this->request->getPost('benefit'),
-        //     'epc_rating' => $this->request->getPost('epc'),
-        //     'additional_notes' => $this->request->getPost('add_notes'),
-        //     'created_agent_date' => $this->request->getPost('created_agent_date'),
-        //     'status' => 'New Lead',
-        //     'agent_name' => $name,
-        //     'userid' => $id,
-        //     'lead_no' => $leadno
-        // ];
+            'post_code' => $this->request->getPost('post_code'),
+            'tenure' => $this->request->getPost('tenure'),
+            'council' => $this->request->getPost('council'),
+            'boiler_age' => $this->request->getPost('boiler_age'),
+            'boiler_make' => $this->request->getPost('boiler_make'),
+            'boiler_model' => $this->request->getPost('boiler_model'),
+            'benefit_flex' => $this->request->getPost('benefit'),
+            'epc_rating' => $this->request->getPost('epc'),
+            'additional_notes' => $this->request->getPost('add_notes'),
+            'created_agent_date' => $this->request->getPost('created_agent_date'),
+            'status' => 'New Lead',
+            'agent_name' => $name,
+            'userid' => $id,
+            'lead_no' => $leadno
+        ];
         
-        // // Save customer data to the database
-        // $customerModel->save($data);
-        // $status = "added";
+        // Save customer data to the database
+        $customerModel->save($data);
+        $status = "added";
     }
 
-    //return redirect()->to('customer?status=' . urlencode($status));
+    return redirect()->to('customer?status=' . urlencode($status));
 }
 
 
