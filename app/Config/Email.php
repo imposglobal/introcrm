@@ -28,7 +28,7 @@ class Email extends BaseConfig
     /**
      * SMTP Server Hostname
      */
-    public string $SMTPHost = 'mail.eco4.doodlo.in';
+    public string $SMTPHost = 'eco4.doodlo.in';
 
     /**
      * SMTP Username
