@@ -101,7 +101,7 @@
                                     <div class=" d-flex align-items-center auth px-0">
                                         <div class="row w-100 mx-0">
                                         <div class="col-lg-12">
-                                            <div class="auth-form-light text-left py-1 px-4 px-sm-5">
+                                            <div class="auth-form-light text-left py-1 ">
                                             
                                             <form class="" action="<?php echo base_url(
                                                 "/agent/add"
@@ -174,12 +174,7 @@
                                 
                          <!-- table code end -->
         </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-        
+    
       </div>
     </div>
   </div>
