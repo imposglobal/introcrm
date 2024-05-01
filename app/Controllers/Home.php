@@ -76,7 +76,7 @@ class Home extends BaseController
         }
         else{
             $session->setFlashdata('msg', 'Email or password incorrect.');
-            return redirect()->to('/');
+            return redirect()->to('/admin');
         }
     }
 
