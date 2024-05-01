@@ -69,7 +69,7 @@ class SendMail extends Controller
 
         // Set email parameters
         $email->setTo($to);
-        $email->setFrom('krushna.phad@doodlodesign.com');
+        $email->setFrom('support@eco4.doodlo.in');
         $email->setSubject($subject);
         $email->setMessage($message);
     
