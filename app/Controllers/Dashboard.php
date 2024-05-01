@@ -185,17 +185,28 @@ class Dashboard extends BaseController
 
 
 public function ViewCallback(){
+    $session = session();
+    $role = $session->get('role');
+    $center = $session->get('center');
 
     $customerModel = new CustomerModel();
     $status='callback';
     $today = date('Y-m-d');
  
     // Query customers and order them by the 'lead_id' column in descending order
+
+    if($role == 1){
+        $result['customers'] = $customerModel
+        ->where('status', $status) 
+        ->where('center_name', $center) 
+        ->orderBy('lead_id', 'desc')
+        ->paginate();
+    }else{
     $result['customers'] = $customerModel
                         ->where('status', $status) 
                         ->orderBy('lead_id', 'desc')
                         ->paginate();
-                       
+    }              
 // Retrieve the pager for pagination
 $result['pager'] = $customerModel->pager;
 // print_r($result); 
