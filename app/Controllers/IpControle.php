@@ -42,11 +42,12 @@ class IpControle extends BaseController
   /***************************************************************************************************/
     public function store()
     {
-        echo "test";
          $ipModel = new IpModel();
-
+         $session = session();
+         $center = $session->get('center');
        $data=[
         'ip_address' => $this->request->getPost('ip_address'),
+        'center' => $center
        ];
         
        $ipModel->save($data);

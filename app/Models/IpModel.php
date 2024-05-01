@@ -8,7 +8,8 @@ class IpModel extends Model{
     
     protected $allowedFields = [
         
-        'ip_address'
+        'ip_address',
+        'center'
         
     ];
     
