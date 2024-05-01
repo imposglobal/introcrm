@@ -57,7 +57,7 @@ class SendMail extends Controller
         $message .= '<p style="color: #333;">At Impos Global ltd, we strive to provide exceptional service and support to all our clients.</p>';
         $message .= '<p style="color: #333;">To get started with your onboarding process, please click the link below:</p>';
         $message .= '<div style="text-align: center; margin-top: 20px;">';
-        $message .= '<a href="'.base_url().'introcrm/onboard?center=' . $center . '&role=introducer" style="background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px; display: inline-block;">Complete Onboarding</a>';
+        $message .= '<a href="'.base_url().'/onboard?center=' . $center . '&role=introducer" style="background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px; display: inline-block;">Complete Onboarding</a>';
         $message .= '</div>';
         $message .= '<p style="color: #333;">By completing the onboarding process, you will gain access to all the features and benefits of our service.</p>';
         $message .= '<p style="color: #333;">If you have any questions or need assistance at any point during the onboarding process, our dedicated support team is here to help you.</p>';
