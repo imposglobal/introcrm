@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
+use App\Models\LogModel;
 
 class Home extends BaseController
 {
@@ -43,18 +44,14 @@ class Home extends BaseController
     {
         $session = session();
         $userModel = new UserModel();
-        $email = $this->request->getVar('email');
-        // echo $email;
-        
-        $password = $this->request->getVar('password');
-        // echo $password;
-        $data = $userModel->where('email', $email)->first();
-        // print_r($data);
+        $email = $this->request->getVar('email');   // get email from user login form
+        $password = $this->request->getVar('password'); // get password from user login form
 
+        $data = $userModel->where('email', $email)->first();  // get email data form database 
         if($data){
-            $pass = $data['password'];
+            $pass = $data['password'];  // get password from database using $data variable which stores all data
             
-            if($password == $pass){
+            if($password == $pass){ // compare password enter by user i.e 4password and from database i.e $pass
                 $ses_data = [
                     'id' => $data['id'],
                     'fname' => $data['fname'],
@@ -65,6 +62,9 @@ class Home extends BaseController
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);
+
+                $this->logActivity($data['fname'] . ' ' . $data['lname'], 'Logged in');
+
 
                 return redirect()->to('/dashboard');
 
@@ -79,6 +79,18 @@ class Home extends BaseController
             return redirect()->to('/');
         }
     }
+
+    private function logActivity($userName,$action)
+    {
+        $logModel = new LogModel(); 
+        $logData = [
+            'user_id' => session()->get('id'), 
+            'action' => $action,
+            'user_name' => $userName,
+            'timestamp' => date('Y-m-d H:i:s')
+        ];
+        $logModel->insert($logData);
+}
 
     public function logout(){
         $session=session();

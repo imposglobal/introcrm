@@ -331,3 +331,55 @@ ORDER BY `lead_id` DESC', [...], false)
 11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
 12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-01 10:38:42 --> Error: Call to undefined method App\Controllers\AgentLogin::logActivity()
+[Method: POST, Route: agentlogin/check]
+in APPPATH\Controllers\AgentLogin.php on line 103.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AgentLogin->Agentlogin()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-01 10:55:40 --> ParseError: syntax error, unexpected token "public"
+[Method: GET, Route: logout]
+in APPPATH\Controllers\Home.php on line 97.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-01 11:39:43 --> ErrorException: Undefined variable $fname
+[Method: POST, Route: login/check]
+in APPPATH\Controllers\Home.php on line 66.
+ 1 APPPATH\Controllers\Home.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fname', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Home.php', 66)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-01 11:41:06 --> ErrorException: Undefined variable $fname
+[Method: POST, Route: login/check]
+in APPPATH\Controllers\Home.php on line 66.
+ 1 APPPATH\Controllers\Home.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fname', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Home.php', 66)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-01 11:47:36 --> ErrorException: Undefined variable $fname
+[Method: POST, Route: login/check]
+in APPPATH\Controllers\Home.php on line 88.
+ 1 APPPATH\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fname', 'C:\\xampp\\htdocs\\introcrm\\app\\Controllers\\Home.php', 88)
+ 2 APPPATH\Controllers\Home.php(66): App\Controllers\Home->logActivity('fname', 'Logged in')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->loginAuth()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

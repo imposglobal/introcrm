@@ -4,6 +4,8 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
 use App\Models\IpModel;
+use App\Models\LogModel;
+
 
 
 class AgentLogin extends BaseController
@@ -39,7 +41,7 @@ class AgentLogin extends BaseController
         $ipModel = new IpModel();
         $request = service('request');
         $userIP = $request->getIPAddress();
-         //$userIP= '192.168.1.1';
+         $userIP= '192.168.1.1';
         $ipdata = $ipModel->select('ip_address')->findAll(); 
     
         $isUserIPAuthorized = false; // Initialize a variable to track if user IP is authorized
@@ -98,6 +100,9 @@ class AgentLogin extends BaseController
                 ];
                 $session->set($ses_data);
 
+                $this->logActivity($data['fname'] . ' ' . $data['lname'], 'Logged in');
+
+
                 return redirect()->to('/dashboard');
 
             }else{
@@ -112,6 +117,17 @@ class AgentLogin extends BaseController
     }
 
 
+    private function logActivity($userName, $action)
+    {
+        $logModel = new LogModel(); 
+        $logData = [
+            'user_id' => session()->get('id'), 
+            'action' => $action,
+            'user_name' => $userName,
+            'timestamp' => date('Y-m-d H:i:s')
+        ];
+        $logModel->insert($logData);
+}
 
 
     
