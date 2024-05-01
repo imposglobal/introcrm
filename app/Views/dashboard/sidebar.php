@@ -45,7 +45,7 @@
         </li>
         <?php } ?>
 
-        <?php if( $role == "1" || $role == "2" || $role == 0){ 
+        <?php if( $role == "1" || $role == 0){ 
             if($role != 3){
         ?>
       
