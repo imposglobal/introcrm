@@ -63,15 +63,17 @@
             </a>
         </li>
                 <?php } ?>
+       
+        
+        <?php }?>
+        <?php if( $role == "1" || $role == 0 || $role == 3){  ?>
         <li class="nav-item  <?php echo ($currentURL == base_url('index.php/view/reports')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('view/reports'); ?>">
             <i class=" menu-icon mdi mdi-file-excel" style="font-size:18px"></i>
                 <span class="menu-title">Get Reports</span>
             </a>
         </li>
-        
-        <?php }?>
-
+            <?php } ?>
         <!-- Add more sidebar items with similar logic -->
     </ul>
 </nav>
