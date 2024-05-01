@@ -263,7 +263,7 @@
                                             <a href="<?php echo base_url('customer/'.$customer['lead_id']);?>" data-toggle="tooltip" data-placement="top" title="edit customer"><i style="font-size: 24px;" class="mdi mdi-account-edit text-primary h4 pt-2 px-1 text-white rounded-circle"></i></a>
                                             <?php } ?>
 
-                                            <?php if($role == 0 || $role == 3){ ?>
+                                            <?php if($role == 0){ ?>
                                             <a href="<?php echo base_url('delete/'.$customer['lead_id']);?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delete customer"><i style="font-size: 24px;" class="mdi mdi-account-remove text-danger h4 pt-2 px-1 text-white rounded-circle"></i></a>
                                             <?php } ?>
 
