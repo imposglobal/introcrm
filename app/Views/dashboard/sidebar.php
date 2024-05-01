@@ -28,6 +28,12 @@
                 <span class="menu-title">View Customers</span>
             </a>
         </li>
+        <li class="nav-item  <?php echo ($currentURL == base_url('index.php/view/callback')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url('view/callback'); ?>">
+            <i class=" menu-icon mdi mdi-headphones-box" style="font-size:18px"></i>
+                <span class="menu-title">View Callback</span>
+            </a>
+        </li>
        
         <?php if( $role != "1" && $role != "2" ){ ?>
           <li class="nav-item mb-3 <?php echo ($currentURL === base_url('index.php/invite')) ? 'active' : ''; ?>">
@@ -52,13 +58,6 @@
             <a class="nav-link" href="<?php echo base_url('agent/view'); ?>">
                 <i class=" menu-icon mdi mdi-account-box" style="font-size:18px"></i>
                 <span class="menu-title">View Agent</span>
-            </a>
-        </li>
-
-        <li class="nav-item  <?php echo ($currentURL == base_url('index.php/view/callback')) ? 'active' : ''; ?>">
-            <a class="nav-link" href="<?php echo base_url('view/callback'); ?>">
-            <i class=" menu-icon mdi mdi-headphones-box" style="font-size:18px"></i>
-                <span class="menu-title">View Callback</span>
             </a>
         </li>
 
