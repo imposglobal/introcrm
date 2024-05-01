@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\CustomerModel;
+use App\Models\UserModel;
 use CodeIgniter\API\ResponseTrait;
 // Office Excell Libraray
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
@@ -36,32 +37,54 @@ class ExcellExport extends BaseController
 
 public function index()
 {
-    
-    return view('reports/get_reports', $this->data);
+    $userModel = new UserModel();
+    $result['users']=$userModel->findAll();
+    //print_r($result);
+    return view('reports/get_reports', $result + $this->data);
 }
+
+/*************************************status wise export excell report**********************************************************/
 
 public function ExportFullExcellReport()
 {
     $customerModel = new CustomerModel();
+    $userModel = new UserModel();
     $filename='CustomersReport.xlsx';
 
-     $start = $this->request->getPost('start');
-     $end = $this->request->getPost('end');
-     $status = $this->request->getPost('status');
-    
-    if($status != ""){
-        $records = $customerModel->where('status', $status)
-                    ->orderBy('lead_id', 'desc')
-                    ->findAll();
+    $ops = $this->request->getPost('ops');
 
-    }else{
-        $records = $customerModel
-        ->where('DATE(lead_date) >=', $start)
-        ->where('DATE(lead_date) <=', $end)
-        ->orderBy('lead_id', 'desc')
-        ->findAll();
+     switch ($ops) {
+        case "datewise":
+            $start = $this->request->getPost('start');
+            $end = $this->request->getPost('end');
+            $records = $customerModel
+                ->where('DATE(lead_date) >=', $start)
+                ->where('DATE(lead_date) <=', $end)
+                ->orderBy('lead_id', 'desc')
+                ->findAll();
+                $filename='CustomersReport('.$start.' to '.$end.').xlsx';
+            break;
+            case "statuswise":
+                $status = $this->request->getPost('status');
+                $records = $customerModel->where('status', $status)
+                ->orderBy('lead_id', 'desc')
+                ->findAll();
+                $filename='CustomersReport('.$status.').xlsx';
+                break;
+            case "centerwise":
+                $center = $this->request->getPost('center');
+                $records = $customerModel->where('center_name', $center)
+                ->orderBy('lead_id', 'desc')
+                ->findAll();
+                $filename='CustomersReport('.$center.').xlsx';
+                break;
+        default:
+            $records = $customerModel
+                ->orderBy('lead_id', 'desc')
+                ->findAll();
+            break;
     }
-   
+    
     $spreadsheet = new Spreadsheet();
     $sheet=$spreadsheet->getActiveSheet();
 
@@ -126,9 +149,7 @@ public function ExportFullExcellReport()
             $sheet->setCellValue('AA'.$rows, $val['boiler_efficiency_link']);
             $sheet->setCellValue('AB'.$rows, $val['agent_name']);
            
-
             $rows++;
-
         }
         $writer = new Xlsx($spreadsheet);
         $writer->save($filename);
@@ -143,8 +164,10 @@ public function ExportFullExcellReport()
         flush();
         readfile($filename);
         exit; 
-
 }
+
+/************************************************show centers **************************************************** */
+/*************************************************************************************************** */
 
 
 
