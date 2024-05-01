@@ -32,10 +32,24 @@ class IpControle extends BaseController
     public function index()
     {
         $ipModel = new IpModel();
+        $session = session();
+        $role = $session->get('role');
+        $center = $session->get('center');
+
+        if($role == 1){
+            $result['ipadress'] = $ipModel->orderBy('ip_id  ', 'desc')
+            ->where('center',$center)
+            ->paginate(); // fetch data from database
+            $result['pager'] = $ipModel->pager;
+
+        }else{
+            $result['ipadress'] = $ipModel->orderBy('ip_id  ', 'desc')
+            ->paginate(); // fetch data from database
+            $result['pager'] = $ipModel->pager;
+
+        }
       
-        $result['ipadress'] = $ipModel->orderBy('ip_id  ', 'desc')->paginate(); // fetch data from database
         
-         $result['pager'] = $ipModel->pager;
         
       return view('ipcontrole/add_ipcontrole', $result + $this->data);
     }
