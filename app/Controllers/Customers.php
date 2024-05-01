@@ -69,8 +69,8 @@ public function store()
             $imageNames = [];
             foreach ($images as $file) {
                 echo "dsds";
-                $file->move(WRITEPATH . '../assets/images/uploads');
-                $imageNames[] = $file->getClientName(); // Add image name to the array
+                // $file->move(WRITEPATH . '../assets/images/uploads');
+                // $imageNames[] = $file->getClientName(); // Add image name to the array
             }
             // Convert array of image names to a comma-separated string
             $imageNamesString = implode(',', $imageNames);
