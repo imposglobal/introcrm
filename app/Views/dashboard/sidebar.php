@@ -36,7 +36,7 @@
         </li>
        
         <?php if( $role == "1" || $role == "2" || $role == 0){ 
-            if($role != 3){
+            if($role != 3 || $role !=1){
         ?>
           <li class="nav-item mb-3 <?php echo ($currentURL === base_url('index.php/invite')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('invite'); ?>">
