@@ -66,11 +66,15 @@ public function store()
     } else {
         //for image uploading
         $imageNames = []; // Initialize an array to hold image names
-        if ($this->request->getFileMultiple('images')) {
-            foreach ($this->request->getFileMultiple('images') as $file) {
-                $file->move(WRITEPATH . '../assets/images/uploads');
-                $imageNames[] = $file->getClientName(); // Add image name to the array
+        if($this->request->getFileMultiple('images') == null){
+            if ($this->request->getFileMultiple('images')) {
+                foreach ($this->request->getFileMultiple('images') as $file) {
+                    $file->move(WRITEPATH . '../assets/images/uploads');
+                    $imageNames[] = $file->getClientName(); // Add image name to the array
+                }
             }
+        }else{
+            $imageNames = null;
         }
         // Convert array of image names to a comma-separated string
         $imageNamesString = implode(',', $imageNames);
