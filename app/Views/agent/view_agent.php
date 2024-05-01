@@ -79,7 +79,7 @@
                                     View Agent</h4>
 
                                     <button style="float: right;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModaldd">
-                                    Open modal
+                                    Add Agent
                                     </button>
  <!-- The Modal -->
  <div class="modal" id="myModaldd">
@@ -88,7 +88,7 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Add Customer</h4>
+          <h4 class="modal-title">Add Agent</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
