@@ -57,7 +57,8 @@ public function store()
     $getid = $customerModel->orderBy('lead_id', 'desc')->first();
     $leadno = $getid['lead_no'];
     echo $leadno;
-    $leadno = $leadno + 1;
+    $leadno = $leadno++;
+    echo $leadno;
 
     // $result = $customerModel->where('email', $email)->first();
     // $date = date('Y-m-d H:i:s');
