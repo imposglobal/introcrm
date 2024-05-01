@@ -55,29 +55,29 @@ public function store()
     $email = $this->request->getPost('email');
     $customerModel = new CustomerModel();   
     $getid = $customerModel->orderBy('lead_id', 'desc')->first();
-    $leadno = intval($getid['lead_no']);
-    $leadno = $leadno + 1;
-
+    $leadno = intval($getid['lead_no']) + 1;
 
     $result = $customerModel->where('email', $email)->first();
     $date = date('Y-m-d H:i:s');
     if ($result !== null && $result['email'] === $email) {
         $status = "duplicate";
     } else {
-        $imageNames = [];
+        $imageNamesString = null;
         $images = $this->request->getFileMultiple('images');
         
-        foreach ($images as $file) {
-            $file->move(WRITEPATH . '../assets/images/uploads');
-            $imageNames[] = $file->getClientName(); // Add image name to the array
+        if (!empty($images)) {
+            $imageNames = [];
+            foreach ($images as $file) {
+                $file->move(WRITEPATH . '../assets/images/uploads');
+                $imageNames[] = $file->getClientName(); // Add image name to the array
+            }
+            // Convert array of image names to a comma-separated string
+            $imageNamesString = implode(',', $imageNames);
         }
-        
-        // Convert array of image names to a comma-separated string
-        $imageNamesString = implode(',', $imageNames);
 
         $data = [
             'upload_image' => $imageNamesString, // Save comma-separated string of image names
-            'type'  => $file->getClientMimeType(),
+            'type'  => $imageNamesString ? $file->getClientMimeType() : null,
             'lead_date' => $date,
             'center_name' => $center,
             'email' => $email,
@@ -88,7 +88,6 @@ public function store()
             'telephone' => $this->request->getPost('telephone'),
             'address_1' => $this->request->getPost('address_1'),
             // 'address_2' => $this->request->getPost('address_2'),
-            
             'post_code' => $this->request->getPost('post_code'),
             'tenure' => $this->request->getPost('tenure'),
             'council' => $this->request->getPost('council'),
