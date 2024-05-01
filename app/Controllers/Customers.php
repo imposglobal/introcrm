@@ -64,22 +64,21 @@ public function store()
     if ($result !== null && $result['email'] === $email) {
         $status = "duplicate";
     } else {
-        //for image uploading
-        $imageNames = [];
-
-        $images = $this->request->getFileMultiple('images');
-        
-        if (!empty($images)) {
+        // Check if any images are uploaded
+        if ($this->request->hasFile('images')) {
+            $imageNames = [];
+            $images = $this->request->getFileMultiple('images');
+            
             foreach ($images as $file) {
                 $file->move(WRITEPATH . '../assets/images/uploads');
                 $imageNames[] = $file->getClientName(); // Add image name to the array
             }
+            
+            // Convert array of image names to a comma-separated string
+            $imageNamesString = implode(',', $imageNames);
         } else {
-            $imageNames = null;
+            $imageNamesString = null; // No images uploaded, set to null
         }
-        
-        // Convert array of image names to a comma-separated string
-        $imageNamesString = implode(',', $imageNames);
 
         $data = [
             'upload_image' => $imageNamesString, // Save comma-separated string of image names
@@ -117,9 +116,8 @@ public function store()
     }
 
     return redirect()->to('customer?status=' . urlencode($status));
-
-
 }
+
 
 /****************************************************************************************************/
 public function showCustomer($lead_id){
