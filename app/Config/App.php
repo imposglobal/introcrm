@@ -18,7 +18,7 @@ class App extends BaseConfig
      */
 
      //public string $baseURL = 'http://localhost/introcrm/';
-    public string $baseURL = 'https://eco4.doodlo.in/';
+    public string $baseURL = 'https://echo4.doodlodesign.com/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
