@@ -62,33 +62,39 @@ public function store()
     if ($result !== null && $result['email'] === $email) {
         $status = "duplicate";
     } else {
-        $imageNamesString = null;
         $images = $this->request->getFileMultiple('images');
-        print_r($images);
-        if (!empty($images)) {
-            $imageNames = [];
-            foreach ($images as $file) {
-                echo "dsds";
-                // $file->move(WRITEPATH . '../assets/images/uploads');
-                // $imageNames[] = $file->getClientName(); // Add image name to the array
+
+        $validImages = [];
+        foreach ($images as $file) {
+            if ($file->getSize() > 0) {
+                $validImages[] = $file;
             }
-            // Convert array of image names to a comma-separated string
-            $imageNamesString = implode(',', $imageNames);
+        }
+
+        if (!empty($validImages)) {
+            $imageNames = [];
+            foreach ($validImages as $file) {
+                $file->move(WRITEPATH . '../assets/images/uploads');
+                $imageNames[] = $file->getClientName(); // Add image name to the array
+            }
+            $imageNamesString = implode(',', $imageNames); // Convert array of image names to a comma-separated string
+            $type = $validImages[0]->getClientMimeType(); // Get the MIME type of the first file
+        } else {
+            $imageNamesString = null; // No valid images uploaded, set to null
+            $type = null;
         }
 
         $data = [
-            'upload_image' => $imageNamesString, // Save comma-separated string of image names
-            'type'  => $imageNamesString ? $file->getClientMimeType() : null,
+            'upload_image' => $imageNamesString,
+            'type' => $type,
             'lead_date' => $date,
             'center_name' => $center,
             'email' => $email,
             'fname' => $this->request->getPost('fname'),
-            // 'lname' => $this->request->getPost('lname'),
             'dob' => $this->request->getPost('dob'),
             'mobile' => $this->request->getPost('mobile'),
             'telephone' => $this->request->getPost('telephone'),
             'address_1' => $this->request->getPost('address_1'),
-            // 'address_2' => $this->request->getPost('address_2'),
             'post_code' => $this->request->getPost('post_code'),
             'tenure' => $this->request->getPost('tenure'),
             'council' => $this->request->getPost('council'),
@@ -106,11 +112,11 @@ public function store()
         ];
         
         // Save customer data to the database
-        // $customerModel->save($data);
-        // $status = "added";
+        $customerModel->save($data);
+        $status = "added";
     }
 
-    //return redirect()->to('customer?status=' . urlencode($status));
+    return redirect()->to('customer?status=' . urlencode($status));
 }
 
 
