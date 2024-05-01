@@ -35,8 +35,7 @@
             </a>
         </li>
        
-        <?php if( $role == "1" || $role == "2" || $role == 0){ 
-            if($role != 3 || $role !=1){
+        <?php if(  $role == "0" ){ 
         ?>
           <li class="nav-item mb-3 <?php echo ($currentURL === base_url('index.php/invite')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('invite'); ?>">
@@ -44,7 +43,7 @@
                 <span class="menu-title">Invite Introducer</span>
             </a>
         </li>
-        <?php } }?>
+        <?php } ?>
 
         <?php if( $role == "1" || $role == "2" || $role == 0){ 
             if($role != 3){
