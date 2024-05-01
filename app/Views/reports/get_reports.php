@@ -84,6 +84,7 @@
                                         <div class="col-md-5">
                                             <form action="<?= $baseURL."excell_report" ?>" method="post">
                                                 <input  type="date" required id="start" name="start" class="form-control" placeholder="From date">
+                                                <input type="hidden" name="ops" value="datewise">
                                         </div>
                                         <div class="col-md-5">
                                             <input  type="date" required id="end" name="end" class="form-control" placeholder="To date">
@@ -97,46 +98,52 @@
                                 </div>
 
                                    <hr>
-
+                                   <!-- status wise reports optiopns  starts-->
                                    <div class="col-lg-12 my-5">
-                                   <form action="<?= $baseURL."excell_report" ?>" method="post">
-                                        <div class="row">
-            
-                                            <div class="col-lg-6">
-                                                <label for="exampleFormControlSelect1">Please Select Status to Export Data</label>
-                                                <select class="form-control" name="status" required id="status">
-                                                <option value="All">All</option>
-                                                <option value="New Lead">New Lead</option>
-                                                <option value="Accepted">Accepted</option>
-                                                <option value="Rejected">Rejected</option>
-                                                <option value="DWP Submitted">DWP Submitted</option>
-                                                <option value="DWP Passed">DWP Passed</option>
-                                                <option value="Completed">Completed</option>
-                                                <option value="Paid">Paid</option>
-                                                <option value="Callback">Callback</option>
-                                                <option value="Retransfer">Retransfer</option>
-                                                </select>
+                                        <form action="<?= $baseURL."excell_report" ?>" method="post">
+                                            <div class="row">                   
+                                                <div class="col-lg-6">
+                                                    <label for="exampleFormControlSelect1">Please Select Status to Export Data</label>
+                                                    <select class="form-control" name="status" required id="status">
+                                                        <option value="All">All</option>
+                                                        <option value="New Lead">New Lead</option>
+                                                        <option value="Accepted">Accepted</option>
+                                                        <option value="Rejected">Rejected</option>
+                                                        <option value="DWP Submitted">DWP Submitted</option>
+                                                        <option value="DWP Passed">DWP Passed</option>
+                                                        <option value="Completed">Completed</option>
+                                                        <option value="Paid">Paid</option>
+                                                        <option value="Callback">Callback</option>
+                                                        <option value="Retransfer">Retransfer</option>
+                                                    </select>
+                                                    <input type="hidden" name="ops" value="statuswise">
+                                                </div>
+                                                <div class="col-lg-6 mt-4">
+                                                    <button style="height:50px" type="submit" class="btn-primary pt-0 text-white px-4 py-2 rounded">Export Report</button>
+                                                </div>
                                             </div>
-                                            <div class="col-lg-6 mt-4">
-                                            <button style="height:50px" type="submit" class="btn-primary pt-0 text-white px-4 py-2 rounded">Export Report</button>
+                                        </form>                                   
+                                    </div>
+                                    <!-- status wise reports optiopns  end-->
+<hr>
+                                    <div class="col-lg-12 my-5">
+                                        <form action="<?= $baseURL."excell_report" ?>" method="post">
+                                            <div class="row">                   
+                                                <div class="col-lg-6">
+                                                    <label for="exampleFormControlSelect1">Please Select Center Name to Export Data</label>
+                                                    <select  class="form-control" name="center" id="center">
+                                                        <?php foreach ($users as $user): ?>
+                                                            <option value="<?php echo $user['center_name']; ?>"><?= $user['center_name'] ?></option>
+                                                        <?php endforeach; ?>
+                                                    </select> 
+                                                    <input type="hidden" name="ops" value="centerwise">
+                                                </div>
+                                                <div class="col-lg-6 mt-4">
+                                                    <button style="height:50px" type="submit" class="btn-primary pt-0 text-white px-4 py-2 rounded">Export Report</button>
+                                                </div>
                                             </div>
-                                        </div>
-                                            
-                                    
-                                           
-                                           
-                                        
-                                      
-                                            
-                                        
-                                        </form>
-                                   
-                                </div>
-                              
-                                
-                                
-
-
+                                        </form>                                   
+                                    </div>
 
 
                             </div>
