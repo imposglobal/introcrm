@@ -64,7 +64,7 @@ public function store()
     } else {
         $imageNamesString = null;
         $images = $this->request->getFileMultiple('images');
-        echo count($images);
+        print_r($images);
         if (!empty($images)) {
             $imageNames = [];
             foreach ($images as $file) {
