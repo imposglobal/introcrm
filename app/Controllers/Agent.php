@@ -65,6 +65,7 @@ public function View() {
     if($role == 1){
         $result['users'] = $userModel
         ->where('center_name', $center) 
+        ->where('role', '2') 
         ->orderBy('id', 'desc')
         ->paginate();
     }else{
