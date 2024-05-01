@@ -47,6 +47,10 @@ public function index()
 
 public function ExportFullExcellReport()
 {
+    $session = session();
+    $center = $session->get('center');
+    $role = $session->get('role');
+
     $customerModel = new CustomerModel();
     $userModel = new UserModel();
     $filename='CustomersReport.xlsx';
@@ -57,20 +61,42 @@ public function ExportFullExcellReport()
         case "datewise":
             $start = $this->request->getPost('start');
             $end = $this->request->getPost('end');
-            $records = $customerModel
+            if($role == 1){
+                $records = $customerModel
+                ->where('DATE(lead_date) >=', $start)
+                ->where('DATE(lead_date) <=', $end)
+                ->where('center_name', $center)
+                ->orderBy('lead_id', 'desc')
+                ->findAll();
+            }else{
+                $records = $customerModel
                 ->where('DATE(lead_date) >=', $start)
                 ->where('DATE(lead_date) <=', $end)
                 ->orderBy('lead_id', 'desc')
                 ->findAll();
+            }
+            
+
                 $filename='CustomersReport('.$start.' to '.$end.').xlsx';
             break;
+            
             case "statuswise":
                 $status = $this->request->getPost('status');
-                $records = $customerModel->where('status', $status)
-                ->orderBy('lead_id', 'desc')
-                ->findAll();
+
+                if($role == 1){
+                    $records = $customerModel->where('status', $status)
+                    ->where('center_name', $center)
+                    ->orderBy('lead_id', 'desc')
+                    ->findAll();
+                }else{
+                    $records = $customerModel->where('status', $status)
+                    ->orderBy('lead_id', 'desc')
+                    ->findAll();
+                }
+                
                 $filename='CustomersReport('.$status.').xlsx';
                 break;
+
             case "centerwise":
                 $center = $this->request->getPost('center');
                 $records = $customerModel->where('center_name', $center)
