@@ -54,7 +54,7 @@ public function store()
     $id = $session->get('id');
     $email = $this->request->getPost('email');
     $customerModel = new CustomerModel();   
-    $getid = $customerModel->latest()->first();
+    $getid = $customerModel->orderBy('lead_id', 'desc')->first();
     $leadno = $getid['lead_no'];
     $leadno =+ 1;
 
