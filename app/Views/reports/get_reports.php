@@ -132,6 +132,7 @@
                                                 <div class="col-lg-6">
                                                     <label for="exampleFormControlSelect1">Please Select Center Name to Export Data</label>
                                                     <select  class="form-control" name="center" id="center">
+                                                    <option value="Select Center">Select Center</option>
                                                         <?php foreach ($users as $user): ?>
                                                             <option value="<?php echo $user['center_name']; ?>"><?= $user['center_name'] ?></option>
                                                         <?php endforeach; ?>
