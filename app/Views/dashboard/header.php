@@ -4,7 +4,7 @@
 $session = session();
 
 // Retrieve session data
-$login = $session->get('email');
+$login = $session->get('id');
 
 // Check if the session data is empty
 if(empty($login)) {
