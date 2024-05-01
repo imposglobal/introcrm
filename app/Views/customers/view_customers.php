@@ -229,7 +229,7 @@
                                         ?>
                                         <tr>
                                         <td>
-                                                <a href="#" onclick="openNav(<?= $customer['lead_id'] ?>)"><?= $customer['lead_no'] ?></a>
+                                                <a href="#" onclick="openNav(<?= $customer['lead_id'] ?>)">EC-<?= $customer['lead_no'] ?></a>
                                             </td>
                                            
                                             <td>
