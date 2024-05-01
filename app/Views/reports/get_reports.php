@@ -129,7 +129,7 @@
     <?php 
     $session = session();
     $role = $session->get('role');
-    if($role !== 1){
+    if($role != 1){
     ?>
                                     <div class="col-lg-12 my-5">
                                         <form action="<?= $baseURL."excell_report" ?>" method="post">
