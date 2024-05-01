@@ -53,7 +53,11 @@ public function store()
     $name = $session->get('fname') . " " . $session->get('lname');
     $id = $session->get('id');
     $email = $this->request->getPost('email');
-    $customerModel = new CustomerModel();
+    $customerModel = new CustomerModel();   
+    $getid = $customerModel->latest()->first();
+    $leadno = $getid['lead_no'];
+    $leadno =+ 1;
+
     $result = $customerModel->where('email', $email)->first();
     $date = date('Y-m-d H:i:s');
     if ($result !== null && $result['email'] === $email) {
@@ -96,7 +100,8 @@ public function store()
             'created_agent_date' => $this->request->getPost('created_agent_date'),
             'status' => 'New Lead',
             'agent_name' => $name,
-            'userid' => $id
+            'userid' => $id,
+            'lead_no' => $leadno
         ];
         
         // Save customer data to the database

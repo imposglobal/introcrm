@@ -44,7 +44,8 @@ class CustomerModel extends Model{
         'userid',
         'agent_name',
         'calltime',
-        'calldate'
+        'calldate',
+        'lead_no'
     ];
     
 }
