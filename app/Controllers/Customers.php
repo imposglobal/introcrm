@@ -68,6 +68,7 @@ public function store()
         if (!empty($images)) {
             $imageNames = [];
             foreach ($images as $file) {
+                echo "dsds";
                 $file->move(WRITEPATH . '../assets/images/uploads');
                 $imageNames[] = $file->getClientName(); // Add image name to the array
             }
@@ -105,11 +106,11 @@ public function store()
         ];
         
         // Save customer data to the database
-        $customerModel->save($data);
-        $status = "added";
+        // $customerModel->save($data);
+        // $status = "added";
     }
 
-    return redirect()->to('customer?status=' . urlencode($status));
+    //return redirect()->to('customer?status=' . urlencode($status));
 }
 
 
