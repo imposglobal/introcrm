@@ -123,13 +123,16 @@ class FilterCustomer extends BaseController
         $customerModel = new CustomerModel();
 
         $search = $this->request->getPost('searching'); // Accept input from form field using name "searching" in view_customer.php
+        if (strpos($search, "EC-") === 0) { // Check if $res starts with "EC-"
+            $search = str_replace("EC-", "", $search);
+        }
 
         $result['customers'] = $customerModel
                         ->like('center_name', $search) // Use like() for partial matches
                         ->orWhere('fname', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
-                        ->orLike('lead_no', $search)
+                        ->orWhere('lead_no', $search)
                         ->paginate();
 
         // Get total count of customers
@@ -138,6 +141,7 @@ class FilterCustomer extends BaseController
                         ->orWhere('fname', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
+                        ->orWhere('lead_no', $search)
                         ->countAllResults();
 
         // Merge total count with results
