@@ -46,7 +46,9 @@
         </li>
         <?php } }?>
 
-        <?php  if( $role != "2" ){   ?>
+        <?php if( $role != "1" && $role != "2" ){ 
+            if($role != 3){
+        ?>
         <li class="nav-item  <?php echo ($currentURL == base_url('index.php/agent')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('agent'); ?>">
             <i class=" menu-icon mdi mdi-account-plus" style="font-size:18px"></i>
@@ -69,7 +71,7 @@
                 <span class="menu-title">IP Management</span>
             </a>
         </li>
-
+                <?php } ?>
         <li class="nav-item  <?php echo ($currentURL == base_url('index.php/view/reports')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('view/reports'); ?>">
             <i class=" menu-icon mdi mdi-file-excel" style="font-size:18px"></i>
