@@ -129,6 +129,7 @@ class FilterCustomer extends BaseController
                         ->orWhere('fname', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
+                        ->orLike('lead_no', $search)
                         ->paginate();
 
         // Get total count of customers
