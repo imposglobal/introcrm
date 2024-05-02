@@ -178,7 +178,7 @@ public function update()
             'upload_image' => $newImageData, 
             //'type'  => $file->getClientMimeType(),
             
-            'center_name' => $center,
+            'center_name' => $this->request->getPost('center'),
             
             'fname' => $this->request->getPost('fname'),
             // 'lname' => $this->request->getPost('lname'),
