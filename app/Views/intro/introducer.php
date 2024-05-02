@@ -139,7 +139,7 @@
                                                 <?= $user['phone'] ?>
                                             </td> 
                                             <td>
-                                            <span class="bg-warning text-dark p-1 px-3 rounded font-weight-bold" style="font-size:13px"><?= $user['Created_at'] ?></span>
+                                            <span class="bg-warning text-dark p-1 px-3 rounded font-weight-bold" style="font-size:13px"><?= $user['created_at'] ?></span>
                                             </td>                                           
                                           
                                         </tr>
