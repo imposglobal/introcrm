@@ -114,8 +114,7 @@
                                             <th scope="col">user Name</th>
                                             <th scope="col">Mobile </th>
                                             <th scope="col">Status </th>
-                                            <th scope="col">Callback date</th>
-                                            <th scope="col">Callback Time</th>
+                                            
                                                  
                                         </tr>
                                     </thead>
@@ -125,29 +124,24 @@
                                         ?>
                                         <tr>
                                             <td>
-                                            <?= $user['lead_id'] ?>
+                                            <?= $user['id'] ?>
                                             </td>                                       
-                                            <td>
-                                                <?= $user['center_name'] ?>
-                                            </td>
-                                            <td>
-                                                <?=  $user['lead_date'] ?>
-                                            </td>                                          
                                             <td>
                                                 <?= $user['fname'] ?>
                                             </td>
                                             <td>
-                                                <?= $user['mobile'] ?>
+                                                <?=  $user['lname'] ?>
+                                            </td>                                          
+                                            <td>
+                                                <?= $user['center_name'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $user['phone'] ?>
                                             </td> 
                                             <td>
-                                            <span class="bg-warning text-dark p-1 px-3 rounded font-weight-bold" style="font-size:13px"><?= $user['status'] ?></span>
+                                            <span class="bg-warning text-dark p-1 px-3 rounded font-weight-bold" style="font-size:13px"><?= $user['Created_at'] ?></span>
                                             </td>                                           
-                                            <td>
-                                                <?= $user['calldate'] ?>
-                                            </td>
-                                            <td>
-                                                <?= $user['calltime'] ?>    
-                                            </td>
+                                          
                                         </tr>
                                         <?php endforeach; ?>
                                         <?php else: ?>
