@@ -4,7 +4,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
 
-class Agent extends BaseController
+class Users extends BaseController
 {
 
     protected $currentURL;
