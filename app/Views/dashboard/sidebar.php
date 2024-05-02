@@ -38,6 +38,12 @@
                 <span class="menu-title">Invite Introducer</span>
             </a>
         </li>
+        <li class="nav-item mb-3 <?php echo ($currentURL === base_url('introducer/view')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url('introducer/view'); ?>">
+                <i class=" menu-icon mdi mdi-account-network" style="font-size:18px"></i>
+                <span class="menu-title">Introducer</span>
+            </a>
+        </li>
         <?php } ?>
         <?php if( $role == "1" || $role == 0 || $role == 3){ ?>
         <li class="nav-item  <?php echo ($currentURL == base_url('index.php/view/callback')) ? 'active' : ''; ?>">
