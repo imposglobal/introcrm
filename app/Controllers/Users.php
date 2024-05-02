@@ -38,7 +38,6 @@ class Users extends BaseController
         $role = $session->get('role');
         $userid = $session->get('id');
         
-            // Query customers and order them by the 'lead_id' column in descending order
             $result['users'] = $userModel->where('role','1')
             ->orderBy('id', 'desc')->paginate();
 

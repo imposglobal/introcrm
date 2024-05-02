@@ -111,7 +111,7 @@
                                             <th scope="col">Lead ID</th>
                                             <th scope="col">Source</th>
                                             <th scope="col">Lead Date</th>
-                                            <th scope="col">Customer Name</th>
+                                            <th scope="col">user Name</th>
                                             <th scope="col">Mobile </th>
                                             <th scope="col">Status </th>
                                             <th scope="col">Callback date</th>
@@ -120,33 +120,33 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php if ($customers && count($customers) >= 1): ?>
-                                        <?php foreach ($customers as $customer):    
+                                    <?php if ($users && count($users) >= 1): ?>
+                                        <?php foreach ($users as $user):    
                                         ?>
                                         <tr>
                                             <td>
-                                            <?= $customer['lead_id'] ?>
+                                            <?= $user['lead_id'] ?>
                                             </td>                                       
                                             <td>
-                                                <?= $customer['center_name'] ?>
+                                                <?= $user['center_name'] ?>
                                             </td>
                                             <td>
-                                                <?=  $customer['lead_date'] ?>
+                                                <?=  $user['lead_date'] ?>
                                             </td>                                          
                                             <td>
-                                                <?= $customer['fname'] ?>
+                                                <?= $user['fname'] ?>
                                             </td>
                                             <td>
-                                                <?= $customer['mobile'] ?>
+                                                <?= $user['mobile'] ?>
                                             </td> 
                                             <td>
-                                            <span class="bg-warning text-dark p-1 px-3 rounded font-weight-bold" style="font-size:13px"><?= $customer['status'] ?></span>
+                                            <span class="bg-warning text-dark p-1 px-3 rounded font-weight-bold" style="font-size:13px"><?= $user['status'] ?></span>
                                             </td>                                           
                                             <td>
-                                                <?= $customer['calldate'] ?>
+                                                <?= $user['calldate'] ?>
                                             </td>
                                             <td>
-                                                <?= $customer['calltime'] ?>    
+                                                <?= $user['calltime'] ?>    
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
@@ -185,7 +185,7 @@
         // Show Sweet Alert confirmation
         Swal.fire({
             title: "Are you sure?",
-            text: "Once deleted, you will not be able to recover this customer!",
+            text: "Once deleted, you will not be able to recover this user!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: '#d33',
@@ -197,7 +197,7 @@
                 window.location.href = deleteUrl;
             } else {
                 // If user cancels deletion, do nothing
-                Swal.fire("Cancelled", "Your customer is safe!", "info");
+                Swal.fire("Cancelled", "Your user is safe!", "info");
             }
         });
     }
