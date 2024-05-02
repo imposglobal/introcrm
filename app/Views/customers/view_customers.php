@@ -196,6 +196,10 @@
                                                 case "Rejected":
                                                     $lstatus = '<span class="bg-danger text-white p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
                                                     break;
+                                                
+                                                case "On Hold":
+                                                    $lstatus = '<span class="bg-warning text-white p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
+                                                    break;
 
                                                 case "DWP Submitted":
                                                     $lstatus = '<span class="bg-warning text-dark p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
@@ -203,6 +207,10 @@
 
                                                 case "DWP Passed":
                                                     $lstatus = '<span class="bg-success text-white p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
+                                                    break;
+
+                                                case "DWP Failed":
+                                                    $lstatus = '<span class="bg-danger text-white p-1 px-3 rounded font-weight-bold" style="font-size:13px">'.$customer['status'].'</span>';
                                                     break;
 
                                                  case "Completed":
