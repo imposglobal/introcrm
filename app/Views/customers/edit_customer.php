@@ -190,7 +190,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label for="exampleFormControlSelect1">Benefit / Flex</label>
+                                <label class="font-weight-bold" for="exampleFormControlSelect1">Benefit / Flex</label>
                                 <select name="benefit" id="benefit"  class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['benefit_flex'] ?>"><?= $result['benefit_flex'] ?></option>
                                 <option value="Income Support">Income Support (IS)</option>
@@ -208,7 +208,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label for="exampleFormControlSelect1">EPC Rating</label>
+                                <label class="font-weight-bold" for="exampleFormControlSelect1">EPC Rating</label>
                                 <select name="epc" id="epc" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['epc_rating'] ?>"><?= $result['epc_rating'] ?></option>
                                 <option value="A">A</option>
@@ -226,7 +226,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label for="exampleFormControlSelect1">Survey status</label>
+                                <label class="font-weight-bold" for="exampleFormControlSelect1">Survey status</label>
                                 <select name="survey_status" id="survey_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['survey_status'] ?>"><?= $result['survey_status'] ?></option>
                                 <option value="Done">Done</option>
@@ -236,7 +236,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label for="exampleFormControlSelect1">Job status</label>
+                                <label class="font-weight-bold" for="exampleFormControlSelect1">Job status</label>
                                 <select name="job_status" id="job_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['job_status'] ?>"><?= $result['job_status'] ?></option>
                                 <option value="Booked">Booked</option>
@@ -247,7 +247,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label for="exampleFormControlSelect1">Payment status</label>
+                                <label class="font-weight-bold" for="exampleFormControlSelect1">Payment status</label>
                                 <select name="payment_status" id="payment_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['payment_status'] ?>"><?= $result['payment_status'] ?></option>
                                 <option value="Paid">Paid</option>
@@ -261,7 +261,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label for="exampleFormControlSelect1">Status</label>
+                                <label class="font-weight-bold" for="exampleFormControlSelect1">Status</label>
                                 <select name="status" id="status" class="form-control form-control-lg" id="exampleFormControlSelect1"
                                 <?php echo ($role == 1) ? 'disabled="true"' : ''; ?>>
                                 <option selected value="<?= $result['status'] ?>"><?= $result['status'] ?></option>
@@ -326,13 +326,13 @@
 
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="notes">Comments</label>
+                                <label class="font-weight-bold" for="notes">Comments</label>
                                 <textarea class="form-control" id="comments" name="comments" rows="19"></textarea>
                                 <button type="button" id="addcomment" class="bg-primary text-white px-3 py-2"> Add Comment </button>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label for="notes">All Comments</label>
+                            <label class="font-weight-bold" for="notes">All Comments</label>
                                 <div id="drop-area" class="drop-area" style="height: 335px; overflow-x:auto">
                                 <div id="commentResponse" class="text-left">
                                     
@@ -345,7 +345,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="notes">View or upload Documents</label>
+                            <label class="font-weight-bold" for="notes">View or upload Documents</label>
                                 <div id="drop-area" class="drop-area">
                                     <!-- <h3 class="drop-text">Drag & Drop Files Here</h3> -->
                                     <input type="hidden" name="prevImg" value="<?= $result['upload_image']; ?>">
@@ -353,7 +353,7 @@
                                 </div>
                         </div>
                         <div class="col-md-6">
-                            <label for="notes">Uploaded Document</label>
+                            <label class="font-weight-bold" for="notes">Uploaded Document</label>
                                 <div id="drop-area" class="drop-area">
                                     <!-- <h3 class="drop-text">Drag & Drop Files Here</h3> -->
                                     <?php
