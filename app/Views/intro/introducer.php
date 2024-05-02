@@ -116,7 +116,7 @@
                                                 <?= $user['fname'].' '.$user['lname'] ?>
                                             </td>
                                             <td>
-                                                <?=  $user['center'] ?>
+                                                <?=  $user['center_name'] ?>
                                             </td>                                          
                                             <td>
                                                 <?= $user['email'] ?>
