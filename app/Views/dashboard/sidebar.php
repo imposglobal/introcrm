@@ -22,7 +22,7 @@
               <span class="menu-title">Customers</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse show" id="tables">
+            <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('customer'); ?>">Add Customer</a></li>
               </ul>
