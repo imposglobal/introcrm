@@ -88,7 +88,7 @@
                 <div class="col-md-6 mb-4 stretch-card transparent">
                   <div class="card card-tale">
                     <div class="card-body">
-                      <p class="mb-4">Working Days</p>
+                      <p class="mb-4 font-weight-bold">Working Days</p>
                       <p class="fs-30 mb-2"><?= $curworking_days; ?></p>
                       <p>Total working Days (<?= $total_working_days; ?>)</p>
                     </div>
@@ -97,7 +97,7 @@
                 <div class="col-md-6 mb-4 stretch-card transparent">
                   <div class="card card-dark-blue">
                     <div class="card-body">
-                      <p class="mb-4">Total Customers</p>
+                      <p class="mb-4 font-weight-bold">Total Customers</p>
                       <p class="fs-30 mb-2"><?= $totalCustomer; ?></p>
                       <p>Total Customer Till Now</p>
                     </div>
@@ -108,7 +108,7 @@
                 <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                   <div class="card card-light-blue">
                     <div class="card-body">
-                      <p class="mb-4">Accepted</p>
+                      <p class="mb-4 font-weight-bold">Accepted</p>
                       <p class="fs-30 mb-2"><?= $countAccept; ?></p>
                       <p>From total <?= $totalCustomer; ?> customers</p>
                     </div>
@@ -117,7 +117,7 @@
                 <div class="col-md-6 stretch-card transparent">
                   <div class="card card-light-danger">
                     <div class="card-body">
-                      <p class="mb-4">Rejected</p>
+                      <p class="mb-4 font-weight-bold">Rejected</p>
                       <p class="fs-30 mb-2"><?=  $countRejected ;?></p>
                       <p>From total <?= $totalCustomer; ?> customers</p>
                     </div>
@@ -131,7 +131,7 @@
             <div class="col-lg-3 my-3">
               <div class="card card-light-blue">
                 <div class="card-body">
-                  <p class="mb-4">DWP Submitted</p>
+                  <p class="mb-4 font-weight-bold">DWP Submitted</p>
                   <p class="fs-30 mb-2"><?= $countDWPSubmitted  ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
@@ -140,7 +140,7 @@
             <div class="col-lg-3 my-3">
               <div class="card card-light-danger">
                 <div class="card-body">
-                  <p class="mb-4">DWP Passed</p>
+                  <p class="mb-4 font-weight-bold">DWP Passed</p>
                   <p class="fs-30 mb-2"><?= $countDWPPassed ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
@@ -149,7 +149,7 @@
             <div class="col-lg-3 my-3">
               <div class="card card-dark-blue">
                 <div class="card-body">
-                  <p class="mb-4">Completed</p>
+                  <p class="mb-4 font-weight-bold">Completed</p>
                   <p class="fs-30 mb-2"><?= $countCompleted ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
@@ -158,7 +158,7 @@
             <div class="col-lg-3 my-3">
               <div class="card card-tale">
                 <div class="card-body">
-                  <p class="mb-4">Paid</p>
+                  <p class="mb-4 font-weight-bold">Paid</p>
                   <p class="fs-30 mb-2"><?= $countPaid ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
@@ -169,7 +169,7 @@
             <div class="col-lg-3 my-3 my-3">
               <div class="card card-tale">
                 <div class="card-body">
-                  <p class="mb-4">Callback</p>
+                  <p class="mb-4 font-weight-bold">Callback</p>
                   <p class="fs-30 mb-2"><?= $countCallback ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers </p>
                 </div>
@@ -178,7 +178,7 @@
             <div class="col-lg-3 my-3 my-3">
               <div class="card card-dark-blue">
                 <div class="card-body">
-                  <p class="mb-4">Retransfer</p>
+                  <p class="mb-4 font-weight-bold">Retransfer</p>
                   <p class="fs-30 mb-2"><?= $countRetransfer ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
