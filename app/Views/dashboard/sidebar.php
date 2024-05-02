@@ -38,7 +38,7 @@
                 <span class="menu-title">Invite Introducer</span>
             </a>
         </li>
-        <li class="nav-item mb-3 <?php echo ($currentURL === base_url('introducer/view')) ? 'active' : ''; ?>">
+        <li class="nav-item mb-3 <?php echo ($currentURL === base_url('index.php/introducer/view')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('introducer/view'); ?>">
                 <i class=" menu-icon mdi mdi-account-network" style="font-size:18px"></i>
                 <span class="menu-title">Introducer</span>
