@@ -196,7 +196,7 @@
                             <div class="form-group">
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">EPC Rating</label>
                                 <select style="color: #000;" name="epc" id="epc" class="form-control form-control-lg" id="exampleFormControlSelect1">
-                                <option value="A">Not Available</option>
+                                <option value="Not Available">Not Available</option>
                                 <option value="A">A</option>
                                 <option value="B">B </option>
                                 <option value="C">C </option>
@@ -211,7 +211,7 @@
                             <div class="form-group">
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">On Gas Registered</label>
                                 <select style="color: #000;" name="gas_registered" id="gas_registered" class="form-control form-control-lg" >
-                                <option value="A">Not Available</option>
+                                <option value="Not Available">Not Available</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
                                 </select>

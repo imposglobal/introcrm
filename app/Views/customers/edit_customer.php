@@ -200,6 +200,7 @@
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">Benefit / Flex</label>
                                 <select style="color:#000" name="benefit" id="benefit"  class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['benefit_flex'] ?>"><?= $result['benefit_flex'] ?></option>
+                                <option value="Not Available">Not Available</option>
                                 <option value="Income Support">Income Support (IS)</option>
                                 <option value="Housing Benefit">Housing Benefit (HB) </option>
                                 <option value="Universal Credit">Universal Credit (UC) </option>
@@ -218,6 +219,7 @@
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">EPC Rating</label>
                                 <select style="color:#000" name="epc" id="epc" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['epc_rating'] ?>"><?= $result['epc_rating'] ?></option>
+                                <option value="A">Not Available</option>
                                 <option value="A">A</option>
                                 <option value="B">B </option>
                                 <option value="C">C </option>
