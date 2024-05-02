@@ -94,10 +94,10 @@
                                 <table class="table table-striped table-responsive">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Lead ID</th>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
                                             <th scope="col">Source</th>
-                                            <th scope="col">Lead Date</th>
-                                            <th scope="col">user Name</th>
+                                            <th scope="col">Email</th>
                                             <th scope="col">Mobile </th>
                                             <th scope="col">Status </th>
                                             
@@ -113,19 +113,19 @@
                                             <?= $i++ ?>
                                             </td>                                       
                                             <td>
-                                                <?= $user['fname'] ?>
+                                                <?= $user['fname'].' '.$user['lname'] ?>
                                             </td>
                                             <td>
-                                                <?=  $user['lname'] ?>
+                                                <?=  $user['center'] ?>
                                             </td>                                          
                                             <td>
-                                                <?= $user['center_name'] ?>
+                                                <?= $user['email'] ?>
                                             </td>
                                             <td>
                                                 <?= $user['phone'] ?>
                                             </td> 
                                             <td>
-                                            <span class="bg-warning text-dark p-1 px-3 rounded font-weight-bold" style="font-size:13px"><?= $user['created_at'] ?></span>
+                                            <span class="bg-success text-dark p-1 px-3 rounded font-weight-bold" style="font-size:13px"><?= $user['created_at'] ?></span>
                                             </td>                                           
                                           
                                         </tr>
