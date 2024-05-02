@@ -118,22 +118,22 @@ public function ExportFullExcellReport()
 
     $sheet->setCellValue('A1','Lead ID');
     $sheet->setCellValue('B1','Source');
-    $sheet->setCellValue('C1','Lead Date');
-    $sheet->setCellValue('D1','Customer Name');
-    $sheet->setCellValue('E1','Address');
-    $sheet->setCellValue('F1','Mobile');
-    $sheet->setCellValue('G1','Status ');
-    $sheet->setCellValue('H1','DOB ');
+    $sheet->setCellValue('C1','Status ');
+    $sheet->setCellValue('D1','Lead Date');
+    $sheet->setCellValue('E1','DOB ');
+    $sheet->setCellValue('F1','Customer Name');
+    $sheet->setCellValue('G1','Address');
+    $sheet->setCellValue('H1','Post Code');
     $sheet->setCellValue('I1','Telephone ');
-    $sheet->setCellValue('J1','Email');
-    $sheet->setCellValue('K1','Post Code');
-    $sheet->setCellValue('L1','Tenure ');
-    $sheet->setCellValue('M1','Council ');
-    $sheet->setCellValue('N1','Boiler Age ');
-    $sheet->setCellValue('O1','Boiler Make ');
-    $sheet->setCellValue('P1','Boiler Model');
-    $sheet->setCellValue('Q1','Benefit Flex ');
-    $sheet->setCellValue('R1','EPC Rating ');
+    $sheet->setCellValue('J1','Mobile');
+    $sheet->setCellValue('K1','Boiler Age ');
+    $sheet->setCellValue('L1','Boiler Make ');
+    $sheet->setCellValue('M1','Boiler Model');
+    $sheet->setCellValue('N1','Benefit Flex ');
+    $sheet->setCellValue('O1','EPC Rating ');
+    $sheet->setCellValue('P1','Email');
+    $sheet->setCellValue('Q1','Tenure ');
+    $sheet->setCellValue('R1','Council ');  
     $sheet->setCellValue('S1','Survey Status ');
     $sheet->setCellValue('T1','Job Status ');
     $sheet->setCellValue('U1','Payment Status ');
@@ -145,27 +145,26 @@ public function ExportFullExcellReport()
     $sheet->setCellValue('AA1','Boiler Efficeincy Link ');
     $sheet->setCellValue('AB1','Created Agent Name ');
  
-
         $rows = 2;
         foreach ($records as $val){
             $sheet->setCellValue('A'.$rows, $val['lead_id']);
             $sheet->setCellValue('B'.$rows, $val['center_name']);
-            $sheet->setCellValue('C'.$rows, $val['lead_date']);
-            $sheet->setCellValue('D'.$rows, $val['fname']);
-            $sheet->setCellValue('E'.$rows, $val['address_1']);
-            $sheet->setCellValue('F'.$rows, $val['mobile']);
-            $sheet->setCellValue('G'.$rows, $val['status']);
-            $sheet->setCellValue('H'.$rows, $val['dob']);
+            $sheet->setCellValue('C'.$rows, $val['status']);
+            $sheet->setCellValue('D'.$rows, $val['lead_date']);
+            $sheet->setCellValue('E'.$rows, $val['dob']);
+            $sheet->setCellValue('F'.$rows, $val['fname']);
+            $sheet->setCellValue('G'.$rows, $val['address_1']);
+            $sheet->setCellValue('H'.$rows, $val['post_code']);
             $sheet->setCellValue('I'.$rows, $val['telephone']);
-            $sheet->setCellValue('J'.$rows, $val['email']);
-            $sheet->setCellValue('K'.$rows, $val['post_code']);
-            $sheet->setCellValue('L'.$rows, $val['tenure']);
-            $sheet->setCellValue('M'.$rows, $val['council']);
-            $sheet->setCellValue('N'.$rows, $val['boiler_age']);
-            $sheet->setCellValue('O'.$rows, $val['boiler_make']);
-            $sheet->setCellValue('P'.$rows, $val['boiler_model']);
-            $sheet->setCellValue('Q'.$rows, $val['benefit_flex']);
-            $sheet->setCellValue('R'.$rows, $val['epc_rating']);
+            $sheet->setCellValue('J'.$rows, $val['mobile']);
+            $sheet->setCellValue('K'.$rows, $val['boiler_age']);
+            $sheet->setCellValue('L'.$rows, $val['boiler_make']);
+            $sheet->setCellValue('M'.$rows, $val['boiler_model']);
+            $sheet->setCellValue('N'.$rows, $val['benefit_flex']);
+            $sheet->setCellValue('O'.$rows, $val['epc_rating']);   
+            $sheet->setCellValue('P'.$rows, $val['email']);
+            $sheet->setCellValue('Q'.$rows, $val['tenure']);
+            $sheet->setCellValue('R'.$rows, $val['council']);
             $sheet->setCellValue('S'.$rows, $val['survey_status']);
             $sheet->setCellValue('T'.$rows, $val['job_status']);
             $sheet->setCellValue('U'.$rows, $val['payment_status']);
@@ -177,7 +176,7 @@ public function ExportFullExcellReport()
             $sheet->setCellValue('AA'.$rows, $val['boiler_efficiency_link']);
             $sheet->setCellValue('AB'.$rows, $val['agent_name']);
            
-            $rows++;
+            //$rows++;
         }
         $writer = new Xlsx($spreadsheet);
         $writer->save($filename);
