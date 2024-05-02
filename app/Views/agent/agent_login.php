@@ -38,11 +38,13 @@
                 <?php endif; ?>
               <!-- code to display flash message  end-->
 
-              <div class="brand-logo">
-                <!-- <img src="<?php echo $baseURL; ?>/assets/images/logo.svg" alt="logo"> -->
-              </div>
-              <h4>Hello <span class="text-primary">Agent!</span> let's get started</h4>
+              <div class="brand-logo text-center">
+                <p class="h3 text-primary"><b>ECO4</b> Portal</p>
+                <hr>
+                <h4>Hello <span class="text-primary">User!</span> </h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
+              </div>
+             
 
               
               <!-- Login form  -->
@@ -56,7 +58,7 @@
                       </div>
                   <?php endif; ?>
               <!-- flash message code end-->
-                <form class="pt-3" action="<?php echo base_url('/agentlogin/check'); ?>" method="POST">
+                <form class="pt-1" action="<?php echo base_url('/agentlogin/check'); ?>" method="POST">
                   <div class="form-group">
                     <input type="username"  required name="username"  class="form-control form-control-lg" id="username" placeholder="User name" value="<?= set_value('username') ?>">
                   </div>

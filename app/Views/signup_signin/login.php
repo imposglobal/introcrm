@@ -38,11 +38,13 @@
                 <?php endif; ?>
               <!-- code to display flash message  end-->
 
-              <!-- <div class="brand-logo">
-                <img src="<?php echo $baseURL; ?>/assets/images/logo.svg" alt="logo">
-              </div> -->
-              <h4>Hello Admin! let's get started</h4>
+              <div class="brand-logo text-center">
+                <p class="h3 text-primary"><b>ECO4</b> Portal</p>
+                <hr>
+                <h4>Hello <span class="text-primary">User!</span> </h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
+              </div>
+             
 
 
               <!-- Login form  -->

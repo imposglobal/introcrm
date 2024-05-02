@@ -2,7 +2,7 @@
 <?= $this->extend('layout/layout') ?>
 <!-- Define the content section -->
 <?= $this->section('content') ?>
-<title>View Introducers</title>
+<title>View Clients</title>
 <style>
     .drop-area {
         border: 2px dashed #ccc;
@@ -98,7 +98,6 @@
                                             <th scope="col">Name</th>
                                             <th scope="col">Source</th>
                                             <th scope="col">Email</th>
-                                            <th scope="col">Passwords</th>
                                             <th scope="col">Mobile </th>
                                             <th scope="col">Onborading Date </th>
                                             
@@ -121,9 +120,6 @@
                                             </td>                                          
                                             <td>
                                                 <?= $user['email'] ?>
-                                            </td>
-                                            <td>
-                                                <?= $user['password'] ?>
                                             </td>
                                             <td>
                                                 <?= $user['phone'] ?>
