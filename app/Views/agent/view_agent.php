@@ -64,7 +64,13 @@
   .sidenav a {font-size: 18px;}
 }
 </style>
-<?php $session = session(); ?>
+<?php 
+$session = session();
+$center = $session->get('center');
+$location = $session->get('location');
+$name = $session->get('fname') . " " . $session->get('lname');
+$id = $session->get('id');
+?>
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
@@ -76,7 +82,7 @@
                         <div class="col-md-12">
                             <div class="card-body mt-2">
                                 <h4 style="display: inline-block;" class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
-                                    View Agent</h4>
+                                    View Agent <?= $location; ?></h4>
 
                                     <button style="float: right;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModaldd">
                                     Add Agent

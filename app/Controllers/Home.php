@@ -57,6 +57,7 @@ class Home extends BaseController
                     'fname' => $data['fname'],
                     'lname' => $data['lname'],
                     'email' => $data['email'],
+                    'location' => $data['location'],
                     'center' => $data['center_name'],
                     'role' => $data['role'],
                     'isLoggedIn' => TRUE
