@@ -35,16 +35,48 @@ class FilterCustomer extends BaseController
 
     public function filterByDays(string $parameter){
         // Get the search query from the request
+        $session = session();
         $customerModel = new CustomerModel();
+        $center = $session->get('center');
+        $role = $session->get('role');
+        $name = $session->get('fname') . " " . $session->get('lname');
+        $id = $session->get('id');
 
         if($parameter == 'today'){
-            $result['customers'] = $customerModel
+            //for introducer 
+            if($role == 1){
+                $result['customers'] = $customerModel
+                            ->where('DATE(lead_date)', date('Y-m-d')) // Filter by today's date
+                            ->where('center_name', $center)
+                            ->orderBy('lead_id', 'desc')
+                            ->paginate();
+            $totalCustomers = $customerModel->where('center_name', $center)
+                            ->where('DATE(lead_date)', date('Y-m-d'))
+                            ->countAllResults();
+            //for agent
+            }elseif($role == 2){
+                $result['customers'] = $customerModel
+                            ->where('DATE(lead_date)', date('Y-m-d')) // Filter by today's date
+                            ->where('center_name', $center)
+                            ->where('userid', $id)
+                            ->orderBy('lead_id', 'desc')
+                            ->paginate();
+            $totalCustomers = $customerModel->where('center_name', $center)
+                            ->where('userid', $id)
+                            ->where('DATE(lead_date)', date('Y-m-d'))
+                            ->countAllResults();
+                //for admin & master
+            }else{
+                $result['customers'] = $customerModel
                             ->where('DATE(lead_date)', date('Y-m-d')) // Filter by today's date
                             ->orderBy('lead_id', 'desc')
                             ->paginate();
             $totalCustomers = $customerModel
                             ->where('DATE(lead_date)', date('Y-m-d'))
                             ->countAllResults();
+                //for admin & master
+            }
+
         } elseif ($parameter == 'yesterday') {
             $yesterday = date('Y-m-d', strtotime('-1 day'));
             $result['customers'] = $customerModel
@@ -54,6 +86,7 @@ class FilterCustomer extends BaseController
             $totalCustomers = $customerModel
                             ->where('DATE(lead_date)', $yesterday)
                             ->countAllResults();
+
         } elseif ($parameter == 'week') {
             $startOfWeek = date('Y-m-d', strtotime('last Monday'));
             $endOfWeek = date('Y-m-d', strtotime('next Sunday'));
@@ -62,10 +95,12 @@ class FilterCustomer extends BaseController
                             ->where('lead_date <=', $endOfWeek)
                             ->orderBy('lead_id', 'desc')
                             ->paginate();
+
             $totalCustomers = $customerModel
                             ->where('lead_date >=', $startOfWeek)
                             ->where('lead_date <=', $endOfWeek)
                             ->countAllResults();
+                            
         } elseif ($parameter == 'month') {
             $startOfMonth = date('Y-m-01');
             $endOfMonth = date('Y-m-t');
