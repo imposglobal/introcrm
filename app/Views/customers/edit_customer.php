@@ -75,7 +75,8 @@
                       <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="font-weight-bold">Lead ID</label>
-                                <input required  type="text" value="<?= $result['lead_id'] ?>" name="lead_id" class="form-control form-control-lg" placeholder="Lead ID" id="lead_id" readonly>
+                                <input required  type="text" value="<?= "EC-    ".$result['lead_no'] ?>" name="lead_no" class="form-control form-control-lg" placeholder="Lead ID" id="lead_no" readonly>
+                                <input required  type="hidden" value="<?= $result['lead_id'] ?>" name="lead_id" class="form-control form-control-lg" placeholder="Lead ID" id="lead_id" readonly>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -185,13 +186,19 @@
                                 <input required  type="text" name="boiler_model" value="<?= $result['boiler_model'] ?>" class="form-control form-control-lg" placeholder="Boiler Model" id="boiler_model">
                             </div>
                         </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="font-weight-bold">Boiler Efficiency</label>
+                                <input required  type="text" name="boiler_effi" value="<?= $result['boiler_effi'] ?>" class="form-control form-control-lg" placeholder="Boiler Model" id="boiler_effi">
+                            </div>
+                        </div>
                         <div class="col-lg-12">
                             <hr>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">Benefit / Flex</label>
-                                <select name="benefit" id="benefit"  class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <select style="color:#000" name="benefit" id="benefit"  class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['benefit_flex'] ?>"><?= $result['benefit_flex'] ?></option>
                                 <option value="Income Support">Income Support (IS)</option>
                                 <option value="Housing Benefit">Housing Benefit (HB) </option>
@@ -209,7 +216,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">EPC Rating</label>
-                                <select name="epc" id="epc" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <select style="color:#000" name="epc" id="epc" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['epc_rating'] ?>"><?= $result['epc_rating'] ?></option>
                                 <option value="A">A</option>
                                 <option value="B">B </option>
@@ -221,13 +228,23 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="exampleFormControlSelect1">On Gas Registered?</label>
+                                <select style="color:#000" name="gas_registered" id="gas_registered" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option selected value="<?= $result['gas_registered'] ?>"><?= $result['gas_registered'] ?></option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="col-lg-12">
                             <hr>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">Survey status</label>
-                                <select name="survey_status" id="survey_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <select style="color:#000" name="survey_status" id="survey_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['survey_status'] ?>"><?= $result['survey_status'] ?></option>
                                 <option value="Done">Done</option>
                                 <option value="Not Done">Not Done </option>
@@ -237,7 +254,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">Job status</label>
-                                <select name="job_status" id="job_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <select style="color:#000" name="job_status" id="job_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['job_status'] ?>"><?= $result['job_status'] ?></option>
                                 <option value="Booked">Booked</option>
                                 <option value="Not Booked">Not Booked </option>
@@ -248,7 +265,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">Payment status</label>
-                                <select name="payment_status" id="payment_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <select style="color:#000" name="payment_status" id="payment_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['payment_status'] ?>"><?= $result['payment_status'] ?></option>
                                 <option value="Paid">Paid</option>
                                 <option value="Not Paid">Not Paid </option>
@@ -262,7 +279,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">Status</label>
-                                <select name="status" id="status" class="form-control form-control-lg" id="exampleFormControlSelect1"
+                                <select style="color:#000" name="status" id="status" class="form-control form-control-lg" id="exampleFormControlSelect1"
                                 <?php echo ($role == 1) ? 'disabled="true"' : ''; ?>>
                                 <option selected value="<?= $result['status'] ?>"><?= $result['status'] ?></option>
                                 <option value="Accepted">Accepted</option>

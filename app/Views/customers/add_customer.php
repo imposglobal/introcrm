@@ -129,7 +129,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label style="font-weight: bold;">Residential Status</label>
-                                <select name="tenure" id="tenure" class="form-control form-control-lg" >
+                                <select style="color: #000;" name="tenure" id="tenure" class="form-control form-control-lg" >
                                 <option value="Home Owner">Home Owner</option>
                                 <option value="Private Tenant">Private Tenant</option>
                                 <option value="Council Tenant">Council Tenant</option>
@@ -165,13 +165,20 @@
                                 <input required  type="text" name="boiler_model" class="form-control form-control-lg" placeholder="Boiler Model" id="boiler_model">
                             </div>
                         </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label style="font-weight: bold;">Boiler Efficeincy</label>
+                                <input required  type="text" name="boiler_effi" class="form-control form-control-lg" placeholder="Boiler Efficeincy" id="boiler_effi">
+                            </div>
+                        </div>
                         <div class="col-lg-12">
                             <hr>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label for="exampleFormControlSelect1">Benefit / Flex</label>
-                                <select name="benefit" id="benefit" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <label class="font-weight-bold" for="exampleFormControlSelect1">Benefit / Flex</label>
+                                <select style="color: #000;" name="benefit" id="benefit" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option Selected>Please Select</option>
                                 <option value="Income Support">Income Support (IS)</option>
                                 <option value="Housing Benefit">Housing Benefit (HB) </option>
                                 <option value="Universal Credit">Universal Credit (UC) </option>
@@ -187,8 +194,8 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label for="exampleFormControlSelect1">EPC Rating</label>
-                                <select name="epc" id="epc" class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <label class="font-weight-bold" for="exampleFormControlSelect1">EPC Rating</label>
+                                <select style="color: #000;" name="epc" id="epc" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option value="A">Not Available</option>
                                 <option value="A">A</option>
                                 <option value="B">B </option>
@@ -200,17 +207,27 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="exampleFormControlSelect1">On Gas Registered</label>
+                                <select style="color: #000;" name="gas_registered" id="gas_registered" class="form-control form-control-lg" >
+                                <option value="A">Not Available</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="col-lg-12">
                             <hr>
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label for="notes">Additional Notes</label>
+                                <label class="font-weight-bold" for="notes">Additional Notes</label>
                                 <textarea class="form-control" id="comments" name="add_notes" rows="8"></textarea>
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <label for="notes">Drag & Drop Files Here</label>
+                            <label class="font-weight-bold" for="notes">Drag & Drop Files Here</label>
                                 <div id="drop-area" class="drop-area">
                                     <!-- <h3 class="drop-text">Drag & Drop Files Here</h3> -->
                                     <input  accept="image/*,.pdf" type="file" name="images[]" id="images" multiple>
