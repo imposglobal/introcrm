@@ -89,13 +89,25 @@ class Dashboard extends BaseController
     }
 
     /****************************************************************************************************/
-    function getStatusCount($status) {
+    function getStatusCount($status,$role,$id,$center) {
         $customerModel = new CustomerModel();
-        
+        if($role == 1 /* for introducer */){
         // Query to count total status count based status
         $totalAccepted = $customerModel
             ->where('status', $status)
+            ->where('center_name', $center)
             ->countAllResults();
+        }elseif($role == 2 /* for Agent */){
+            // Query to count total status count based status
+            $totalAccepted = $customerModel->where('userid', $id)
+            ->where('status', $status)
+            ->countAllResults();
+        }else{ /* for Admins and mastera admin */
+            // Query to count total status count based status
+            $totalAccepted = $customerModel
+            ->where('status', $status)
+            ->countAllResults();
+        }
     
         return $totalAccepted;
     }
@@ -173,14 +185,14 @@ class Dashboard extends BaseController
          $totalWorkingDays = $this->countWorkingDays($startDate, $endDate);
          $totaCurlWorkingDays = $this->countWorkingDaysUntilToday($startDate);
          $totalCustomer = $this->getTotalCustomers($role,$id,$center);
-         $countAccept = $this->getStatusCount('Accepted');
-         $countRejected = $this->getStatusCount('Rejected');
-         $countDWPSubmitted = $this->getStatusCount('DWP Submitted');
-         $countDWPPassed = $this->getStatusCount('DWP Passed');
-         $countCompleted = $this->getStatusCount('Completed');
-         $countPaid = $this->getStatusCount('Paid');
-         $countCallback = $this->getStatusCount('Callback');
-         $countRetransfer = $this->getStatusCount('Retransfer');
+         $countAccept = $this->getStatusCount('Accepted',$role,$id,$center);
+         $countRejected = $this->getStatusCount('Rejected',$role,$id,$center);
+         $countDWPSubmitted = $this->getStatusCount('DWP Submitted',$role,$id,$center);
+         $countDWPPassed = $this->getStatusCount('DWP Passed',$role,$id,$center);
+         $countCompleted = $this->getStatusCount('Completed',$role,$id,$center);
+         $countPaid = $this->getStatusCount('Paid',$role,$id,$center);
+         $countCallback = $this->getStatusCount('Callback',$role,$id,$center);
+         $countRetransfer = $this->getStatusCount('Retransfer',$role,$id,$center);
 
 
          $data = [
