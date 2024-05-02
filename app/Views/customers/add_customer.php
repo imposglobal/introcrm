@@ -66,37 +66,37 @@
                       <div class="row">
                         <div class="col-lg-8">
                             <div class="form-group">
-                                <label>Name</label>
+                                <label style="font-weight: bold;">Name</label>
                                 <input required  type="text" name="fname" class="form-control form-control-lg" placeholder="Customer Full Name" id="fname">
                             </div>
                         </div>
                         <!-- <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Last Name</label>
+                                <label style="font-weight: bold;">Last Name</label>
                                 <input required  type="text" name="lname" class="form-control form-control-lg" placeholder="Customer Last Name" id="lname">
                             </div>
                         </div> -->
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Email</label>
+                                <label style="font-weight: bold;">Email</label>
                                 <input required  type="email" name="email" class="form-control form-control-lg" placeholder="Customer Email" id="email">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Mobile</label>
+                                <label style="font-weight: bold;">Mobile</label>
                                 <input required  type="text" name="mobile" class="form-control form-control-lg" placeholder="Customer Mobile No" id="mobile">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Telephone</label>
+                                <label style="font-weight: bold;">Telephone</label>
                                 <input required  type="text" name="telephone" class="form-control form-control-lg" placeholder="Customer Telephone No" id="telephone">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>DOB</label>
+                                <label style="font-weight: bold;">DOB</label>
                                 <input required  type="date" name="dob" class="form-control form-control-lg" placeholder="Customer Telephone No" id="dob">
                             </div>
                         </div>
@@ -106,20 +106,20 @@
                         </div>
                         <div class="col-lg-8">
                             <div class="form-group">
-                                <label>Address</label>
+                                <label style="font-weight: bold;">Address</label>
                                 <input required  type="text" name="address_1" class="form-control form-control-lg" placeholder="Customer Address " id="address_1">
                             </div>
                         </div>
                         <!-- <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Address 2</label>
+                                <label style="font-weight: bold;">Address 2</label>
                                 <input required  type="text" name="address_2" class="form-control form-control-lg" placeholder="Customer Address " id="address_2">
                             </div>
                         </div> -->
 
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Post Code</label>
+                                <label style="font-weight: bold;">Post Code</label>
                                 <input required  type="text" name="post_code" class="form-control form-control-lg" placeholder="Post Code" id="postcode">
                             </div>
                         </div>
@@ -128,13 +128,18 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Tenure</label>
-                                <input required  type="text" name="tenure" class="form-control form-control-lg" placeholder="Tenure" id="tenure">
+                                <label style="font-weight: bold;">Residential Status</label>
+                                <select name="tenure" id="tenure" class="form-control form-control-lg" >
+                                <option value="Home Owner">Home Owner</option>
+                                <option value="Private Tenant">Private Tenant</option>
+                                <option value="Council Tenant">Council Tenant</option>
+                                <option value="HA Tenant">HA Tenant</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Council</label>
+                                <label style="font-weight: bold;">Council</label>
                                 <input required  type="text" name="council" class="form-control form-control-lg" placeholder="Council" id="council">
                             </div>
                         </div>
@@ -144,19 +149,19 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Boiler Age</label>
+                                <label style="font-weight: bold;">Boiler Age</label>
                                 <input required  type="text" name="boiler_age" class="form-control form-control-lg" placeholder="Boiler Age" id="boiler_age">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Boiler Make</label>
+                                <label style="font-weight: bold;">Boiler Make</label>
                                 <input required  type="text" name="boiler_make" class="form-control form-control-lg" placeholder="Boiler Make" id="boiler_make">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Boiler Model</label>
+                                <label style="font-weight: bold;">Boiler Model</label>
                                 <input required  type="text" name="boiler_model" class="form-control form-control-lg" placeholder="Boiler Model" id="boiler_model">
                             </div>
                         </div>
