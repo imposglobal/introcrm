@@ -49,6 +49,6 @@ class Agent extends BaseController
         
         // Pass additional data to the view, if needed ($this->data seems to be additional data)
         // You can merge it with the $result array using the '+' operator
-        return view('introducer/introducer', $result + $this->data);
+        return view('intro/introducer', $result + $this->data);
     }
 }
