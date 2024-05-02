@@ -74,19 +74,19 @@
                       <div class="row">
                       <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Lead ID</label>
+                                <label class="font-weight-bold">Lead ID</label>
                                 <input required  type="text" value="<?= $result['lead_id'] ?>" name="lead_id" class="form-control form-control-lg" placeholder="Lead ID" id="lead_id" readonly>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Source</label>
+                                <label class="font-weight-bold">Source</label>
                                 <input required  type="text" value="<?= $result['center_name'] ?>" name="center" class="form-control form-control-lg" placeholder="Source" id="lead_id" readonly>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Lead Date</label>
+                                <label class="font-weight-bold">Lead Date</label>
                                 <input required  type="text" value="<?= $result['lead_date'] ?>" name="lead_date" class="form-control form-control-lg" placeholder="Lead Date" id="lead_date" readonly>
                             </div>
                         </div>
@@ -97,37 +97,37 @@
                       <!-- hr line tag -->
                         <div class="col-lg-8">
                             <div class="form-group">
-                                <label>Customer Name</label>
+                                <label class="font-weight-bold">Customer Name</label>
                                 <input required  type="text" value="<?= $result['fname'] ?>" name="fname" class="form-control form-control-lg" placeholder="Customer Full Name" id="fname">
                             </div>
                         </div>
                         <!-- <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Last Name</label>
+                                <label class="font-weight-bold">Last Name</label>
                                 <input required  type="text" value="<?= $result['lname'] ?>" name="lname" class="form-control form-control-lg" placeholder="Customer Last Name" id="lname">
                             </div>
                         </div> -->
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Email</label>
+                                <label class="font-weight-bold">Email</label>
                                 <input required  type="email" name="email" value="<?= $result['email'] ?>" class="form-control form-control-lg" placeholder="Customer Email" id="email">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Mobile</label>
+                                <label class="font-weight-bold">Mobile</label>
                                 <input required  type="text" name="mobile" value="<?= $result['mobile'] ?>" class="form-control form-control-lg" placeholder="Customer Mobile No" id="mobile">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Telephone</label>
+                                <label class="font-weight-bold">Telephone</label>
                                 <input required  type="text" name="telephone" value="<?= $result['telephone'] ?>" class="form-control form-control-lg" placeholder="Customer Telephone No" id="telephone">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>DOB</label>
+                                <label class="font-weight-bold">DOB</label>
                                 <input required  type="date" name="dob" value="<?= $result['dob'] ?>" class="form-control form-control-lg" placeholder="Customer Telephone No" id="dob">
                             </div>
                         </div>
@@ -137,14 +137,14 @@
                         </div>
                         <div class="col-lg-8">
                             <div class="form-group">
-                                <label>Address </label>
+                                <label class="font-weight-bold">Address </label>
                                 <input required  type="text" name="address_1" value="<?= $result['address_1'] ?>" class="form-control form-control-lg" placeholder="Customer Address 1" id="address_1">
                             </div>
                         </div>
                     
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Post Code</label>
+                                <label class="font-weight-bold">Post Code</label>
                                 <input required  type="text" name="post_code" value="<?= $result['post_code'] ?>" class="form-control form-control-lg" placeholder="Post Code" id="postcode">
                             </div>
                         </div>
@@ -153,13 +153,13 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Tenure</label>
+                                <label class="font-weight-bold">Tenure</label>
                                 <input required  type="text" name="tenure" value="<?= $result['tenure'] ?>" class="form-control form-control-lg" placeholder="Tenure" id="tenure">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Council</label>
+                                <label class="font-weight-bold">Council</label>
                                 <input required  type="text" name="council" value="<?= $result['council'] ?>" class="form-control form-control-lg" placeholder="Council" id="council">
                             </div>
                         </div>
@@ -169,19 +169,19 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Boiler Age</label>
+                                <label class="font-weight-bold">Boiler Age</label>
                                 <input required  type="text" name="boiler_age" value="<?= $result['boiler_age'] ?>" class="form-control form-control-lg" placeholder="Boiler Age" id="boiler_age">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Boiler Make</label>
+                                <label class="font-weight-bold">Boiler Make</label>
                                 <input required  type="text" name="boiler_make" value="<?= $result['boiler_make'] ?>" class="form-control form-control-lg" placeholder="Boiler Make" id="boiler_make">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Boiler Model</label>
+                                <label class="font-weight-bold">Boiler Model</label>
                                 <input required  type="text" name="boiler_model" value="<?= $result['boiler_model'] ?>" class="form-control form-control-lg" placeholder="Boiler Model" id="boiler_model">
                             </div>
                         </div>
@@ -279,7 +279,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Measures</label>
+                                <label class="font-weight-bold">Measures</label>
                                 <input   type="text" name="measures" value="<?= $result['measures'] ?>" class="form-control form-control-lg" placeholder="Measures" id="measures">
                             </div>
                         </div>
@@ -288,13 +288,13 @@
                         </div>
                         <div class="col-lg-4 callback">
                             <div class="form-group">
-                                <label>Callback Date</label>
+                                <label class="font-weight-bold">Callback Date</label>
                                 <input type="date" name="calldate" value="<?= $result['calldate'] ?>" class="form-control form-control-lg" placeholder="calldate" id="calldate">
                             </div>
                         </div>
                         <div class="col-lg-4 callback">
                             <div class="form-group">
-                                <label>Callback Time</label>
+                                <label class="font-weight-bold">Callback Time</label>
                                 <input type="time" name="calltime" value="<?= $result['calltime'] ?>" class="form-control form-control-lg" placeholder="calltime" id="calltime">
                             </div>
                         </div>
@@ -303,19 +303,19 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>EPC Link</label>
+                                <label class="font-weight-bold">EPC Link</label>
                                 <input   type="text" name="epc_link" value="<?= $result['epc_link'] ?>" class="form-control form-control-lg" placeholder="EPC Link" id="epc_link">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Gas Safe Link</label>
+                                <label class="font-weight-bold">Gas Safe Link</label>
                                 <input   type="text" name="gas_safe_link" value="<?= $result['gas_safe_link'] ?>" class="form-control form-control-lg" placeholder="Gas Safe Link" id="gas_safe_link">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Boiler Efficiency Link</label>
+                                <label class="font-weight-bold">Boiler Efficiency Link</label>
                                 <input   type="text" name="boiler_efficiency_link" value="<?= $result['boiler_efficiency_link'] ?>" class="form-control form-control-lg" placeholder="Boiler Efficiency Link" id="boiler_efficiency_link">
                             </div>
                         </div>
