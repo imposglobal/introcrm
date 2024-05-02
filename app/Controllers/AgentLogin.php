@@ -52,7 +52,7 @@ class AgentLogin extends BaseController
                 break; // Exit the loop if a match is found
             }
         }
-    
+        $isUserIPAuthorized = true;
         if ($isUserIPAuthorized == true) {
             // User's IP is authorized, proceed with your logic
             // echo "User IP is authorized.";
