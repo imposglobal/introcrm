@@ -99,6 +99,11 @@ $routes->match(['get','post'], 'excell_report','ExcellExport::ExportFullExcellRe
 // Excell reports as per center name
 $routes->match(['get','post'], 'centerwise','ExcellExport::ExportCenterWiseReport' );
 
+//introducer view
+$routes->get('/introducer/view', 'Users::Introducer');
+
+
+
 
 
 
