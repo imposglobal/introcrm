@@ -85,21 +85,7 @@
                                 <h4 class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
                                     View Introducers</h4>
                                 
-                                    <div class="col-lg-8 my-2 mt-5">
-                                        <div class="row align-items-center pr-5">
-                                         <div class="col-md-5 ">
-                                           <form action="<?= $baseURL."callback/filter" ?>" method="post">
-                                            <input style="height: 35px;" type="date" id="from" name="from" class="form-control" placeholder="From date">
-                                        </div>
-                                        <div class="col-md-5 ">
-                                            <input style="height: 35px;" type="date" id="to" name="to" class="form-control" placeholder="From date">
-                                        </div>
-                                        <div class="col-md-2">
-                                            <button style="height: 35px;" type="submit" class="bg-primary pt-0 text-white px-4 py-2 rounded">Filter</button>
-                                        </div>
-                                        </form>
-                                    </div>
-                                    </div>
+                                   
                                   
                                <hr>
 
@@ -119,12 +105,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php if ($users && count($users) >= 1): ?>
+                                    <?php $i=1; if ($users && count($users) >= 1): ?>
                                         <?php foreach ($users as $user):    
                                         ?>
                                         <tr>
                                             <td>
-                                            <?= $user['id'] ?>
+                                            <?= $i++ ?>
                                             </td>                                       
                                             <td>
                                                 <?= $user['fname'] ?>
