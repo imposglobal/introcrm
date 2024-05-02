@@ -292,7 +292,7 @@
             <div class="row px-5 pt-4">
                 <div class="col-lg-4"> 
                     <h5>Lead ID</h5> 
-                    <p id="leadid"></p>
+                    <p>EC-<span id="leadid"></span></p>
                 </div>
                 <div class="col-lg-4"> 
                     <h5>Lead Date</h5> 
@@ -514,7 +514,7 @@
             dataType: 'json',
             success: function(data) {
                 // Update HTML elements with received data
-                $('#leadid').text(data.customer.lead_id);
+                $('#leadid').text(data.customer.lead_no);
                 $('#ldate').text(data.customer.lead_date);
                 $('#cname').text(data.customer.center_name);
                 $('#fname').text(data.customer.fname);

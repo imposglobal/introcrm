@@ -70,7 +70,7 @@ public function View() {
         ->paginate();
     }else{
         // Query customers and order them by the 'lead_id' column in descending order
-        $result['users'] = $userModel->orderBy('id', 'desc')->paginate();
+        $result['users'] = $userModel->where('role', '2')->orderBy('id', 'desc')->paginate();
     }
     
     

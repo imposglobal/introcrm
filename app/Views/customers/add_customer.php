@@ -79,7 +79,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label style="font-weight: bold;">Email</label>
-                                <input required  type="email" name="email" class="form-control form-control-lg" placeholder="Customer Email" id="email">
+                                <input type="email" name="email" class="form-control form-control-lg" placeholder="Customer Email" id="email">
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -217,7 +217,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-12">
+                        <div class="col-lg-12">                  
                             <hr>
                         </div>
                         <div class="col-lg-12">

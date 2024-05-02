@@ -186,7 +186,7 @@
             </div>
           </div>
           
-          <?php  if( $role != "2" ){ ?>
+          <?php  if( $role == "0" || $role == "3" ){ ?>
           <div class="my-5">
             <div class="card">
               <div class="row">

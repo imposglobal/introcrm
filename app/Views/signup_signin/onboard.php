@@ -26,10 +26,20 @@
         <div class="row w-100 mx-0">
           <div class="col-lg-6 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-              <div class="brand-logo">
-                <img src="<?php echo $baseURL; ?>/assets/images/logo.svg" alt="logo">
-              </div>
+              <div class="brand-logo text-center">
+                <p class="h3 text-primary"><b>ECO4</b> Portal</p>
+              </div><hr>
+              <?php
              
+              if(isset($_GET['id'])){
+                $id = $_GET['id'];
+              }else{
+                $id = "";
+              }
+              
+              $decode = base64_decode($id);
+              if($decode == "Approve"){
+              ?>
               <form class="pt-3" action="<?php echo base_url('/login'); ?>" method="post">
               <div class="row">
                 <div class="col-lg-6">
@@ -83,6 +93,9 @@
                 
                 </div>
               </form>
+              <?php }else{
+                echo '<p class="h4">Given Link Is Expired Please Contact - <a href="mailto:support@eco4.doodlo.in">support@eco4.doodlo.in</a></p>';
+              } ?>
             </div>
           </div>
         </div>
