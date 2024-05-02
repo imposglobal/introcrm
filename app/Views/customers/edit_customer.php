@@ -111,7 +111,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="font-weight-bold">Email</label>
-                                <input required  type="email" name="email" value="<?= $result['email'] ?>" class="form-control form-control-lg" placeholder="Customer Email" id="email">
+                                <input type="email" name="email" value="<?= $result['email'] ?>" class="form-control form-control-lg" placeholder="Customer Email" id="email">
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -219,7 +219,7 @@
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">EPC Rating</label>
                                 <select style="color:#000" name="epc" id="epc" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['epc_rating'] ?>"><?= $result['epc_rating'] ?></option>
-                                <option value="A">Not Available</option>
+                                <option value="Not Available">Not Available</option>
                                 <option value="A">A</option>
                                 <option value="B">B </option>
                                 <option value="C">C </option>
@@ -235,6 +235,7 @@
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">On Gas Registered?</label>
                                 <select style="color:#000" name="gas_registered" id="gas_registered" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['gas_registered'] ?>"><?= $result['gas_registered'] ?></option>
+                                <option value="Not Available">Not Available</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
                                 </select>
@@ -248,6 +249,7 @@
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">Survey status</label>
                                 <select style="color:#000" name="survey_status" id="survey_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['survey_status'] ?>"><?= $result['survey_status'] ?></option>
+                                <option value="Not Available">Not Available</option>
                                 <option value="Done">Done</option>
                                 <option value="Not Done">Not Done </option>
                                 </select>
@@ -258,6 +260,7 @@
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">Job status</label>
                                 <select style="color:#000" name="job_status" id="job_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['job_status'] ?>"><?= $result['job_status'] ?></option>
+                                <option value="Not Available">Not Available</option>
                                 <option value="Booked">Booked</option>
                                 <option value="Not Booked">Not Booked </option>
                                 
@@ -269,6 +272,7 @@
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">Payment status</label>
                                 <select style="color:#000" name="payment_status" id="payment_status" class="form-control form-control-lg" id="exampleFormControlSelect1">
                                 <option selected value="<?= $result['payment_status'] ?>"><?= $result['payment_status'] ?></option>
+                                <option value="Not Available">Not Available</option>
                                 <option value="Paid">Paid</option>
                                 <option value="Not Paid">Not Paid </option>
 
@@ -284,6 +288,7 @@
                                 <select style="color:#000" name="status" id="status" class="form-control form-control-lg" id="exampleFormControlSelect1"
                                 <?php echo ($role == 1) ? 'disabled="true"' : ''; ?>>
                                 <option selected value="<?= $result['status'] ?>"><?= $result['status'] ?></option>
+                                <option value="Not Available">Not Available</option>
                                 <option value="Accepted">Accepted</option>
                                 <option value="Rejected">Rejected</option>
                                 <option value="DWP Submitted">DWP Submitted</option>
