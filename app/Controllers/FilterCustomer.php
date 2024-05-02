@@ -208,94 +208,211 @@ class FilterCustomer extends BaseController
     /**************************************************filter by date functionality*************************************************************/
 
     public function filterByDate(){
+        // Get the search query from the request
         $customerModel = new CustomerModel();
         $start = $this->request->getPost('from');
-
         $end = $this->request->getPost('to');
-        $result['customers'] = $customerModel
+        $session = session();
+        $center = $session->get('center');
+        $role = $session->get('role');
+        $id = $session->get('id');
+    
+        if($role == 1){
+            $result['customers'] = $customerModel
+                        ->where('DATE(lead_date) >=', $start)
+                        ->where('DATE(lead_date) <=', $end)
+                        ->where('center_name', $center)
+                        ->orderBy('lead_id', 'desc')
+                        ->paginate();
+            $totalCustomers = $customerModel
+                        ->where('DATE(lead_date) >=', $start)
+                        ->where('DATE(lead_date) <=', $end)
+                        ->where('center_name', $center)
+                        ->countAllResults();
+        } elseif($role == 2){
+            $result['customers'] = $customerModel
+                        ->where('DATE(lead_date) >=', $start)
+                        ->where('DATE(lead_date) <=', $end)
+                        ->where('center_name', $center)
+                        ->where('userid', $id)
+                        ->orderBy('lead_id', 'desc')
+                        ->paginate();
+            $totalCustomers = $customerModel
+                        ->where('DATE(lead_date) >=', $start)
+                        ->where('DATE(lead_date) <=', $end)
+                        ->where('center_name', $center)
+                        ->where('userid', $id)
+                        ->countAllResults();
+        } else {
+            $result['customers'] = $customerModel
                         ->where('DATE(lead_date) >=', $start)
                         ->where('DATE(lead_date) <=', $end)
                         ->orderBy('lead_id', 'desc')
                         ->paginate();
-
-        // Get total count of customers
-        $totalCustomers = $customerModel
+            $totalCustomers = $customerModel
                         ->where('DATE(lead_date) >=', $start)
                         ->where('DATE(lead_date) <=', $end)
                         ->countAllResults();
-
+        }
+    
         // Merge total count with results
         $result['totalCustomers'] = $totalCustomers;
         $result['pager'] = $customerModel->pager;
-
+    
         // Pass data to the view
         return view('customers/view_customers', $result + $this->data);
     }
+    
 
     /**************************************searching customers from tables only *********************************************************/
 
     public function searchingCustomer(){
         $customerModel = new CustomerModel();
         $search = $this->request->getPost('searching'); // Accept input from form field using name "searching" in view_customer.php
+        $session = session();
+        $center = $session->get('center');
+        $role = $session->get('role');
+        $id = $session->get('id');
+    
         if (strpos($search, "EC-") === 0) { // Check if $res starts with "EC-"
             $search = str_replace("EC-", "", $search);
         }
-
-        $result['customers'] = $customerModel
+    
+        if($role == 1){
+            $result['customers'] = $customerModel
+                        ->like('center_name', $search) // Use like() for partial matches
+                        ->where('center_name', $center)
+                        ->orWhere('fname', $search)
+                        ->orWhere('lname', $search)
+                        ->orWhere('lead_id', $search)
+                        ->orWhere('lead_no', $search)
+                        ->paginate();
+            $totalCustomers = $customerModel
+                        ->like('center_name', $search) // Use like() for partial matches
+                        ->where('center_name', $center)
+                        ->orWhere('fname', $search)
+                        ->orWhere('lname', $search)
+                        ->orWhere('lead_id', $search)
+                        ->orWhere('lead_no', $search)
+                        ->countAllResults();
+        } elseif($role == 2){
+            $result['customers'] = $customerModel
+                        ->like('center_name', $search) // Use like() for partial matches
+                        ->where('center_name', $center)
+                        ->where('userid', $id)
+                        ->orWhere('fname', $search)
+                        ->orWhere('lname', $search)
+                        ->orWhere('lead_id', $search)
+                        ->orWhere('lead_no', $search)
+                        ->paginate();
+            $totalCustomers = $customerModel
+                        ->like('center_name', $search) // Use like() for partial matches
+                        ->where('center_name', $center)
+                        ->where('userid', $id)
+                        ->orWhere('fname', $search)
+                        ->orWhere('lname', $search)
+                        ->orWhere('lead_id', $search)
+                        ->orWhere('lead_no', $search)
+                        ->countAllResults();
+        } else {
+            $result['customers'] = $customerModel
                         ->like('center_name', $search) // Use like() for partial matches
                         ->orWhere('fname', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
                         ->paginate();
-
-        // Get total count of customers
-        $totalCustomers = $customerModel
+            $totalCustomers = $customerModel
                         ->like('center_name', $search) // Use like() for partial matches
                         ->orWhere('fname', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
                         ->countAllResults();
-
+        }
+    
         // Merge total count with results
         $result['totalCustomers'] = $totalCustomers;
         $result['pager'] = $customerModel->pager;
-
+    
         // Pass data to the view
         return view('customers/view_customers', $result + $this->data);
     }
-
+    
 /************************************************get customer by status*******************************************************************/
 
 public function getStatusbyCustomer(string $status) {
     $customerModel = new CustomerModel();
-    if($status == "All"){
-        // Query to count total status count based status
-        $result['customers'] = $customerModel
-        ->orderBy('lead_id', 'desc')
-        ->paginate();
-        // Get total count of customers
-        $totalCustomers = $customerModel
-        ->countAllResults();
-    }else{
-    // Query to count total status count based status
-    $result['customers'] = $customerModel
-        ->where('status', $status)
-        ->orderBy('lead_id', 'desc')
-        ->paginate();
+    $session = session();
+    $center = $session->get('center');
+    $role = $session->get('role');
+    $id = $session->get('id');
 
-        // Get total count of customers
-        $totalCustomers = $customerModel
-        ->where('status', $status)
-        ->countAllResults();
+    if($status == "All"){
+        if($role == 1){
+            $result['customers'] = $customerModel
+                        ->where('center_name', $center)
+                        ->orderBy('lead_id', 'desc')
+                        ->paginate();
+            $totalCustomers = $customerModel
+                        ->where('center_name', $center)
+                        ->countAllResults();
+        } elseif($role == 2){
+            $result['customers'] = $customerModel
+                        ->where('center_name', $center)
+                        ->where('userid', $id)
+                        ->orderBy('lead_id', 'desc')
+                        ->paginate();
+            $totalCustomers = $customerModel
+                        ->where('center_name', $center)
+                        ->where('userid', $id)
+                        ->countAllResults();
+        } else {
+            $result['customers'] = $customerModel
+                        ->orderBy('lead_id', 'desc')
+                        ->paginate();
+            $totalCustomers = $customerModel->countAllResults();
+        }
+    } else {
+        if($role == 1){
+            $result['customers'] = $customerModel
+                        ->where('center_name', $center)
+                        ->where('status', $status)
+                        ->orderBy('lead_id', 'desc')
+                        ->paginate();
+            $totalCustomers = $customerModel
+                        ->where('center_name', $center)
+                        ->where('status', $status)
+                        ->countAllResults();
+        } elseif($role == 2){
+            $result['customers'] = $customerModel
+                        ->where('center_name', $center)
+                        ->where('userid', $id)
+                        ->where('status', $status)
+                        ->orderBy('lead_id', 'desc')
+                        ->paginate();
+            $totalCustomers = $customerModel
+                        ->where('center_name', $center)
+                        ->where('userid', $id)
+                        ->where('status', $status)
+                        ->countAllResults();
+        } else {
+            $result['customers'] = $customerModel
+                        ->where('status', $status)
+                        ->orderBy('lead_id', 'desc')
+                        ->paginate();
+            $totalCustomers = $customerModel
+                        ->where('status', $status)
+                        ->countAllResults();
+        }
     }
+
     // Merge total count with results
     $result['totalCustomers'] = $totalCustomers;
     $result['pager'] = $customerModel->pager;
 
-// Pass data to the view
-return view('customers/view_customers', $result + $this->data);
+    // Pass data to the view
+    return view('customers/view_customers', $result + $this->data);
 }
 
 /*****************************************callback search filetr by date*******************************************************************/
