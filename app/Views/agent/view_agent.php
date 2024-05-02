@@ -82,7 +82,7 @@ $id = $session->get('id');
                         <div class="col-md-12">
                             <div class="card-body mt-2">
                                 <h4 style="display: inline-block;" class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
-                                    View Agent <?= $location; ?></h4>
+                                    View Agent</h4>
 
                                     <button style="float: right;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModaldd">
                                     Add Agent
@@ -133,17 +133,13 @@ $id = $session->get('id');
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label>Center Name</label>
-                                                        <input type="text"  name="center_name" class="form-control form-control-lg" id="center_name" placeholder="Center Name" value="<?= set_value(
-                                                            "center_name"
-                                                        ) ?>">
+                                                        <input type="text"  name="center_name" class="form-control form-control-lg" id="center_name" placeholder="Center Name" value="<?= $center; ?>" readonly>
                                                      </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label>Location</label>
-                                                        <input type="text"  name="location" class="form-control form-control-lg" id="location" placeholder="Location" value="<?= set_value(
-                                                            "location"
-                                                        ) ?>">
+                                                        <input type="text"  name="location" class="form-control form-control-lg" id="location" placeholder="Location" value="<?= $location; ?>" readonly>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
