@@ -132,18 +132,6 @@ $id = $session->get('id');
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label>Center Name</label>
-                                                        <input type="text"  name="center_name" class="form-control form-control-lg" id="center_name" placeholder="Center Name" value="<?= $center; ?>" readonly>
-                                                     </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label>Location</label>
-                                                        <input type="text"  name="location" class="form-control form-control-lg" id="location" placeholder="Location" value="<?= $location; ?>" readonly>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
                                                         <label>User Name</label>
                                                         <input type="text"  name="username" class="form-control form-control-lg" id="username" placeholder="User Name" value="<?= set_value(
                                                             "username"
@@ -156,6 +144,19 @@ $id = $session->get('id');
                                                         <input type="password"  name="password" class="form-control form-control-lg" id="password" placeholder="Password">
                                                     </div>
                                                 </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>Center Name</label>
+                                                        <input type="text"  name="center_name" class="form-control form-control-lg" id="center_name" placeholder="Center Name" value="<?= $center; ?>" readonly>
+                                                     </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>Location</label>
+                                                        <input type="text"  name="location" class="form-control form-control-lg" id="location" placeholder="Location" value="<?= $location; ?>" readonly>
+                                                    </div>
+                                                </div>
+                                               
                                                 <div class="col-lg-12">
                                                     <div class="mt-3">
                                                         <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"  >Add Agent</button>
