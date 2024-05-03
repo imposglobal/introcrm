@@ -130,17 +130,19 @@
                             <div class="form-group">
                                 <label style="font-weight: bold;">Residential Status</label>
                                 <select style="color: #000;" name="tenure" id="tenure" class="form-control form-control-lg" >
+                                <option selected >Please Select</option>
                                 <option value="Home Owner">Home Owner</option>
                                 <option value="Private Tenant">Private Tenant</option>
                                 <option value="Council Tenant">Council Tenant</option>
                                 <option value="HA Tenant">HA Tenant</option>
+                                <option value="Not Available">Not Available</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label style="font-weight: bold;">Council</label>
-                                <input required  type="text" name="council" class="form-control form-control-lg" placeholder="Council" id="council">
+                                <label style="font-weight: bold;">Council<small>(If Flex)</small></label>
+                                <input type="text" name="council" class="form-control form-control-lg" placeholder="Council" id="council">
                             </div>
                         </div>
                         <div class="col-lg-4"></div>
