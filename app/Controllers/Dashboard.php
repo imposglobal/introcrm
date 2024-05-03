@@ -193,6 +193,8 @@ class Dashboard extends BaseController
          $countPaid = $this->getStatusCount('Paid',$role,$id,$center);
          $countCallback = $this->getStatusCount('Callback',$role,$id,$center);
          $countRetransfer = $this->getStatusCount('Retransfer',$role,$id,$center);
+         $countDWPFailed = $this->getStatusCount('DWP Failed',$role,$id,$center);
+         $countonHold = $this->getStatusCount('On Hold',$role,$id,$center);
 
 
          $data = [
@@ -210,6 +212,8 @@ class Dashboard extends BaseController
             'countPaid' => $countPaid,
             'countRetransfer' => $countRetransfer,
             'result' => $result,
+            'countDWPFailed' => $countDWPFailed,
+            'countonHold' => $countonHold,
             'callback'=>$callback
         ];
 
