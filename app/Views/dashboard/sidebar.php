@@ -41,7 +41,7 @@
             </a>
             <div class="collapse" id="intro">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('customer'); ?>">Invite</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('invite'); ?>">Invite</a></li>
               </ul>
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('introducer/view'); ?>">View </a></li>
