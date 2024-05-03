@@ -132,10 +132,11 @@ public function showCustomer($lead_id){
     $email = $this->request->getPost('email');
 
     $userModel = new UserModel();
-    $resultu['users']=$userModel
+    $resultu=$userModel
     ->where('role', '1')
     ->findAll();
 
+    print_r($resultu);
 
 
     $customerModel = new CustomerModel();
