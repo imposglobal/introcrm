@@ -35,7 +35,7 @@
           <?php if(  $role == "0" ){ ?>
           <li class="nav-item <?php echo ($currentURL === base_url('index.php/invite') || $currentURL === base_url('index.php/introducer/view')) ? 'active' : ''; ?>">
             <a class="nav-link" data-toggle="collapse" href="#intro" aria-expanded="false" aria-controls="intro">
-            <i class=" menu-icon mdi mdi-account-card-details" style="font-size:18px"></i>
+            <i class=" menu-icon mdi mdi-account-network" style="font-size:18px"></i>
               <span class="menu-title">Introducers</span>
               <i class="menu-arrow"></i>
             </a>
