@@ -136,9 +136,6 @@ public function showCustomer($lead_id){
     ->where('role', '1')
     ->findAll();
 
-    print_r($resultu);
-
-
     $customerModel = new CustomerModel();
     $result = $customerModel->where('lead_id', $lead_id)->first();
     $viewData = [

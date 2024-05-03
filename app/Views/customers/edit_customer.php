@@ -81,14 +81,17 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
+
+                            <?php if($role  == 1 || $role == 2 ){ ?>
                                 <label class="font-weight-bold">Source</label>
                                 <input required  type="text" value="<?= $result['center_name'] ?>" name="center" class="form-control form-control-lg" placeholder="Source" id="lead_id" readonly>
-
-                                <select>
+                            <?php }else{ ?>
+                                <select class="form-control form-control-lg" name="center">
                                 <?php foreach ($users as $user): ?>
                                     <option value="<?php echo $user['center_name']; ?>"><?= $user['center_name'] ?></option>
                                 <?php endforeach; ?>
                                 </select>
+                            <?php } ?>
                             </div>
                         </div>
                         <div class="col-lg-4">
