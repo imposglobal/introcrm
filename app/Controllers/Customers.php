@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\CustomerModel;
 use App\Models\CommentModel;
+use App\Models\UserModel;
 
 class Customers extends BaseController
 {
@@ -130,6 +131,11 @@ public function showCustomer($lead_id){
     $aid = $session->get('id');
     $email = $this->request->getPost('email');
 
+    $userModel = new UserModel();
+    $result['users']=$userModel
+    ->where('role', '1')
+    ->findAll();
+
     $customerModel = new CustomerModel();
     $result = $customerModel->where('lead_id', $lead_id)->first();
     $viewData = [
@@ -137,6 +143,7 @@ public function showCustomer($lead_id){
         'center' => $center,
         'name' => $name,
         'aid' => $aid,
+        'users'=> $userModel
         // 'status'=>$status,
     ];
 

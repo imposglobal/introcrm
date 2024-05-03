@@ -75,7 +75,7 @@
                       <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="font-weight-bold">Lead ID</label>
-                                <input required  type="text" value="<?= "EC-    ".$result['lead_no'] ?>" name="lead_no" class="form-control form-control-lg" placeholder="Lead ID" id="lead_no" readonly>
+                                <input required  type="text" value="<?= "EC-".$result['lead_no'] ?>" name="lead_no" class="form-control form-control-lg" placeholder="Lead ID" id="lead_no" readonly>
                                 <input required  type="hidden" value="<?= $result['lead_id'] ?>" name="lead_id" class="form-control form-control-lg" placeholder="Lead ID" id="lead_id" readonly>
                             </div>
                         </div>
@@ -83,6 +83,12 @@
                             <div class="form-group">
                                 <label class="font-weight-bold">Source</label>
                                 <input required  type="text" value="<?= $result['center_name'] ?>" name="center" class="form-control form-control-lg" placeholder="Source" id="lead_id" readonly>
+
+                                <select>
+                                <?php foreach ($users as $user): ?>
+                                    <option value="<?php echo $user['center_name']; ?>"><?= $user['center_name'] ?></option>
+                                <?php endforeach; ?>
+                                </select>
                             </div>
                         </div>
                         <div class="col-lg-4">
