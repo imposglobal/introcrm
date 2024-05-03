@@ -32,22 +32,25 @@
             </div>
             
           </li>
+          <?php if(  $role == "0" ){ ?>
+          <li class="nav-item <?php echo ($currentURL === base_url('index.php/invite') || $currentURL === base_url('index.php/introducer/view')) ? 'active' : ''; ?>">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+            <i class=" menu-icon mdi mdi-account-card-details" style="font-size:18px"></i>
+              <span class="menu-title">Introducers</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('customer'); ?>">Invite</a></li>
+              </ul>
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('introducer/view'); ?>">View </a></li>
+              </ul>
+            </div>
+            
+          </li>
+          <?php } ?>
        
-        <?php if(  $role == "0" ){ 
-        ?>
-          <li class="nav-item mb-3 <?php echo ($currentURL === base_url('index.php/invite')) ? 'active' : ''; ?>">
-            <a class="nav-link" href="<?php echo base_url('invite'); ?>">
-                <i class=" menu-icon mdi mdi-account-network" style="font-size:18px"></i>
-                <span class="menu-title">Invite Introducer</span>
-            </a>
-        </li>
-        <li class="nav-item mb-3 <?php echo ($currentURL === base_url('index.php/introducer/view')) ? 'active' : ''; ?>">
-            <a class="nav-link" href="<?php echo base_url('introducer/view'); ?>">
-                <i class=" menu-icon mdi mdi-account-network" style="font-size:18px"></i>
-                <span class="menu-title">Introducer</span>
-            </a>
-        </li>
-        <?php } ?>
         <?php if( $role == "1" || $role == 0 || $role == 3){ ?>
         <li class="nav-item  <?php echo ($currentURL == base_url('index.php/view/callback')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('view/callback'); ?>">
