@@ -65,7 +65,7 @@
         ?>
         
       
-        <li class="nav-item mb-3 <?php echo ($currentURL == base_url('index.php/agent/view')) ? 'active' : ''; ?>">
+        <li class="nav-item  <?php echo ($currentURL == base_url('index.php/agent/view')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('agent/view'); ?>">
                 <i class=" menu-icon mdi mdi-account-box" style="font-size:18px"></i>
                 <span class="menu-title"> Agents</span>
