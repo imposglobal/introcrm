@@ -86,6 +86,7 @@
                                 <input required  type="text" value="<?= $result['center_name'] ?>" name="center" class="form-control form-control-lg" placeholder="Source" id="lead_id" readonly>
                             <?php }else{ ?>
                                 <select style="color:#000" class="form-control form-control-lg" name="center">
+                                <option selected value="<?= $result['center_name'] ?>"><?= $result['center_name'] ?></option>
                                 <?php foreach ($users as $user): ?>
                                     <option value="<?php echo $user['center_name']; ?>"><?= $user['center_name'] ?></option>
                                 <?php endforeach; ?>
