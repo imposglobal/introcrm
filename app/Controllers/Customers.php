@@ -54,13 +54,14 @@ public function store()
     $name = $session->get('fname') . " " . $session->get('lname');
     $id = $session->get('id');
     $email = $this->request->getPost('email');
+    $mobile = $this->request->getPost('mobile');
     $customerModel = new CustomerModel();   
     $getid = $customerModel->orderBy('lead_id', 'desc')->first();
     $leadno = intval($getid['lead_no']) + 1;
 
-    $result = $customerModel->where('email', $email)->first();
+    $result = $customerModel->where('mobile', $mobile)->first();
     $date = date('Y-m-d H:i:s');
-    if ($result !== null && $result['email'] === $email) {
+    if ($result !== null && $result['mobile'] === $mobile) {
         $status = "duplicate";
     } else {
         $images = $this->request->getFileMultiple('images');
