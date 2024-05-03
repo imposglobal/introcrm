@@ -84,7 +84,11 @@
                                 <label class="font-weight-bold">Source</label>
                                 <input required  type="text" value="<?= $result['center_name'] ?>" name="center" class="form-control form-control-lg" placeholder="Source" id="lead_id" readonly>
 
-                               
+                                <select>
+                                <?php foreach ($users as $user): ?>
+                                    <option value="<?php echo $user['center_name']; ?>"><?= $user['center_name'] ?></option>
+                                <?php endforeach; ?>
+                                </select>
                             </div>
                         </div>
                         <div class="col-lg-4">

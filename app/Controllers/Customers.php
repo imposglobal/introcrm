@@ -132,9 +132,11 @@ public function showCustomer($lead_id){
     $email = $this->request->getPost('email');
 
     $userModel = new UserModel();
-    $result['users']=$userModel
+    $resultu['users']=$userModel
     ->where('role', '1')
     ->findAll();
+
+
 
     $customerModel = new CustomerModel();
     $result = $customerModel->where('lead_id', $lead_id)->first();
@@ -143,7 +145,7 @@ public function showCustomer($lead_id){
         'center' => $center,
         'name' => $name,
         'aid' => $aid,
-        'users'=> $userModel
+        'users'=> $resultu
         // 'status'=>$status,
     ];
 
