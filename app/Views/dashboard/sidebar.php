@@ -34,12 +34,12 @@
           </li>
           <?php if(  $role == "0" ){ ?>
           <li class="nav-item <?php echo ($currentURL === base_url('index.php/invite') || $currentURL === base_url('index.php/introducer/view')) ? 'active' : ''; ?>">
-            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+            <a class="nav-link" data-toggle="collapse" href="#intro" aria-expanded="false" aria-controls="intro">
             <i class=" menu-icon mdi mdi-account-card-details" style="font-size:18px"></i>
               <span class="menu-title">Introducers</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="tables">
+            <div class="collapse" id="intro">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('customer'); ?>">Invite</a></li>
               </ul>
