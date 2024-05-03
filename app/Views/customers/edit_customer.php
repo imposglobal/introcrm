@@ -81,9 +81,8 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-
+                            <label class="font-weight-bold">Source</label>
                             <?php if($role  == 1 || $role == 2 ){ ?>
-                                <label class="font-weight-bold">Source</label>
                                 <input required  type="text" value="<?= $result['center_name'] ?>" name="center" class="form-control form-control-lg" placeholder="Source" id="lead_id" readonly>
                             <?php }else{ ?>
                                 <select class="form-control form-control-lg" name="center">
