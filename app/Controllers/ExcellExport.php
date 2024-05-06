@@ -176,7 +176,7 @@ public function ExportFullExcellReport()
             $sheet->setCellValue('AA'.$rows, $val['boiler_efficiency_link']);
             $sheet->setCellValue('AB'.$rows, $val['agent_name']);
            
-            //$rows++;
+            $rows++;
         }
         $writer = new Xlsx($spreadsheet);
         $writer->save($filename);
