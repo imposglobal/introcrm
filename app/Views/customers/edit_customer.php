@@ -301,6 +301,7 @@
                                 <option value="Accepted">Accepted</option>
                                 <option value="Rejected">Rejected</option>
                                 <option value="On Hold">On Hold</option>
+                                <option value="Ready to Start">Ready to Start</option>
                                 <option value="DWP Submitted">DWP Submitted</option>
                                 <option value="DWP Passed">DWP Passed</option>
                                 <option value="DWP Failed">DWP Failed</option>
