@@ -142,7 +142,34 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label style="font-weight: bold;">Council<small>(If Flex)</small></label>
-                                <input type="text" name="council" class="form-control form-control-lg" placeholder="Council" id="council">
+                            <select style="color: #000;" name="council" id="council" class="form-control form-control-lg" >
+                                <option selected>Please Select Council</option>
+                                <option value="Birmingham City Council">Birmingham City Council</option>
+                                <option value="Bristol Council">Bristol Council</option>
+                                <option value="Buckinghamshire Council">Buckinghamshire Council</option>
+                                <option value="Cherwell District Council">Cherwell District Council</option>
+                                <option value="Dacorum Council">Dacorum Council</option>
+                                <option value="Derbyshire Council">Derbyshire Council</option>
+                                <option value="Dudley Council">Dudley Council</option>
+                                <option value="Hammersmith and Fulham District Council">Hammersmith and Fulham District Council</option>
+                                <option value="Hertsmere Borough Council">Hertsmere Borough Council</option>
+                                <option value="Leicester Council">Leicester Council</option>
+                                <option value="London Borough of Ealing Council">London Borough of Ealing Council</option>
+                                <option value="NEF Basingstoke and Deane Council">NEF Basingstoke and Deane Council</option>
+                                <option value="North Northants Council">North Northants Council</option>
+                                <option value="Oxford City Council">Oxford City Council</option>
+                                <option value="Saint Albans City and District Council">Saint Albans City and District Council</option>
+                                <option value="Sheffield Council">Sheffield Council</option>
+                                <option value="South Oxfordshire District Council">South Oxfordshire District Council</option>
+                                <option value="Three River District Council">Three River District Council</option>
+                                <option value="Vale of Whitehorse District Council">Vale of Whitehorse District Council</option>
+                                <option value="Walsall Council">Walsall Council</option>
+                                <option value="Watford Borough Council">Watford Borough Council</option>
+                                <option value="West Northants Council">West Northants Council</option>
+                                <option value="West Oxfordshire District Council">West Oxfordshire District Council</option>
+                                <option value="Winchester City Council">Winchester City Council</option>
+                                <option value="Not Available">Not Available</option>
+                             </select>
                             </div>
                         </div>
                         <div class="col-lg-4"></div>
