@@ -58,7 +58,6 @@ public function store(){
         'role' => $this->request->getPost('role'),
         'lname' => $this->request->getPost('lname'),
         'email' => $this->request->getPost('email'),
-        'username' => $this->request->getPost('username'),
         'password' => $this->request->getPost('password')
     ];
     // print_r($data);
