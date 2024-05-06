@@ -105,7 +105,7 @@
                                                 <div class="col-lg-6">
                                                     <label for="exampleFormControlSelect1">Please Select Status to Export Data</label>
                                                     <select class="form-control" name="status" required id="status">
-                                                        <option value="All">All</option>
+                                                        <!-- <option value="All">All</option> -->
                                                         <option value="New Lead">New Lead</option>
                                                         <option value="Accepted">Accepted</option>
                                                         <option value="Rejected">Rejected</option>
