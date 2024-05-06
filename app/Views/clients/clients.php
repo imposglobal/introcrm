@@ -82,10 +82,10 @@ $id = $session->get('id');
                         <div class="col-md-12">
                             <div class="card-body mt-2">
                                 <h4 style="display: inline-block;" class="card-title"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 text-white rounded"></i>
-                                    View Agent</h4>
+                                    View Clients</h4>
 
                                     <button style="float: right;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModaldd">
-                                    Add Agent
+                                    Add Client
                                     </button>
  <!-- The Modal -->
  <div class="modal" id="myModaldd">
@@ -200,10 +200,8 @@ $id = $session->get('id');
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">First Name</th>
-                                            <th scope="col">Last Name</th>
-                                            <th scope="col">Center Name</th>
-                                            <th scope="col">User Name</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Email</th>
                                             <th scope="col">Password</th>
                                             <th scope="col">Actions</th>
                                             
@@ -221,18 +219,13 @@ $id = $session->get('id');
                                                 <?= $i++ ?>
                                             </td>                                       
                                             <td>
-                                                <?= $user["fname"] ?>
+                                                <?= $user["fname"] ?> <?= $user["lname"] ?>
                                             </td>
                                             
+                                                                             
                                             <td>
-                                                <?= $user["lname"] ?>
-                                            </td>                                          
-                                            <td>
-                                                <?= $user["center_name"] ?>
+                                                <?= $user["email"] ?>
                                             </td>
-                                            <td>
-                                                <?= $user["username"] ?>
-                                            </td> 
                                             <td>
                                                 <?= $user["password"] ?>
                                             </td> 
