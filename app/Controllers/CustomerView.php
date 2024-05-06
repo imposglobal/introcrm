@@ -31,6 +31,23 @@ class CustomerView extends BaseController
     }
 /***********************************************************************************************/
 //view all Customer in Tables
+public array $templates = [
+    'default_full'   => 'CodeIgniter\Pager\Views\default_full',
+    'default_simple' => 'CodeIgniter\Pager\Views\default_simple',
+    'default_head'   => 'CodeIgniter\Pager\Views\default_head',
+    'full_pagination'   => 'template/full_pagination',
+
+];
+
+/**
+ * --------------------------------------------------------------------------
+ * Items Per Page
+ * --------------------------------------------------------------------------
+ *
+ * The default number of results shown in a single page.
+ */
+public int $perPage = 10;
+
 public function index() {
     $customerModel = new CustomerModel();
     
