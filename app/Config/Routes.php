@@ -102,8 +102,9 @@ $routes->match(['get','post'], 'centerwise','ExcellExport::ExportCenterWiseRepor
 //introducer view
 $routes->get('/introducer/view', 'Users::Introducer');
 
-//introducer view
+//clients 
 $routes->get('/client/view', 'Client::view');
+$routes->POST('/client/add', 'Client::store');
 
 
 

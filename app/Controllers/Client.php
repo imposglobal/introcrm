@@ -49,4 +49,22 @@ public function View() {
     // You can merge it with the $result array using the '+' operator
     return view('clients/clients', $result + $this->data);
 }
+
+public function store(){
+    $userModel = new UserModel();
+    // get data from agent form in db fields using getpost
+    $data = [
+        'fname' => $this->request->getPost('fname'),
+        'role' => $this->request->getPost('role'),
+        'lname' => $this->request->getPost('lname'),
+        'email' => $this->request->getPost('email'),
+        'username' => $this->request->getPost('username'),
+        'password' => $this->request->getPost('password')
+    ];
+    // print_r($data);
+    $userModel->save($data);
+    // return redirect()->back();
+    return redirect()->to('clients/clients')->with('alrt', 'Client added successfully');
+}
+
 }
