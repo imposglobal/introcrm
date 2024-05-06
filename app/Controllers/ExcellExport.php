@@ -147,7 +147,7 @@ public function ExportFullExcellReport()
  
         $rows = 2;
         foreach ($records as $val){
-            $sheet->setCellValue('A'.$rows, $val['lead_id']);
+            $sheet->setCellValue('A'.$rows, 'EC-'. $val['lead_no']);
             $sheet->setCellValue('B'.$rows, $val['center_name']);
             $sheet->setCellValue('C'.$rows, $val['status']);
             $sheet->setCellValue('D'.$rows, $val['lead_date']);
