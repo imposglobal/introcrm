@@ -170,7 +170,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="font-weight-bold">Council</label>
-                                <input required  type="text" name="council" value="<?= $result['council'] ?>" class="form-control form-control-lg" placeholder="Council" id="council">
+                                <input  type="text" name="council" value="<?= $result['council'] ?>" class="form-control form-control-lg" placeholder="Council" id="council">
                             </div>
                         </div>
                         <div class="col-lg-4"></div>

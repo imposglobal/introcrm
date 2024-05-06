@@ -222,6 +222,24 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="font-weight-bold">EPC Link</label>
+                                <input   type="text" name="epc_link" class="form-control form-control-lg" placeholder="EPC Link" id="epc_link">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="font-weight-bold">Gas Safe Link</label>
+                                <input   type="text" name="gas_safe_link"  class="form-control form-control-lg" placeholder="Gas Safe Link" id="gas_safe_link">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="font-weight-bold">Boiler Efficiency Link</label>
+                                <input   type="text" name="boiler_efficiency_link" class="form-control form-control-lg" placeholder="Boiler Efficiency Link" id="boiler_efficiency_link">
+                            </div>
+                        </div>
                         <div class="col-lg-12">                  
                             <hr>
                         </div>
