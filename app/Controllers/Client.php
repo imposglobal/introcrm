@@ -47,6 +47,6 @@ public function View() {
     
     // Pass additional data to the view, if needed ($this->data seems to be additional data)
     // You can merge it with the $result array using the '+' operator
-    return view('client/client', $result + $this->data);
+    return view('clients/client', $result + $this->data);
 }
 }
