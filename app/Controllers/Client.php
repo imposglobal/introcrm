@@ -63,7 +63,25 @@ public function store(){
     // print_r($data);
     $userModel->save($data);
     // return redirect()->back();
-    return redirect()->to('clients/clients')->with('alrt', 'Client added successfully');
+    return redirect()->to('/client/view')->with('alrt', 'Client added successfully');
 }
+
+public function delete($id = null) {
+    $userModel = new UserModel();
+    $result['users'] = $userModel->where('id', $id)->delete();
+
+    // Check if the delete operation was successful
+    if ($result['users']) {
+        // Get the referral URL from the HTTP_REFERER header
+        $referrer = $this->request->getServer('HTTP_REFERER');
+        
+        // Redirect to the referral URL after successful deletion
+        return redirect()->to($referrer);
+    } else {
+        // Handle the case where the delete operation failed
+        return "Error deleting Client with lead_id: $id";
+    }
+}
+
 
 }

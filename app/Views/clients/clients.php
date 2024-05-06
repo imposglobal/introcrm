@@ -237,7 +237,7 @@ $id = $session->get('id');
                                                 $role == 3
                                             ) { ?>
                                             <a href="<?php echo base_url(
-                                                "agent/delete/" . $user["id"]
+                                                "client/delete/" . $user["id"]
                                             ); ?>" onclick="confirmDelete(this)" data-toggle="tooltip" data-placement="top" title="Delete customer"><i class="mdi mdi-account-remove bg-danger h4 pt-2 px-2 text-white rounded-circle"></i></a>
                                             <?php } ?>
                                             </td>
@@ -278,7 +278,7 @@ $id = $session->get('id');
         // Show Sweet Alert confirmation
         Swal.fire({
             title: "Are you sure?",
-            text: "Once deleted, you will not be able to recover this customer!",
+            text: "Once deleted, you will not be able to recover this Client!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: '#d33',
