@@ -246,7 +246,10 @@
                                 <option value="Pension Credit Savings Credit">Pension Credit Savings Credit (PCSC)</option>
                                 <option value="Pension Credit Guarantee Credit">Pension Credit Guarantee Credit (PCGC)</option>
                                 <option value="Employment and Support Allowance">Employment and Support Allowance (ESA) </option>
-                                <option value="Child Tax Credit">Child Tax Credit (IS)</option>
+                                <option value="Part Time Employed">Part Time Employed</option>
+                                <option value="Full Time Employed">Full Time Employed</option>
+                                <option value="Child Tax Credit">Child Tax Credit</option>
+                                <option value="No Benefit">No Benefit</option>
                                 
                                 </select>
                             </div>
