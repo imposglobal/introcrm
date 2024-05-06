@@ -58,6 +58,12 @@
             </div>
             
           </li>
+          <li class="nav-item  <?php echo ($currentURL == base_url('index.php/client/view')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url('client/view'); ?>">
+            <i class=" menu-icon mdi mdi-account-multiple" style="font-size:18px"></i>
+                <span class="menu-title">Clients</span>
+            </a>
+        </li>
           <?php } ?>
     
         <?php if( $role == "1" || $role == 0){ 
