@@ -139,12 +139,13 @@
                             <div class="form-group">
                                 <label class="font-weight-bold">DOB</label>
                                 <input required  type="date" name="dob" value="<?= $result['dob'] ?>" class="form-control form-control-lg" placeholder="Customer Telephone No" id="dob">
+                                <span class="bg-primary form-control-lg" style="cursor: pointer;" id="copyButton">Copy</span>
                             </div>
                         </div>
                         <div class="col-lg-1">
                             <div class="form-group">
                                 <label class="font-weight-bold"><br> <br>&nbsp;</label>
-                                <span style="cursor: pointer;" id="copyButton">Copy</span>
+                                
                             </div>
                         </div>
             
