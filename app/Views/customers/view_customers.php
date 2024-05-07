@@ -93,10 +93,10 @@
                             <div class="card-body mt-2">
 
                             <div class="row">
-                                <div class="col-lg-8">
+                                <div class="col-lg-7">
                                 <h4 class="card-title mb-3"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 mr-2 text-white rounded"></i>View Customer</h4>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-5">
                                 
 
                                     <!-- search customer from table code     -->
