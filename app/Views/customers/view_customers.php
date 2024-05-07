@@ -105,7 +105,7 @@
                                     
                                           <div class="input-group col-md-12 row justify-content-start">
                                             
-                                              <input style="height: 35px;" type="text" id="searching" required name="searching" class="form-control" placeholder="Search Customer....">
+                                              <input style="height: 35px;" type="text" id="searching" required name="searching" class="form-control" placeholder="Search by Name, Source & Lead ID">
                                               <div class="input-group-append">  
                                                   <button style="height: 35px;" class="px-3 btn-primary rounded-right" type="submit">Search</button>
                                               </div>
