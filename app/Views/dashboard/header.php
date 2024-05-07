@@ -78,8 +78,8 @@ td{
         <ul class="navbar-nav mr-lg-2">
           <li class="nav-item nav-search d-none d-lg-block">
             <div class="input-group">
-              <input style="border-radius: 10px; width:500px" type="text" class="bg-light text-dark form-control-sm border px-4 border-rounded" id="searchQuery" placeholder="Check Duplicate Email or Mobile No" aria-label="search" aria-describedby="search">
-              <div class="input-group-prepend hover-cursor bg-primary text-white px-4" id="duplicatechk">
+              <input style="border-radius: 10px; width:500px" type="text" class="bg-light text-dark form-control-sm px-4 border-rounded" id="searchQuery" placeholder="Check Duplicate Email or Mobile No" aria-label="search" aria-describedby="search">
+              <div class="input-group-prepend rounded-right hover-cursor bg-primary text-white px-4" id="duplicatechk">
                 <span class="input-group-text text-white" id="searchCustomer">
                  Check Duplicate
                 </span>
