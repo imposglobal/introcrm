@@ -150,7 +150,7 @@ public function ExportFullExcellReport()
             $sheet->setCellValue('A'.$rows, 'EC-'. $val['lead_no']);
             $sheet->setCellValue('B'.$rows, $val['center_name']);
             $sheet->setCellValue('C'.$rows, $val['status']);
-            $sheet->setCellValue('D'.$rows, $val['lead_date']);
+            $sheet->setCellValue('D'.$rows, date('d-m-Y H:i:s', strtotime($val['lead_date'])));
             $sheet->setCellValue('E'.$rows, date('d-m-Y', strtotime($val['dob'])));
             $sheet->setCellValue('F'.$rows, $val['fname']);
             $sheet->setCellValue('G'.$rows, $val['address_1']);
