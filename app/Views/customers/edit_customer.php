@@ -144,7 +144,7 @@
                         <div class="col-lg-1">
                             <div class="form-group">
                                 <label class="font-weight-bold"><br> <br>&nbsp;</label>
-                                <span style="cursor: pointer;" id="copyButton">Copy Date</span>
+                                <span style="cursor: pointer;" id="copyButton">Copy</span>
                             </div>
                         </div>
             
