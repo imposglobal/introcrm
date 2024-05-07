@@ -282,7 +282,7 @@ class FilterCustomer extends BaseController
             $result['customers'] = $customerModel
                         ->like('center_name', $search) // Use like() for partial matches
                         ->where('center_name', $center)
-                        ->orWhere('fname', $search)
+                        ->orLike('fname', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
@@ -290,7 +290,7 @@ class FilterCustomer extends BaseController
             $totalCustomers = $customerModel
                         ->like('center_name', $search) // Use like() for partial matches
                         ->where('center_name', $center)
-                        ->orWhere('fname', $search)
+                        ->orLike('fname', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
@@ -300,7 +300,7 @@ class FilterCustomer extends BaseController
                         ->like('center_name', $search) // Use like() for partial matches
                         ->where('center_name', $center)
                         ->where('userid', $id)
-                        ->orWhere('fname', $search)
+                        ->orLike('fname', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
@@ -309,7 +309,7 @@ class FilterCustomer extends BaseController
                         ->like('center_name', $search) // Use like() for partial matches
                         ->where('center_name', $center)
                         ->where('userid', $id)
-                        ->orWhere('fname', $search)
+                        ->orLike('fname', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
@@ -324,7 +324,7 @@ class FilterCustomer extends BaseController
                         ->paginate();
             $totalCustomers = $customerModel
                         ->like('center_name', $search) // Use like() for partial matches
-                        ->orWhere('fname', $search)
+                        ->orLike('fname', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
