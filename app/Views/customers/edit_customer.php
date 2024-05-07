@@ -135,15 +135,15 @@
                                 <input required  type="text" name="telephone" value="<?= $result['telephone'] ?>" class="form-control form-control-lg" placeholder="Customer Telephone No" id="telephone">
                             </div>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-3">
                             <div class="form-group">
                                 <label class="font-weight-bold">DOB</label>
                                 <input required  type="date" name="dob" value="<?= $result['dob'] ?>" class="form-control form-control-lg" placeholder="Customer Telephone No" id="dob">
                             </div>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-1">
                             <div class="form-group">
-                                <label class="font-weight-bold"><br> &nbsp;</label>
+                                <label class="font-weight-bold"><br> <br>&nbsp;</label>
                                 <span style="cursor: pointer;" id="copyButton">Copy Date</span>
                             </div>
                         </div>
