@@ -144,7 +144,7 @@
                         <div class="col-lg-1">
                             <div class="form-group">
                                 <label class="font-weight-bold">&nbsp;</label>
-                                <p class="bg-primary form-control-lg text-white" style="cursor: pointer; font-size:12px" id="copyButton">Copy</p>
+                                <p class="bg-primary form-control-lg text-white px-0 text-center" style="cursor: pointer; font-size:14px" id="copyButton">Copy</p>
                             </div>
                         </div>
             
