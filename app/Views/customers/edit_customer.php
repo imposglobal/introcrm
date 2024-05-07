@@ -143,8 +143,8 @@
                         </div>
                         <div class="col-lg-1">
                             <div class="form-group">
-                                <label class="font-weight-bold"><br>&nbsp;</label>
-                                <p class="bg-primary" style="cursor: pointer;" id="copyButton">Copy</p>
+                                <label class="font-weight-bold">&nbsp;</label>
+                                <p class="bg-primary form-control-lg text-white" style="cursor: pointer; font-size:12px" id="copyButton">Copy</p>
                             </div>
                         </div>
             
