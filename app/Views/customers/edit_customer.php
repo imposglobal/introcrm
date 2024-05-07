@@ -135,10 +135,16 @@
                                 <input required  type="text" name="telephone" value="<?= $result['telephone'] ?>" class="form-control form-control-lg" placeholder="Customer Telephone No" id="telephone">
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-2">
                             <div class="form-group">
                                 <label class="font-weight-bold">DOB</label>
                                 <input required  type="date" name="dob" value="<?= $result['dob'] ?>" class="form-control form-control-lg" placeholder="Customer Telephone No" id="dob">
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label class="font-weight-bold"> &nbsp;</label>
+                                <button id="copyButton">Copy Date</button>
                             </div>
                         </div>
             
@@ -558,7 +564,36 @@ $("#addcomment").click(function(){
 });
 
 </script>
+<script>
+    $(document).ready(function() {
+      $("#copyButton").click(function() {
+        // Get the value from the input field
+        var dateValue = $("#dob").val();
 
+        // Format the date as dd-mm-yyyy
+        var dateParts = dateValue.split("-");
+        var formattedDate = dateParts[2] + "-" + dateParts[1] + "-" + dateParts[0];
+
+        // Create a temporary textarea element
+        var tempInput = $("<textarea>");
+        $("body").append(tempInput);
+        tempInput.val(formattedDate);
+
+        // Select the value of the textarea
+        tempInput.select();
+        tempInput[0].setSelectionRange(0, 99999); /* For mobile devices */
+
+        // Copy the selected text
+        document.execCommand("copy");
+
+        // Remove the temporary textarea
+        tempInput.remove();
+
+        // Alert the user that the text has been copied
+        alert("Date copied: " + formattedDate);
+      });
+    });
+  </script>
 
 <?= $this->endSection() ?>
 
