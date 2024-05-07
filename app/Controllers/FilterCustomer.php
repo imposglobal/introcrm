@@ -317,7 +317,7 @@ class FilterCustomer extends BaseController
         } else {
             $result['customers'] = $customerModel
                         ->like('center_name', $search) // Use like() for partial matches
-                        ->orWhere('fname', $search)
+                        ->orLike('fname', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
