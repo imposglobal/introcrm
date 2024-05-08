@@ -64,7 +64,7 @@
         <?php } ?>
 
 
-        <?php if( $role == 3 || $role == 1 || $role == 0){ ?>
+        <?php if( $role == 3 ){ ?>
 
         <li class="nav-item  <?php echo ($currentURL == base_url('index.php/status/DWP%20Submitted')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('status/DWP%20Submitted'); ?>">
