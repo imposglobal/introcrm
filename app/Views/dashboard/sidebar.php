@@ -32,6 +32,12 @@
             </div>
           <? } ?>
             <?php if( $role == 3){ ?>
+          <li class="nav-item  <?php echo ($currentURL == base_url('index.php/customer')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url('customer'); ?>">
+            <i class="menu-icon mdi mdi-account-card-details" style="font-size:18px"></i>
+                <span class="menu-title">Add Customer</span>
+            </a>
+        </li>
         <li class="nav-item  <?php echo ($currentURL == base_url('index.php/customer/view')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('customer/view'); ?>">
             <i class="menu-icon mdi mdi-account-card-details" style="font-size:18px"></i>
