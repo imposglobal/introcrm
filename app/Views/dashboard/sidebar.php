@@ -63,6 +63,18 @@
             
         <?php } ?>
 
+
+        <?php if( $role == 3 || $role == 1 || $role == 0){ ?>
+
+        <li class="nav-item  <?php echo ($currentURL == base_url('index.php/status/DWP%20Submitted')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url('status/DWP%20Submitted'); ?>">
+            <i class=" menu-icon mdi mdi-headphones-box" style="font-size:18px"></i>
+                <span class="menu-title">DWP Submitted</span>
+            </a>
+        </li>
+            
+        <?php } ?>
+
           </li>
           <?php if(  $role == "0" ){ ?>
           <li class="nav-item <?php echo ($currentURL === base_url('index.php/invite') || $currentURL === base_url('index.php/introducer/view')) ? 'active' : ''; ?>">
