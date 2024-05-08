@@ -45,10 +45,10 @@
             </a>
         </li>
        
-        <li class="nav-item  <?php echo ($currentURL == base_url('index.php/view/callback')) ? 'active' : ''; ?>">
-            <a class="nav-link" href="<?php echo base_url('view/callback'); ?>">
+        <li class="nav-item  <?php echo ($currentURL == base_url('index.php/status/New%20Lead')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url('status/New%20Lead'); ?>">
             <i class=" menu-icon mdi mdi-headphones-box" style="font-size:18px"></i>
-                <span class="menu-title">View Callback</span>
+                <span class="menu-title">New Lead</span>
             </a>
         </li>
 
