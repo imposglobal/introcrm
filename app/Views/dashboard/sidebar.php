@@ -31,15 +31,31 @@
               </ul>
             </div>
 
-            <?php if( $role == "1" || $role == 0 || $role == 3){ ?>
+            <?php if( $role == 3){ ?>
+        <li class="nav-item  <?php echo ($currentURL == base_url('index.php/customer/view')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url('customer/view'); ?>">
+            <i class="menu-icon mdi mdi-account-card-details" style="font-size:18px"></i>
+                <span class="menu-title">View Customer</span>
+            </a>
+        </li>
+       
         <li class="nav-item  <?php echo ($currentURL == base_url('index.php/view/callback')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('view/callback'); ?>">
             <i class=" menu-icon mdi mdi-headphones-box" style="font-size:18px"></i>
                 <span class="menu-title">View Callback</span>
             </a>
         </li>
-        <?php } ?>
+
+           
+        <li class="nav-item  <?php echo ($currentURL == base_url('index.php/view/callback')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url('view/callback'); ?>">
+            <i class=" menu-icon mdi mdi-headphones-box" style="font-size:18px"></i>
+                <span class="menu-title">View Callback</span>
+            </a>
+        </li>
             
+        <?php } ?>
+
           </li>
           <?php if(  $role == "0" ){ ?>
           <li class="nav-item <?php echo ($currentURL === base_url('index.php/invite') || $currentURL === base_url('index.php/introducer/view')) ? 'active' : ''; ?>">
