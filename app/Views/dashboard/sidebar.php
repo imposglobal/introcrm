@@ -15,7 +15,7 @@
                 <span class="menu-title">Dashboard</span>
             </a>
         </li>
-
+        <?php if( $role !== 3){ ?>
         <li class="nav-item <?php echo ($currentURL === base_url('index.php/customer') || $currentURL === base_url('index.php/customer/view')) ? 'active' : ''; ?>">
             <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
             <i class=" menu-icon mdi mdi-account-card-details" style="font-size:18px"></i>
@@ -30,7 +30,7 @@
                 <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('customer/view'); ?>">View Customers</a></li>
               </ul>
             </div>
-
+          <? } ?>
             <?php if( $role == 3){ ?>
         <li class="nav-item  <?php echo ($currentURL == base_url('index.php/customer/view')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('customer/view'); ?>">
