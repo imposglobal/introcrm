@@ -68,7 +68,7 @@
 
         <li class="nav-item  <?php echo ($currentURL == base_url('index.php/status/DWP%20Submitted')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('status/DWP%20Submitted'); ?>">
-            <i class=" menu-icon mdi mdi-headphones-box" style="font-size:18px"></i>
+            <i class=" menu-icon mdi mdi-account-check" style="font-size:18px"></i>
                 <span class="menu-title">DWP Submitted</span>
             </a>
         </li>
