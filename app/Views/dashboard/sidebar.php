@@ -9,7 +9,7 @@
 ?>
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
-        <li class="nav-item mb-3 <?php echo ($currentURL == base_url('index.php/dashboard')) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo ($currentURL == base_url('index.php/dashboard')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('dashboard'); ?>">
                 <i class="icon-grid menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
