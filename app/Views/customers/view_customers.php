@@ -285,7 +285,7 @@ $role = $session->get('role'); ?>
                                             <td>
                                                 <?= $customer['calltime'] ?>
                                             </td>
-                                            <? } ?>
+                                            <?php } ?>
                                             <td>
                                                 <?= $lstatus ?>
                                             </td>
