@@ -175,8 +175,8 @@ $role = $session->get('role'); ?>
                                     <thead>
                                         <tr>
                                             <th scope="col">Lead ID</th>
-                                            <?php if($role !== 1){ ?>
-                                            <th scope="col">Source</th>
+                                            <?php if($role == 1){ ?>
+                                            <th scope="col">Source dsdsd</th>
                                             <?php } ?>
                                             <th scope="col">Lead Date</th>
                                             <th scope="col">Customer Name</th>
