@@ -198,7 +198,7 @@
               <div class="card card-light-danger">
                 <div class="card-body">
                   <p class="mb-4 font-weight-bold">Ready To Start</p>
-                  <p class="fs-30 mb-2"><?= $countDWPFailed ;?></p>
+                  <p class="fs-30 mb-2"><?= $countReady ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
