@@ -334,15 +334,16 @@
                                 <select style="color:#000" name="status" id="status" class="form-control form-control-lg" id="exampleFormControlSelect1"
                                 <?php echo ($role == 1) ? 'disabled="true"' : ''; ?>>
                                 <option selected value="<?= $result['status'] ?>"><?= $result['status'] ?></option>
-                                <option value="Rejected">Rejected</option>
-                                <option value="DWP Submitted">DWP Submitted</option>
-                                <option value="Callback">Call Back</option>
-                                <option value="Survey Booked">Survey Booked</option>
                                 <option value="Accepted">Accepted</option>
-                                <option value="Completed">Completed</option>
-                                <option value="On Hold">On Hold</option>
-                                <option value="Ready to Start">Ready to Start</option>
-                                <option value="LAFLEX">LAFLEX</option>
+                                            <option value="Callback">Call Back</option>
+                                            <option value="Completed">Completed</option>
+                                            <option value="DWP Submitted">DWP Submitted</option>
+                                            <option value="LAFLEX">LAFLEX</option>
+                                            <option value="New Lead">New Lead</option>
+                                            <option value="On Hold">On Hold</option>
+                                            <option value="Ready to Start">Ready to Start</option>
+                                            <option value="Rejected">Rejected</option>
+                                            <option value="Survey Booked">Survey Booked</option>
                             </select>
                             </div>
                         </div>
