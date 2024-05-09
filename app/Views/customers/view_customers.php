@@ -134,16 +134,17 @@ $role = $session->get('role'); ?>
                                                 }
                                             ?>
                                             <option value="All">All</option>
-                                            <option value="New Lead">New Lead</option>
-                                            <option value="Rejected">Rejected</option>
-                                            <option value="DWP Submitted">DWP Submitted</option>
-                                            <option value="Callback">Call Back</option>
-                                            <option value="Survey Booked">Survey Booked</option>
                                             <option value="Accepted">Accepted</option>
+                                            <option value="Callback">Call Back</option>
                                             <option value="Completed">Completed</option>
+                                            <option value="DWP Submitted">DWP Submitted</option>
+                                            <option value="LAFLEX">LAFLEX</option>
+                                            <option value="New Lead">New Lead</option>
                                             <option value="On Hold">On Hold</option>
                                             <option value="Ready to Start">Ready to Start</option>
-                                            <option value="LAFLEX">LAFLEX</option>
+                                            <option value="Rejected">Rejected</option>
+                                            <option value="Survey Booked">Survey Booked</option>
+
                                         </select>
                                         </div>
                                        

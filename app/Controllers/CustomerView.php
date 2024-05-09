@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\CustomerModel;
+use App\Models\UserModel;
 use CodeIgniter\API\ResponseTrait;
 
 class CustomerView extends BaseController
@@ -57,6 +58,11 @@ public function index() {
     $userid = $session->get('id');
     $totalCustomers = "";
 
+    $userModel = new UserModel();
+    $userres['users']=$userModel
+    ->where('role', '1')
+    ->findAll();
+
     if($role == 2){
         $result['customers'] = $customerModel
             ->where('userid', $userid)
@@ -88,7 +94,7 @@ public function index() {
     $result['totalCustomers'] = $totalCustomers;
     
     // Merge additional data with the $result array using the '+' operator
-    return view('customers/view_customers', $result + $this->data);
+    return view('customers/view_customers', $result + $userres + $this->data);
 }
 
 
