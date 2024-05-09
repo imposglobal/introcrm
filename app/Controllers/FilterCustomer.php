@@ -283,6 +283,8 @@ class FilterCustomer extends BaseController
                         ->like('center_name', $search) // Use like() for partial matches
                         ->where('center_name', $center)
                         ->orLike('fname', $search)
+                        ->orLike('mobile', $search)
+                        ->orLike('telephone', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
@@ -291,6 +293,8 @@ class FilterCustomer extends BaseController
                         ->like('center_name', $search) // Use like() for partial matches
                         ->where('center_name', $center)
                         ->orLike('fname', $search)
+                        ->orLike('mobile', $search)
+                        ->orLike('telephone', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
@@ -301,6 +305,8 @@ class FilterCustomer extends BaseController
                         ->where('center_name', $center)
                         ->where('userid', $id)
                         ->orLike('fname', $search)
+                        ->orLike('mobile', $search)
+                        ->orLike('telephone', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
@@ -310,6 +316,8 @@ class FilterCustomer extends BaseController
                         ->where('center_name', $center)
                         ->where('userid', $id)
                         ->orLike('fname', $search)
+                        ->orLike('mobile', $search)
+                        ->orLike('telephone', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
@@ -318,6 +326,8 @@ class FilterCustomer extends BaseController
             $result['customers'] = $customerModel
                         ->like('center_name', $search) // Use like() for partial matches
                         ->orLike('fname', $search)
+                        ->orLike('mobile', $search)
+                        ->orLike('telephone', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
@@ -325,6 +335,8 @@ class FilterCustomer extends BaseController
             $totalCustomers = $customerModel
                         ->like('center_name', $search) // Use like() for partial matches
                         ->orLike('fname', $search)
+                        ->orLike('mobile', $search)
+                        ->orLike('telephone', $search)
                         ->orWhere('lname', $search)
                         ->orWhere('lead_id', $search)
                         ->orWhere('lead_no', $search)
