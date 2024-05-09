@@ -301,6 +301,14 @@ public function getComments($lead_id = null) {
                  ->findAll();
 
     if (!empty($custcomments) || !empty($comments)) {
+
+        foreach ($custcomments as $customer) {
+            echo "<div class='pb-3 time'>";
+            echo "" . $customer['fname']."<br>";
+            echo "<hr>"; // Separator between comments
+            echo "</div>";
+
+        }
        
              // Iterate over comments and print each one
         foreach ($comments as $comment) {
