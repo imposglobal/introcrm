@@ -175,7 +175,7 @@ $role = $session->get('role'); ?>
                                     <thead>
                                         <tr>
                                             <th scope="col">Lead ID</th>
-                                            <?php if($role == 1){ ?>
+                                            <?php if($role != 1){ ?>
                                             <th scope="col">Source dsdsd</th>
                                             <?php } ?>
                                             <th scope="col">Lead Date</th>
@@ -250,7 +250,7 @@ $role = $session->get('role'); ?>
                                         <td>
                                                 <a href="#" onclick="openNav(<?= $customer['lead_id'] ?>)">EC-<?= $customer['lead_no'] ?></a>
                                             </td>
-                                            <?php if($role !== 1){ ?>
+                                            <?php if($role != 1){ ?>
                                             <td>
                                                 <?= $customer['center_name'] ?>
                                             </td>
