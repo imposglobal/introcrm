@@ -158,9 +158,9 @@
             <div class="col-lg-3 my-3">
               <div class="card card-tale">
                 <div class="card-body">
-                  <p class="mb-4 font-weight-bold">Accepted</p>
-                  <p class="fs-30 mb-2"><?= $countAccept ;?></p>
-                  <p>From total <?= $totalCustomer; ?> customers</p>
+                  <p class="mb-4 font-weight-bold">Completed</p>
+                  <p class="fs-30 mb-2"><?= $countCompleted ;?></p>
+                  <p>From total <?= $totalCustomer; ?> customers </p> 
                 </div>
               </div>
             </div>
@@ -169,17 +169,17 @@
             <div class="col-lg-3 my-3 my-3">
               <div class="card card-tale">
                 <div class="card-body">
-                  <p class="mb-4 font-weight-bold">Completed</p>
-                  <p class="fs-30 mb-2"><?= $countCompleted ;?></p>
-                  <p>From total <?= $totalCustomer; ?> customers </p>
+                  <p class="mb-4 font-weight-bold">Paid</p>
+                  <p class="fs-30 mb-2"><?= $countPaid ;?></p>
+                  <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-3 my-3 my-3">
               <div class="card card-dark-blue">
                 <div class="card-body">
-                  <p class="mb-4 font-weight-bold">Paid</p>
-                  <p class="fs-30 mb-2"><?= $countPaid ;?></p>
+                <p class="mb-4 font-weight-bold">On Hold</p>
+                  <p class="fs-30 mb-2"><?= $countonHold  ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
@@ -188,8 +188,8 @@
             <div class="col-lg-3 my-3">
               <div class="card card-light-blue">
                 <div class="card-body">
-                  <p class="mb-4 font-weight-bold">On Hold</p>
-                  <p class="fs-30 mb-2"><?= $countonHold  ;?></p>
+                <p class="mb-4 font-weight-bold">Ready To Start</p>
+                  <p class="fs-30 mb-2"><?= $countReady ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
@@ -197,8 +197,8 @@
             <div class="col-lg-3 my-3">
               <div class="card card-light-danger">
                 <div class="card-body">
-                  <p class="mb-4 font-weight-bold">Ready To Start</p>
-                  <p class="fs-30 mb-2"><?= $countReady ;?></p>
+                  <p class="mb-4 font-weight-bold">LAFLEX</p>
+                  <p class="fs-30 mb-2"><?= $countLaflex ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
