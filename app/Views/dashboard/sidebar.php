@@ -54,8 +54,8 @@
         <?php } ?>
         <?php if( $role == 3 || $role == 1 || $role == 0){ ?>
 
-        <li class="nav-item  <?php echo ($currentURL == base_url('index.php/view/callback')) ? 'active' : ''; ?>">
-            <a class="nav-link" href="<?php echo base_url('view/callback'); ?>">
+        <li class="nav-item  <?php echo ($currentURL == base_url('index.php/status/Callback')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url('status/Callback'); ?>">
             <i class=" menu-icon mdi mdi-headphones-box" style="font-size:18px"></i>
                 <span class="menu-title">View Callback</span>
             </a>
