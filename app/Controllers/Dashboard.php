@@ -188,7 +188,7 @@ class Dashboard extends BaseController
          $countAccept = $this->getStatusCount('Accepted',$role,$id,$center);
          $countRejected = $this->getStatusCount('Rejected',$role,$id,$center);
          $countDWPSubmitted = $this->getStatusCount('DWP Submitted',$role,$id,$center);
-         $countDWPPassed = $this->getStatusCount('DWP Passed',$role,$id,$center);
+         $countSurvey = $this->getStatusCount('Survey Booked',$role,$id,$center);
          $countCompleted = $this->getStatusCount('Completed',$role,$id,$center);
          $countPaid = $this->getStatusCount('Paid',$role,$id,$center);
          $countCallback = $this->getStatusCount('Callback',$role,$id,$center);
@@ -206,7 +206,7 @@ class Dashboard extends BaseController
             'countAccept' => $countAccept,
             'countRejected' => $countRejected,
             'countDWPSubmitted' => $countDWPSubmitted,
-            'countDWPPassed' => $countDWPPassed,
+            'countSurvey' => $countSurvey,
             'countCompleted' => $countCompleted,
             'countCallback' => $countCallback,
             'countPaid' => $countPaid,

@@ -140,8 +140,8 @@
             <div class="col-lg-3 my-3">
               <div class="card card-light-danger">
                 <div class="card-body">
-                  <p class="mb-4 font-weight-bold">DWP Passed</p>
-                  <p class="fs-30 mb-2"><?= $countDWPPassed ;?></p>
+                  <p class="mb-4 font-weight-bold">Call Back</p>
+                  <p class="fs-30 mb-2"><?= $countCallback ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
@@ -149,8 +149,8 @@
             <div class="col-lg-3 my-3">
               <div class="card card-dark-blue">
                 <div class="card-body">
-                  <p class="mb-4 font-weight-bold">Completed</p>
-                  <p class="fs-30 mb-2"><?= $countCompleted ;?></p>
+                  <p class="mb-4 font-weight-bold">Survey Booked</p>
+                  <p class="fs-30 mb-2"><?= $countSurvey ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
