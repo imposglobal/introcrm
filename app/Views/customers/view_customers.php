@@ -263,12 +263,14 @@
                                             <td>
                                                 <?= $customer['mobile'] ?>
                                             </td>
+                                            <?php if($callback = "Callback"){ ?>
                                             <td>
                                                 <?= $customer['calldate'] ?>
                                             </td>
                                             <td>
                                                 <?= $customer['calltime'] ?>
                                             </td>
+                                            <? } ?>
                                             <td>
                                                 <?= $lstatus ?>
                                             </td>
