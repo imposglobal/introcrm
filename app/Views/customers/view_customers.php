@@ -126,7 +126,10 @@
                                             <select style="font-size: 12px;" class="bg-light border mx-2 px-3 py-2 rounded" name="" id="statusSelect" onchange="redirect()">
                                             <?php
                                                 if(isset($_GET['status']) != null){
+                                                    $callback = $_GET['status'];
                                                     echo '<option selected>'.$_GET['status'].'</option>';
+                                                }else{
+                                                    $callback = null;
                                                 }
                                             ?>
                                             <option value="All">All</option>
@@ -176,6 +179,8 @@
                                             <th scope="col">Customer Name</th>
                                             <th scope="col">Address</th>
                                             <th scope="col">Mobile</th>
+                                            <th scope="col">Callback Date</th>
+                                            <th scope="col">Callback Time</th>
                                             <th scope="col">Status (<?=$totalCustomers ?>)</th>
                                             <th scope="col">Actions</th>
                                         </tr>
@@ -257,6 +262,12 @@
                                             </td>
                                             <td>
                                                 <?= $customer['mobile'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $customer['calldate'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $customer['calltime'] ?>
                                             </td>
                                             <td>
                                                 <?= $lstatus ?>
