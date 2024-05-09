@@ -120,11 +120,11 @@ $role = $session->get('role'); ?>
                                 <hr>
                                     <div class="row">
                                         <div class="col-lg-7 my-2">
-                                            <span style="font-size: 12px;" class="bg-light border mx-2 px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/yesterday"?>">Yesterday</span></a>
-                                            <span style="font-size: 12px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/today"?>">Today</span></a>
-                                            <span style="font-size: 12px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/week"?>">Weekly</span></a>
-                                            <span style="font-size: 12px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/month"?>">Monthly</span></a>
-                                            <select style="font-size: 12px;" class="bg-light border mx-2 px-3 py-2 rounded" name="" id="statusSelect" onchange="redirect()">
+                                            <span style="font-size: 10px;" class="bg-light border mx-2 px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/yesterday"?>">Yesterday</span></a>
+                                            <span style="font-size: 10px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/today"?>">Today</span></a>
+                                            <span style="font-size: 10px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/week"?>">Weekly</span></a>
+                                            <span style="font-size: 10px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/month"?>">Monthly</span></a>
+                                            <select style="font-size: 10px;" class="bg-light border mx-2 px-3 py-2 rounded" name="" id="statusSelect" onchange="redirect()">
                                             <?php
                                                 if(isset($_GET['status']) != null){
                                                     $callback = $_GET['status'];
