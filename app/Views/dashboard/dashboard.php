@@ -158,8 +158,8 @@
             <div class="col-lg-3 my-3">
               <div class="card card-tale">
                 <div class="card-body">
-                  <p class="mb-4 font-weight-bold">Paid</p>
-                  <p class="fs-30 mb-2"><?= $countPaid ;?></p>
+                  <p class="mb-4 font-weight-bold">Accepted</p>
+                  <p class="fs-30 mb-2"><?= $countAccept ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
@@ -169,8 +169,8 @@
             <div class="col-lg-3 my-3 my-3">
               <div class="card card-tale">
                 <div class="card-body">
-                  <p class="mb-4 font-weight-bold">Callback</p>
-                  <p class="fs-30 mb-2"><?= $countCallback ;?></p>
+                  <p class="mb-4 font-weight-bold">Completed</p>
+                  <p class="fs-30 mb-2"><?= $countCompleted ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers </p>
                 </div>
               </div>
@@ -178,8 +178,8 @@
             <div class="col-lg-3 my-3 my-3">
               <div class="card card-dark-blue">
                 <div class="card-body">
-                  <p class="mb-4 font-weight-bold">Retransfer</p>
-                  <p class="fs-30 mb-2"><?= $countRetransfer ;?></p>
+                  <p class="mb-4 font-weight-bold">Paid</p>
+                  <p class="fs-30 mb-2"><?= $countPaid ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>
               </div>
@@ -197,7 +197,7 @@
             <div class="col-lg-3 my-3">
               <div class="card card-light-danger">
                 <div class="card-body">
-                  <p class="mb-4 font-weight-bold">DWP Failed</p>
+                  <p class="mb-4 font-weight-bold">Ready To Start</p>
                   <p class="fs-30 mb-2"><?= $countDWPFailed ;?></p>
                   <p>From total <?= $totalCustomer; ?> customers</p>
                 </div>

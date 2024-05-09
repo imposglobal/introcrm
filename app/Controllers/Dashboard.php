@@ -193,7 +193,8 @@ class Dashboard extends BaseController
          $countPaid = $this->getStatusCount('Paid',$role,$id,$center);
          $countCallback = $this->getStatusCount('Callback',$role,$id,$center);
          $countRetransfer = $this->getStatusCount('Retransfer',$role,$id,$center);
-         $countDWPFailed = $this->getStatusCount('DWP Failed',$role,$id,$center);
+         $countReady = $this->getStatusCount('Ready to Start',$role,$id,$center);
+         $countLaflex = $this->getStatusCount('LAFLEX',$role,$id,$center);
          $countonHold = $this->getStatusCount('On Hold',$role,$id,$center);
 
 
@@ -210,9 +211,10 @@ class Dashboard extends BaseController
             'countCompleted' => $countCompleted,
             'countCallback' => $countCallback,
             'countPaid' => $countPaid,
+            'countLaflex' => $countLaflex,
             'countRetransfer' => $countRetransfer,
             'result' => $result,
-            'countDWPFailed' => $countDWPFailed,
+            'countReady' => $countReady,
             'countonHold' => $countonHold,
             'callback'=>$callback
         ];
