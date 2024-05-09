@@ -78,6 +78,12 @@
                 <span class="menu-title">Survey Booked</span>
             </a>
         </li>
+        <li class="nav-item  <?php echo ($currentURL == base_url('index.php/status/LAFLEX')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url('/status/LAFLEX'); ?>">
+            <i class=" menu-icon mdi mdi-file-check" style="font-size:18px"></i>
+                <span class="menu-title">LAFLEX</span>
+            </a>
+        </li>
             
         <?php } ?>
 
