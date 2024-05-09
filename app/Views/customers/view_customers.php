@@ -176,7 +176,10 @@ $role = $session->get('role'); ?>
                                         <tr>
                                             <th scope="col">Lead ID</th>
                                             <?php if($role != 1){ ?>
-                                            <th scope="col">Source dsdsd</th>
+                                            <th scope="col">Source </th>
+                                            <?php } ?>
+                                            <?php if($role == 1){ ?>
+                                            <th scope="col">Agent</th>
                                             <?php } ?>
                                             <th scope="col">Lead Date</th>
                                             <th scope="col">Customer Name</th>
@@ -255,6 +258,13 @@ $role = $session->get('role'); ?>
                                                 <?= $customer['center_name'] ?>
                                             </td>
                                            <?php } ?>
+                                            
+                                           <?php if($role == 1){ ?>
+                                            <td>
+                                                <?= $customer['agent_name'] ?>
+                                            </td>
+                                            <?php } ?>
+
                                             <td style="font-size: 12px;">
                                                 <?= date('d-m-Y',$ldate) ?>
                                                 <p class="mt-1"><small><?= date('H:i',$ldate) ?></small></p>
