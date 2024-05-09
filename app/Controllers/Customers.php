@@ -304,7 +304,7 @@ public function getComments($lead_id = null) {
 
         foreach ($custcomments as $customer) {
             echo "<div class='pb-3 time'>";
-            echo "" . $customer['fname']."<br>";
+            echo "<h5>" . $customer['fname']."</h5><br>";
             echo "<hr>"; // Separator between comments
             echo "</div>";
 
