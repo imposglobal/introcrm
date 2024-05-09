@@ -333,7 +333,8 @@
                                 <label class="font-weight-bold" for="exampleFormControlSelect1">Status</label>
                                 <select style="color:#000" name="status" id="status" class="form-control form-control-lg" id="exampleFormControlSelect1"
                                 <?php echo ($role == 1) ? 'disabled="true"' : ''; ?>>
-                                <option selected value="<?= $result['status'] ?>"><?= $result['status'] ?></option><option value="Rejected">Rejected</option>
+                                <option selected value="<?= $result['status'] ?>"><?= $result['status'] ?></option>
+                                <option value="Rejected">Rejected</option>
                                 <option value="DWP Submitted">DWP Submitted</option>
                                 <option value="Callback">Call Back</option>
                                 <option value="Survey Booked">Survey Booked</option>
