@@ -74,7 +74,7 @@
         </li>
         <li class="nav-item  <?php echo ($currentURL == base_url('index.php/status/Survey%20Booked')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('status/Survey%20Booked'); ?>">
-            <i class=" menu-icon mdi mdi-account-check" style="font-size:18px"></i>
+            <i class=" menu-icon mdi mdi-file-check" style="font-size:18px"></i>
                 <span class="menu-title">Survey Booked</span>
             </a>
         </li>
