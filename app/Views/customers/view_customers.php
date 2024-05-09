@@ -80,7 +80,8 @@
  
 }
 </style>
-<?php $session = session(); ?>
+<?php $session = session();
+$role = $session->get('role'); ?>
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
