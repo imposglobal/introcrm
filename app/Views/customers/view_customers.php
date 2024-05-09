@@ -179,7 +179,7 @@
                                             <th scope="col">Customer Name</th>
                                             <th scope="col">Address</th>
                                             <th scope="col">Mobile</th>
-                                            <?php if($callback = "Callback"){ ?>
+                                            <?php if($callback == "Callback"){ ?>
                                             <th scope="col">Callback Date</th>
                                             <th scope="col">Callback Time</th>
                                             <? } ?>
@@ -265,7 +265,7 @@
                                             <td>
                                                 <?= $customer['mobile'] ?>
                                             </td>
-                                            <?php if($callback = "Callback"){ ?>
+                                            <?php if($callback == "Callback"){ ?>
                                             <td>
                                                 <?= $customer['calldate'] ?>
                                             </td>
