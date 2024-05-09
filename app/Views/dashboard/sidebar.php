@@ -30,7 +30,7 @@
                 <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('customer/view'); ?>">View Customers</a></li>
               </ul>
             </div>
-          <? } ?>
+          <?php } ?>
             <?php if( $role == 3){ ?>
           <li class="nav-item  <?php echo ($currentURL == base_url('index.php/customer')) ? 'active' : ''; ?>">
             <a class="nav-link" href="<?php echo base_url('customer'); ?>">

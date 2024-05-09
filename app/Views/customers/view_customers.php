@@ -174,7 +174,9 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">Lead ID</th>
+                                            <?php if($role !== 1){ ?>
                                             <th scope="col">Source</th>
+                                            <?php } ?>
                                             <th scope="col">Lead Date</th>
                                             <th scope="col">Customer Name</th>
                                             <th scope="col">Address</th>
@@ -247,11 +249,11 @@
                                         <td>
                                                 <a href="#" onclick="openNav(<?= $customer['lead_id'] ?>)">EC-<?= $customer['lead_no'] ?></a>
                                             </td>
-                                           
+                                            <?php if($role !== 1){ ?>
                                             <td>
                                                 <?= $customer['center_name'] ?>
                                             </td>
-                                           
+                                           <?php } ?>
                                             <td style="font-size: 12px;">
                                                 <?= date('d-m-Y',$ldate) ?>
                                                 <p class="mt-1"><small><?= date('H:i',$ldate) ?></small></p>
