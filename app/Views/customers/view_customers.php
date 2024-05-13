@@ -85,33 +85,27 @@ $role = $session->get('role'); ?>
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
-            <div class="col-lg-12">
-            </div>
-            <div class="col-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card-body mt-2">
+            <div class="col-lg-12"></div>
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card-body mt-2">
+                                    <div class="row">
+                                        <div class="col-lg-7">
+                                            <h4 class="card-title mb-3"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 mr-2 text-white rounded"></i>View Customer</h4>
+                                        </div>
 
-                            <div class="row">
-                                <div class="col-lg-7">
-                                <h4 class="card-title mb-3"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 mr-2 text-white rounded"></i>View Customer</h4>
-                                </div>
-                                <div class="col-lg-5">
-                                
-
-                                    <!-- search customer from table code     -->
-                                    <form action="<?php echo base_url('/search/customer'); ?>" method="post">
-                                  
-                                    
-                                          <div class="input-group col-md-12 row justify-content-start">
-                                            
-                                              <input style="height: 35px;" type="text" id="searching" required name="searching" class="form-control" placeholder="Search by Name, Source & Lead ID">
-                                              <div class="input-group-append">  
-                                                  <button style="height: 35px;" class="px-3 btn-primary rounded-right" type="submit">Search</button>
+                                        <div class="col-lg-5">
+                                            <!--  code to search customer from table     -->
+                                            <form action="<?php echo base_url('/search/customer'); ?>" method="post">                                   
+                                                <div class="input-group col-md-12 row justify-content-start">                                   
+                                                    <input style="height: 35px;" type="text" id="searching" required name="searching" class="form-control" placeholder="Search by Name, Source & Lead ID">
+                                                <div class="input-group-append">  
+                                                    <button style="height: 35px;" class="px-3 btn-primary rounded-right" type="submit">Search</button>
                                               </div>
-                                          </div>
-                                      </form>
+                                        </div>
+                                            </form>
                                  <!-- search customer from table code     -->
                                 </div>
                             </div>
