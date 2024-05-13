@@ -145,15 +145,16 @@ $role = $session->get('role'); ?>
                                             <option value="Rejected">Rejected</option>
                                             <option value="Survey Booked">Survey Booked</option>
                                         </select>
-
+                                     
+                                        <!-- code to filter center name -->
                                          <?php if($role == 0){?>
-                                        <select style="font-size: 12px;" class="bg-light border mx-2 px-3 py-2 my-2 rounded" name="" id="centerSelect" onchange="searchByCenter(event)">
+                                        <select style="font-size: 12px;" class="bg-light border mx-2 px-3 py-2 my-2 rounded" name="center_name" id="centerSelect" onchange="searchByCenter(event)">
                                            
                                              <option value="Select Center">Select Center</option>
-                                                                                            <?php
+                                                <?php
                                                 $seenValues = array();
-                                                foreach ($customers as $customer) {
-                                                    $centerName = $customer['center_name'];
+                                                foreach ($users as $user) {
+                                                    $centerName = $user['center_name'];
                                                     if (!in_array($centerName, $seenValues)) {
                                                         $seenValues[] = $centerName;
                                                         echo '<option value="' . $centerName . '">' . $centerName . '</option>';
@@ -162,6 +163,25 @@ $role = $session->get('role'); ?>
                                                 ?>
                                         </select>
                                          <?php }?>
+
+
+                                          <!-- code to filter agent name -->
+                                          <?php if($role == 1){?>
+                                        <select style="font-size: 12px;" class="bg-light border mx-2 px-3 py-2 my-2 rounded" name="agent_name" id="agentSelect" onchange="searchByAgent(event)"> 
+                                             <option value="Select Agent">Select Agent</option>
+                                             <?php
+                                                $seenValues = array();
+                                                foreach ($users as $user) {
+                                                    $agentName = $user['fname'] . ' ' . $user['lname'];
+                                                    if (!in_array($agentName, $seenValues)) {
+                                                        $seenValues[] = $agentName;
+                                                        echo '<option value="' . $agentName . '">' . $agentName . '</option>';
+                                                    }
+                                                }
+                                                ?>
+                                        </select>
+                                         <?php }?>
+
                                         </div>
                                        
                                     
@@ -687,11 +707,33 @@ $role = $session->get('role'); ?>
         var rows = table.getElementsByTagName('tr');
         
         for (var i = 0; i < rows.length; i++) {
-            var centerCell = rows[i].getElementsByTagName('td')[1]; // Assuming center is in the third column
-            if (centerCell) {
+            var agentCell = rows[i].getElementsByTagName('td')[1]; // Assuming center is in the third column
+            if (agentCell) {
 
-                var centerText = centerCell.textContent || centerCell.innerText;
+                var centerText = agentCell.textContent || agentCell.innerText;
                 if (selectedcenter === '' || centerText.toUpperCase().indexOf(selectedcenter.toUpperCase()) > -1) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        }
+    }
+</script>
+
+<script>
+    function searchByAgent(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        var select = document.getElementById('agentSelect');
+        var selectedAgent = select.options[select.selectedIndex].value;
+        var table = document.getElementById('dataTable');
+        var rows = table.getElementsByTagName('tr');
+
+        for (var i = 0; i < rows.length; i++) {
+            var agentCell = rows[i].getElementsByTagName('td')[1]; // Assuming agent is in the second column
+            if (agentCell) {
+                var agentText = agentCell.textContent || agentCell.innerText;
+                if (selectedAgent === '' || agentText.toUpperCase().indexOf(selectedAgent.toUpperCase()) > -1) {
                     rows[i].style.display = '';
                 } else {
                     rows[i].style.display = 'none';
