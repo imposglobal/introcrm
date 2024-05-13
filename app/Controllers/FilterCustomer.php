@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\CustomerModel;
+use App\Models\UserModel;
+
 use CodeIgniter\API\ResponseTrait;
 
 class FilterCustomer extends BaseController
@@ -41,6 +43,8 @@ class FilterCustomer extends BaseController
         $role = $session->get('role');
         $name = $session->get('fname') . " " . $session->get('lname');
         $id = $session->get('id');
+
+        
     
         if($parameter == 'today'){
             // For introducer 
@@ -216,7 +220,11 @@ class FilterCustomer extends BaseController
         $center = $session->get('center');
         $role = $session->get('role');
         $id = $session->get('id');
-    
+
+        // $userModel = new UserModel();
+        // $centerName['users']=$userModel->findAll();
+        //var_dump($centerName['users']);
+                        
         if($role == 1){
             $result['customers'] = $customerModel
                         ->where('DATE(lead_date) >=', $start)
@@ -261,6 +269,8 @@ class FilterCustomer extends BaseController
     
         // Pass data to the view
         return view('customers/view_customers', $result + $this->data);
+        // return view('customers/view_customers', ['result' => $result, 'centerName' => $centerName] + $this->data);
+
     }
     
 
