@@ -144,30 +144,26 @@
                                 <label style="font-weight: bold;">Council<small>(If Flex)</small></label>
                             <select style="color: #000;" name="council" id="council" class="form-control form-control-lg" >
                                 <option selected>Please Select Council</option>
-                                <option value="Birmingham City Council">Birmingham City Council</option>
-                                <option value="Bristol Council">Bristol Council</option>
-                                <option value="Buckinghamshire Council">Buckinghamshire Council</option>
-                                <option value="Cherwell District Council">Cherwell District Council</option>
-                                <option value="Dacorum Council">Dacorum Council</option>
-                                <option value="Derbyshire Council">Derbyshire Council</option>
-                                <option value="Dudley Council">Dudley Council</option>
-                                <option value="Hammersmith and Fulham District Council">Hammersmith and Fulham District Council</option>
-                                <option value="Hertsmere Borough Council">Hertsmere Borough Council</option>
-                                <option value="Leicester Council">Leicester Council</option>
-                                <option value="London Borough of Ealing Council">London Borough of Ealing Council</option>
-                                <option value="NEF Basingstoke and Deane Council">NEF Basingstoke and Deane Council</option>
-                                <option value="North Northants Council">North Northants Council</option>
-                                <option value="Oxford City Council">Oxford City Council</option>
-                                <option value="Saint Albans City and District Council">Saint Albans City and District Council</option>
-                                <option value="Sheffield Council">Sheffield Council</option>
-                                <option value="South Oxfordshire District Council">South Oxfordshire District Council</option>
-                                <option value="Three River District Council">Three River District Council</option>
-                                <option value="Vale of Whitehorse District Council">Vale of Whitehorse District Council</option>
-                                <option value="Walsall Council">Walsall Council</option>
-                                <option value="Watford Borough Council">Watford Borough Council</option>
-                                <option value="West Northants Council">West Northants Council</option>
-                                <option value="West Oxfordshire District Council">West Oxfordshire District Council</option>
-                                <option value="Winchester City Council">Winchester City Council</option>
+                                <option value="Basingstoke and Deane Council">Basingstoke and Deane Council</option>
+                                <option value="Colchester City Council">Colchester City Council</option>
+                                <option value="West Sussex">West Sussex</option>
+                                <option value="Welwyn Hatfield Borough Council">Welwyn Hatfield Borough Council</option>
+                                <option value="Royal Borough of Windsor and Maidenhead">Royal Borough of Windsor and Maidenhead</option>
+                                <option value="East Hertfordshire Council">East Hertfordshire Council</option>
+                                <option value="Hillingdon Council">Hillingdon Council</option>
+                                <option value="Chelmsford City Council">Chelmsford City Council</option>
+                                <option value="Darlington Borough Council">Darlington Borough Council</option>
+                                <option value="Coventry City Council">Coventry City Council</option>
+                                <option value="East Devon District Council">East Devon District Council</option>
+                                <option value="Bath and North East Somerset">Bath and North East Somerset</option>
+                                <option value="Mendip Council">Mendip Council</option>
+                                <option value="Mid-Devon Council">Mid-Devon Council</option>
+                                <option value="North Somerset Council">North Somerset Council</option>
+                                <option value="Sedgemoor Council">Sedgemoor Council</option>
+                                <option value="Somerset West & Taunton Council">Somerset West & Taunton Council</option>
+                                <option value="South Somerset Council">South Somerset Council</option>
+                                <option value="Swindon Borough Council">Swindon Borough Council</option>
+                                <option value="Wiltshire Council">Wiltshire Council</option>
                                 <option value="Not Available">Not Available</option>
                              </select>
                             </div>
