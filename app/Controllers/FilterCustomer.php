@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\CustomerModel;
+use App\Models\UserModel;
+
 use CodeIgniter\API\ResponseTrait;
 
 class FilterCustomer extends BaseController
@@ -41,6 +43,11 @@ class FilterCustomer extends BaseController
         $role = $session->get('role');
         $name = $session->get('fname') . " " . $session->get('lname');
         $id = $session->get('id');
+ 
+        // model to get useres data to display center name filter
+        $userModel = new UserModel();
+        $centerName['users']=$userModel->findAll();
+        
     
         if($parameter == 'today'){
             // For introducer 
@@ -201,7 +208,8 @@ class FilterCustomer extends BaseController
         $result['pager'] = $customerModel->pager;
     
         // Pass data to the view
-        return view('customers/view_customers', $result + $this->data);
+        return view('customers/view_customers', $result +$centerName + $this->data);
+
     }
     
 
@@ -216,7 +224,12 @@ class FilterCustomer extends BaseController
         $center = $session->get('center');
         $role = $session->get('role');
         $id = $session->get('id');
-    
+
+        // model to get useres data to display center filter
+        $userModel = new UserModel();
+        $centerName['users']=$userModel->findAll();
+        //var_dump($centerName['users']);
+                        
         if($role == 1){
             $result['customers'] = $customerModel
                         ->where('DATE(lead_date) >=', $start)
@@ -260,7 +273,8 @@ class FilterCustomer extends BaseController
         $result['pager'] = $customerModel->pager;
     
         // Pass data to the view
-        return view('customers/view_customers', $result + $this->data);
+        return view('customers/view_customers', $result +$centerName + $this->data);
+
     }
     
 
@@ -273,6 +287,10 @@ class FilterCustomer extends BaseController
         $center = $session->get('center');
         $role = $session->get('role');
         $id = $session->get('id');
+
+        // model to get useres data to display center filter
+        $userModel = new UserModel();
+        $centerName['users']=$userModel->findAll();
     
         if (strpos($search, "EC-") === 0) { // Check if $res starts with "EC-"
             $search = str_replace("EC-", "", $search);
@@ -354,7 +372,8 @@ class FilterCustomer extends BaseController
         $result['pager'] = $customerModel->pager;
     
         // Pass data to the view
-        return view('customers/view_customers', $result + $this->data);
+        return view('customers/view_customers', $result + $centerName + $this->data);
+
     }
     
 /************************************************get customer by status*******************************************************************/
@@ -365,6 +384,10 @@ public function getStatusbyCustomer(string $status) {
     $center = $session->get('center');
     $role = $session->get('role');
     $id = $session->get('id');
+
+    // model to get useres data to display center filter
+    $userModel = new UserModel();
+    $centerName['users']=$userModel->findAll();
 
     if($status == "All"){
         if($role == 1){
@@ -430,7 +453,8 @@ public function getStatusbyCustomer(string $status) {
     $result['pager'] = $customerModel->pager;
 
     // Pass data to the view
-    return view('customers/view_customers', $result + $this->data);
+    return view('customers/view_customers', $result + $centerName + $this->data);
+
 }
 
 /*****************************************callback search filetr by date*******************************************************************/

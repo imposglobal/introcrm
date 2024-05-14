@@ -85,33 +85,27 @@ $role = $session->get('role'); ?>
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
-            <div class="col-lg-12">
-            </div>
-            <div class="col-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card-body mt-2">
+            <div class="col-lg-12"></div>
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card-body mt-2">
+                                    <div class="row">
+                                        <div class="col-lg-7">
+                                            <h4 class="card-title mb-3"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 mr-2 text-white rounded"></i>View Customer</h4>
+                                        </div>
 
-                            <div class="row">
-                                <div class="col-lg-7">
-                                <h4 class="card-title mb-3"><i class="mdi mdi-account-multiple bg-primary h4 pt-1 px-2 mr-2 text-white rounded"></i>View Customer</h4>
-                                </div>
-                                <div class="col-lg-5">
-                                
-
-                                    <!-- search customer from table code     -->
-                                    <form action="<?php echo base_url('/search/customer'); ?>" method="post">
-                                  
-                                    
-                                          <div class="input-group col-md-12 row justify-content-start">
-                                            
-                                              <input style="height: 35px;" type="text" id="searching" required name="searching" class="form-control" placeholder="Search by Name, Source & Lead ID">
-                                              <div class="input-group-append">  
-                                                  <button style="height: 35px;" class="px-3 btn-primary rounded-right" type="submit">Search</button>
+                                        <div class="col-lg-5">
+                                            <!--  code to search customer from table     -->
+                                            <form action="<?php echo base_url('/search/customer'); ?>" method="post">                                   
+                                                <div class="input-group col-md-12 row justify-content-start">                                   
+                                                    <input style="height: 35px;" type="text" id="searching" required name="searching" class="form-control" placeholder="Search by Name, Source & Lead ID">
+                                                <div class="input-group-append">  
+                                                    <button style="height: 35px;" class="px-3 btn-primary rounded-right" type="submit">Search</button>
                                               </div>
-                                          </div>
-                                      </form>
+                                        </div>
+                                            </form>
                                  <!-- search customer from table code     -->
                                 </div>
                             </div>
@@ -120,11 +114,11 @@ $role = $session->get('role'); ?>
                                 <hr>
                                     <div class="row">
                                         <div class="col-lg-7 my-2">
-                                            <span style="font-size: 10px;" class="bg-light border mx-2 px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/yesterday"?>">Yesterday</span></a>
-                                            <span style="font-size: 10px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/today"?>">Today</span></a>
-                                            <span style="font-size: 10px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/week"?>">Weekly</span></a>
-                                            <span style="font-size: 10px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/month"?>">Monthly</span></a>
-                                            <select style="font-size: 10px;" class="bg-light border mx-2 px-3 py-2 rounded" name="" id="statusSelect" onchange="redirect()">
+                                            <span style="font-size: 12px;" class="bg-light border mx-2 px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/yesterday"?>">Yesterday</span></a>
+                                            <span style="font-size: 12px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/today"?>">Today</span></a>
+                                            <span style="font-size: 12px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/week"?>">Weekly</span></a>
+                                            <span style="font-size: 12px;" class="bg-light border mx-2 text-dark px-3 py-2 rounded"><a class="text-dark" href="<?= $baseURL."filter/month"?>">Monthly</span></a>
+                                            <select style="font-size: 12px;" class="bg-light border mx-2 px-3 py-2 rounded" name="" id="statusSelect" onchange="redirect()">
                                             <?php
                                                 if(isset($_GET['status']) != null){
                                                     $callback = $_GET['status'];
@@ -144,8 +138,44 @@ $role = $session->get('role'); ?>
                                             <option value="Ready to Start">Ready to Start</option>
                                             <option value="Rejected">Rejected</option>
                                             <option value="Survey Booked">Survey Booked</option>
-
                                         </select>
+                                     
+                                        <!-- code to filter center name -->
+                                         <?php if($role == 0){?>
+                                        <select style="font-size: 12px;" class="bg-light border mx-2 px-3 py-2 my-2 rounded" name="center_name" id="centerSelect" onchange="searchByCenter(event)">
+                                           
+                                             <option value="Select Center">Select Center</option>
+                                                <?php
+                                                $seenValues = array();
+                                                foreach ($users as $user) {
+                                                    $centerName = $user['center_name'];
+                                                    if (!in_array($centerName, $seenValues)) {
+                                                        $seenValues[] = $centerName;
+                                                        echo '<option value="' . $centerName . '">' . $centerName . '</option>';
+                                                    }
+                                                }
+                                                ?>
+                                        </select>
+                                         <?php }?>
+
+
+                                          <!-- code to filter agent name -->
+                                          <?php if($role == 1){?>
+                                        <select style="font-size: 12px;" class="bg-light border mx-2 px-3 py-2 my-2 rounded" name="agent_name" id="agentSelect" onchange="searchByAgent(event)"> 
+                                             <option value="Select Agent">Select Agent</option>
+                                             <?php
+                                                $seenValues = array();
+                                                foreach ($users as $user) {
+                                                    $agentName = $user['fname'] . ' ' . $user['lname'];
+                                                    if (!in_array($agentName, $seenValues)) {
+                                                        $seenValues[] = $agentName;
+                                                        echo '<option value="' . $agentName . '">' . $agentName . '</option>';
+                                                    }
+                                                }
+                                                ?>
+                                        </select>
+                                         <?php }?>
+
                                         </div>
                                        
                                     
@@ -172,7 +202,7 @@ $role = $session->get('role'); ?>
                                
 
                                 <!-- table code start -->
-                                <table class="table table-striped table-responsive tb-responsive">
+                                <table id="dataTable" class="table table-striped table-responsive tb-responsive">
                                     <thead>
                                         <tr>
                                             <th scope="col">Lead ID</th>
@@ -189,7 +219,7 @@ $role = $session->get('role'); ?>
                                             <?php if($callback == "Callback"){ ?>
                                             <th scope="col">Callback Date</th>
                                             <th scope="col">Callback Time</th>
-                                            <? } ?>
+                                            <?php } ?>
                                             <th scope="col">Status (<?=$totalCustomers ?>)</th>
                                             <th scope="col">Actions</th>
                                         </tr>
@@ -651,14 +681,61 @@ $role = $session->get('role'); ?>
         $('#timelineslide').css('width', '0');
     }
 </script>
+<!-- script code to search customer by status -->
 <script>
-function redirect() {
-    var select = document.getElementById("statusSelect");
-    var selectedValue = select.options[select.selectedIndex].value;
-    var baseUrl = "<?= $baseURL.'/status/' ?>";
-    var redirectUrl = baseUrl + encodeURIComponent(selectedValue) + '?status='+ encodeURIComponent(selectedValue);
-    window.location.href = redirectUrl;
-}
+    function redirect() {
+        var select = document.getElementById("statusSelect");
+        var selectedValue = select.options[select.selectedIndex].value;
+        var baseUrl = "<?= $baseURL.'/status/' ?>";
+        var redirectUrl = baseUrl + encodeURIComponent(selectedValue) + '?status='+ encodeURIComponent(selectedValue);
+        window.location.href = redirectUrl;
+    }
 </script>
+
+<script>
+    function searchByCenter(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        var select = document.getElementById('centerSelect');
+        var selectedcenter = select.options[select.selectedIndex].value;
+        var table = document.getElementById('dataTable');
+        var rows = table.getElementsByTagName('tr');
+        
+        for (var i = 0; i < rows.length; i++) {
+            var agentCell = rows[i].getElementsByTagName('td')[1]; // Assuming center is in the third column
+            if (agentCell) {
+
+                var centerText = agentCell.textContent || agentCell.innerText;
+                if (selectedcenter === '' || centerText.toUpperCase().indexOf(selectedcenter.toUpperCase()) > -1) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        }
+    }
+</script>
+
+<script>
+    function searchByAgent(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        var select = document.getElementById('agentSelect');
+        var selectedAgent = select.options[select.selectedIndex].value;
+        var table = document.getElementById('dataTable');
+        var rows = table.getElementsByTagName('tr');
+
+        for (var i = 0; i < rows.length; i++) {
+            var agentCell = rows[i].getElementsByTagName('td')[1]; // Assuming agent is in the second column
+            if (agentCell) {
+                var agentText = agentCell.textContent || agentCell.innerText;
+                if (selectedAgent === '' || agentText.toUpperCase().indexOf(selectedAgent.toUpperCase()) > -1) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        }
+    }
+</script>
+
 
     <?= $this->endSection() ?>
