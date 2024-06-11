@@ -168,7 +168,6 @@ public function update()
     $timestamp = date('d/m/Y H:i:s');
     if($role == 3){
         $updatedfromclient = $name;
-        echo $updatedfromclient;
     }else{
         $updatedfromclient = "";
     }
@@ -242,7 +241,7 @@ public function update()
 
             
         ];
-    
+        echo $updatedfromclient . "-". $timestamp;
             // Perform the update
             $result = $customerModel->update($lead_id, $data);
 
