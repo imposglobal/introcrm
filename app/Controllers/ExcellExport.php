@@ -176,7 +176,7 @@ public function ExportFullExcellReport()
             $sheet->setCellValue('Z'.$rows, $val['gas_safe_link']);
             $sheet->setCellValue('AA'.$rows, $val['boiler_efficiency_link']);
             $sheet->setCellValue('AB'.$rows, $val['agent_name']);
-            $sheet->setCellValue('AB'.$rows, $val['update_client_name']." on ".$val['update_client_name']);
+            $sheet->setCellValue('AC'.$rows, $val['update_client_name']." on ".$val['update_client_date']);
            
             $rows++;
         }
