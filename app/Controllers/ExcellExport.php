@@ -144,6 +144,7 @@ public function ExportFullExcellReport()
     $sheet->setCellValue('Z1','Gas safe Link ');
     $sheet->setCellValue('AA1','Boiler Efficeincy Link ');
     $sheet->setCellValue('AB1','Created Agent Name ');
+    $sheet->setCellValue('AC1','Last Updated By ');
  
         $rows = 2;
         foreach ($records as $val){
@@ -175,6 +176,7 @@ public function ExportFullExcellReport()
             $sheet->setCellValue('Z'.$rows, $val['gas_safe_link']);
             $sheet->setCellValue('AA'.$rows, $val['boiler_efficiency_link']);
             $sheet->setCellValue('AB'.$rows, $val['agent_name']);
+            $sheet->setCellValue('AB'.$rows, $val['update_client_name']." on ".$val['update_client_name']);
            
             $rows++;
         }
