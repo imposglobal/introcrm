@@ -168,6 +168,7 @@ public function update()
     $timestamp = date('d/m/Y H:i:s');
     if($role == 3){
         $updatedfromclient = $name;
+        echo $updatedfromclient;
     }else{
         $updatedfromclient = "";
     }
@@ -257,7 +258,7 @@ public function update()
                 $redirectURL = $baseUrl .$lead_id. '?status=error';
             }
             // Redirect to the updated URL
-            return redirect()->to($redirectURL);
+           // return redirect()->to($redirectURL);
 }
 
 
