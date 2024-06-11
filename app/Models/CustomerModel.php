@@ -47,7 +47,9 @@ class CustomerModel extends Model{
         'calldate',
         'lead_no',
         'boiler_effi',
-        'gas_registered'
+        'gas_registered',
+        'update_client_name',
+        'update_client_date'
     ];
     
 }

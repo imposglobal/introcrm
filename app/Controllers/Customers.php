@@ -241,7 +241,7 @@ public function update()
 
             
         ];
-        echo $updatedfromclient . "-". $timestamp;
+      
             // Perform the update
             $result = $customerModel->update($lead_id, $data);
 
@@ -257,7 +257,7 @@ public function update()
                 $redirectURL = $baseUrl .$lead_id. '?status=error';
             }
             // Redirect to the updated URL
-           // return redirect()->to($redirectURL);
+           return redirect()->to($redirectURL);
 }
 
 
