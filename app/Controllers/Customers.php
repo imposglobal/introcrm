@@ -164,6 +164,13 @@ public function update()
     $center = $session->get('center');
     $name = $session->get('fname') . " " . $session->get('lname');
     $id = $session->get('id');
+    $role = $session->get('role');
+    $timestamp = date('d/m/Y H:i:s');
+    if($role == 3){
+        $updatedfromclient = $name;
+    }else{
+        $updatedfromclient = "";
+    }
     // $customerModel=find($lead_id);
      $lead_id=$this->request->getPost('lead_id');
      //for image uploading
@@ -229,6 +236,9 @@ public function update()
             // 'processing_notes' => $this->request->getPost('processing_notes'),
             // 'previous_grant_work' => $this->request->getPost('previous_grant_work'),
             // 'contact_center_notes' => $this->request->getPost('contact_center_notes'),
+            'update_client_date' => $timestamp,
+            'update_client_name' => $updatedfromclient
+
             
         ];
     
