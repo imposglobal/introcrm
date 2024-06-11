@@ -238,7 +238,7 @@ public function update()
             // 'previous_grant_work' => $this->request->getPost('previous_grant_work'),
             // 'contact_center_notes' => $this->request->getPost('contact_center_notes'),
             'update_client_date' => $timestamp,
-            'update_client_name' => $updatedfromclient
+            'update_client_name' => $updatedfromclient,
 
             
         ];
