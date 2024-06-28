@@ -107,6 +107,9 @@ $routes->get('/client/view', 'Client::view');
 $routes->POST('/client/add', 'Client::store');
 $routes->get('/client/delete/(:num)', 'Client::delete/$1');
 
+//Profile
+$routes->get('/profile', 'Profile::view');
+
 
 
 
