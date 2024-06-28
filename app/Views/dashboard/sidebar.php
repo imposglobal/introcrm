@@ -144,5 +144,11 @@
         </li>
             <?php } ?>
         <!-- Add more sidebar items with similar logic -->
+        <li class="nav-item <?php echo ($currentURL == base_url('index.php/dashboard')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="#">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Settings</span>
+            </a>
+        </li>
     </ul>
 </nav>
