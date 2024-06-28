@@ -29,7 +29,6 @@ class Profile extends BaseController
             'baseURL' => $this->baseURL
         ];
     }
-//view all Customer in Tables
 public function View() {
     $userModel = new UserModel();
     $session = session();
@@ -37,15 +36,78 @@ public function View() {
     $role = $session->get('role');
     $userid = $session->get('id');
    
-    // Query customers and order them by the 'lead_id' column in descending order
-    $result['users'] = $userModel->where('role', '3')->orderBy('id', 'desc')->paginate();
+    // Query all customers and order them by the 'lead_id' column in descending order
+    $result = $userModel->where('id', $userid)->findAll();
     
-    
-    // Retrieve the pager for pagination
-    $result['pager'] = $userModel->pager;
-    
-    // Pass additional data to the view, if needed ($this->data seems to be additional data)
-    // You can merge it with the $result array using the '+' operator
-    return view('Profile/profile', $result + $this->data);
+    // Combine the fetched data with additional data (if any)
+    $data = [
+        'users' => $result,
+    ];
+
+    // Merge additional data if $this->data is set
+    if (isset($this->data)) {
+        $data = array_merge($data, $this->data);
+    }
+
+    // Pass the data to the view
+    return view('Profile/profile', $data);
 }
+
+public function update()
+{
+
+            $userModel = new UserModel();
+            $session = session();
+            $center = $session->get('center');
+            $role = $session->get('role');
+            $userid = $session->get('id');
+
+            $data = [
+                'fname' => $this->request->getPost('fname'),
+                'lname' => $this->request->getPost('lname'),
+                'email' => $this->request->getPost('email'),
+                'phone' => $this->request->getPost('mobile'),
+                'center_name' => $this->request->getPost('center'),
+                'location' => $this->request->getPost('location'),
+        
+            ];
+           
+                    // Perform the update
+                    $result = $userModel->update($userid, $data);
+                    if ($result) {
+                        // Set success flash message
+                        session()->setFlashdata('alrt', 'Profile updated successfully.');
+                        return redirect()->back();
+                    } else {
+                        // Handle update failure if needed
+                        return redirect()->back()->with('error', 'Failed to update Profile data.');
+                    } 
+   }
+
+
+   public function changePassword()
+{
+
+            $userModel = new UserModel();
+            $session = session();
+            $center = $session->get('center');
+            $role = $session->get('role');
+            $userid = $session->get('id');
+
+            $data = [
+                'password' => $this->request->getPost('pwd')
+            ];
+           
+                    // Perform the update
+                    $result = $userModel->update($userid, $data);
+                    if ($result) {
+                        // Set success flash message
+                        session()->setFlashdata('alrtp', 'Password Changed successfully.');
+                        return redirect()->back();
+                    } else {
+                        // Handle update failure if needed
+                        return redirect()->back()->with('error', 'Failed to Changed Password.');
+                    } 
+   }
+
 }

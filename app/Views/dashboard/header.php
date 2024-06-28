@@ -99,9 +99,9 @@ td{
                          echo $session->get('fname');?></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
+              <a class="dropdown-item" href="<?php echo base_url('profile'); ?>">
                 <i class="ti-settings text-primary"></i>
-                Settings
+                Update Profile
               </a>
               <a class="dropdown-item"  href="<?php echo base_url('logout'); ?>">
                 <i class="ti-power-off text-primary"></i>

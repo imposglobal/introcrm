@@ -142,13 +142,14 @@
                 <span class="menu-title">Get Reports</span>
             </a>
         </li>
-            <?php } ?>
-        <!-- Add more sidebar items with similar logic -->
-        <li class="nav-item <?php echo ($currentURL == base_url('index.php/dashboard')) ? 'active' : ''; ?>">
-            <a class="nav-link" href="#">
-                <i class="icon-grid menu-icon"></i>
-                <span class="menu-title">Settings</span>
+        <li class="nav-item <?php echo ($currentURL == base_url('index.php/profile')) ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url('profile'); ?>">
+                <i class="menu-icon mdi mdi-account"></i>
+                <span class="menu-title">Profile</span>
             </a>
         </li>
+            <?php } ?>
+        <!-- Add more sidebar items with similar logic -->
+       
     </ul>
 </nav>

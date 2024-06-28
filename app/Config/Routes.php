@@ -109,6 +109,8 @@ $routes->get('/client/delete/(:num)', 'Client::delete/$1');
 
 //Profile
 $routes->get('/profile', 'Profile::view');
+$routes->post('/profile/update', 'Profile::update');
+$routes->post('/profile/change-password', 'Profile::changePassword');
 
 
 
