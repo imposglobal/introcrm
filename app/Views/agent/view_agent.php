@@ -311,7 +311,7 @@ $id = $session->get('id');
                 window.location.href = deleteUrl;
             } else {
                 // If user cancels deletion, do nothing
-                Swal.fire("Cancelled", "Your customer is safe!", "info");
+                Swal.fire("Cancelled", "Your Agent is safe!", "info");
             }
         });
     }
