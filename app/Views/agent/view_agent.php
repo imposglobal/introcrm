@@ -254,6 +254,7 @@ $id = $session->get('id');
 
                                             <?php if (
                                                 $role == 0 ||
+                                                $role == 1 ||
                                                 $role == 3
                                             ) { ?>
                                             <a href="<?php echo base_url(
